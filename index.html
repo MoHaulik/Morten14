@@ -1,1 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Morten Haulik - Spatial Computing Pioneer, VR Consultant, and XR Content Creation Expert based in Copenhagen. Premium XR consulting and 360 video content creation for Europe.">
+    <title>Morten Haulik | Spatial Computing Pioneer & Keynote Speaker</title>
+    
+    <!-- Favicon (XR Goggles) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥽</text></svg>">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AAA SEO: Multilingual JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.mortenhaulik.com/#person",
+          "name": "Morten Haulik",
+          "jobTitle": "Spatial Computing Pioneer, VR Consultant, XR Content Creation Expert",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Copenhagen",
+            "addressCountry": "DK"
+          },
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "University of Copenhagen"
+          },
+          "description": "Award-winning XR Developer, VR Consultant, and Keynote Speaker based in Copenhagen. Expert in XR content creation, 360 video content creation, and XR consulting for European clients.",
+          "knowsAbout": ["Spatial Computing", "WebXR", "Virtual Reality", "Augmented Reality", "XR Consulting", "XR Content Creation", "360 Video Content Creation", "Keynote Speaking"]
+        },
+        {
+          "@type": "Service",
+          "provider": {"@id": "https://www.mortenhaulik.com/#person"},
+          "name": "Premium XR Consulting & VR Development",
+          "serviceType": "XR Consulting, VR Consultant, XR Content Creation, 360 Video Content Creation",
+          "areaServed": "Europe",
+          "description": "Top-tier XR consulting, enterprise VR solutions, and bespoke 360 video content creation for clients across Europe."
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      body { 
+        background-color: #0044FF; 
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      #root:empty { display: none; }
+      
+      /* Smooth language transitions */
+      .fade-lang-enter { opacity: 0; transform: translateY(5px); }
+      .fade-lang-enter-active { opacity: 1; transform: translateY(0); transition: opacity 300ms, transform 300ms; }
+    </style>
+
+    <!-- Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.292.0"
+      }
+    }
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- AAA SEO: Semantic Multi-Language Keyword Dominator Block -->
+    <!-- Visually hidden but perfectly readable for web crawlers looking for high-value European keywords -->
+    <article class="sr-only">
+        <h1>Morten Haulik - VR Consultant & XR Content Creation</h1>
+        
+        <section lang="en">
+            <h2>English - XR Consulting & 360 Video Content Creation</h2>
+            <p>Morten Haulik is an award-winning VR Consultant and Spatial Computing Developer based in Copenhagen. Serving clients all over Europe, Morten provides next-level XR consulting, premium XR content creation, and bespoke 360 video content creation. As an industry-leading VR consultant, he specializes in WebXR, enterprise spatial computing, and immersive tech strategies.</p>
+        </section>
+
+        <section lang="da">
+            <h2>Dansk - XR Konsulent & 360 Video Produktion</h2>
+            <p>Morten Haulik er en prisvindende VR Konsulent og Spatial Computing udvikler baseret i København. Med kunder i hele Europa tilbyder Morten højt specialiseret XR rådgivning (XR consulting), XR indholdsproduktion og 360 video content creation. Som førende VR konsulent hjælper han virksomheder med WebXR og immersive strategier.</p>
+        </section>
+
+        <section lang="de">
+            <h2>Deutsch - XR-Beratung & 360-Grad-Videoproduktion</h2>
+            <p>Morten Haulik ist ein preisgekrönter VR-Berater und Spatial Computing Entwickler mit Sitz in Kopenhagen. Er bietet Kunden in ganz Europa erstklassige XR-Beratung (XR Consulting), XR-Inhaltserstellung und 360-Grad-Videoproduktion (360 video content creation). Als branchenführender VR-Berater ist er auf WebXR und immersive Unternehmenslösungen spezialisiert.</p>
+        </section>
+
+        <section lang="it">
+            <h2>Italiano - Consulenza XR & Creazione di Contenuti Video 360</h2>
+            <p>Morten Haulik è un pluripremiato consulente VR e sviluppatore di Spatial Computing con sede a Copenaghen. Servendo clienti in tutta Europa, Morten offre consulenza XR (XR consulting) di alto livello, creazione di contenuti XR e produzione di video a 360 gradi (360 video content creation). In qualità di consulente VR leader del settore, è specializzato in WebXR e soluzioni spaziali aziendali.</p>
+        </section>
+
+        <section lang="fr">
+            <h2>Français - Conseil XR & Création de Contenu Vidéo 360</h2>
+            <p>Morten Haulik est un consultant VR primé et un développeur d'informatique spatiale basé à Copenhague. Au service de clients dans toute l'Europe, Morten propose des services de conseil XR (XR consulting), de création de contenu XR de premier ordre et de création de contenu vidéo 360 sur mesure. En tant que consultant VR de premier plan, il se spécialise dans le WebXR et les stratégies technologiques immersives.</p>
+        </section>
+    </article>
+
+    <div id="root"></div>
+
+    <script type="text/babel" data-type="module">
+        import React, { useState, useEffect, useRef } from 'react';
+        import { createRoot } from 'react-dom/client';
+        import { 
+          Mail, Linkedin, Twitter, Play, Monitor, Globe, Mic, X, 
+          Camera, Code, Calendar, Phone, User, Headphones, Newspaper, 
+          History, Star, Ticket, Users, ExternalLink, ChevronRight
+        } from 'lucide-react';
+
+        // --- MULTILINGUAL DICTIONARY UI ---
+        const UI_TEXT = {
+            en: {
+                role: "Spatial Computing Pioneer, Founder & Keynote Speaker", expNxt: "Experience NXT/WebXR", engage: "Engage as Speaker", meet: "Meet Morten", letsTalk: "Let's Talk", name: "Name", email: "Email Address", message: "Tell me about your project...", openEmail: "Open Email App", draftMsg: "This will draft the message in your default email client.", officialBooking: "Official Booking", inquiry: "Keynote Inquiry", inquiryDesc: "Available for conferences, corporate summits, and private workshops.", audienceSize: "Audience Size", people: "people", pickDates: "Pick Dates", pickDatesDesc: "(You can select up to three dates)", phone: "Phone Number", reqEmail: "Open Email to Request", reqEmailDesc: "This will open your default email app with the details filled out.", footer: "Designed in Copenhagen", hoverListen: "Listen", hoverProject: "Explore Project", hoverImage: "View Image", hoverRead: "Read More", btnVisit: "View Source", btnExperience: "Experience NXT/WebXR", btnTry: "Try SendToQuest"
+            },
+            da: {
+                role: "Spatial Computing Pioner, Founder & Keynote Taler", expNxt: "Oplev NXT/WebXR", engage: "Book som Taler", meet: "Mød Morten", letsTalk: "Lad os tale sammen", name: "Navn", email: "E-mailadresse", message: "Fortæl mig om dit projekt...", openEmail: "Åbn E-mail Program", draftMsg: "Dette vil oprette en kladde i din standard e-mail klient.", officialBooking: "Officiel Booking", inquiry: "Forespørgsel på Keynote", inquiryDesc: "Tilgængelig til konferencer, virksomhedsevents og private workshops.", audienceSize: "Publikumsstørrelse", people: "personer", pickDates: "Vælg Datoer", pickDatesDesc: "(Du kan vælge op til tre datoer)", phone: "Telefonnummer", reqEmail: "Åbn E-mail for at Anmode", reqEmailDesc: "Dette vil åbne din e-mail app med detaljerne udfyldt.", footer: "Designet i København", hoverListen: "Lyt med", hoverProject: "Udforsk Projekt", hoverImage: "Se Billede", hoverRead: "Læs Mere", btnVisit: "Gå til kilde", btnExperience: "Oplev NXT/WebXR", btnTry: "Prøv SendToQuest"
+            },
+            de: {
+                role: "Spatial Computing Pionier, Gründer & Keynote Speaker", expNxt: "NXT/WebXR Erleben", engage: "Als Redner Buchen", meet: "Morten Treffen", letsTalk: "Lass uns reden", name: "Name", email: "E-Mail Adresse", message: "Erzählen Sie mir von Ihrem Projekt...", openEmail: "E-Mail-App Öffnen", draftMsg: "Dies erstellt einen Entwurf in Ihrem Standard-E-Mail-Programm.", officialBooking: "Offizielle Buchung", inquiry: "Keynote-Anfrage", inquiryDesc: "Verfügbar für Konferenzen, Unternehmensgipfel und private Workshops.", audienceSize: "Publikumsgröße", people: "Personen", pickDates: "Daten Wählen", pickDatesDesc: "(Sie können bis zu drei Daten auswählen)", phone: "Telefonnummer", reqEmail: "E-Mail zur Anfrage Öffnen", reqEmailDesc: "Dies öffnet Ihre E-Mail-App mit den ausgefüllten Details.", footer: "Entworfen in Kopenhagen", hoverListen: "Anhören", hoverProject: "Projekt Erkunden", hoverImage: "Bild Ansehen", hoverRead: "Weiterlesen", btnVisit: "Quelle Ansehen", btnExperience: "NXT/WebXR Erleben", btnTry: "SendToQuest Testen"
+            },
+            it: {
+                role: "Pioniere dello Spatial Computing, Fondatore e Keynote Speaker", expNxt: "Scopri NXT/WebXR", engage: "Prenota come Speaker", meet: "Incontra Morten", letsTalk: "Parliamo", name: "Nome", email: "Indirizzo Email", message: "Parlami del tuo progetto...", openEmail: "Apri App Email", draftMsg: "Questo creerà una bozza nel tuo client email predefinito.", officialBooking: "Prenotazione Ufficiale", inquiry: "Richiesta Keynote", inquiryDesc: "Disponibile per conferenze, summit aziendali e workshop privati.", audienceSize: "Dimensione del Pubblico", people: "persone", pickDates: "Scegli le Date", pickDatesDesc: "(Puoi selezionare fino a tre date)", phone: "Numero di Telefono", reqEmail: "Apri Email per Richiedere", reqEmailDesc: "Questo aprirà la tua app email con i dettagli precompilati.", footer: "Progettato a Copenaghen", hoverListen: "Ascolta", hoverProject: "Esplora Progetto", hoverImage: "Vedi Immagine", hoverRead: "Leggi di Più", btnVisit: "Vedi Fonte", btnExperience: "Scopri NXT/WebXR", btnTry: "Prova SendToQuest"
+            },
+            fr: {
+                role: "Pionnier de l'Informatique Spatiale, Fondateur & Conférencier", expNxt: "Découvrir NXT/WebXR", engage: "Réserver comme Conférencier", meet: "Rencontrer Morten", letsTalk: "Discutons-en", name: "Nom", email: "Adresse Email", message: "Parlez-moi de votre projet...", openEmail: "Ouvrir l'App Email", draftMsg: "Cela préparera le message dans votre client de messagerie par défaut.", officialBooking: "Réservation Officielle", inquiry: "Demande de Keynote", inquiryDesc: "Disponible pour des conférences, des sommets d'entreprise et des ateliers privés.", audienceSize: "Taille du Public", people: "personnes", pickDates: "Choisir les Dates", pickDatesDesc: "(Vous pouvez sélectionner jusqu'à trois dates)", phone: "Numéro de Téléphone", reqEmail: "Ouvrir l'Email pour Demander", reqEmailDesc: "Cela ouvrira votre application de messagerie avec les détails remplis.", footer: "Conçu à Copenhague", hoverListen: "Écouter", hoverProject: "Explorer le Projet", hoverImage: "Voir l'Image", hoverRead: "Lire la Suite", btnVisit: "Voir la Source", btnExperience: "Découvrir NXT/WebXR", btnTry: "Essayer SendToQuest"
+            }
+        };
+
+        const SEO_META = {
+            en: { title: "Morten Haulik | VR Consultant & XR Content Creation", desc: "Premium XR consulting and 360 video content creation for European clients." },
+            da: { title: "Morten Haulik | VR Konsulent & XR Indholdsproduktion", desc: "Premium XR rådgivning og 360 video produktion til europæiske kunder." },
+            de: { title: "Morten Haulik | VR-Berater & XR-Inhaltserstellung", desc: "Erstklassige XR-Beratung und 360-Grad-Videoproduktion für europäische Kunden." },
+            it: { title: "Morten Haulik | Consulente VR & Creazione Contenuti XR", desc: "Consulenza XR premium e creazione di video 360 per clienti europei." },
+            fr: { title: "Morten Haulik | Consultant VR & Création Contenu XR", desc: "Conseil XR premium et création de contenu vidéo 360 pour clients européens." }
+        };
+
+        // --- FULLY EXPANDED MULTILINGUAL CONTENT ---
+        const PORTFOLIO_DATA = {
+            'about-morten': {
+                en: {
+                    title: "Meet Morten Haulik", subtitle: "Spatial Computing Pioneer, Founder & Keynote Speaker",
+                    desc: "Morten Haulik is an award-winning spatial computing developer, founder, and keynote speaker based in Copenhagen.",
+                    content: [
+                        "I am an award-winning spatial computing developer, founder, and keynote speaker based in Copenhagen. Over a decade ago, I left my Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then, I have facilitated over 100 industry workshops, shipped high-impact immersive products, and delivered keynotes to audiences of 2,000+ people.",
+                        "I have had the honor of presenting spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, as well as for United Nations delegations, demonstrating the real-world impact of immersive technology.",
+                        "Over the past five years, I have engineered WebXR and immersive applications for leading global brands and cultural institutions. My software is used daily across the globe—transforming clinical workflows in hospitals, enhancing museum exhibits, and delivering seamless entertainment to users at home.",
+                        "Since 2022, I have served as an Entrepreneur in Residence at the University of Copenhagen, helping shape the KU Lighthouse initiative to support students and faculty in scaling new tech startups.",
+                        "In 2025, I launched NXT/WebXR. Today, it stands as one of the world's most prominent spatial computing platforms, serving as the definitive gateway for daily users worldwide to explore the spatial internet."
+                    ]
+                },
+                da: {
+                    title: "Mød Morten Haulik", subtitle: "Spatial Computing Pioner, Founder & Keynote Speaker",
+                    desc: "Morten Haulik er en prisvindende spatial computing udvikler, founder og keynote taler baseret i København.",
+                    content: [
+                        "Jeg er en prisvindende spatial computing udvikler, founder og keynote taler baseret i København. For over et årti siden forlod jeg mine studier i Informationsvidenskab på Københavns Universitet for at tilslutte mig det første nordiske XR-studie på fuld tid. Siden da har jeg faciliteret over 100 brancheworkshops, leveret høj-effektive immersive produkter og holdt keynotes for publikummer på over 2.000 mennesker.",
+                        "Jeg har haft æren af at præsentere spatial computing-løsninger ved officielle EU-sammenkomster for medlemmer af Europa-Parlamentet og Kommissionen, samt for FN-delegationer, for at demonstrere den reelle effekt af immersiv teknologi.",
+                        "Over de seneste fem år har jeg udviklet WebXR og immersive applikationer for førende globale brands og kulturinstitutioner. Min software bruges dagligt over hele verden – og transformerer kliniske arbejdsgange på hospitaler, forbedrer museumsudstillinger og leverer underholdning til brugere i hjemmet.",
+                        "Siden 2022 har jeg fungeret som Entrepreneur in Residence på Københavns Universitet, hvor jeg hjælper med at forme KU Lighthouse-initiativet for at støtte studerende og forskere i at skalere nye tech-startups.",
+                        "I 2025 lancerede jeg NXT/WebXR. I dag står den som en af verdens mest fremtrædende spatial computing-platforme og fungerer som den definitive gateway for daglige brugere verden over til at udforske det rummelige internet."
+                    ]
+                },
+                de: {
+                    title: "Triff Morten Haulik", subtitle: "Spatial Computing Pionier, Gründer & Keynote Speaker",
+                    desc: "Morten Haulik ist ein preisgekrönter Entwickler, Gründer und Keynote Speaker aus Kopenhagen.",
+                    content: [
+                        "Ich bin ein preisgekrönter Spatial Computing Entwickler, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über einem Jahrzehnt verließ ich mein Studium an der Universität Kopenhagen, um dem ersten nordischen XR-Studio in Vollzeit beizutreten. Seitdem habe ich über 100 Workshops geleitet, wirkungsvolle immersive Produkte geliefert und Keynotes vor über 2.000 Menschen gehalten.",
+                        "Ich hatte die Ehre, Spatial Computing Lösungen bei offiziellen EU-Treffen für Mitglieder des Europäischen Parlaments sowie für UN-Delegationen zu präsentieren, um die realen Auswirkungen immersiver Technologien zu demonstrieren.",
+                        "In den letzten fünf Jahren habe ich WebXR und immersive Anwendungen für führende globale Marken entwickelt. Meine Software wird weltweit täglich genutzt – zur Transformation klinischer Arbeitsabläufe in Krankenhäusern, zur Erweiterung von Museumsausstellungen und für nahtlose Unterhaltung zu Hause.",
+                        "Seit 2022 bin ich Entrepreneur in Residence an der Universität Kopenhagen und helfe bei der Gestaltung der KU Lighthouse-Initiative zur Unterstützung von Studenten bei neuen Tech-Startups.",
+                        "2025 habe ich NXT/WebXR gestartet. Heute ist es eine der weltweit führenden Spatial Computing Plattformen."
+                    ]
+                },
+                it: {
+                    title: "Incontra Morten Haulik", subtitle: "Pioniere dello Spatial Computing, Fondatore e Keynote Speaker",
+                    desc: "Morten Haulik è uno sviluppatore pluripremiato, fondatore e keynote speaker con sede a Copenaghen.",
+                    content: [
+                        "Sono un pluripremiato sviluppatore di spatial computing, fondatore e keynote speaker con sede a Copenaghen. Oltre un decennio fa, ho lasciato i miei studi per unirmi a tempo pieno al primo studio XR nordico. Da allora, ho facilitato oltre 100 workshop del settore, lanciato prodotti immersivi ad alto impatto e tenuto keynote a un pubblico di oltre 2.000 persone.",
+                        "Ho avuto l'onore di presentare soluzioni di spatial computing in occasione di incontri ufficiali dell'Unione Europea e delegazioni delle Nazioni Unite, dimostrando l'impatto reale della tecnologia immersiva.",
+                        "Negli ultimi cinque anni ho ingegnerizzato WebXR e applicazioni immersive per marchi globali. Il mio software è utilizzato quotidianamente in tutto il mondo: trasforma i flussi di lavoro clinici negli ospedali, migliora le mostre museali e offre intrattenimento domestico.",
+                        "Dal 2022 sono Entrepreneur in Residence presso l'Università di Copenaghen, contribuendo a plasmare l'iniziativa KU Lighthouse.",
+                        "Nel 2025 ho lanciato NXT/WebXR. Oggi è una delle piattaforme di spatial computing più importanti al mondo."
+                    ]
+                },
+                fr: {
+                    title: "Rencontrer Morten Haulik", subtitle: "Pionnier de l'informatique spatiale, Fondateur et Conférencier",
+                    desc: "Morten Haulik est un développeur primé, fondateur et conférencier basé à Copenhague.",
+                    content: [
+                        "Je suis un développeur d'informatique spatiale primé, fondateur et conférencier basé à Copenhague. Il y a plus de dix ans, j'ai quitté mes études pour rejoindre à temps plein le premier studio XR nordique. Depuis, j'ai animé plus de 100 ateliers de l'industrie, livré des produits immersifs à fort impact et donné des conférences devant plus de 2 000 personnes.",
+                        "J'ai eu l'honneur de présenter des solutions d'informatique spatiale lors de rassemblements officiels de l'Union européenne et de délégations des Nations Unies, démontrant l'impact réel de la technologie immersive.",
+                        "Au cours des cinq dernières années, j'ai conçu des applications WebXR et immersives pour de grandes marques mondiales. Mon logiciel est utilisé quotidiennement dans le monde entier.",
+                        "Depuis 2022, je suis Entrepreneur en Résidence à l'Université de Copenhague, aidant à façonner l'initiative KU Lighthouse.",
+                        "En 2025, j'ai lancé NXT/WebXR. Aujourd'hui, il s'agit de l'une des plateformes d'informatique spatiale les plus importantes au monde."
+                    ]
+                }
+            },
+            'keynote-ida': {
+                en: { tag: 'Keynote', title: 'IDA: Driving Health Tech', subtitle: 'Spatial Computing as future healthcare', desc: "As co-founder and XR architect, I took the stage at IDA's Driving Health Tech conference to demonstrate how MidwifeXR solves critical challenges on maternity wards.",
+                      quote: "The cutting-edge conference Driving Health Tech is IDA's annual health tech conference, where we focus on new revolutionary methods and health tech solutions...",
+                      content: [
+                          "How can immersive technology help new parents and benefit the establishment of breastfeeding?",
+                          "Watch or re-watch my talk from Driving Health Tech in Aarhus, where I, along with midwife Sofie Bonde Alsen, presented the XR platform I designed and developed to solve a massive problem in the healthcare sector during the lockdown of Denmark.",
+                          "In my keynote, I dive into the engine room behind MidwifeXR and show concrete cases of how we alleviate the healthcare system's challenges with spatial computing – now and in the future."
+                      ] },
+                da: { tag: 'Keynote', title: 'IDA: Driving Health Tech', subtitle: 'Spatial Computing som fremtidens sundhedsvæsen', desc: "Som medstifter og XR-arkitekt indtog jeg scenen på IDA's Driving Health Tech-konference for at demonstrere, hvordan MidwifeXR løser kritiske udfordringer på fødegangene.",
+                      quote: "Cutting-edge konferencen Driving Health Tech er IDAs årlige sundhedsteknologiske konference, hvor vi sætter spot på nye revolutionerende metoder og sundhedsteknologiske løsninger...",
+                      content: [
+                          "Hvordan kan fordybende teknologi hjælpe nybagte forældre og gavne amme-etableringen?",
+                          "Se eller gense min talk fra Driving Health Tech i Aarhus, hvor jeg, sammen med jordemoder Sofie Bonde Alsen, præsenterede den XR-platform, jeg har designet og udviklet for at løse et massivt problem i sundhedssektoren under nedlukningen af Danmark.",
+                          "I min keynote dykker jeg ned i maskinrummet bag MidwifeXR og viser konkrete cases på, hvordan vi med spatial computing afhjælper sundhedssystemets udfordringer – nu og i fremtiden."
+                      ] },
+                de: { tag: 'Keynote', title: 'IDA: Driving Health Tech', subtitle: 'Spatial Computing als zukünftiges Gesundheitswesen', desc: "Als Mitbegründer und XR-Architekt stand ich auf der Bühne der IDA, um zu demonstrieren, wie MidwifeXR kritische Herausforderungen auf Entbindungsstationen löst.",
+                      quote: "Die zukunftsweisende Konferenz Driving Health Tech ist die jährliche Gesundheitstechnologiekonferenz der IDA...",
+                      content: [
+                          "Wie kann immersive Technologie frischgebackenen Eltern helfen?",
+                          "Sehen Sie sich meinen Vortrag in Aarhus an, wo ich die von mir entworfene XR-Plattform vorgestellt habe, um ein massives Problem im Gesundheitssektor zu lösen.",
+                          "In meiner Keynote tauche ich in den Maschinenraum hinter MidwifeXR ein und zeige konkrete Fälle, wie wir die Herausforderungen des Gesundheitssystems mit Spatial Computing lindern."
+                      ] },
+                it: { tag: 'Keynote', title: 'IDA: Driving Health Tech', subtitle: 'Lo Spatial Computing come sanità del futuro', desc: "Come co-fondatore e architetto XR, sono salito sul palco per dimostrare come MidwifeXR risolve le sfide critiche nei reparti di maternità.",
+                      quote: "La conferenza all'avanguardia Driving Health Tech è la conferenza annuale sulla tecnologia sanitaria di IDA...",
+                      content: [
+                          "Come può la tecnologia immersiva aiutare i neo genitori?",
+                          "Guarda o riguarda il mio intervento in cui ho presentato la piattaforma XR che ho progettato e sviluppato per risolvere un enorme problema nel settore sanitario.",
+                          "Nel mio keynote, mi immergo nella sala macchine dietro MidwifeXR e mostro casi concreti di come alleviamo le sfide del sistema sanitario con lo spatial computing."
+                      ] },
+                fr: { tag: 'Keynote', title: 'IDA: Driving Health Tech', subtitle: 'L\'informatique spatiale comme santé du futur', desc: "En tant que co-fondateur et architecte XR, je suis monté sur scène pour démontrer comment MidwifeXR résout les défis critiques des maternités.",
+                      quote: "La conférence de pointe Driving Health Tech est la conférence annuelle sur les technologies de la santé de l'IDA...",
+                      content: [
+                          "Comment la technologie immersive peut-elle aider les nouveaux parents ?",
+                          "Regardez ma conférence où j'ai présenté la plateforme XR que j'ai conçue et développée pour résoudre un problème massif dans le secteur de la santé.",
+                          "Dans mon keynote, je plonge dans la salle des machines derrière MidwifeXR et montre des cas concrets de la façon dont nous atténuons les défis du système de santé avec l'informatique spatiale."
+                      ] }
+            },
+            'highlight-kp': {
+                en: { tag: 'Highlight', title: 'XR platform integrated in official curriculum', subtitle: 'University College Copenhagen (KP)', desc: "A proud moment: Midwifery students at University College Copenhagen now actively use the platform I built in their official education.",
+                      content: [
+                          "MidwifeXR on the Syllabus",
+                          "As part of their official education, midwifery students at University College Copenhagen (KP) have now integrated our platform, MidwifeXR, directly into their teaching.",
+                          "During their course on uncomplicated breastfeeding, students used the application to receive breastfeeding guidance via immersive scenarios. It is a strong example of how immersive technology can make a real and noticeable difference in practice."
+                      ] },
+                da: { tag: 'Highlight', title: 'XR-platform integreret i officielt pensum', subtitle: 'Københavns Professionshøjskole (KP)', desc: "Et stolt øjeblik: Jordemoderstuderende på Københavns Professionshøjskole bruger nu den platform, jeg har bygget, aktivt i deres officielle uddannelse.",
+                      content: [
+                          "MidwifeXR på Uddannelsesskemaet",
+                          "Som en del af deres officielle uddannelse har jordemoderstuderende på Københavns Professionshøjskole (KP) nu integreret vores platform, MidwifeXR, direkte i undervisningen.",
+                          "Under deres forløb om ukompliceret amning benyttede de studerende applikationen til at få ammevejledning via immersive scenarier. Det er et stærkt eksempel på, hvordan fordybende teknologi kan gøre en reel og mærkbar forskel i praksis."
+                      ] },
+                de: { tag: 'Highlight', title: 'XR-Plattform in offiziellen Lehrplan integriert', subtitle: 'University College Copenhagen (KP)', desc: "Ein stolzer Moment: Hebammenstudenten nutzen nun aktiv die von mir entwickelte Plattform in ihrer offiziellen Ausbildung.",
+                      content: [
+                          "MidwifeXR auf dem Lehrplan",
+                          "Als Teil ihrer offiziellen Ausbildung haben Hebammenstudenten nun unsere Plattform MidwifeXR direkt in ihren Unterricht integriert.",
+                          "Während ihres Kurses über unkompliziertes Stillen nutzten die Studenten die Anwendung, um über immersive Szenarien Stillberatung zu erhalten. Ein starkes Beispiel dafür, wie immersive Technologie in der Praxis einen echten Unterschied machen kann."
+                      ] },
+                it: { tag: 'Highlight', title: 'Piattaforma XR integrata nel curriculum ufficiale', subtitle: 'University College Copenhagen (KP)', desc: "Un momento di orgoglio: gli studenti di ostetricia ora utilizzano attivamente la piattaforma che ho costruito nella loro istruzione ufficiale.",
+                      content: [
+                          "MidwifeXR sul programma",
+                          "Come parte della loro formazione ufficiale, gli studenti di ostetricia hanno ora integrato la nostra piattaforma, MidwifeXR, direttamente nel loro insegnamento.",
+                          "Durante il loro corso sull'allattamento al seno, gli studenti hanno utilizzato l'applicazione per ricevere indicazioni tramite scenari immersivi. È un forte esempio di come la tecnologia immersiva possa fare una vera differenza nella pratica."
+                      ] },
+                fr: { tag: 'Highlight', title: 'Plateforme XR intégrée au programme officiel', subtitle: 'University College Copenhagen (KP)', desc: "Un moment de fierté : les étudiants en maïeutique utilisent désormais activement la plateforme que j'ai construite dans leur formation officielle.",
+                      content: [
+                          "MidwifeXR au programme",
+                          "Dans le cadre de leur formation officielle, les étudiants en maïeutique ont désormais intégré notre plateforme, MidwifeXR, directement dans leur enseignement.",
+                          "Lors de leur cours sur l'allaitement, les étudiants ont utilisé l'application pour recevoir des conseils via des scénarios immersifs. C'est un exemple fort de la façon dont la technologie immersive peut faire une réelle différence dans la pratique."
+                      ] }
+            },
+            'press-berlingske': {
+                en: { tag: 'Press', title: 'Berlingske: VR startup solves problems for parents', subtitle: 'Spatial Computing relieves maternity wards.', desc: "In a major interview with Berlingske, my co-founder discusses the vision behind MidwifeVR and how we use technology to tackle staff shortages.",
+                      content: [
+                          "Technology meets a pressured healthcare system",
+                          "Sore breasts, milk that doesn't flow, and critical staff shortages on Danish maternity wards. These are just some of the challenges new mothers face.",
+                          "In this interview, Berlingske focuses on how we at MidwifeVR have entered the fight to solve these problems through immersive, easily accessible VR training, which I designed and built from scratch."
+                      ] },
+                da: { tag: 'Press', title: 'Berlingske: VR-startup løser problemer for forældre', subtitle: 'Spatial Computing aflaster fødegangene.', desc: "I et stort interview med Berlingske fortæller min co-founder om visionen bag MidwifeVR, og hvordan vi bruger teknologi til at tackle personalemanglen.",
+                      content: [
+                          "Teknologi møder et presset sundhedsvæsen",
+                          "Ømme bryster, mælk der ikke løber til, og kritisk personalemangel på de danske fødeafdelinger. Det er blot nogle af de udfordringer, nybagte mødre står med.",
+                          "I dette interview sætter Berlingske fokus på, hvordan vi med MidwifeVR er gået ind i kampen for at løse disse problemer gennem fordybende, lettilgængelig VR-træning, som jeg har designet og bygget fra bunden."
+                      ] },
+                de: { tag: 'Presse', title: 'Berlingske: VR-Startup löst Probleme für Eltern', subtitle: 'Spatial Computing entlastet Entbindungsstationen.', desc: "In einem großen Interview mit Berlingske spricht mein Mitbegründer über die Vision hinter MidwifeVR und wie wir Technologie nutzen.",
+                      content: [
+                          "Technologie trifft auf ein unter Druck stehendes Gesundheitssystem",
+                          "Wunde Brüste, Milch, die nicht fließt, und kritischer Personalmangel. Das sind nur einige der Herausforderungen, denen sich frischgebackene Mütter gegenübersehen.",
+                          "In diesem Interview konzentriert sich Berlingske darauf, wie wir bei MidwifeVR den Kampf aufgenommen haben, um diese Probleme durch immersives VR-Training zu lösen, das ich von Grund auf neu entwickelt habe."
+                      ] },
+                it: { tag: 'Stampa', title: 'Berlingske: La startup VR risolve i problemi per i genitori', subtitle: 'Lo Spatial Computing allevia i reparti di maternità.', desc: "In una grande intervista a Berlingske, il mio co-fondatore discute la visione dietro MidwifeVR.",
+                      content: [
+                          "La tecnologia incontra un sistema sanitario sotto pressione",
+                          "Seni doloranti, latte che non scorre e carenza critica di personale. Queste sono solo alcune delle sfide.",
+                          "In questa intervista, Berlingske si concentra su come noi di MidwifeVR siamo entrati in campo per risolvere questi problemi attraverso una formazione VR immersiva, che ho progettato e costruito da zero."
+                      ] },
+                fr: { tag: 'Presse', title: 'Berlingske: Une startup VR résout les problèmes des parents', subtitle: 'L\'informatique spatiale soulage les maternités.', desc: "Dans une grande interview avec Berlingske, mon co-fondateur discute de la vision derrière MidwifeVR.",
+                      content: [
+                          "La technologie rencontre un système de santé sous pression",
+                          "Des seins douloureux, du lait qui ne coule pas et une pénurie critique de personnel. Ce ne sont là que quelques-uns des défis.",
+                          "Dans cette interview, Berlingske se concentre sur la façon dont nous, chez MidwifeVR, sommes entrés dans la lutte pour résoudre ces problèmes grâce à une formation VR immersive, que j'ai conçue et construite à partir de zéro."
+                      ] }
+            },
+            'media-24victoria': {
+                en: { tag: 'Press', title: 'New horizons for future hospitals', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In this segment, we focus on how I collaborate with Herlev Hospital to integrate spatial computing into daily clinical life.",
+                      content: [
+                          "Morten Haulik is the founder of NXT/WebXR and collaborates with Herlev Hospital to integrate XR technology into everyday life.",
+                          "I have worked professionally with the VR and AR industry for a decade. In the feature, we discuss how Europe lags behind Asia when it comes to utilizing the latest technology, and how we can specifically free up massive resources in hospitals through immersive solutions."
+                      ] },
+                da: { tag: 'Presse', title: 'Nye horisonter for fremtidens hospitaler', subtitle: 'NXTWebXR x Herlev Hospital', desc: "I dette indslag sætter vi fokus på, hvordan jeg samarbejder med Herlev Hospital om at integrere spatial computing i den kliniske dagligdag.",
+                      content: [
+                          "Morten Haulik er founder af NXT/WebXR og samarbejder med Herlev Hospital om at integrere XR-teknologien i dagligdagen.",
+                          "Jeg har arbejdet professionelt med VR- og AR-industrien i et årti. I indslaget diskuterer vi, hvordan Europa halter efter Asien, når det kommer til at udnytte den nyeste teknologi, og hvordan vi konkret kan frigøre massive ressourcer på eksempelvis hospitaler gennem immersive løsninger."
+                      ] },
+                de: { tag: 'Presse', title: 'Neue Horizonte für zukünftige Krankenhäuser', subtitle: 'NXTWebXR x Herlev Krankenhaus', desc: "In diesem Beitrag konzentrieren wir uns darauf, wie ich mit dem Herlev-Krankenhaus zusammenarbeite.",
+                      content: [
+                          "Morten Haulik ist der Gründer von NXT/WebXR und arbeitet mit dem Herlev Hospital zusammen.",
+                          "Ich arbeite seit einem Jahrzehnt professionell mit der VR- und AR-Branche zusammen. In dem Feature diskutieren wir, wie Europa hinter Asien zurückbleibt und wie wir durch immersive Lösungen gezielt massive Ressourcen in Krankenhäusern freisetzen können."
+                      ] },
+                it: { tag: 'Stampa', title: 'Nuovi orizzonti per gli ospedali del futuro', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In questo segmento, ci concentriamo su come collaboro con l'Herlev Hospital per integrare lo spatial computing.",
+                      content: [
+                          "Morten Haulik è il fondatore di NXT/WebXR e collabora con l'Herlev Hospital.",
+                          "Lavoro professionalmente con l'industria VR e AR da un decennio. Nel servizio discutiamo di come l'Europa sia in ritardo rispetto all'Asia e di come possiamo liberare massicce risorse negli ospedali attraverso soluzioni immersive."
+                      ] },
+                fr: { tag: 'Presse', title: 'Nouveaux horizons pour les hôpitaux du futur', subtitle: 'NXTWebXR x Herlev Hospital', desc: "Dans ce segment, nous nous concentrons sur la façon dont je collabore avec l'hôpital Herlev pour intégrer l'informatique spatiale.",
+                      content: [
+                          "Morten Haulik est le fondateur de NXT/WebXR et collabore avec l'hôpital Herlev.",
+                          "Je travaille professionnellement avec l'industrie de la VR et de l'AR depuis une décennie. Dans le reportage, nous discutons de la façon dont l'Europe est à la traîne de l'Asie et de la façon dont nous pouvons libérer des ressources massives dans les hôpitaux grâce à des solutions immersives."
+                      ] }
+            },
+            'project-nxt': {
+                en: { tag: 'Project', title: 'NXT/WebXR Platform', subtitle: 'The front page of the spatial internet.', desc: "Can discovering immersive content be as seamless as browsing the web? That is the challenge I solved with NXT/WebXR.",
+                      content: [
+                          "Can discovering immersive content be as seamless as browsing the web? That is the challenge I solved with NXT/WebXR. Today, it stands as one of the world's leading spatial computing platforms.",
+                          "Every single day, users from all over the globe visit NXT/WebXR to browse through immersive experiences and games directly from their headsets. No app stores, no friction—just instant access to making memories and finding new favorite content on the spatial internet."
+                      ] },
+                da: { tag: 'Projekt', title: 'NXT/WebXR Platform', subtitle: 'Forsiden til det rummelige internet.', desc: "Kan opdagelsen af immersivt indhold være lige så gnidningsløst som at browse nettet? Det løste jeg med NXT/WebXR.",
+                      content: [
+                          "Kan opdagelsen af immersivt indhold være lige så gnidningsløst som at browse nettet? Det er den udfordring, jeg løste med NXT/WebXR. I dag står den som en af verdens førende spatial computing-platforme.",
+                          "Hver eneste dag besøger brugere fra hele kloden NXT/WebXR for at browse gennem immersive oplevelser og spil direkte fra deres headsets. Ingen app stores, ingen friktion – bare øjeblikkelig adgang til at skabe minder og finde nyt yndlingsindhold på det rummelige internet."
+                      ] },
+                de: { tag: 'Projekt', title: 'NXT/WebXR Plattform', subtitle: 'Die Startseite des räumlichen Internets.', desc: "Kann die Entdeckung immersiver Inhalte so nahtlos sein wie das Surfen im Internet? Das habe ich mit NXT/WebXR gelöst.",
+                      content: [
+                          "Kann die Entdeckung immersiver Inhalte so nahtlos sein wie das Surfen im Internet? Das ist die Herausforderung, die ich mit NXT/WebXR gelöst habe. Heute ist es eine der weltweit führenden Spatial Computing Plattformen.",
+                          "Jeden Tag besuchen Benutzer aus der ganzen Welt NXT/WebXR, um immersive Erlebnisse direkt von ihren Headsets aus zu durchsuchen. Keine App-Stores, keine Reibung."
+                      ] },
+                it: { tag: 'Progetto', title: 'Piattaforma NXT/WebXR', subtitle: 'La prima pagina dell\'internet spaziale.', desc: "La scoperta di contenuti immersivi può essere fluida come navigare sul web? Questa è la sfida che ho risolto con NXT/WebXR.",
+                      content: [
+                          "La scoperta di contenuti immersivi può essere fluida come navigare sul web? Questa è la sfida che ho risolto con NXT/WebXR. Oggi è una delle principali piattaforme di spatial computing al mondo.",
+                          "Ogni singolo giorno, utenti da tutto il mondo visitano NXT/WebXR per sfogliare esperienze immersive e giochi direttamente dai loro visori. Nessun app store, nessuna frizione."
+                      ] },
+                fr: { tag: 'Projet', title: 'Plateforme NXT/WebXR', subtitle: 'La page d\'accueil de l\'internet spatial.', desc: "La découverte de contenu immersif peut-elle être aussi fluide que la navigation sur le web ? C'est le défi que j'ai relevé avec NXT/WebXR.",
+                      content: [
+                          "La découverte de contenu immersif peut-elle être aussi fluide que la navigation sur le web ? C'est le défi que j'ai relevé avec NXT/WebXR. Aujourd'hui, elle s'impose comme l'une des principales plateformes d'informatique spatiale au monde.",
+                          "Chaque jour, des utilisateurs du monde entier visitent NXT/WebXR pour parcourir des expériences immersives et des jeux directement depuis leurs casques. Pas d'app stores, pas de friction."
+                      ] }
+            },
+            'podcast-apple': {
+                en: { tag: 'Podcast', title: 'The Apple Glasses in Pilestræde', subtitle: 'Berlingske Podcast: Apple Vision Pro Analysis', desc: "I was invited into the studio at Berlingske to give my expert opinion on Apple's massive entry into spatial computing.",
+                      quote: "»You've never seen anything like it,« promised Apple boss Tim Cook. But as a tech pioneer, I have a more nuanced view of the hardware.",
+                      content: [
+                          "When Apple presented Vision Pro – the headset that breaks down the boundary between physical and digital reality – they promised a revolution.",
+                          "In the podcast, I explain why the headset is not (yet) a consumer revolution on par with the first iPhone. However, it is the ultimate developer platform for creating the immersive content of the future. I guested the program to cut through the hype."
+                      ] },
+                da: { tag: 'Podcast', title: 'Æblebrillen i Pilestræde', subtitle: 'Berlingske Podcast: Apple Vision Pro Analyse', desc: "Jeg var inviteret i studiet hos Kaare Svejstrup på Berlingske for at give mit ekspertbesyv på Apples massive indtog i spatial computing.",
+                      quote: "»Du har aldrig set noget lignende,« lovede Apple-boss Tim Cook. Men som tech-pioner og XR-udvikler har jeg et mere nuanceret blik på hardwaren.",
+                      content: [
+                          "Da Apple præsenterede Vision Pro – headsettet der nedbryder grænsen mellem den fysiske og digitale virkelighed – lovede de en revolution.",
+                          "I podcasten forklarer jeg, hvorfor headsettet (endnu) ikke er en forbruger-revolution på linje med den første iPhone. Til gengæld er det den ultimative udvikler-platform til at skabe fremtidens immersive indhold. Jeg gæstede programmet for at skære igennem hypen og give lytterne det ægte billede af fremtidens rummelige computere."
+                      ] },
+                de: { tag: 'Podcast', title: 'Die Apple-Brille in Pilestræde', subtitle: 'Berlingske Podcast: Apple Vision Pro Analyse', desc: "Ich war ins Studio bei Berlingske eingeladen, um meine Expertenmeinung zu Apples massivem Einstieg in das Spatial Computing abzugeben.",
+                      quote: "»So etwas haben Sie noch nie gesehen«, versprach Apple-Chef Tim Cook. Aber als Tech-Pionier habe ich eine differenziertere Sicht auf die Hardware.",
+                      content: [
+                          "Als Apple Vision Pro vorstellte, versprachen sie eine Revolution.",
+                          "Im Podcast erkläre ich, warum das Headset (noch) keine Verbraucherrevolution auf Augenhöhe mit dem ersten iPhone ist. Es ist jedoch die ultimative Entwicklerplattform."
+                      ] },
+                it: { tag: 'Podcast', title: 'Gli occhiali Apple a Pilestræde', subtitle: 'Berlingske Podcast: Analisi Apple Vision Pro', desc: "Sono stato invitato in studio al Berlingske per dare la mia opinione di esperto sul massiccio ingresso di Apple nello spatial computing.",
+                      quote: "»Non hai mai visto niente del genere«, ha promesso il capo di Apple Tim Cook. Ma come pioniere della tecnologia, ho una visione più sfumata.",
+                      content: [
+                          "Quando Apple ha presentato Vision Pro, ha promesso una rivoluzione.",
+                          "Nel podcast, spiego perché il visore non è (ancora) una rivoluzione per i consumatori alla pari del primo iPhone. Tuttavia, è l'ultima piattaforma di sviluppo."
+                      ] },
+                fr: { tag: 'Podcast', title: 'Les lunettes Apple à Pilestræde', subtitle: 'Podcast Berlingske : Analyse Apple Vision Pro', desc: "J'ai été invité en studio au Berlingske pour donner mon avis d'expert sur l'entrée massive d'Apple dans l'informatique spatiale.",
+                      quote: "»Vous n'avez jamais rien vu de tel«, a promis le patron d'Apple, Tim Cook. Mais en tant que pionnier de la technologie, j'ai une vision plus nuancée.",
+                      content: [
+                          "Lorsqu'Apple a présenté Vision Pro, ils ont promis une révolution.",
+                          "Dans le podcast, j'explique pourquoi le casque n'est pas (encore) une révolution grand public au même titre que le premier iPhone. Cependant, c'est la plateforme de développement ultime."
+                      ] }
+            },
+            'panel-sound': {
+                en: { tag: 'Panel', title: 'The Sound of XR', subtitle: 'Future Sound Forum • Danish Sound Cluster', desc: "Invited as a panelist to share my knowledge about spatial computing together with representatives from Bang & Olufsen.",
+                      content: [
+                          "The Future Sound Forum",
+                          "I was invited as a panelist to share my experiences with spatial computing on stage alongside leading profiles from, among others, Bang & Olufsen. We discussed in depth how spatial audio plays an absolutely crucial role for presence in the creation of immersive worlds and future experiences."
+                      ] },
+                da: { tag: 'Panel', title: 'The Sound of XR', subtitle: 'Future Sound Forum • Danish Sound Cluster', desc: "Inviteret som paneldeltager for at dele min viden om spatial computing sammen med repræsentanter fra bl.a. Bang & Olufsen.",
+                      content: [
+                          "The Future Sound Forum",
+                          "Jeg var inviteret som paneldeltager for at dele mine erfaringer med spatial computing på scenen sammen med førende profiler fra bl.a. Bang & Olufsen. Vi diskuterede indgående, hvordan rummelig lyd spiller en fuldstændig afgørende rolle for tilstedeværelsen (presence) i skabelsen af immersive verdener og fremtidens oplevelser."
+                      ] },
+                de: { tag: 'Panel', title: 'Der Sound von XR', subtitle: 'Future Sound Forum • Danish Sound Cluster', desc: "Eingeladen als Diskussionsteilnehmer, um mein Wissen über Spatial Computing zusammen mit Vertretern von Bang & Olufsen zu teilen.",
+                      content: [
+                          "The Future Sound Forum",
+                          "Ich war als Diskussionsteilnehmer eingeladen, um meine Erfahrungen mit Spatial Computing auf der Bühne zusammen mit führenden Profilen von unter anderem Bang & Olufsen zu teilen. Wir haben ausführlich darüber diskutiert, wie räumlicher Klang eine entscheidende Rolle für die Präsenz in immersiven Welten spielt."
+                      ] },
+                it: { tag: 'Panel', title: 'Il suono dell\'XR', subtitle: 'Future Sound Forum • Danish Sound Cluster', desc: "Invitato come relatore per condividere le mie conoscenze sullo spatial computing insieme ai rappresentanti di Bang & Olufsen.",
+                      content: [
+                          "The Future Sound Forum",
+                          "Sono stato invitato come relatore per condividere le mie esperienze con lo spatial computing sul palco insieme a profili di spicco di Bang & Olufsen. Abbiamo discusso approfonditamente di come l'audio spaziale giochi un ruolo cruciale per la presenza in mondi immersivi."
+                      ] },
+                fr: { tag: 'Panel', title: 'Le son de la XR', subtitle: 'Future Sound Forum • Danish Sound Cluster', desc: "Invité en tant que panéliste pour partager mes connaissances sur l'informatique spatiale avec des représentants de Bang & Olufsen.",
+                      content: [
+                          "The Future Sound Forum",
+                          "J'ai été invité en tant que panéliste pour partager mes expériences avec l'informatique spatiale sur scène aux côtés de profils de premier plan de Bang & Olufsen. Nous avons discuté en profondeur de la manière dont l'audio spatial joue un rôle crucial pour la présence dans les mondes immersifs."
+                      ] }
+            },
+            'press-kulturmagasinet': {
+                en: { tag: 'Podcast', title: 'XR in Kulturmagasinet', subtitle: 'What will Apple Vision Pro mean?', desc: "Together with Christiane Vejlø, I visited Radio4 to analyze the impact spatial computing will have on the cultural industry.",
+                      content: [
+                          "I visited Radio4's Kulturmagasinet together with tech expert Christiane Vejlø to analyze what influence Apple Vision Pro will have on the cultural industry.",
+                          "Spoiler alert: I emphasize that although spatial computing is undoubtedly the future, we are in a phase where the hardware is primarily an invaluable tool for developers. Someone has to build the foundation and fill up the spatial internet before the big mainstream breakthrough hits the ordinary consumer. That is exactly what we are doing now."
+                      ] },
+                da: { tag: 'Podcast', title: 'XR i Kulturmagasinet', subtitle: 'Hvad kommer Apple Vision Pro til at betyde?', desc: "Sammen med Christiane Vejlø besøgte jeg Radio4 for at analysere, hvilken indflydelse spatial computing får på kulturindustrien.",
+                      content: [
+                          "Jeg besøgte Radio4's Kulturmagasinet sammen med tech-ekspert Christiane Vejlø for at analysere, hvilken indflydelse Apple Vision Pro får for kulturindustrien.",
+                          "Spoiler alert: Jeg fremhæver, at selvom spatial computing utvivlsomt er fremtiden, er vi i en fase, hvor hardwaren primært er et uvurderligt værktøj for udviklere. Det handler om at give os adgang til mediet, så vi kan skabe og forme indholdet. Nogen skal jo bygge fundamentet og fylde det rummelige internet op, før det store mainstream-gennembrud rammer den almindelige forbruger. Det er netop dét, vi gør nu."
+                      ] },
+                de: { tag: 'Podcast', title: 'XR im Kulturmagasinet', subtitle: 'Was wird Apple Vision Pro bedeuten?', desc: "Zusammen mit Christiane Vejlø besuchte ich Radio4, um die Auswirkungen von Spatial Computing auf die Kulturindustrie zu analysieren.",
+                      content: [
+                          "Ich besuchte Radio4s Kulturmagasinet zusammen mit der Tech-Expertin Christiane Vejlø, um zu analysieren, welchen Einfluss Apple Vision Pro auf die Kulturindustrie haben wird.",
+                          "Spoiler-Alarm: Ich betone, dass Spatial Computing zweifellos die Zukunft ist, wir uns aber in einer Phase befinden, in der die Hardware in erster Linie ein Werkzeug für Entwickler ist. Jemand muss das Fundament bauen, bevor der große Durchbruch kommt. Genau das tun wir jetzt."
+                      ] },
+                it: { tag: 'Podcast', title: 'XR nel Kulturmagasinet', subtitle: 'Cosa significherà Apple Vision Pro?', desc: "Insieme a Christiane Vejlø, ho visitato Radio4 per analizzare l'impatto che lo spatial computing avrà sull'industria culturale.",
+                      content: [
+                          "Ho visitato il Kulturmagasinet di Radio4 insieme all'esperta di tecnologia Christiane Vejlø per analizzare quale influenza avrà Apple Vision Pro sull'industria culturale.",
+                          "Spoiler alert: sottolineo che sebbene lo spatial computing sia senza dubbio il futuro, siamo in una fase in cui l'hardware è principalmente uno strumento inestimabile per gli sviluppatori. Qualcuno deve costruire le fondamenta prima che avvenga la grande svolta mainstream. Questo è esattamente ciò che stiamo facendo ora."
+                      ] },
+                fr: { tag: 'Podcast', title: 'XR dans le Kulturmagasinet', subtitle: 'Que signifiera Apple Vision Pro ?', desc: "Avec Christiane Vejlø, j'ai visité Radio4 pour analyser l'impact de l'informatique spatiale sur l'industrie culturelle.",
+                      content: [
+                          "J'ai visité le Kulturmagasinet de Radio4 avec l'experte en technologie Christiane Vejlø pour analyser l'influence qu'aura Apple Vision Pro sur l'industrie culturelle.",
+                          "Alerte spoiler : je souligne que bien que l'informatique spatiale soit sans aucun doute l'avenir, nous sommes dans une phase où le matériel est principalement un outil inestimable pour les développeurs. Quelqu'un doit construire les fondations avant que la grande percée grand public n'arrive. C'est exactement ce que nous faisons maintenant."
+                      ] }
+            },
+            'blog-webxr': {
+                en: { tag: 'Article', title: 'Why WebXR is the Next Platform', subtitle: 'The URL is the Portal', desc: "The App Store model is broken for immersive tech. The open web offers the only scalable, permissionless distribution channel.",
+                      quote: "Spatial computing won't be installed. It will be visited.",
+                      content: [
+                          "The App Store model is broken for spatial computing. The open web offers the only scalable, permissionless distribution channel for immersive content. We need to stop thinking about 'apps' and start thinking about 'destinations'.",
+                          "The magic of WebXR is that you don't 'download' an experience. You just click a link and you're there. The URL is the portal. This creates seamless traversal between experiences built by different developers.",
+                          "WebXR is fully cross-platform, available out of the box on all modern headsets. Furthermore, you can host everything yourself, pushing the power out to the developers and organizations and away from the rigid control of big tech platforms.",
+                          "With the advent of WebGPU, we are finally seeing graphics performance in the browser that rivals native applications. The barrier to entry is crumbling.",
+                          "This paradigm shift requires a fundamental rethinking of how we design interfaces. Flat screens are windows; XR is a door."
+                      ] },
+                da: { tag: 'Artikel', title: 'Why WebXR is the Next Platform', subtitle: 'The URL is the Portal', desc: "App Store-modellen er i stykker for immersiv teknologi. Det åbne web tilbyder den eneste skalerbare, tilladelsesfrie distributionskanal.",
+                      quote: "Spatial computing won't be installed. It will be visited.",
+                      content: [
+                          "App Store-modellen er i stykker for spatial computing. Det åbne web tilbyder den eneste skalerbare, tilladelsesfrie distributionskanal for immersivt indhold. Vi er nødt til at stoppe med at tænke på 'apps' og begynde at tænke på 'destinationer'.",
+                          "Magien ved WebXR er, at du ikke 'downloader' en oplevelse. Du klikker bare på et link, og du er der. URL'en er portalen. Dette skaber sømløs overgang mellem oplevelser bygget af forskellige udviklere.",
+                          "WebXR er fuldt cross-platform, tilgængeligt out-of-the-box på alle moderne headsets. Desuden kan du hoste alt selv, hvilket skubber magten ud til udviklerne og væk fra big tech.",
+                          "Med WebGPU ser vi endelig grafikydelse i browseren, der rivaliserer native applikationer. Adgangsbarrieren smuldrer.",
+                          "Dette paradigmeskift kræver en grundlæggende nytænkning af, hvordan vi designer grænseflader. Flade skærme er vinduer; XR er en dør."
+                      ] },
+                de: { tag: 'Artikel', title: 'Warum WebXR die nächste Plattform ist', subtitle: 'Die URL ist das Portal', desc: "Das App Store Modell ist für immersive Technologien kaputt. Das offene Web bietet den einzigen skalierbaren Vertriebskanal.",
+                      quote: "Spatial Computing wird nicht installiert. Es wird besucht.",
+                      content: [
+                          "Das App Store Modell ist kaputt. Das offene Web bietet den einzigen skalierbaren Vertriebskanal für immersive Inhalte.",
+                          "Die Magie von WebXR ist, dass Sie kein Erlebnis 'herunterladen'. Sie klicken einfach auf einen Link und sind da. Die URL ist das Portal.",
+                          "WebXR ist plattformübergreifend. Mit dem Aufkommen von WebGPU sehen wir endlich eine Grafikleistung im Browser, die mit nativen Anwendungen konkurriert.",
+                          "Dieser Paradigmenwechsel erfordert ein grundlegendes Umdenken. Flachbildschirme sind Fenster; XR ist eine Tür."
+                      ] },
+                it: { tag: 'Articolo', title: 'Perché WebXR è la prossima piattaforma', subtitle: 'L\'URL è il portale', desc: "Il modello App Store è rotto per la tecnologia immersiva. Il web aperto offre l'unico canale di distribuzione scalabile.",
+                      quote: "Lo spatial computing non sarà installato. Sarà visitato.",
+                      content: [
+                          "Il modello App Store è rotto. Il web aperto offre l'unico canale di distribuzione scalabile per i contenuti immersivi.",
+                          "La magia del WebXR è che non 'scarichi' un'esperienza. Clicchi su un link e ci sei. L'URL è il portale.",
+                          "WebXR è multipiattaforma. Con l'avvento di WebGPU, vediamo finalmente prestazioni grafiche nel browser in grado di rivaleggiare con le applicazioni native.",
+                          "Questo cambio di paradigma richiede un ripensamento fondamentale. Gli schermi piatti sono finestre; L'XR è una porta."
+                      ] },
+                fr: { tag: 'Article', title: 'Pourquoi WebXR est la prochaine plateforme', subtitle: 'L\'URL est le portail', desc: "Le modèle App Store est cassé pour la technologie immersive. Le web ouvert offre le seul canal de distribution évolutif.",
+                      quote: "L'informatique spatiale ne sera pas installée. Elle sera visitée.",
+                      content: [
+                          "Le modèle App Store est cassé. Le web ouvert offre le seul canal de distribution évolutif pour le contenu immersif.",
+                          "La magie du WebXR est que vous ne 'téléchargez' pas une expérience. Vous cliquez sur un lien et vous y êtes. L'URL est le portail.",
+                          "WebXR est multiplateforme. Avec l'avènement du WebGPU, nous voyons enfin des performances graphiques dans le navigateur qui rivalisent avec les applications natives.",
+                          "Ce changement de paradigme nécessite une refonte fondamentale. Les écrans plats sont des fenêtres ; la XR est une porte."
+                      ] }
+            },
+            'press-midwife': {
+                en: { tag: 'Press', title: 'The Birth of MidwifeVR', subtitle: 'CBS Wire Interview', desc: "\"I met a recently graduated midwife who was on the brink of tears... That’s how I decided to build MidwifeVR.\" Interview with CBS Wire.",
+                      content: [
+                          "How my spatial computing expertise sparked a new startup",
+                          "From my interview with CBS Wire on how I founded MidwifeVR:"
+                      ],
+                      quote: "I had been working with immersive technology for years when I met a recently graduated midwife at a party. She was on the brink of tears because the critical lack of staff meant she felt she couldn’t give new parents the right guidance... Knowing the power of simulation training, I saw a clear opportunity. I decided to take crucial maternity training, build it into an immersive application, and make it available for parents 24/7."
+                },
+                da: { tag: 'Presse', title: 'The Birth of MidwifeVR', subtitle: 'CBS Wire Interview', desc: "\"Jeg mødte en nyuddannet jordemoder, der var på grænsen til tårer... Sådan besluttede jeg at bygge MidwifeVR.\" Interview med CBS Wire.",
+                      content: [
+                          "Hvordan min spatial computing-ekspertise udløste en ny startup",
+                          "Fra mit interview med CBS Wire om, hvordan jeg stiftede MidwifeVR:"
+                      ],
+                      quote: "Jeg havde arbejdet med immersiv teknologi i årevis, da jeg mødte en nyuddannet jordemoder til en fest. Hun var på grænsen til tårer, fordi den kritiske personalemangel betød, at hun følte, hun ikke kunne give nybagte forældre den rette vejledning... Da jeg kendte styrken ved simulationstræning, så jeg en klar mulighed. Jeg besluttede at tage afgørende barselstræning, bygge det ind i en immersiv applikation og gøre det tilgængeligt for forældre 24/7."
+                },
+                de: { tag: 'Presse', title: 'Die Geburt von MidwifeVR', subtitle: 'CBS Wire Interview', desc: "\"Ich traf eine frisch gebackene Hebamme, die den Tränen nahe war... So beschloss ich, MidwifeVR zu bauen.\" Interview mit CBS Wire.",
+                      content: [
+                          "Wie meine Spatial-Computing-Expertise ein neues Startup auslöste",
+                          "Aus meinem Interview mit CBS Wire:"
+                      ],
+                      quote: "Ich arbeitete seit Jahren mit immersiver Technologie, als ich eine Hebamme traf, die den Tränen nahe war, weil der Personalmangel bedeutete, dass sie jungen Eltern nicht die richtige Anleitung geben konnte. Ich sah eine klare Chance und baute eine immersive Anwendung für Eltern."
+                },
+                it: { tag: 'Stampa', title: 'La nascita di MidwifeVR', subtitle: 'Intervista CBS Wire', desc: "\"Ho incontrato un'ostetrica appena laureata che era sull'orlo delle lacrime... È così che ho deciso di costruire MidwifeVR.\" Intervista con CBS Wire.",
+                      content: [
+                          "Come la mia esperienza nello spatial computing ha dato vita a una nuova startup",
+                          "Dalla mia intervista con CBS Wire:"
+                      ],
+                      quote: "Lavoravo con la tecnologia immersiva da anni quando ho incontrato un'ostetrica che era sull'orlo delle lacrime perché la carenza di personale le impediva di dare la giusta guida ai neo genitori. Ho visto una chiara opportunità e ho costruito un'applicazione immersiva per i genitori."
+                },
+                fr: { tag: 'Presse', title: 'La naissance de MidwifeVR', subtitle: 'Interview CBS Wire', desc: "\"J'ai rencontré une sage-femme récemment diplômée qui était au bord des larmes... C'est ainsi que j'ai décidé de créer MidwifeVR.\" Interview avec CBS Wire.",
+                      content: [
+                          "Comment mon expertise en informatique spatiale a déclenché une nouvelle startup",
+                          "Extrait de mon interview avec CBS Wire :"
+                      ],
+                      quote: "Je travaillais avec la technologie immersive depuis des années lorsque j'ai rencontré une sage-femme au bord des larmes parce que le manque de personnel l'empêchait de donner les bons conseils aux nouveaux parents. J'ai vu une opportunité claire et j'ai construit une application immersive pour les parents."
+                }
+            },
+            'project-sendtoquest': {
+                en: { tag: 'Project', title: 'SendToQuest.Com', subtitle: 'A beloved utility tool for spatial users', desc: "I built SendToQuest to save users hours of frustration. Instantly open WebXR on multiple headsets simultaneously.",
+                      content: [
+                          "SendToQuest solves a massive friction point in the hardware ecosystem, saving users time and frustration every single day.",
+                          "Whether it is a solo user who simply wants to open a specific destination on their headset, or a fleet operator needing to launch an immersive experience across 30 headsets at once, my tool handles it seamlessly.",
+                          "Today, SendToQuest is used and loved daily by spatial computing users all over the globe."
+                      ] },
+                da: { tag: 'Projekt', title: 'SendToQuest.Com', subtitle: 'Et elsket værktøj for XR brugere', desc: "Jeg byggede SendToQuest for at spare brugere for timer med frustration. Åbn WebXR øjeblikkeligt på flere headsets på samme tid.",
+                      content: [
+                          "SendToQuest løser et massivt friktionspunkt i hardware-økosystemet og sparer brugere tid og frustration hver eneste dag.",
+                          "Uanset om det er en solo-bruger, der blot ønsker at åbne en specifik destination på deres headset, eller en flådeoperatør, der har brug for at launche en immersiv oplevelse på tværs af 30 headsets på én gang, håndterer mit værktøj det problemfrit.",
+                          "I dag bruges og elskes SendToQuest dagligt af spatial computing-brugere over hele kloden."
+                      ] },
+                de: { tag: 'Projekt', title: 'SendToQuest.Com', subtitle: 'Ein beliebtes Werkzeug für XR-Nutzer', desc: "Ich habe SendToQuest entwickelt, um Frustrationen zu sparen. Öffnet WebXR sofort auf mehreren Headsets gleichzeitig.",
+                      content: [
+                          "SendToQuest löst einen massiven Reibungspunkt im Hardware-Ökosystem und spart Benutzern jeden Tag Zeit und Frustration.",
+                          "Egal, ob es sich um einen Solo-Benutzer handelt oder um einen Flottenbetreiber, der ein immersives Erlebnis über 30 Headsets gleichzeitig starten muss, mein Tool erledigt dies nahtlos.",
+                          "Heute wird SendToQuest täglich von Spatial Computing-Benutzern auf der ganzen Welt genutzt und geliebt."
+                      ] },
+                it: { tag: 'Progetto', title: 'SendToQuest.Com', subtitle: 'Uno strumento amato dagli utenti XR', desc: "Ho creato SendToQuest per far risparmiare ore di frustrazione. Apri WebXR istantaneamente su più visori contemporaneamente.",
+                      content: [
+                          "SendToQuest risolve un enorme punto di attrito nell'ecosistema hardware, facendo risparmiare tempo e frustrazione agli utenti ogni giorno.",
+                          "Che si tratti di un utente singolo o di un operatore di flotta che deve lanciare un'esperienza immersiva su 30 visori contemporaneamente, il mio strumento lo gestisce senza problemi.",
+                          "Oggi SendToQuest è utilizzato e amato quotidianamente dagli utenti di spatial computing in tutto il mondo."
+                      ] },
+                fr: { tag: 'Projet', title: 'SendToQuest.Com', subtitle: 'Un outil apprécié par les utilisateurs XR', desc: "J'ai créé SendToQuest pour éviter des heures de frustration. Ouvrez WebXR instantanément sur plusieurs casques simultanément.",
+                      content: [
+                          "SendToQuest résout un point de friction massif dans l'écosystème matériel, faisant gagner du temps aux utilisateurs chaque jour.",
+                          "Qu'il s'agisse d'un utilisateur solo ou d'un opérateur de flotte devant lancer une expérience immersive sur 30 casques à la fois, mon outil gère cela de manière transparente.",
+                          "Aujourd'hui, SendToQuest est utilisé et apprécié quotidiennement par les utilisateurs d'informatique spatiale dans le monde entier."
+                      ] }
+            },
+            'goggle-scotty': {
+                en: { tag: 'Flashback', title: 'Goggle me up Scotty!', subtitle: 'The Copenhagen Post (2017)', desc: "In 2017, The Copenhagen Post caught up with me to discuss my vision for immersive technology as 'the final frontier'.",
+                      content: [
+                          "An early but important retrospective.",
+                          "The Copenhagen Post highlighted the massive potential of the Copenhagen tech scene, and I helped predict the technological revolution that lay ahead. It's a fascinating look at the early visions for spatial computing that I have since spent years realizing and building in practice."
+                      ] },
+                da: { tag: 'Flashback', title: 'Goggle me up Scotty!', subtitle: 'The Copenhagen Post (2017)', desc: "I 2017 fangede The Copenhagen Post mig til en snak om min vision for fordybende teknologi som 'the final frontier'.",
+                      content: [
+                          "Et tidligt, men vigtigt tilbageblik.",
+                          "The Copenhagen Post satte fokus på det massive potentiale i den københavnske tech-scene, og jeg var med til at spå om den teknologiske revolution, der ventede forude. Det er et fascinerende kig på de tidlige visioner for spatial computing, som jeg sidenhen har brugt årevis på at realisere og bygge i praksis."
+                      ] },
+                de: { tag: 'Rückblick', title: 'Goggle me up Scotty!', subtitle: 'The Copenhagen Post (2017)', desc: "2017 sprach The Copenhagen Post mit mir über meine Vision von immersiver Technologie als 'the final frontier'.",
+                      content: [
+                          "Ein früher, aber wichtiger Rückblick.",
+                          "Die Copenhagen Post hob das massive Potenzial der Kopenhagener Tech-Szene hervor, und ich half dabei, die technologische Revolution vorherzusagen. Es ist ein faszinierender Blick auf die frühen Visionen für Spatial Computing."
+                      ] },
+                it: { tag: 'Flashback', title: 'Goggle me up Scotty!', subtitle: 'The Copenhagen Post (2017)', desc: "Nel 2017, The Copenhagen Post mi ha intervistato per discutere la mia visione della tecnologia immersiva come 'l'ultima frontiera'.",
+                      content: [
+                          "Una retrospettiva iniziale ma importante.",
+                          "Il Copenhagen Post ha evidenziato l'enorme potenziale della scena tecnologica di Copenaghen e ho contribuito a prevedere la rivoluzione tecnologica che ci attendeva."
+                      ] },
+                fr: { tag: 'Flashback', title: 'Goggle me up Scotty!', subtitle: 'The Copenhagen Post (2017)', desc: "En 2017, The Copenhagen Post m'a interviewé pour discuter de ma vision de la technologie immersive comme 'la dernière frontière'.",
+                      content: [
+                          "Une rétrospective précoce mais importante.",
+                          "Le Copenhagen Post a souligné le potentiel massif de la scène technologique de Copenhague, et j'ai aidé à prédire la révolution technologique à venir."
+                      ] }
+            },
+            'voa-2016': {
+                en: { tag: 'Flashback', title: 'Voice of America visits my virtual worlds (2016)', subtitle: 'Voice of America', desc: "Already in 2016, the international media Voice of America stopped by to cover my work building immersive spaces.",
+                      content: [
+                          "A look all the way back to the industry's absolute infancy in 2016.",
+                          "The international news media Voice of America covered the emerging technology landscape and stopped by to test the virtual experiences I was developing at the time. It is a fun time capsule showing how long I have worked to shape spatial computing in practice."
+                      ] },
+                da: { tag: 'Flashback', title: 'Voice of America besøger mine virtuelle verdener (2016)', subtitle: 'Voice of America', desc: "Allerede i 2016 lagde det internationale medie Voice of America vejen forbi for at dække mit arbejde med at bygge immersive rum.",
+                      content: [
+                          "Et kig helt tilbage til branchens absolutte spæde start i 2016.",
+                          "Det internationale nyhedsmedie Voice of America dækkede det gryende teknologilandskab og lagde vejen forbi for at teste de virtuelle oplevelser, jeg udviklede dengang. Det er en sjov tidslomme, der viser, hvor længe jeg har arbejdet med at forme spatial computing i praksis."
+                      ] },
+                de: { tag: 'Rückblick', title: 'Voice of America besucht meine virtuellen Welten (2016)', subtitle: 'Voice of America', desc: "Bereits 2016 kam das internationale Medium Voice of America vorbei, um über meine Arbeit beim Aufbau immersiver Räume zu berichten.",
+                      content: [
+                          "Ein Blick zurück in die absolute Kindheit der Branche im Jahr 2016.",
+                          "Voice of America testete die virtuellen Erlebnisse, die ich damals entwickelte. Es ist eine lustige Zeitkapsel, die zeigt, wie lange ich daran gearbeitet habe, Spatial Computing in der Praxis zu gestalten."
+                      ] },
+                it: { tag: 'Flashback', title: 'Voice of America visita i miei mondi virtuali (2016)', subtitle: 'Voice of America', desc: "Già nel 2016, il media internazionale Voice of America è passato a coprire il mio lavoro nella costruzione di spazi immersivi.",
+                      content: [
+                          "Uno sguardo indietro all'assoluta infanzia del settore nel 2016.",
+                          "Voice of America ha testato le esperienze virtuali che stavo sviluppando all'epoca. È una divertente capsula del tempo che mostra da quanto tempo lavoro per plasmare lo spatial computing."
+                      ] },
+                fr: { tag: 'Flashback', title: 'Voice of America visite mes mondes virtuels (2016)', subtitle: 'Voice of America', desc: "Déjà en 2016, le média international Voice of America est venu couvrir mon travail de construction d'espaces immersifs.",
+                      content: [
+                          "Un regard en arrière sur l'enfance absolue de l'industrie en 2016.",
+                          "Voice of America a testé les expériences virtuelles que je développais à l'époque. C'est une capsule temporelle amusante montrant depuis combien de temps je travaille pour façonner l'informatique spatiale."
+                      ] }
+            },
+            'michelin-vr': {
+                en: { tag: 'Highlight', title: 'Michelin Dining in XR', subtitle: 'The ultimate immersive dream for foodies', desc: "As Lead Developer and VR Consultant, I created a fully immersive experience for top restaurants.",
+                      content: [
+                          "Explore Michelin restaurants via Spatial Computing.",
+                          "Together with some of the absolute best Danish restaurants, I led the development of 'the ultimate dream for foodies': a fully immersive exploration of high-end gastronomy.",
+                          "I built the platform and created the content that gave users the ability to step directly into the kitchen and feel the intense, fascinating work behind the Michelin stars through their headset."
+                      ] },
+                da: { tag: 'Highlight', title: 'Michelin Dining i XR', subtitle: 'Den ultimative drøm for foodies', desc: "Som Lead Developer skabte jeg en fuldt immersiv oplevelse for nogle af Danmarks bedste restauranter for at tage brugerne direkte ind i stjernekøkkenerne.",
+                      content: [
+                          "Udforsk Michelin-restauranter via Spatial Computing.",
+                          "Sammen med nogle af de absolut bedste danske restauranter stod jeg i spidsen for udviklingen af 'the ultimate dream for foodies': en fuldt immersiv udforskning af high-end gastronomi.",
+                          "Jeg byggede platformen og skabte indholdet, der gav brugere mulighed for at træde direkte ind i køkkenet og mærke det intense, fascinerende arbejde bag Michelin-stjernerne gennem deres headset."
+                      ] },
+                de: { tag: 'Highlight', title: 'Michelin Dining in XR', subtitle: 'Der ultimative Traum für Feinschmecker', desc: "Als leitender Entwickler habe ich ein vollständig immersives Erlebnis für einige der besten Restaurants geschaffen.",
+                      content: [
+                          "Entdecken Sie Michelin-Restaurants über Spatial Computing.",
+                          "Zusammen mit einigen der besten dänischen Restaurants leitete ich die Entwicklung einer vollständig immersiven Erkundung der High-End-Gastronomie.",
+                          "Ich habe die Plattform gebaut und die Inhalte erstellt, die den Benutzern die Möglichkeit gaben, direkt in die Küche zu treten und die faszinierende Arbeit hinter den Sternen zu spüren."
+                      ] },
+                it: { tag: 'Highlight', title: 'Michelin Dining in XR', subtitle: 'Il sogno immersivo per i buongustai', desc: "Come Lead Developer, ho creato un'esperienza completamente immersiva per alcuni dei migliori ristoranti.",
+                      content: [
+                          "Esplora i ristoranti Michelin tramite Spatial Computing.",
+                          "Insieme ad alcuni dei migliori ristoranti, ho guidato lo sviluppo di un'esplorazione completamente immersiva della gastronomia di fascia alta.",
+                          "Ho costruito la piattaforma e creato i contenuti che hanno dato agli utenti la possibilità di entrare direttamente in cucina e sentire il lavoro affascinante dietro le stelle."
+                      ] },
+                fr: { tag: 'Highlight', title: 'Michelin Dining en XR', subtitle: 'Le rêve immersif pour les gourmets', desc: "En tant que Lead Developer, j'ai créé une expérience totalement immersive pour certains des meilleurs restaurants.",
+                      content: [
+                          "Explorez les restaurants Michelin via Spatial Computing.",
+                          "En collaboration avec certains des meilleurs restaurants, j'ai dirigé le développement d'une exploration immersive de la gastronomie haut de gamme.",
+                          "J'ai construit la plateforme et créé le contenu qui a donné aux utilisateurs la possibilité d'entrer directement dans la cuisine et de ressentir le travail fascinant derrière les étoiles."
+                      ] }
+            },
+            'throwback-gearvr': {
+                en: { tag: 'Throwback', title: 'Samsung Gear VR', subtitle: 'Back in 2018', desc: "A look into the archive: Back in 2018, deeply concentrated on setting up a Samsung Gear VR.", content: "Deeply concentrated on setting up a Samsung Gear VR back in 2018." },
+                da: { tag: 'Throwback', title: 'Samsung Gear VR', subtitle: 'Tilbage i 2018', desc: "Et kig i arkivet: Tilbage i 2018, dybt koncentreret om opsætningen af en Samsung Gear VR.", content: "Dybt koncentreret om opsætningen af en Samsung Gear VR tilbage i 2018." },
+                de: { tag: 'Rückblick', title: 'Samsung Gear VR', subtitle: 'Damals 2018', desc: "Ein Blick ins Archiv: Damals 2018, hochkonzentriert beim Einrichten einer Samsung Gear VR.", content: "Hochkonzentriert beim Einrichten einer Samsung Gear VR im Jahr 2018." },
+                it: { tag: 'Ricordo', title: 'Samsung Gear VR', subtitle: 'Nel 2018', desc: "Uno sguardo all'archivio: nel 2018, profondamente concentrato sulla configurazione di un Samsung Gear VR.", content: "Profondamente concentrato sulla configurazione di un Samsung Gear VR nel 2018." },
+                fr: { tag: 'Souvenir', title: 'Samsung Gear VR', subtitle: 'En 2018', desc: "Un regard dans les archives : En 2018, profondément concentré sur la configuration d'un Samsung Gear VR.", content: "Profondément concentré sur la configuration d'un Samsung Gear VR en 2018." }
+            },
+            'throwback-so-ein-ding': {
+                en: { tag: 'Behind the Scenes', title: 'DR2 So ein Ding', subtitle: 'With Nikolaj Sonne', desc: "Behind the scenes at DR2, demonstrating future technology for tech host Nikolaj Sonne.", content: "Behind the scenes at DR2 So ein Ding, testing XR with Nikolaj Sonne." },
+                da: { tag: 'Behind the Scenes', title: 'DR2 So ein Ding', subtitle: 'Med Nikolaj Sonne', desc: "Behind the scenes på DR2, hvor jeg demonstrerede fremtidens teknologi for tech-vært Nikolaj Sonne.", content: "Behind the scenes på DR2 So ein Ding, hvor XR blev testet med Nikolaj Sonne." },
+                de: { tag: 'Hinter den Kulissen', title: 'DR2 So ein Ding', subtitle: 'Mit Nikolaj Sonne', desc: "Hinter den Kulissen bei DR2, wo ich dem Tech-Moderator Nikolaj Sonne Zukunftstechnologie demonstrierte.", content: "Hinter den Kulissen bei DR2 So ein Ding, wo XR mit Nikolaj Sonne getestet wurde." },
+                it: { tag: 'Dietro le quinte', title: 'DR2 So ein Ding', subtitle: 'Con Nikolaj Sonne', desc: "Dietro le quinte di DR2, dimostrando la tecnologia futura al presentatore tecnologico Nikolaj Sonne.", content: "Dietro le quinte di DR2 So ein Ding, testando XR con Nikolaj Sonne." },
+                fr: { tag: 'Coulisses', title: 'DR2 So ein Ding', subtitle: 'Avec Nikolaj Sonne', desc: "Dans les coulisses de DR2, démontrant la technologie du futur pour le présentateur Nikolaj Sonne.", content: "Dans les coulisses de DR2 So ein Ding, testant la XR avec Nikolaj Sonne." }
+            },
+            'throwback-tofu-1': {
+                en: { tag: 'Throwback', title: 'Art Magazine Tofu', subtitle: 'XR in Contemporary Art', desc: "From a photo series in the art magazine Tofu about technology's entry into contemporary art.", content: "From a photo series in the art magazine Tofu about technology's entry into contemporary art." },
+                da: { tag: 'Throwback', title: 'Kunstmagasinet Tofu', subtitle: 'XR i samtidskunsten', desc: "Fra en fotoserie i kunstmagasinet Tofu om teknologiens indtog i samtidskunsten.", content: "Fra en fotoserie i kunstmagasinet Tofu om teknologiens indtog i samtidskunsten." },
+                de: { tag: 'Rückblick', title: 'Kunstmagazin Tofu', subtitle: 'XR in der zeitgenössischen Kunst', desc: "Aus einer Fotoserie im Kunstmagazin Tofu über den Einzug der Technologie in die Kunst.", content: "Aus einer Fotoserie im Kunstmagazin Tofu über den Einzug der Technologie in die zeitgenössische Kunst." },
+                it: { tag: 'Ricordo', title: 'Rivista d\'Arte Tofu', subtitle: 'XR nell\'Arte Contemporanea', desc: "Da una serie fotografica sulla rivista d'arte Tofu sull'ingresso della tecnologia nell'arte contemporanea.", content: "Da una serie fotografica sulla rivista d'arte Tofu sull'ingresso della tecnologia nell'arte contemporanea." },
+                fr: { tag: 'Souvenir', title: 'Magazine d\'Art Tofu', subtitle: 'XR dans l\'Art Contemporain', desc: "Tiré d'une série de photos dans le magazine d'art Tofu sur l'entrée de la technologie dans l'art contemporain.", content: "Tiré d'une série de photos dans le magazine d'art Tofu sur l'entrée de la technologie dans l'art contemporain." }
+            },
+            'throwback-eu': {
+                en: { tag: 'Throwback', title: 'European Parliament', subtitle: 'European Greens', desc: "Demonstration of newly developed immersive experiences for the European Greens directly in the European Parliament.", content: "Demonstration of immersive experiences for European Greens in the European Parliament." },
+                da: { tag: 'Throwback', title: 'Europa-Parlamentet', subtitle: 'European Greens', desc: "Demonstration af nyudviklede immersive oplevelser for parlamentsgruppen European Greens direkte i Europa-Parlamentet.", content: "Demonstration af immersive oplevelser for European Greens i Europa-Parlamentet." },
+                de: { tag: 'Rückblick', title: 'Europäisches Parlament', subtitle: 'European Greens', desc: "Demonstration neu entwickelter immersiver Erlebnisse für die Europäischen Grünen direkt im Europäischen Parlament.", content: "Demonstration immersiver Erlebnisse für die Europäischen Grünen im Europäischen Parlament." },
+                it: { tag: 'Ricordo', title: 'Parlamento Europeo', subtitle: 'European Greens', desc: "Dimostrazione di nuove esperienze immersive per i Verdi Europei direttamente al Parlamento Europeo.", content: "Dimostrazione di esperienze immersive per i Verdi Europei al Parlamento Europeo." },
+                fr: { tag: 'Souvenir', title: 'Parlement Européen', subtitle: 'European Greens', desc: "Démonstration de nouvelles expériences immersives pour les Verts européens directement au Parlement européen.", content: "Démonstration d'expériences immersives pour les Verts européens au Parlement européen." }
+            },
+            'throwback-museion': {
+                en: { tag: 'Throwback', title: 'Medical Museion', subtitle: 'Eli Lilly NewGen event', desc: "Exclusive tech presentation at the historical Medical Museion in Copenhagen for Eli Lilly's NewGen event.", content: "Tech presentation at the Medical Museion for Eli Lilly's NewGen event." },
+                da: { tag: 'Throwback', title: 'Medicinsk Museion', subtitle: 'Eli Lilly NewGen-event', desc: "Eksklusiv tech-præsentation på det historiske Medicinsk Museion i København til Eli Lillys NewGen-event.", content: "Tech-præsentation på Medicinsk Museion til Eli Lillys NewGen-event." },
+                de: { tag: 'Rückblick', title: 'Medizinisches Museion', subtitle: 'Eli Lilly NewGen Event', desc: "Exklusive Tech-Präsentation im historischen Medizinischen Museion in Kopenhagen für das NewGen-Event von Eli Lilly.", content: "Tech-Präsentation im Medizinischen Museion für das NewGen-Event von Eli Lilly." },
+                it: { tag: 'Ricordo', title: 'Medical Museion', subtitle: 'Evento Eli Lilly NewGen', desc: "Presentazione tecnologica esclusiva presso lo storico Medical Museion di Copenaghen per l'evento NewGen di Eli Lilly.", content: "Presentazione tecnologica al Medical Museion per l'evento NewGen di Eli Lilly." },
+                fr: { tag: 'Souvenir', title: 'Museion Médical', subtitle: 'Événement Eli Lilly NewGen', desc: "Présentation technologique exclusive au Museion médical historique de Copenhague pour l'événement NewGen d'Eli Lilly.", content: "Présentation technologique au Museion médical pour l'événement NewGen d'Eli Lilly." }
+            },
+            'throwback-tofu-2': {
+                en: { tag: 'Throwback', title: 'Tofu Magazine', subtitle: 'Immersive Tech & Art', desc: "Another picture from Tofu's aesthetic photo series on the intersection of technology and art.", content: "Another picture from Tofu's photo series on technology and art." },
+                da: { tag: 'Throwback', title: 'Tofu Magazine', subtitle: 'Immersive Tech & Samtidskunst', desc: "Endnu et billede fra Tofus æstetiske fotoserie om krydsfeltet mellem teknologi og kunst.", content: "Endnu et billede fra Tofus fotoserie om teknologi og kunst." },
+                de: { tag: 'Rückblick', title: 'Tofu Magazine', subtitle: 'Immersive Tech & Kunst', desc: "Ein weiteres Bild aus Tofus ästhetischer Fotoserie über die Schnittstelle von Technologie und Kunst.", content: "Ein weiteres Bild aus Tofus Fotoserie über Technologie und Kunst." },
+                it: { tag: 'Ricordo', title: 'Tofu Magazine', subtitle: 'Tech Immersivo & Arte', desc: "Un'altra foto dalla serie fotografica di Tofu sull'intersezione tra tecnologia e arte.", content: "Un'altra foto dalla serie fotografica di Tofu su tecnologia e arte." },
+                fr: { tag: 'Souvenir', title: 'Tofu Magazine', subtitle: 'Technologie Immersive & Art', desc: "Une autre photo de la série esthétique de Tofu sur l'intersection de la technologie et de l'art.", content: "Une autre photo de la série de Tofu sur la technologie et l'art." }
+            },
+            'podcast-thepreneur': {
+                en: { tag: 'Podcast', title: 'Thepreneur Podcast #11', subtitle: 'From tech idea to scalable product', desc: "As a guest on Thepreneur Podcast, I share my journey as a tech founder and XR developer.", content: "As a guest on Thepreneur Podcast, I share my journey as a tech founder and XR developer, and how I brought MidwifeXR to the market." },
+                da: { tag: 'Podcast', title: 'Thepreneur Podcast #11', subtitle: 'Fra tech-idé til skalerbart produkt', desc: "Som gæst på Thepreneur Podcast deler jeg min rejse som tech-founder og XR-udvikler.", content: "Som gæst på Thepreneur Podcast deler jeg min rejse som tech-founder og XR-udvikler, og hvordan jeg tog MidwifeXR til markedet." },
+                de: { tag: 'Podcast', title: 'Thepreneur Podcast #11', subtitle: 'Von der Tech-Idee zum Produkt', desc: "Als Gast im Thepreneur Podcast teile ich meine Reise als Tech-Gründer und XR-Entwickler.", content: "Als Gast im Thepreneur Podcast teile ich meine Reise als Tech-Gründer und XR-Entwickler, und wie ich MidwifeXR auf den Markt gebracht habe." },
+                it: { tag: 'Podcast', title: 'Thepreneur Podcast #11', subtitle: 'Dall\'idea tech al prodotto', desc: "Come ospite del Thepreneur Podcast, condivido il mio viaggio come fondatore di tecnologia e sviluppatore XR.", content: "Come ospite del Thepreneur Podcast, condivido il mio viaggio come fondatore di tecnologia e sviluppatore XR." },
+                fr: { tag: 'Podcast', title: 'Thepreneur Podcast #11', subtitle: 'De l\'idée tech au produit', desc: "En tant qu'invité du Thepreneur Podcast, je partage mon parcours en tant que fondateur de technologie et développeur XR.", content: "En tant qu'invité du Thepreneur Podcast, je partage mon parcours en tant que fondateur de technologie et développeur XR." }
+            }
+        };
+
+        // --- RAW PORTFOLIO CONFIG ---
+        const RAW_PORTFOLIO_ITEMS = [
+          { id: 'keynote-ida', type: 'video', icon: <Mic size={14} />, video: 'Mortenhjemmeside.mp4', externalLink: 'https://videos.ida.dk/media/Virtual+Reality+og+Amning%3A+En+innovativ+tilgang+med+MidwifeVR++Morten+Haulik%2C+Co-founder+og+VR+ekspert+og+Sofie+Bonde+Alsen%2C+jordemoder+og+Digital+Designer/1_bb9dwkxp', colSpan: 'md:col-span-1 lg:col-span-1' },
+          { id: 'highlight-kp', type: 'link', icon: <Star size={14} />, image: 'thumbnail11.png', externalLink: 'https://www.linkedin.com/posts/caroline-laurvig-deichmann-0813ba1b7_innovation-teknologi-teknologiforstaevelse-activity-7188271529833492480-Hh9q', colSpan: 'md:col-span-1' },
+          { id: 'press-berlingske', type: 'link', icon: <Newspaper size={14} />, image: 'thumb14.jpg', externalLink: 'https://www.berlingske.dk/indland/stort-problem-blandt-nybagte-foraeldre-kan-afhjaelpes-startup-kommer-med-loesning', colSpan: 'md:col-span-1' },
+          { id: 'media-24victoria', type: 'link', icon: <Globe size={14} />, image: 'thumbnail6.jpg', externalLink: 'https://24victoria.dk/artificial-and-intelligence-deep-tech/udvikler-xr-oplevelser-morten-haulik', colSpan: 'md:col-span-1' },
+          { id: 'project-nxt', type: 'project', icon: <Code size={14} />, image: 'thumb13.png', secondaryImage: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop', externalLink: 'https://www.nxtwebxr.com', colSpan: 'md:col-span-2' },
+          { id: 'podcast-apple', type: 'link', icon: <Headphones size={14} />, image: 'thumb1.png', externalLink: 'https://goodpods.com/podcasts/pilestræde-241749/æblebrillen-31650444', colSpan: 'md:col-span-1' },
+          { id: 'panel-sound', type: 'link', icon: <Users size={14} />, image: 'thumb7.jpg', externalLink: 'https://danishsoundcluster.dk/the-future-sound-forum/', colSpan: 'md:col-span-1' },
+          { id: 'press-kulturmagasinet', type: 'link', icon: <Headphones size={14} />, image: 'thunn.png', externalLink: 'https://radio4.dk/podcasts/kraes/rolf-s-rensen-elsker-ny-dokumentar-om-tour-de-fran', colSpan: 'md:col-span-1' },
+          { id: 'blog-webxr', type: 'blog', icon: <Monitor size={14} />, image: 'url.jpg', colSpan: 'md:col-span-1' },
+          { id: 'throwback-gearvr', type: 'image', icon: <Camera size={14} />, image: 'Picture2.jpg', colSpan: 'md:col-span-1' },
+          { id: 'press-midwife', type: 'link', icon: <Newspaper size={14} />, image: 'thumb17.jpg', externalLink: 'https://cbswire.dk/healthy-glove-gaming-misoballs-and-a-virtual-midwife/', colSpan: 'md:col-span-1' },
+          { id: 'throwback-so-ein-ding', type: 'image', icon: <Camera size={14} />, image: 'Picture1.jpeg', colSpan: 'md:col-span-1' },
+          { id: 'project-sendtoquest', type: 'project', icon: <Code size={14} />, image: 'ImageSendtoQuest.png', externalLink: 'https://sendtoquest.com', colSpan: 'md:col-span-2' },
+          { id: 'podcast-thepreneur', type: 'link', icon: <Headphones size={14} />, image: 'thumb15.jpg', externalLink: 'https://www.youtube.com/watch?v=9PpGts9B240', colSpan: 'md:col-span-1' },
+          { id: 'throwback-tofu-1', type: 'image', icon: <Camera size={14} />, image: 'IMG_4328.jpg', colSpan: 'md:col-span-1' },
+          { id: 'goggle-scotty', type: 'link', icon: <History size={14} />, image: 'thumblol.png', externalLink: 'https://cphpost.dk/2017-07-02/news/goggle-me-up-scotty-this-is-the-final-frontier/', colSpan: 'md:col-span-1' },
+          { id: 'throwback-eu', type: 'image', icon: <Camera size={14} />, image: 'IMG_4329.png', colSpan: 'md:col-span-1' },
+          { id: 'voa-2016', type: 'link', icon: <History size={14} />, image: 'thumb5.png', externalLink: 'https://learningenglish.voanews.com/amp/a-visit-to-the-virtual-world/3618990.html', colSpan: 'md:col-span-1' },
+          { id: 'throwback-museion', type: 'image', icon: <Camera size={14} />, image: 'EA74BB10-831F-47D1-B668-3F70535CB0B6.JPG', colSpan: 'md:col-span-1' },
+          { id: 'michelin-vr', type: 'link', icon: <Star size={14} />, image: 'thumb6.png', externalLink: 'https://www.linkedin.com/posts/evrest-as_virtualreality-virtualtoday-realitytomorrow-activity-6638369060289683456-Vd-N', colSpan: 'md:col-span-1' },
+          { id: 'throwback-tofu-2', type: 'image', icon: <Camera size={14} />, image: 'picture2.jpeg', colSpan: 'md:col-span-1' }
+        ];
+
+        const useTilt = (active = true) => {
+          const ref = useRef(null);
+          const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
+          const [shadow, setShadow] = useState('0px 10px 30px -5px rgba(0, 0, 0, 0.3)');
+          
+          const handleMouseMove = (e) => {
+            if (!ref.current || !active) return;
+            const { left, top, width, height } = ref.current.getBoundingClientRect();
+            const x = (e.clientX - left) / width;
+            const y = (e.clientY - top) / height;
+            const tiltX = (0.5 - y) * 15;
+            const tiltY = (x - 0.5) * 15;
+            setTransform(`perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`);
+            setShadow(`${-tiltY}px ${tiltX + 10}px 30px -5px rgba(0, 0, 0, 0.5)`);
+          };
+
+          const handleMouseLeave = () => {
+            setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
+            setShadow('0px 10px 30px -5px rgba(0, 0, 0, 0.3)');
+          };
+
+          return { ref, transform, shadow, handleMouseMove, handleMouseLeave };
+        };
+
+        const useMagnetic = (strength = 30) => {
+          const ref = useRef(null);
+          const [position, setPosition] = useState({ x: 0, y: 0 });
+
+          const handleMouseMove = (e) => {
+            if (!ref.current) return;
+            const { left, top, width, height } = ref.current.getBoundingClientRect();
+            const centerX = left + width / 2;
+            const centerY = top + height / 2;
+            setPosition({ x: (e.clientX - centerX) / strength, y: (e.clientY - centerY) / strength });
+          };
+
+          const handleMouseLeave = () => setPosition({ x: 0, y: 0 });
+
+          return { ref, position, handleMouseMove, handleMouseLeave };
+        };
+
+        const LanguageSwitcher = ({ currentLang, setLang }) => {
+            const langs = [
+                { code: 'en', flag: '🇬🇧', name: 'EN' },
+                { code: 'da', flag: '🇩🇰', name: 'DA' },
+                { code: 'de', flag: '🇩🇪', name: 'DE' },
+                { code: 'it', flag: '🇮🇹', name: 'IT' },
+                { code: 'fr', flag: '🇫🇷', name: 'FR' }
+            ];
+            
+            return (
+                <div className="w-full max-w-7xl mx-auto px-6 md:px-10 pt-6 md:pt-8 flex justify-center md:justify-end relative z-50">
+                    <div className="flex gap-2 bg-white/10 backdrop-blur-xl p-1.5 rounded-full border border-white/30 shadow-lg">
+                        {langs.map(l => (
+                            <button
+                                key={l.code}
+                                onClick={() => setLang(l.code)}
+                                className={`flex items-center justify-center w-8 h-8 rounded-full text-sm transition-all ${currentLang === l.code ? 'bg-white text-blue-900 scale-110 shadow-lg' : 'hover:bg-white/20 text-white opacity-70 hover:opacity-100'}`}
+                                title={l.name}
+                            >
+                                {l.flag}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        const Header = ({ lang, t, onBookKeynote, onOpenBio }) => {
+          const { ref, position, handleMouseMove, handleMouseLeave } = useMagnetic(5);
+
+          return (
+            <header className="w-full max-w-7xl mx-auto px-6 pb-6 pt-4 md:px-10 md:pb-10 md:pt-2 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative fade-lang-enter-active" key={lang}>
+              <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                <div 
+                  className="relative group cursor-pointer"
+                  onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} ref={ref}
+                  style={{ transform: `translate(${position.x}px, ${position.y}px)`, transition: 'transform 0.2s ease-out' }}
+                >
+                  <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-[4px] border-white shadow-2xl relative z-10">
+                    <img 
+                      src="pjp.jpg" alt="Morten Haulik" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop"; }}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
+                    Morten Haulik <span className="text-[#88CCFF] font-light">| XR</span>
+                  </h1>
+                  <p className="text-xl text-blue-100 font-medium tracking-wide">
+                      {t.role}
+                  </p>
+                  
+                  <div className="flex items-center justify-center md:justify-start gap-3 pt-2">
+                    <span className="flex items-center gap-2 px-4 py-1.5 bg-white/10 border-2 border-white/50 rounded-full backdrop-blur-sm shadow-sm">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                      </span>
+                      <span className="text-xs font-bold uppercase tracking-wider text-white">Copenhagen 🇩🇰/🇪🇺</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3 w-full md:w-auto min-w-[240px]">
+                <a 
+                  href="https://www.nxtwebxr.com" target="_blank" rel="noopener noreferrer"
+                  className="w-full px-6 py-3 bg-blue-900/40 backdrop-blur-md border-2 border-white/50 text-white rounded-full font-bold hover:bg-blue-900/60 hover:scale-105 transition-all flex items-center justify-center gap-2 text-center"
+                >
+                    {t.expNxt}
+                </a>
+
+                  <button 
+                    onClick={onBookKeynote}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-[#6600FF] to-[#0044FF] border-2 border-white/30 text-white rounded-full font-bold hover:brightness-110 hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-lg"
+                  >
+                    <Ticket size={16} /> {t.engage}
+                </button>
+
+                <button 
+                    onClick={onOpenBio}
+                    className="w-full px-6 py-3 bg-white/10 backdrop-blur-md border-2 border-white/40 text-white rounded-full font-bold hover:bg-white/20 hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-sm"
+                  >
+                    <User size={16} /> {t.meet}
+                </button>
+              </div>
+            </header>
+          );
+        };
+
+        const ContactCard = ({ lang, t }) => {
+          const [name, setName] = useState('');
+          const [email, setEmail] = useState('');
+          const [message, setMessage] = useState('');
+
+          const handleSubmit = (e) => {
+            e.preventDefault();
+            const subject = encodeURIComponent(`${t.letsTalk}: ${name}`);
+            const body = encodeURIComponent(`${t.name}: ${name}\n${t.email}: ${email}\n\nMessage:\n${message}`);
+            window.location.href = `mailto:Morten@nxtwebxr.com?subject=${subject}&body=${body}`;
+          };
+
+          return (
+            <div className="relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/20 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group fade-lang-enter-active" key={lang}>
+              <div className="relative z-10 p-8 h-full flex flex-col">
+                <div className="flex justify-between items-center mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-white rounded-xl text-blue-600 shadow-md"><Mail size={22} /></div>
+                    <h3 className="text-2xl font-bold text-white">{t.letsTalk}</h3>
+                  </div>
+                  <div className="flex gap-2">
+                      <a href="https://x.com/Haulik" target="_blank" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors"><Twitter size={18} /></a>
+                      <a href="https://www.linkedin.com/in/haulik" target="_blank" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors"><Linkedin size={18} /></a>
+                  </div>
+                </div>
+
+                <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
+                    <div className="space-y-4">
+                      <input required type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder={t.name} className="w-full bg-blue-900/30 border-2 border-white/30 rounded-2xl p-4 text-white placeholder-blue-200/70 outline-none focus:border-white focus:bg-blue-900/50 transition-all font-medium" />
+                      <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t.email} className="w-full bg-blue-900/30 border-2 border-white/30 rounded-2xl p-4 text-white placeholder-blue-200/70 outline-none focus:border-white focus:bg-blue-900/50 transition-all font-medium" />
+                      <textarea required rows={3} value={message} onChange={(e) => setMessage(e.target.value)} placeholder={t.message} className="w-full bg-blue-900/30 border-2 border-white/30 rounded-2xl p-4 text-white placeholder-blue-200/70 outline-none focus:border-white focus:bg-blue-900/50 transition-all resize-none font-medium" />
+                    </div>
+                    <button type="submit" className="mt-auto w-full bg-white text-blue-700 font-extrabold py-4 rounded-2xl hover:bg-blue-50 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 shadow-lg">
+                      {t.openEmail} <ExternalLink size={18} />
+                    </button>
+                    <p className="text-xs text-blue-200 text-center mt-2">{t.draftMsg}</p>
+                </form>
+              </div>
+            </div>
+          );
+        };
+
+        const KeynoteModal = ({ lang, t, onClose }) => {
+          const [audience, setAudience] = useState(500);
+          const [phone, setPhone] = useState('');
+          const [date1, setDate1] = useState('');
+          const [date2, setDate2] = useState('');
+          const [date3, setDate3] = useState('');
+
+          const handleSubmit = (e) => {
+            e.preventDefault();
+            const datesArr = [date1, date2, date3].filter(d => d);
+            const datesString = datesArr.length > 0 ? datesArr.join(', ') : 'TBD';
+
+            const subject = encodeURIComponent(`${t.inquiry} - ${audience} ${t.people}`);
+            const body = encodeURIComponent(`Booking Morten Haulik - ${audience} ${t.people}\n${t.phone}: ${phone}\nDates: ${datesString}`);
+            window.location.href = `mailto:Morten@nxtwebxr.com?subject=${subject}&body=${body}`;
+          };
+
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 animate-fade-in-fast" key={lang}>
+              <div className="absolute inset-0 bg-blue-950/80 backdrop-blur-xl" onClick={onClose} />
+              <div className="relative w-full max-w-2xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border-[6px] border-white animate-scale-up flex flex-col max-h-[90vh]">
+                <button onClick={onClose} className="absolute top-6 right-6 z-50 p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-600"><X size={24} /></button>
+                <div className="p-8 md:p-12 overflow-y-auto scrollbar-hide">
+                  <div className="mb-8">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 bg-blue-100 text-blue-700 rounded-lg"><Ticket size={20} /></div>
+                      <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">{t.officialBooking}</span>
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900">{t.inquiry}</h2>
+                    <p className="text-slate-500 mt-2 text-lg">{t.inquiryDesc}</p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                      <div className="flex justify-between items-end">
+                        <label className="text-sm font-bold text-slate-400 uppercase flex items-center gap-2"><Users size={16} /> {t.audienceSize}</label>
+                        <span className="text-2xl font-bold text-blue-600 tabular-nums">
+                          {audience === 5000 ? '5,000+' : audience.toLocaleString()} <span className="text-sm font-medium text-slate-400 ml-1">{t.people}</span>
+                        </span>
+                      </div>
+                      <input type="range" min="5" max="5000" step="5" value={audience} onChange={(e) => setAudience(Number(e.target.value))} className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/30" />
+                      
+                      <div className="pt-4 border-t border-slate-200 mt-4 space-y-3">
+                         <label className="text-sm font-bold text-slate-700 flex items-center gap-2"><Calendar size={16} /> {t.pickDates} <span className="text-xs font-normal text-slate-500">{t.pickDatesDesc}</span></label>
+                         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <input type="date" value={date1} onChange={e => setDate1(e.target.value)} className="w-full bg-white border-2 border-slate-200 rounded-xl py-2 px-3 text-sm text-slate-800 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium" />
+                            <input type="date" value={date2} onChange={e => setDate2(e.target.value)} className="w-full bg-white border-2 border-slate-200 rounded-xl py-2 px-3 text-sm text-slate-800 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium" />
+                            <input type="date" value={date3} onChange={e => setDate3(e.target.value)} className="w-full bg-white border-2 border-slate-200 rounded-xl py-2 px-3 text-sm text-slate-800 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium" />
+                         </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-sm font-bold text-slate-700 ml-1">{t.phone}</label>
+                      <div className="relative">
+                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                        <input required type="tel" value={phone} onChange={e => setPhone(e.target.value)} placeholder="+45 12 34 56 78" className="w-full bg-white border-2 border-slate-200 rounded-xl py-3 pl-12 pr-4 text-slate-800 placeholder-slate-300 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all font-medium" />
+                      </div>
+                    </div>
+
+                    <div className="pt-4 flex flex-col items-center border-t border-slate-100">
+                      <button type="submit" className="w-full px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all flex justify-center items-center gap-2">
+                        {t.reqEmail} <ExternalLink size={18} />
+                      </button>
+                      <p className="text-xs text-slate-500 mt-3 text-center">{t.reqEmailDesc}</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          );
+        };
+
+        const ExpandedCard = ({ item, lang, t, onClose }) => {
+          const videoRef = useRef(null);
+
+          useEffect(() => {
+            if (videoRef.current && item.videoStartTime !== undefined) {
+               const setTime = () => { videoRef.current.currentTime = item.videoStartTime; };
+               if (videoRef.current.readyState >= 1) { setTime(); }
+               else {
+                  videoRef.current.addEventListener('loadedmetadata', setTime);
+                  return () => videoRef.current?.removeEventListener('loadedmetadata', setTime);
+               }
+            }
+          }, [item]);
+
+          if (!item) return null;
+          
+          const transData = PORTFOLIO_DATA[item.id]?.[lang] || PORTFOLIO_DATA['about-morten'][lang];
+          const isPolaroid = item.type === 'image';
+
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 animate-fade-in-fast" key={item.id+lang}>
+              <div className="absolute inset-0 bg-blue-950/80 backdrop-blur-xl" onClick={onClose} />
+              
+              {isPolaroid ? (
+                <div className="relative animate-wiggle-float origin-center">
+                    <button onClick={onClose} className="absolute -top-12 right-0 z-50 p-3 bg-white hover:bg-gray-100 rounded-full text-blue-900 shadow-lg"><X size={24} /></button>
+                    <div className="bg-white p-4 pb-16 shadow-2xl transform rotate-1 max-w-xl w-full border-[8px] border-white rounded-lg">
+                        <div className="aspect-[4/3] w-full bg-gray-100 overflow-hidden mb-6"><img src={item.image} className="w-full h-full object-cover" /></div>
+                        <div className="text-center transform -rotate-1 px-4">
+                            <p className="font-handwriting text-2xl md:text-3xl text-blue-900 leading-relaxed tracking-wide">
+                                {transData.content || transData.desc}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              ) : (
+              <div className="relative w-full max-w-5xl max-h-[90vh] bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up border-[6px] border-white">
+                <button onClick={onClose} className="absolute top-4 right-4 z-50 p-2 bg-black/10 hover:bg-black/20 rounded-full text-black backdrop-blur-md transition-colors"><X size={24} /></button>
+
+                <div className={`relative ${item.type === 'project' ? 'md:w-1/2' : 'md:w-5/12'} bg-slate-100 h-64 md:h-auto overflow-hidden`}>
+                   {item.type === 'video' ? (
+                     <div className="w-full h-full flex items-center justify-center relative group bg-black">
+                        {item.video ? (
+                            <video 
+                                ref={videoRef}
+                                src={item.video} 
+                                autoPlay 
+                                loop={item.videoStartTime === undefined} 
+                                muted 
+                                playsInline 
+                                className="absolute inset-0 w-full h-full object-cover opacity-80" 
+                                onEnded={(e) => {
+                                    if (item.videoStartTime !== undefined) {
+                                        e.target.currentTime = item.videoStartTime;
+                                        e.target.play();
+                                    }
+                                }}
+                            />
+                        ) : (
+                            <img src={item.image} className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                        )}
+                        {!item.hidePlayButton && (
+                            <div 
+                                onClick={(e) => {
+                                    if (item.id === 'keynote-ida' && item.externalLink) {
+                                        e.stopPropagation();
+                                        window.open(item.externalLink, '_blank');
+                                    }
+                                }}
+                                className={`w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-10 ${item.id === 'keynote-ida' ? 'cursor-pointer' : 'pointer-events-none'}`}
+                            >
+                                <Play className="fill-blue-600 text-blue-600 ml-1 w-8 h-8" />
+                            </div>
+                        )}
+                     </div>
+                   ) : (
+                     <img src={item.image || item.secondaryImage} className="w-full h-full object-cover" />
+                   )}
+                   <div className="absolute top-6 left-6 pointer-events-none z-20">
+                      <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full text-xs font-bold text-blue-900 uppercase tracking-wider shadow-lg">
+                        {item.icon} {transData.tag || 'Project'}
+                      </span>
+                   </div>
+                </div>
+
+                <div className={`flex-1 p-8 md:p-12 flex flex-col overflow-y-auto ${item.type === 'project' ? 'md:w-1/2' : 'md:w-7/12'} scrollbar-hide`}>
+                  <div className="mb-8">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-3 leading-tight tracking-tight">{transData.title}</h2>
+                    <p className="text-xl text-blue-600 font-semibold">{transData.subtitle}</p>
+                  </div>
+                  
+                  <div className="space-y-6 text-gray-800 leading-relaxed text-lg mb-8">
+                      {Array.isArray(transData.content) ? transData.content.map((p, i) => <p key={i}>{p}</p>) : <p>{transData.content}</p>}
+                      {transData.quote && (
+                          <div className="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl my-6 italic">
+                            <p className="text-blue-900">"{transData.quote}"</p>
+                          </div>
+                      )}
+                  </div>
+
+                  <div className="mt-auto pt-8 border-t border-gray-100 flex justify-end items-center">
+                      {item.externalLink && item.externalLink !== '#' && (
+                        <a href={item.externalLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-colors flex items-center gap-2 shadow-lg">
+                          {item.id.includes('nxt') ? t.btnExperience : item.id.includes('send') ? t.btnTry : t.btnVisit} <ExternalLink size={16} />
+                        </a>
+                      )}
+                  </div>
+                </div>
+              </div>
+              )}
+            </div>
+          );
+        };
+
+        const ContentCard = ({ item, lang, t, onClick }) => {
+          const { ref, transform, shadow, handleMouseMove, handleMouseLeave } = useTilt();
+          const transData = PORTFOLIO_DATA[item.id]?.[lang] || {};
+          
+          let hoverText = t.hoverRead;
+          if (transData.tag === 'Podcast' || transData.tag === 'Keynote') hoverText = t.hoverListen;
+          if (transData.tag === 'Projekt' || transData.tag === 'Project') hoverText = t.hoverProject;
+          if (item.type === 'image') hoverText = t.hoverImage;
+
+          return (
+            <div 
+              ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={() => onClick(item)} 
+              className={`relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/10 backdrop-blur-xl transition-all duration-300 ease-out cursor-pointer group min-h-[320px] flex flex-col fade-lang-enter-active`}
+              style={{ transform, boxShadow: shadow, transformStyle: 'preserve-3d' }}
+              key={item.id+lang}
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none z-20" />
+              {(item.image || item.video) && (
+                <div className="absolute inset-0 z-0">
+                  {item.video ? <video src={item.video} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /> : <img src={item.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />}
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-80" />
+                </div>
+              )}
+              
+              <div className="absolute top-5 left-5 z-20">
+                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/30 text-xs font-bold uppercase tracking-wider shadow-lg backdrop-blur-md bg-white/20 text-white`}>
+                  {item.icon} {transData.tag || 'Work'}
+                </div>
+              </div>
+
+              <div className="relative z-10 p-7 mt-auto">
+                <h3 className={`font-bold text-white mb-2 leading-[1.1] drop-shadow-md ${item.colSpan.includes('col-span-2') ? 'text-4xl' : 'text-2xl'}`}>
+                  {transData.title || item.title}
+                </h3>
+                <p className="text-sm text-blue-100/90 line-clamp-2 mb-4 group-hover:text-white transition-colors font-medium">
+                  {transData.desc}
+                </p>
+                
+                <div className="flex items-center gap-2 text-xs font-black text-white uppercase tracking-widest opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  {hoverText} <ChevronRight size={14} className="bg-white text-blue-600 rounded-full p-0.5" />
+                </div>
+              </div>
+            </div>
+          );
+        };
+
+        const App = () => {
+          const [lang, setLang] = useState('en');
+          const [selectedItem, setSelectedItem] = useState(null);
+          const [isBookingOpen, setIsBookingOpen] = useState(false);
+
+          const t = UI_TEXT[lang] || UI_TEXT['en'];
+
+          // AAA SEO: Dynamically update Meta Data when language changes
+          useEffect(() => {
+            const meta = SEO_META[lang] || SEO_META['en'];
+            document.title = meta.title;
+            document.documentElement.lang = lang;
+            
+            let metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute("content", meta.desc);
+            }
+          }, [lang]);
+
+          useEffect(() => {
+            document.body.style.overflow = (selectedItem || isBookingOpen) ? 'hidden' : 'unset';
+          }, [selectedItem, isBookingOpen]);
+
+          const renderBackground = () => (
+            <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0044FF]">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0033FF] via-[#0022AA] to-[#001188]" />
+              <div className="absolute top-0 right-0 w-[80vw] h-[80vw] bg-[#3377FF] opacity-30 rounded-full blur-[120px] mix-blend-screen translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-[#6600FF] opacity-20 rounded-full blur-[100px] mix-blend-screen -translate-x-1/4 translate-y-1/4" />
+              <div className="absolute inset-0 opacity-[0.06] pointer-events-none mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+            </div>
+          );
+
+          return (
+            <div className="relative min-h-screen text-slate-200 font-sans selection:bg-white selection:text-blue-600 pb-20">
+              <style>{`
+                body { font-family: 'Plus Jakarta Sans', sans-serif; }
+                .font-handwriting { font-family: 'Permanent Marker', cursive; }
+                
+                .animate-float { animation: float 10s ease-in-out infinite; }
+                @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+                
+                .animate-fade-in-fast { animation: fadeIn 0.3s ease-out forwards; }
+                .animate-scale-up { animation: scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+                
+                .animate-wiggle-float { animation: wiggleFloat 6s ease-in-out infinite; }
+                @keyframes wiggleFloat {
+                    0%, 100% { transform: rotate(1deg) translateY(0); }
+                    25% { transform: rotate(-1deg) translateY(-10px); }
+                    50% { transform: rotate(2deg) translateY(0); }
+                    75% { transform: rotate(-2deg) translateY(-5px); }
+                }
+                
+                @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+                @keyframes scaleUp { from { opacity: 0; transform: scale(0.95) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+
+                .masonry-grid {
+                  display: grid;
+                  grid-template-columns: repeat(1, 1fr);
+                  gap: 2rem;
+                }
+                @media (min-width: 768px) {
+                  .masonry-grid { grid-template-columns: repeat(2, 1fr); }
+                }
+                @media (min-width: 1024px) {
+                  .masonry-grid { grid-template-columns: repeat(3, 1fr); }
+                }
+              `}</style>
+              
+              {renderBackground()}
+              
+              <LanguageSwitcher currentLang={lang} setLang={setLang} />
+
+              <Header 
+                lang={lang} t={t}
+                onBookKeynote={() => setIsBookingOpen(true)} 
+                onOpenBio={() => setSelectedItem({ id: 'about-morten', type: 'video', video: 'Mortenhjemmeside.mp4', videoStartTime: 4, hidePlayButton: true })} 
+              />
+
+              <main className="max-w-7xl mx-auto px-6 md:px-10 pb-24 mt-12">
+                <div className="masonry-grid">
+                  {RAW_PORTFOLIO_ITEMS.map((item, index) => (
+                    <div key={item.id+lang} className={`${item.colSpan} animate-fade-in-fast`} style={{ animationDelay: `${index * 0.1}s` }}>
+                      <ContentCard item={item} lang={lang} t={t} onClick={setSelectedItem} />
+                    </div>
+                  ))}
+                  
+                  <div className="md:col-span-1 lg:col-span-1 animate-fade-in-fast" style={{ animationDelay: '0.8s' }}>
+                      <ContactCard lang={lang} t={t} />
+                  </div>
+                </div>
+              </main>
+
+              <footer className="w-full text-center py-10 text-white/50 text-sm font-semibold tracking-wide fade-lang-enter-active" key={"footer"+lang}>
+                <div className="flex items-center justify-center gap-4 mb-4 opacity-70 hover:opacity-100 transition-opacity">
+                      <Globe size={16} /> <span>{t.footer}</span>
+                </div>
+                <p>© 2026 Morten Haulik. All rights reserved.</p>
+              </footer>
+
+              {selectedItem && <ExpandedCard item={selectedItem} lang={lang} t={t} onClose={() => setSelectedItem(null)} />}
+              {isBookingOpen && <KeynoteModal lang={lang} t={t} onClose={() => setIsBookingOpen(false)} />}
+            </div>
+          );
+        };
+
+        const rootElement = document.getElementById('root');
+        const root = createRoot(rootElement);
+        root.render(<App />);
+    </script>
+</body>
+</html>

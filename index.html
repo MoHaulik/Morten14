@@ -6,7 +6,15 @@
     <meta name="description" content="Morten Haulik - Spatial Computing Pioneer, VR Consultant, and XR Content Creation Expert based in Copenhagen. Premium XR consulting and 360 video content creation for Europe.">
     <title>Morten Haulik | Spatial Computing Pioneer & Keynote Speaker</title>
     
-    <!-- Favicon (XR Goggles) -->
+    <!-- Language Alternates for SEO -->
+    <link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/" />
+    <link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/?lang=da" />
+    <link rel="alternate" hreflang="de" href="https://www.mortenhaulik.com/?lang=de" />
+    <link rel="alternate" hreflang="it" href="https://www.mortenhaulik.com/?lang=it" />
+    <link rel="alternate" hreflang="fr" href="https://www.mortenhaulik.com/?lang=fr" />
+    <link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/" />
+
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥽</text></svg>">
 
     <!-- Tailwind CSS -->
@@ -17,16 +25,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- AAA SEO: Multilingual JSON-LD Structured Data -->
+    <!-- AAA SEO: Expanded JSON-LD Structured Data for RAG & LLMs -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://www.mortenhaulik.com/#website",
+          "url": "https://www.mortenhaulik.com/",
+          "name": "Morten Haulik - XR Consultant",
+          "description": "Portfolio and consulting services of Morten Haulik, Spatial Computing Expert.",
+          "inLanguage": ["en", "da", "de", "it", "fr"]
+        },
+        {
           "@type": "Person",
           "@id": "https://www.mortenhaulik.com/#person",
           "name": "Morten Haulik",
           "jobTitle": "Spatial Computing Pioneer, VR Consultant, XR Content Creation Expert",
+          "url": "https://www.mortenhaulik.com",
+          "sameAs": [
+            "https://x.com/Haulik",
+            "https://www.linkedin.com/in/haulik"
+          ],
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Copenhagen",
@@ -37,7 +58,7 @@
             "name": "University of Copenhagen"
           },
           "description": "Award-winning XR Developer, VR Consultant, and Keynote Speaker based in Copenhagen. Expert in XR content creation, 360 video content creation, and XR consulting for European clients.",
-          "knowsAbout": ["Spatial Computing", "WebXR", "Virtual Reality", "Augmented Reality", "XR Consulting", "XR Content Creation", "360 Video Content Creation", "Keynote Speaking"]
+          "knowsAbout": ["Spatial Computing", "WebXR", "Virtual Reality", "Augmented Reality", "XR Consulting", "XR Content Creation", "360 Video Content Creation", "Keynote Speaking", "Apple Vision Pro", "Meta Quest"]
         },
         {
           "@type": "Service",
@@ -46,6 +67,20 @@
           "serviceType": "XR Consulting, VR Consultant, XR Content Creation, 360 Video Content Creation",
           "areaServed": "Europe",
           "description": "Top-tier XR consulting, enterprise VR solutions, and bespoke 360 video content creation for clients across Europe."
+        },
+        {
+          "@type": "CreativeWork",
+          "author": {"@id": "https://www.mortenhaulik.com/#person"},
+          "name": "NXT/WebXR Platform",
+          "description": "The front page of the spatial internet. A leading spatial computing platform for immersive experiences.",
+          "url": "https://www.nxtwebxr.com"
+        },
+        {
+          "@type": "CreativeWork",
+          "author": {"@id": "https://www.mortenhaulik.com/#person"},
+          "name": "SendToQuest",
+          "description": "A utility tool for spatial users to instantly open WebXR on multiple headsets simultaneously.",
+          "url": "https://sendtoquest.com"
         }
       ]
     }
@@ -57,8 +92,6 @@
         margin: 0;
         font-family: 'Plus Jakarta Sans', sans-serif;
       }
-      #root:empty { display: none; }
-      
       /* Smooth language transitions */
       .fade-lang-enter { opacity: 0; transform: translateY(5px); }
       .fade-lang-enter-active { opacity: 1; transform: translateY(0); transition: opacity 300ms, transform 300ms; }
@@ -78,38 +111,60 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <!-- AAA SEO: Semantic Multi-Language Keyword Dominator Block -->
-    <!-- Visually hidden but perfectly readable for web crawlers looking for high-value European keywords -->
-    <article class="sr-only">
-        <h1>Morten Haulik - VR Consultant & XR Content Creation</h1>
-        
-        <section lang="en">
-            <h2>English - XR Consulting & 360 Video Content Creation</h2>
-            <p>Morten Haulik is an award-winning VR Consultant and Spatial Computing Developer based in Copenhagen. Serving clients all over Europe, Morten provides next-level XR consulting, premium XR content creation, and bespoke 360 video content creation. As an industry-leading VR consultant, he specializes in WebXR, enterprise spatial computing, and immersive tech strategies.</p>
-        </section>
+    <!-- 
+      AAA AIO & SEO Strategy: THE BOT FEAST 
+      This static HTML inside #root guarantees that AI scrapers, LLM bots, and search engines 
+      that DO NOT execute JavaScript will instantly read 100% of your highly semantic content. 
+      When React loads, it seamlessly replaces this with the interactive App. 
+      This is safe, standard white-hat SEO (hydration-style pre-rendering).
+    -->
+    <div id="root">
+        <header>
+            <h1>Morten Haulik | Spatial Computing Pioneer, Founder & Keynote Speaker</h1>
+            <p>XR Consulting, VR Consultant, XR Content Creation, 360 Video Content Creation based in Copenhagen, Denmark.</p>
+        </header>
+        <main>
+            <article>
+                <h2>About Morten Haulik</h2>
+                <p>Morten Haulik is an award-winning spatial computing developer, founder, and keynote speaker based in Copenhagen. Over a decade ago, I left my Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then, I have facilitated over 100 industry workshops, shipped high-impact immersive products, and delivered keynotes to audiences of 2,000+ people.</p>
+                <p>I have had the honor of presenting spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, as well as for United Nations delegations, demonstrating the real-world impact of immersive technology.</p>
+                <p>In 2025, I launched NXT/WebXR. Today, it stands as one of the world's most prominent spatial computing platforms, serving as the definitive gateway for daily users worldwide to explore the spatial internet.</p>
+            </article>
 
-        <section lang="da">
-            <h2>Dansk - XR Konsulent & 360 Video Produktion</h2>
-            <p>Morten Haulik er en prisvindende VR Konsulent og Spatial Computing udvikler baseret i København. Med kunder i hele Europa tilbyder Morten højt specialiseret XR rådgivning (XR consulting), XR indholdsproduktion og 360 video content creation. Som førende VR konsulent hjælper han virksomheder med WebXR og immersive strategier.</p>
-        </section>
+            <article>
+                <h2>NXT/WebXR Platform</h2>
+                <p>The front page of the spatial internet. Can discovering immersive content be as seamless as browsing the web? That is the challenge I solved with NXT/WebXR. Today, it stands as one of the world's leading spatial computing platforms. Every single day, users from all over the globe visit NXT/WebXR to browse through immersive experiences and games directly from their headsets.</p>
+            </article>
 
-        <section lang="de">
-            <h2>Deutsch - XR-Beratung & 360-Grad-Videoproduktion</h2>
-            <p>Morten Haulik ist ein preisgekrönter VR-Berater und Spatial Computing Entwickler mit Sitz in Kopenhagen. Er bietet Kunden in ganz Europa erstklassige XR-Beratung (XR Consulting), XR-Inhaltserstellung und 360-Grad-Videoproduktion (360 video content creation). Als branchenführender VR-Berater ist er auf WebXR und immersive Unternehmenslösungen spezialisiert.</p>
-        </section>
+            <article>
+                <h2>MidwifeXR & Healthcare Tech</h2>
+                <p>As co-founder and XR architect, I took the stage at IDA's Driving Health Tech conference to demonstrate how MidwifeXR solves critical challenges on maternity wards. As part of their official education, midwifery students at University College Copenhagen (KP) have now integrated our platform directly into their teaching.</p>
+            </article>
 
-        <section lang="it">
-            <h2>Italiano - Consulenza XR & Creazione di Contenuti Video 360</h2>
-            <p>Morten Haulik è un pluripremiato consulente VR e sviluppatore di Spatial Computing con sede a Copenaghen. Servendo clienti in tutta Europa, Morten offre consulenza XR (XR consulting) di alto livello, creazione di contenuti XR e produzione di video a 360 gradi (360 video content creation). In qualità di consulente VR leader del settore, è specializzato in WebXR e soluzioni spaziali aziendali.</p>
-        </section>
+            <article>
+                <h2>Apple Vision Pro Analysis - Berlingske Podcast</h2>
+                <p>I was invited into the studio at Berlingske to give my expert opinion on Apple's massive entry into spatial computing. I explain why the headset is not (yet) a consumer revolution on par with the first iPhone. However, it is the ultimate developer platform for creating the immersive content of the future.</p>
+            </article>
 
-        <section lang="fr">
-            <h2>Français - Conseil XR & Création de Contenu Vidéo 360</h2>
-            <p>Morten Haulik est un consultant VR primé et un développeur d'informatique spatiale basé à Copenhague. Au service de clients dans toute l'Europe, Morten propose des services de conseil XR (XR consulting), de création de contenu XR de premier ordre et de création de contenu vidéo 360 sur mesure. En tant que consultant VR de premier plan, il se spécialise dans le WebXR et les stratégies technologiques immersives.</p>
-        </section>
-    </article>
-
-    <div id="root"></div>
+            <!-- Multilingual Semantic Anchors for LLMs -->
+            <section lang="da">
+                <h2>Dansk - XR Konsulent & 360 Video Produktion</h2>
+                <p>Morten Haulik er en prisvindende VR Konsulent og Spatial Computing udvikler baseret i København. Med kunder i hele Europa tilbyder Morten højt specialiseret XR rådgivning (XR consulting), XR indholdsproduktion og 360 video content creation.</p>
+            </section>
+            <section lang="de">
+                <h2>Deutsch - XR-Beratung & 360-Grad-Videoproduktion</h2>
+                <p>Morten Haulik ist ein preisgekrönter VR-Berater und Spatial Computing Entwickler mit Sitz in Kopenhagen. Er bietet Kunden in ganz Europa erstklassige XR-Beratung, XR-Inhaltserstellung und 360-Grad-Videoproduktion.</p>
+            </section>
+            <section lang="it">
+                <h2>Italiano - Consulenza XR & Creazione di Contenuti Video 360</h2>
+                <p>Morten Haulik è un pluripremiato consulente VR e sviluppatore di Spatial Computing con sede a Copenaghen. Servendo clienti in tutta Europa, Morten offre consulenza XR di alto livello, creazione di contenuti XR e produzione di video a 360 gradi.</p>
+            </section>
+            <section lang="fr">
+                <h2>Français - Conseil XR & Création de Contenu Vidéo 360</h2>
+                <p>Morten Haulik est un consultant VR primé et un développeur d'informatique spatiale basé à Copenhague. Au service de clients dans toute l'Europe, Morten propose des services de conseil XR, de création de contenu XR de premier ordre et de création de contenu vidéo 360 sur mesure.</p>
+            </section>
+        </main>
+    </div>
 
     <script type="text/babel" data-type="module">
         import React, { useState, useEffect, useRef } from 'react';
@@ -157,8 +212,8 @@
                         "I am an award-winning spatial computing developer, founder, and keynote speaker based in Copenhagen. Over a decade ago, I left my Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then, I have facilitated over 100 industry workshops, shipped high-impact immersive products, and delivered keynotes to audiences of 2,000+ people.",
                         "I have had the honor of presenting spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, as well as for United Nations delegations, demonstrating the real-world impact of immersive technology.",
                         "Over the past five years, I have engineered WebXR and immersive applications for leading global brands and cultural institutions. My software is used daily across the globe—transforming clinical workflows in hospitals, enhancing museum exhibits, and delivering seamless entertainment to users at home.",
-                        "Since 2022, I have served as an Entrepreneur in Residence at the University of Copenhagen, helping shape the KU Lighthouse initiative to support students and faculty in scaling new tech startups.",
-                        "In 2025, I launched NXT/WebXR. Today, it stands as one of the world's most prominent spatial computing platforms, serving as the definitive gateway for daily users worldwide to explore the spatial internet."
+                        "Since 2022, I have served as an Entrepreneur in Residence at the University of Copenhagen, helping shape the <a href='https://lighthouse.ku.dk/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>KU Lighthouse</a> initiative to support students and faculty in scaling new tech startups.",
+                        "In 2025, I launched <a href='https://www.nxtwebxr.com' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>NXT/WebXR</a>. Today, it stands as one of the world's most prominent spatial computing platforms, serving as the definitive gateway for daily users worldwide to explore the spatial internet."
                     ]
                 },
                 da: {
@@ -168,8 +223,8 @@
                         "Jeg er en prisvindende spatial computing udvikler, founder og keynote taler baseret i København. For over et årti siden forlod jeg mine studier i Informationsvidenskab på Københavns Universitet for at tilslutte mig det første nordiske XR-studie på fuld tid. Siden da har jeg faciliteret over 100 brancheworkshops, leveret høj-effektive immersive produkter og holdt keynotes for publikummer på over 2.000 mennesker.",
                         "Jeg har haft æren af at præsentere spatial computing-løsninger ved officielle EU-sammenkomster for medlemmer af Europa-Parlamentet og Kommissionen, samt for FN-delegationer, for at demonstrere den reelle effekt af immersiv teknologi.",
                         "Over de seneste fem år har jeg udviklet WebXR og immersive applikationer for førende globale brands og kulturinstitutioner. Min software bruges dagligt over hele verden – og transformerer kliniske arbejdsgange på hospitaler, forbedrer museumsudstillinger og leverer underholdning til brugere i hjemmet.",
-                        "Siden 2022 har jeg fungeret som Entrepreneur in Residence på Københavns Universitet, hvor jeg hjælper med at forme KU Lighthouse-initiativet for at støtte studerende og forskere i at skalere nye tech-startups.",
-                        "I 2025 lancerede jeg NXT/WebXR. I dag står den som en af verdens mest fremtrædende spatial computing-platforme og fungerer som den definitive gateway for daglige brugere verden over til at udforske det rummelige internet."
+                        "Siden 2022 har jeg fungeret som Entrepreneur in Residence på Københavns Universitet, hvor jeg hjælper med at forme <a href='https://lighthouse.ku.dk/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>KU Lighthouse</a>-initiativet for at støtte studerende og forskere i at skalere nye tech-startups.",
+                        "I 2025 lancerede jeg <a href='https://www.nxtwebxr.com' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>NXT/WebXR</a>. I dag står den som en af verdens mest fremtrædende spatial computing-platforme og fungerer som den definitive gateway for daglige brugere verden over til at udforske det rummelige internet."
                     ]
                 },
                 de: {
@@ -179,8 +234,8 @@
                         "Ich bin ein preisgekrönter Spatial Computing Entwickler, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über einem Jahrzehnt verließ ich mein Studium an der Universität Kopenhagen, um dem ersten nordischen XR-Studio in Vollzeit beizutreten. Seitdem habe ich über 100 Workshops geleitet, wirkungsvolle immersive Produkte geliefert und Keynotes vor über 2.000 Menschen gehalten.",
                         "Ich hatte die Ehre, Spatial Computing Lösungen bei offiziellen EU-Treffen für Mitglieder des Europäischen Parlaments sowie für UN-Delegationen zu präsentieren, um die realen Auswirkungen immersiver Technologien zu demonstrieren.",
                         "In den letzten fünf Jahren habe ich WebXR und immersive Anwendungen für führende globale Marken entwickelt. Meine Software wird weltweit täglich genutzt – zur Transformation klinischer Arbeitsabläufe in Krankenhäusern, zur Erweiterung von Museumsausstellungen und für nahtlose Unterhaltung zu Hause.",
-                        "Seit 2022 bin ich Entrepreneur in Residence an der Universität Kopenhagen und helfe bei der Gestaltung der KU Lighthouse-Initiative zur Unterstützung von Studenten bei neuen Tech-Startups.",
-                        "2025 habe ich NXT/WebXR gestartet. Heute ist es eine der weltweit führenden Spatial Computing Plattformen."
+                        "Seit 2022 bin ich Entrepreneur in Residence an der Universität Kopenhagen und helfe bei der Gestaltung der <a href='https://lighthouse.ku.dk/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>KU Lighthouse</a>-Initiative zur Unterstützung von Studenten bei neuen Tech-Startups.",
+                        "2025 habe ich <a href='https://www.nxtwebxr.com' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>NXT/WebXR</a> gestartet. Heute ist es eine der weltweit führenden Spatial Computing Plattformen."
                     ]
                 },
                 it: {
@@ -190,8 +245,8 @@
                         "Sono un pluripremiato sviluppatore di spatial computing, fondatore e keynote speaker con sede a Copenaghen. Oltre un decennio fa, ho lasciato i miei studi per unirmi a tempo pieno al primo studio XR nordico. Da allora, ho facilitato oltre 100 workshop del settore, lanciato prodotti immersivi ad alto impatto e tenuto keynote a un pubblico di oltre 2.000 persone.",
                         "Ho avuto l'onore di presentare soluzioni di spatial computing in occasione di incontri ufficiali dell'Unione Europea e delegazioni delle Nazioni Unite, dimostrando l'impatto reale della tecnologia immersiva.",
                         "Negli ultimi cinque anni ho ingegnerizzato WebXR e applicazioni immersive per marchi globali. Il mio software è utilizzato quotidianamente in tutto il mondo: trasforma i flussi di lavoro clinici negli ospedali, migliora le mostre museali e offre intrattenimento domestico.",
-                        "Dal 2022 sono Entrepreneur in Residence presso l'Università di Copenaghen, contribuendo a plasmare l'iniziativa KU Lighthouse.",
-                        "Nel 2025 ho lanciato NXT/WebXR. Oggi è una delle piattaforme di spatial computing più importanti al mondo."
+                        "Dal 2022 sono Entrepreneur in Residence presso l'Università di Copenaghen, contribuendo a plasmare l'iniziativa <a href='https://lighthouse.ku.dk/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>KU Lighthouse</a>.",
+                        "Nel 2025 ho lanciato <a href='https://www.nxtwebxr.com' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>NXT/WebXR</a>. Oggi è una delle piattaforme di spatial computing più importanti al mondo."
                     ]
                 },
                 fr: {
@@ -201,8 +256,8 @@
                         "Je suis un développeur d'informatique spatiale primé, fondateur et conférencier basé à Copenhague. Il y a plus de dix ans, j'ai quitté mes études pour rejoindre à temps plein le premier studio XR nordique. Depuis, j'ai animé plus de 100 ateliers de l'industrie, livré des produits immersifs à fort impact et donné des conférences devant plus de 2 000 personnes.",
                         "J'ai eu l'honneur de présenter des solutions d'informatique spatiale lors de rassemblements officiels de l'Union européenne et de délégations des Nations Unies, démontrant l'impact réel de la technologie immersive.",
                         "Au cours des cinq dernières années, j'ai conçu des applications WebXR et immersives pour de grandes marques mondiales. Mon logiciel est utilisé quotidiennement dans le monde entier.",
-                        "Depuis 2022, je suis Entrepreneur en Résidence à l'Université de Copenhague, aidant à façonner l'initiative KU Lighthouse.",
-                        "En 2025, j'ai lancé NXT/WebXR. Aujourd'hui, il s'agit de l'une des plateformes d'informatique spatiale les plus importantes au monde."
+                        "Depuis 2022, je suis Entrepreneur en Résidence à l'Université de Copenhague, aidant à façonner l'initiative <a href='https://lighthouse.ku.dk/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>KU Lighthouse</a>.",
+                        "En 2025, j'ai lancé <a href='https://www.nxtwebxr.com' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800 transition-colors'>NXT/WebXR</a>. Aujourd'hui, il s'agit de l'une des plateformes d'informatique spatiale les plus importantes au monde."
                     ]
                 }
             },
@@ -308,30 +363,30 @@
                       ] }
             },
             'media-24victoria': {
-                en: { tag: 'Press', title: 'New horizons for future hospitals', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In this segment, we focus on how I collaborate with Herlev Hospital to integrate spatial computing into daily clinical life.",
+                en: { tag: 'Press', title: 'Morten Haulik develops XR experiences in new ways', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In this segment, we focus on how I collaborate with Herlev Hospital to integrate spatial computing into daily clinical life.",
                       content: [
-                          "Morten Haulik is the founder of NXT/WebXR and collaborates with Herlev Hospital to integrate XR technology into everyday life.",
-                          "I have worked professionally with the VR and AR industry for a decade. In the feature, we discuss how Europe lags behind Asia when it comes to utilizing the latest technology, and how we can specifically free up massive resources in hospitals through immersive solutions."
+                          "Morten Haulik is the founder of NXTWebXR and collaborates with Herlev Hospital to integrate XR technology into everyday life.",
+                          "He has worked in the VR and AR industry for ten years (XR combines both). Both the US and Europe lag far behind Asia, where they utilize the technology and free up massive resources in, for example, hospitals."
                       ] },
-                da: { tag: 'Presse', title: 'Nye horisonter for fremtidens hospitaler', subtitle: 'NXTWebXR x Herlev Hospital', desc: "I dette indslag sætter vi fokus på, hvordan jeg samarbejder med Herlev Hospital om at integrere spatial computing i den kliniske dagligdag.",
+                da: { tag: 'Presse', title: 'Morten Haulik udvikler XR-oplevelser på nye måder', subtitle: 'NXTWebXR x Herlev Hospital', desc: "I dette indslag sætter vi fokus på, hvordan jeg samarbejder med Herlev Hospital om at integrere spatial computing i den kliniske dagligdag.",
                       content: [
-                          "Morten Haulik er founder af NXT/WebXR og samarbejder med Herlev Hospital om at integrere XR-teknologien i dagligdagen.",
-                          "Jeg har arbejdet professionelt med VR- og AR-industrien i et årti. I indslaget diskuterer vi, hvordan Europa halter efter Asien, når det kommer til at udnytte den nyeste teknologi, og hvordan vi konkret kan frigøre massive ressourcer på eksempelvis hospitaler gennem immersive løsninger."
+                          "Morten Haulik er founder af NXTWebXR og samarbejder med Herlev Hospital om at integrere XR-teknologien i dagligdagen.",
+                          "Han har arbejdet i VR- og AR-industrien i ti år (XR samler begge). Både USA og Europa halter langt efter Asien, hvor man udnytter teknologien og frigør store kræfter på for eksempel hospitaler."
                       ] },
-                de: { tag: 'Presse', title: 'Neue Horizonte für zukünftige Krankenhäuser', subtitle: 'NXTWebXR x Herlev Krankenhaus', desc: "In diesem Beitrag konzentrieren wir uns darauf, wie ich mit dem Herlev-Krankenhaus zusammenarbeite.",
+                de: { tag: 'Presse', title: 'Morten Haulik entwickelt XR-Erlebnisse auf neue Weise', subtitle: 'NXTWebXR x Herlev Krankenhaus', desc: "In diesem Beitrag konzentrieren wir uns darauf, wie ich mit dem Herlev-Krankenhaus zusammenarbeite.",
                       content: [
-                          "Morten Haulik ist der Gründer von NXT/WebXR und arbeitet mit dem Herlev Hospital zusammen.",
-                          "Ich arbeite seit einem Jahrzehnt professionell mit der VR- und AR-Branche zusammen. In dem Feature diskutieren wir, wie Europa hinter Asien zurückbleibt und wie wir durch immersive Lösungen gezielt massive Ressourcen in Krankenhäusern freisetzen können."
+                          "Morten Haulik ist der Gründer von NXTWebXR und arbeitet mit dem Herlev-Krankenhaus zusammen, um XR-Technologie in den Alltag zu integrieren.",
+                          "Er arbeitet seit zehn Jahren in der VR- und AR-Branche (XR vereint beides). Sowohl die USA als auch Europa hinken Asien weit hinterher, wo die Technologie genutzt wird, um beispielsweise in Krankenhäusern enorme Ressourcen freizusetzen."
                       ] },
-                it: { tag: 'Stampa', title: 'Nuovi orizzonti per gli ospedali del futuro', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In questo segmento, ci concentriamo su come collaboro con l'Herlev Hospital per integrare lo spatial computing.",
+                it: { tag: 'Stampa', title: 'Morten Haulik sviluppa esperienze XR in modi nuovi', subtitle: 'NXTWebXR x Herlev Hospital', desc: "In questo segmento, ci concentriamo su come collaboro con l'Herlev Hospital per integrare lo spatial computing.",
                       content: [
-                          "Morten Haulik è il fondatore di NXT/WebXR e collabora con l'Herlev Hospital.",
-                          "Lavoro professionalmente con l'industria VR e AR da un decennio. Nel servizio discutiamo di come l'Europa sia in ritardo rispetto all'Asia e di come possiamo liberare massicce risorse negli ospedali attraverso soluzioni immersive."
+                          "Morten Haulik è il fondatore di NXTWebXR e collabora con l'Herlev Hospital per integrare la tecnologia XR nella vita di tutti i giorni.",
+                          "Lavora nel settore VR e AR da dieci anni (l'XR unisce entrambi). Sia gli Stati Uniti che l'Europa sono molto indietro rispetto all'Asia, dove la tecnologia viene utilizzata per liberare enormi risorse in ospedali, per esempio."
                       ] },
-                fr: { tag: 'Presse', title: 'Nouveaux horizons pour les hôpitaux du futur', subtitle: 'NXTWebXR x Herlev Hospital', desc: "Dans ce segment, nous nous concentrons sur la façon dont je collabore avec l'hôpital Herlev pour intégrer l'informatique spatiale.",
+                fr: { tag: 'Presse', title: 'Morten Haulik développe des expériences XR de nouvelles manières', subtitle: 'NXTWebXR x Hôpital de Herlev', desc: "Dans ce segment, nous nous concentrons sur la façon dont je collabore avec l'hôpital Herlev pour intégrer l'informatique spatiale.",
                       content: [
-                          "Morten Haulik est le fondateur de NXT/WebXR et collabore avec l'hôpital Herlev.",
-                          "Je travaille professionnellement avec l'industrie de la VR et de l'AR depuis une décennie. Dans le reportage, nous discutons de la façon dont l'Europe est à la traîne de l'Asie et de la façon dont nous pouvons libérer des ressources massives dans les hôpitaux grâce à des solutions immersives."
+                          "Morten Haulik est le fondateur de NXTWebXR et collabore avec l'hôpital de Herlev pour intégrer la technologie XR dans la vie quotidienne.",
+                          "Il travaille dans l'industrie de la VR et de l'AR depuis dix ans (la XR réunit les deux). Les États-Unis et l'Europe sont loin derrière l'Asie, où la technologie est utilisée pour libérer des ressources massives dans les hôpitaux, par exemple."
                       ] }
             },
             'project-nxt': {
@@ -763,7 +818,22 @@
           return { ref, position, handleMouseMove, handleMouseLeave };
         };
 
+        // --- NEW SLEEK LANGUAGE SWITCHER ---
         const LanguageSwitcher = ({ currentLang, setLang }) => {
+            const [isVisible, setIsVisible] = useState(true);
+
+            useEffect(() => {
+                const handleScroll = () => {
+                    if (window.scrollY > 60) {
+                        setIsVisible(false);
+                    } else {
+                        setIsVisible(true);
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
             const langs = [
                 { code: 'en', flag: '🇬🇧', name: 'EN' },
                 { code: 'da', flag: '🇩🇰', name: 'DA' },
@@ -773,28 +843,45 @@
             ];
             
             return (
-                <div className="w-full max-w-7xl mx-auto px-6 md:px-10 pt-6 md:pt-8 flex justify-center md:justify-end relative z-50">
-                    <div className="flex gap-2 bg-white/10 backdrop-blur-xl p-1.5 rounded-full border border-white/30 shadow-lg">
+                <nav aria-label="Language Switcher" className={`fixed top-6 left-6 z-50 transition-all duration-500 hidden md:block ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+                    <div className="flex gap-1 bg-white/10 backdrop-blur-xl p-1.5 rounded-full border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-300">
                         {langs.map(l => (
                             <button
                                 key={l.code}
                                 onClick={() => setLang(l.code)}
-                                className={`flex items-center justify-center w-8 h-8 rounded-full text-sm transition-all ${currentLang === l.code ? 'bg-white text-blue-900 scale-110 shadow-lg' : 'hover:bg-white/20 text-white opacity-70 hover:opacity-100'}`}
+                                className={`flex items-center justify-center w-9 h-9 rounded-full text-base transition-all duration-300 ${currentLang === l.code ? 'bg-white text-blue-900 shadow-md transform scale-105' : 'hover:bg-white/30 text-white opacity-70 hover:opacity-100 hover:scale-110'}`}
                                 title={l.name}
+                                aria-label={`Change language to ${l.name}`}
                             >
                                 {l.flag}
                             </button>
                         ))}
                     </div>
-                </div>
+                </nav>
             );
         };
 
-        const Header = ({ lang, t, onBookKeynote, onOpenBio }) => {
+        const Header = ({ lang, t, onBookKeynote, onOpenBio, setLang }) => {
           const { ref, position, handleMouseMove, handleMouseLeave } = useMagnetic(5);
 
           return (
-            <header className="w-full max-w-7xl mx-auto px-6 pb-6 pt-4 md:px-10 md:pb-10 md:pt-2 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative fade-lang-enter-active" key={lang}>
+            <header className="w-full max-w-7xl mx-auto px-6 pb-6 pt-12 md:px-10 md:pb-10 md:pt-16 flex flex-col md:flex-row items-center justify-between gap-8 z-10 relative fade-lang-enter-active" key={lang}>
+              
+              {/* Mobile Language Switcher (Visible only on small screens) */}
+              <div className="md:hidden flex gap-1 bg-white/10 backdrop-blur-xl p-1.5 rounded-full border border-white/20 shadow-lg mb-4">
+                  {['en', 'da', 'de', 'it', 'fr'].map(code => {
+                      const flags = { en: '🇬🇧', da: '🇩🇰', de: '🇩🇪', it: '🇮🇹', fr: '🇫🇷' };
+                      return (
+                          <button
+                              key={code} onClick={() => setLang(code)}
+                              className={`flex items-center justify-center w-8 h-8 rounded-full text-sm transition-all ${lang === code ? 'bg-white text-blue-900 shadow-md scale-105' : 'text-white opacity-70'}`}
+                          >
+                              {flags[code]}
+                          </button>
+                      );
+                  })}
+              </div>
+
               <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                 <div 
                   className="relative group cursor-pointer"
@@ -803,7 +890,8 @@
                 >
                   <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-[4px] border-white shadow-2xl relative z-10">
                     <img 
-                      src="pjp.jpg" alt="Morten Haulik" 
+                      src="pjp.jpg" 
+                      alt="Morten Haulik - Spatial Computing Pioneer and VR Consultant" 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop"; }}
                     />
@@ -869,18 +957,18 @@
           };
 
           return (
-            <div className="relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/20 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group fade-lang-enter-active" key={lang}>
+            <section aria-label="Contact Section" className="relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/20 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group fade-lang-enter-active h-full" key={lang}>
               <div className="relative z-10 p-8 h-full flex flex-col">
-                <div className="flex justify-between items-center mb-6">
+                <header className="flex justify-between items-center mb-6">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-white rounded-xl text-blue-600 shadow-md"><Mail size={22} /></div>
                     <h3 className="text-2xl font-bold text-white">{t.letsTalk}</h3>
                   </div>
                   <div className="flex gap-2">
-                      <a href="https://x.com/Haulik" target="_blank" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors"><Twitter size={18} /></a>
-                      <a href="https://www.linkedin.com/in/haulik" target="_blank" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors"><Linkedin size={18} /></a>
+                      <a href="https://x.com/Haulik" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors" aria-label="Twitter/X"><Twitter size={18} /></a>
+                      <a href="https://www.linkedin.com/in/haulik" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/20 rounded-full hover:bg-white hover:text-blue-600 transition-colors" aria-label="LinkedIn"><Linkedin size={18} /></a>
                   </div>
-                </div>
+                </header>
 
                 <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-4">
                     <div className="space-y-4">
@@ -894,7 +982,7 @@
                     <p className="text-xs text-blue-200 text-center mt-2">{t.draftMsg}</p>
                 </form>
               </div>
-            </div>
+            </section>
           );
         };
 
@@ -919,16 +1007,16 @@
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 animate-fade-in-fast" key={lang}>
               <div className="absolute inset-0 bg-blue-950/80 backdrop-blur-xl" onClick={onClose} />
               <div className="relative w-full max-w-2xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border-[6px] border-white animate-scale-up flex flex-col max-h-[90vh]">
-                <button onClick={onClose} className="absolute top-6 right-6 z-50 p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-600"><X size={24} /></button>
+                <button aria-label="Close" onClick={onClose} className="absolute top-6 right-6 z-50 p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-600"><X size={24} /></button>
                 <div className="p-8 md:p-12 overflow-y-auto scrollbar-hide">
-                  <div className="mb-8">
+                  <header className="mb-8">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2 bg-blue-100 text-blue-700 rounded-lg"><Ticket size={20} /></div>
                       <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">{t.officialBooking}</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900">{t.inquiry}</h2>
                     <p className="text-slate-500 mt-2 text-lg">{t.inquiryDesc}</p>
-                  </div>
+                  </header>
 
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-100">
@@ -996,19 +1084,19 @@
               
               {isPolaroid ? (
                 <div className="relative animate-wiggle-float origin-center">
-                    <button onClick={onClose} className="absolute -top-12 right-0 z-50 p-3 bg-white hover:bg-gray-100 rounded-full text-blue-900 shadow-lg"><X size={24} /></button>
-                    <div className="bg-white p-4 pb-16 shadow-2xl transform rotate-1 max-w-xl w-full border-[8px] border-white rounded-lg">
-                        <div className="aspect-[4/3] w-full bg-gray-100 overflow-hidden mb-6"><img src={item.image} className="w-full h-full object-cover" /></div>
+                    <button aria-label="Close" onClick={onClose} className="absolute -top-12 right-0 z-50 p-3 bg-white hover:bg-gray-100 rounded-full text-blue-900 shadow-lg"><X size={24} /></button>
+                    <article className="bg-white p-4 pb-16 shadow-2xl transform rotate-1 max-w-xl w-full border-[8px] border-white rounded-lg">
+                        <figure className="aspect-[4/3] w-full bg-gray-100 overflow-hidden mb-6">
+                            <img src={item.image} alt={transData.title + " - Morten Haulik XR Work"} className="w-full h-full object-cover" />
+                        </figure>
                         <div className="text-center transform -rotate-1 px-4">
-                            <p className="font-handwriting text-2xl md:text-3xl text-blue-900 leading-relaxed tracking-wide">
-                                {transData.content || transData.desc}
-                            </p>
+                            <p className="font-handwriting text-2xl md:text-3xl text-blue-900 leading-relaxed tracking-wide" dangerouslySetInnerHTML={{ __html: transData.content || transData.desc }}></p>
                         </div>
-                    </div>
+                    </article>
                 </div>
               ) : (
-              <div className="relative w-full max-w-5xl max-h-[90vh] bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up border-[6px] border-white">
-                <button onClick={onClose} className="absolute top-4 right-4 z-50 p-2 bg-black/10 hover:bg-black/20 rounded-full text-black backdrop-blur-md transition-colors"><X size={24} /></button>
+              <article className="relative w-full max-w-5xl max-h-[90vh] bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row animate-scale-up border-[6px] border-white">
+                <button aria-label="Close" onClick={onClose} className="absolute top-4 right-4 z-50 p-2 bg-black/10 hover:bg-black/20 rounded-full text-black backdrop-blur-md transition-colors"><X size={24} /></button>
 
                 <div className={`relative ${item.type === 'project' ? 'md:w-1/2' : 'md:w-5/12'} bg-slate-100 h-64 md:h-auto overflow-hidden`}>
                    {item.type === 'video' ? (
@@ -1021,6 +1109,7 @@
                                 loop={item.videoStartTime === undefined} 
                                 muted 
                                 playsInline 
+                                aria-label={transData.title + " Video Feature"}
                                 className="absolute inset-0 w-full h-full object-cover opacity-80" 
                                 onEnded={(e) => {
                                     if (item.videoStartTime !== undefined) {
@@ -1030,7 +1119,7 @@
                                 }}
                             />
                         ) : (
-                            <img src={item.image} className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                            <img src={item.image} alt={transData.title} className="absolute inset-0 w-full h-full object-cover opacity-80" />
                         )}
                         {!item.hidePlayButton && (
                             <div 
@@ -1047,7 +1136,7 @@
                         )}
                      </div>
                    ) : (
-                     <img src={item.image || item.secondaryImage} className="w-full h-full object-cover" />
+                     <img src={item.image || item.secondaryImage} alt={transData.title + " Project Visual"} className="w-full h-full object-cover" />
                    )}
                    <div className="absolute top-6 left-6 pointer-events-none z-20">
                       <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full text-xs font-bold text-blue-900 uppercase tracking-wider shadow-lg">
@@ -1057,19 +1146,19 @@
                 </div>
 
                 <div className={`flex-1 p-8 md:p-12 flex flex-col overflow-y-auto ${item.type === 'project' ? 'md:w-1/2' : 'md:w-7/12'} scrollbar-hide`}>
-                  <div className="mb-8">
+                  <header className="mb-8">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-3 leading-tight tracking-tight">{transData.title}</h2>
                     <p className="text-xl text-blue-600 font-semibold">{transData.subtitle}</p>
-                  </div>
+                  </header>
                   
-                  <div className="space-y-6 text-gray-800 leading-relaxed text-lg mb-8">
-                      {Array.isArray(transData.content) ? transData.content.map((p, i) => <p key={i}>{p}</p>) : <p>{transData.content}</p>}
+                  <section className="space-y-6 text-gray-800 leading-relaxed text-lg mb-8">
+                      {Array.isArray(transData.content) ? transData.content.map((p, i) => <p key={i} dangerouslySetInnerHTML={{ __html: p }}></p>) : <p dangerouslySetInnerHTML={{ __html: transData.content }}></p>}
                       {transData.quote && (
-                          <div className="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl my-6 italic">
+                          <blockquote className="p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl my-6 italic">
                             <p className="text-blue-900">"{transData.quote}"</p>
-                          </div>
+                          </blockquote>
                       )}
-                  </div>
+                  </section>
 
                   <div className="mt-auto pt-8 border-t border-gray-100 flex justify-end items-center">
                       {item.externalLink && item.externalLink !== '#' && (
@@ -1079,7 +1168,7 @@
                       )}
                   </div>
                 </div>
-              </div>
+              </article>
               )}
             </div>
           );
@@ -1094,28 +1183,35 @@
           if (transData.tag === 'Projekt' || transData.tag === 'Project') hoverText = t.hoverProject;
           if (item.type === 'image') hoverText = t.hoverImage;
 
+          // Wrap the inner logic in an <a> tag pointing to either the external link or a hashtag id for crawlers
+          const targetUrl = item.externalLink ? item.externalLink : `#${item.id}`;
+
           return (
-            <div 
-              ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={() => onClick(item)} 
-              className={`relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/10 backdrop-blur-xl transition-all duration-300 ease-out cursor-pointer group min-h-[320px] flex flex-col fade-lang-enter-active`}
+            <article 
+              ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} 
+              className={`relative overflow-hidden rounded-[2.5rem] border-[4px] border-white/90 bg-white/10 backdrop-blur-xl transition-all duration-300 ease-out group min-h-[320px] flex flex-col fade-lang-enter-active`}
               style={{ transform, boxShadow: shadow, transformStyle: 'preserve-3d' }}
               key={item.id+lang}
             >
+              <a href={targetUrl} onClick={(e) => { e.preventDefault(); onClick(item); }} className="absolute inset-0 z-30 flex flex-col">
+                  <span className="sr-only">Read more about {transData.title}</span>
+              </a>
+
               <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none z-20" />
               {(item.image || item.video) && (
-                <div className="absolute inset-0 z-0">
-                  {item.video ? <video src={item.video} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /> : <img src={item.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                  {item.video ? <video src={item.video} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" /> : <img src={item.image} alt={`${transData.title} presentation thumbnail`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent opacity-80" />
                 </div>
               )}
               
-              <div className="absolute top-5 left-5 z-20">
+              <div className="absolute top-5 left-5 z-20 pointer-events-none">
                 <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/30 text-xs font-bold uppercase tracking-wider shadow-lg backdrop-blur-md bg-white/20 text-white`}>
                   {item.icon} {transData.tag || 'Work'}
                 </div>
               </div>
 
-              <div className="relative z-10 p-7 mt-auto">
+              <div className="relative z-10 p-7 mt-auto pointer-events-none">
                 <h3 className={`font-bold text-white mb-2 leading-[1.1] drop-shadow-md ${item.colSpan.includes('col-span-2') ? 'text-4xl' : 'text-2xl'}`}>
                   {transData.title || item.title}
                 </h3>
@@ -1127,7 +1223,7 @@
                   {hoverText} <ChevronRight size={14} className="bg-white text-blue-600 rounded-full p-0.5" />
                 </div>
               </div>
-            </div>
+            </article>
           );
         };
 
@@ -1155,7 +1251,7 @@
           }, [selectedItem, isBookingOpen]);
 
           const renderBackground = () => (
-            <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0044FF]">
+            <div className="fixed inset-0 -z-10 overflow-hidden bg-[#0044FF]" aria-hidden="true">
               <div className="absolute inset-0 bg-gradient-to-br from-[#0033FF] via-[#0022AA] to-[#001188]" />
               <div className="absolute top-0 right-0 w-[80vw] h-[80vw] bg-[#3377FF] opacity-30 rounded-full blur-[120px] mix-blend-screen translate-x-1/2 -translate-y-1/2" />
               <div className="absolute bottom-0 left-0 w-[60vw] h-[60vw] bg-[#6600FF] opacity-20 rounded-full blur-[100px] mix-blend-screen -translate-x-1/4 translate-y-1/4" />
@@ -1204,12 +1300,12 @@
               <LanguageSwitcher currentLang={lang} setLang={setLang} />
 
               <Header 
-                lang={lang} t={t}
+                lang={lang} t={t} setLang={setLang}
                 onBookKeynote={() => setIsBookingOpen(true)} 
                 onOpenBio={() => setSelectedItem({ id: 'about-morten', type: 'video', video: 'Mortenhjemmeside.mp4', videoStartTime: 4, hidePlayButton: true })} 
               />
 
-              <main className="max-w-7xl mx-auto px-6 md:px-10 pb-24 mt-12">
+              <main className="max-w-7xl mx-auto px-6 md:px-10 pb-24 mt-4 md:mt-12">
                 <div className="masonry-grid">
                   {RAW_PORTFOLIO_ITEMS.map((item, index) => (
                     <div key={item.id+lang} className={`${item.colSpan} animate-fade-in-fast`} style={{ animationDelay: `${index * 0.1}s` }}>
@@ -1227,7 +1323,7 @@
                 <div className="flex items-center justify-center gap-4 mb-4 opacity-70 hover:opacity-100 transition-opacity">
                       <Globe size={16} /> <span>{t.footer}</span>
                 </div>
-                <p>© 2026 Morten Haulik. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Morten Haulik. All rights reserved.</p>
               </footer>
 
               {selectedItem && <ExpandedCard item={selectedItem} lang={lang} t={t} onClose={() => setSelectedItem(null)} />}

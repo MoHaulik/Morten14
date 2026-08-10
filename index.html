@@ -146,7 +146,7 @@
         <input required type="email" name="email" data-tp="email" placeholder="Email Address" autocomplete="email">
         <textarea required rows="3" name="message" data-tp="message" placeholder="Tell me about your project..."></textarea>
         <button type="submit" class="btn btn-white"><span data-t="openEmail">Open Email App</span></button>
-        <p class="hint" data-t="draftMsg">This will draft the message in your default email client.</p>
+        <p class="hint" id="contact-status" data-t="draftMsg">This will draft the message in your default email client.</p>
       </form>
     </section>
   </div>
@@ -184,7 +184,7 @@
       <label for="phone" data-t="phone">Phone Number</label>
       <input required type="tel" id="phone" placeholder="+45 12 34 56 78" autocomplete="tel">
       <button type="submit" class="btn btn-primary"><span data-t="reqEmail">Open Email to Request</span></button>
-      <p class="hint" data-t="reqEmailDesc">This will open your default email app with the details filled out.</p>
+      <p class="hint" id="booking-status" data-t="reqEmailDesc">This will open your default email app with the details filled out.</p>
     </form>
   </div>
 </dialog>

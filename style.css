@@ -122,7 +122,8 @@ h1 .xr{color:var(--sky);font-weight:300}
   border-radius:1rem;padding:1rem;color:#fff;font:inherit;font-weight:500;resize:none}
 .contact input::placeholder,.contact textarea::placeholder{color:rgba(191,219,254,.7)}
 .contact input:focus,.contact textarea:focus{outline:none;border-color:#fff;background:rgba(13,30,100,.5)}
-.hint{font-size:.72rem;color:#bfdbfe;text-align:center;margin:0}
+.hint{font-size:.72rem;color:#bfdbfe;text-align:center;margin:0;min-height:1em}
+.hint.err{color:#fecaca;font-weight:700}
 
 /* Footer */
 .site-footer{text-align:center;padding:2.5rem 1rem;color:rgba(255,255,255,.5);font-size:.85rem;font-weight:600}

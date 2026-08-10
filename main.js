@@ -120,6 +120,46 @@
     m.addEventListener('click', e => { if (e.target === m) m.close(); });
   });
 
+  /* ---------- email backend ----------
+     Real, silent delivery via FormSubmit (formsubmit.co) -- same no-server approach
+     already proven working on nxtwebxr.com's showcase site. First submission to a
+     fresh address triggers a one-time confirmation email FormSubmit sends to
+     Morten@nxtwebxr.com; after that link is clicked, all future submissions go
+     through automatically with no further setup. Replaces the old mailto: links,
+     which just popped open the *visitor's* email client instead of actually sending. */
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/Morten@nxtwebxr.com';
+  function sendForm(formEl, statusEl, payload) {
+    const btn = formEl.querySelector('button[type="submit"]');
+    // The button's label lives in a nested <span data-t="..."> for the i18n
+    // system -- writing straight to btn.textContent would delete that span,
+    // permanently breaking language switching for this button. Update the
+    // span (or fall back to the button itself if there isn't one) and restore
+    // it by re-reading the CURRENT language's string, not a cached one, so it
+    // stays correct even if the visitor switches language while a request is
+    // in flight.
+    const label = btn.querySelector('[data-t]');
+    const labelKey = label && label.dataset.t;
+    const target = label || btn;
+    btn.disabled = true;
+    target.textContent = t().sending;
+    statusEl.classList.remove('err');
+    statusEl.textContent = '';
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(r => { if (!r.ok) throw new Error('bad status'); return r.json(); }).then(() => {
+      statusEl.textContent = t().sentOk;
+      formEl.reset();
+    }).catch(() => {
+      statusEl.classList.add('err');
+      statusEl.textContent = t().sentErr;
+    }).finally(() => {
+      btn.disabled = false;
+      target.textContent = labelKey ? t()[labelKey] : target.textContent;
+    });
+  }
+
   /* ---------- booking ---------- */
   $('#open-booking').addEventListener('click', () => bookingModal.showModal());
   const audOut = $('#audience-out');
@@ -131,18 +171,26 @@
     e.preventDefault();
     const aud = $('#audience').value;
     const dates = ['#d1','#d2','#d3'].map(s => $(s).value).filter(Boolean).join(', ') || 'TBD';
-    const subject = encodeURIComponent(`${t().inquiry} - ${aud} ${t().people}`);
-    const body = encodeURIComponent(`Booking Morten Haulik - ${aud} ${t().people}\n${t().phone}: ${$('#phone').value}\nDates: ${dates}`);
-    location.href = `mailto:Morten@nxtwebxr.com?subject=${subject}&body=${body}`;
+    sendForm(e.target, $('#booking-status'), {
+      audience_size: aud,
+      phone: $('#phone').value,
+      dates,
+      _subject: `${t().inquiry} - ${aud} ${t().people}`,
+      _template: 'table'
+    });
   });
 
   /* ---------- contact ---------- */
   $('#contact-form').addEventListener('submit', e => {
     e.preventDefault();
     const f = e.target;
-    const subject = encodeURIComponent(`${t().letsTalk}: ${f.name.value}`);
-    const body = encodeURIComponent(`${t().name}: ${f.name.value}\n${t().email}: ${f.email.value}\n\nMessage:\n${f.message.value}`);
-    location.href = `mailto:Morten@nxtwebxr.com?subject=${subject}&body=${body}`;
+    sendForm(f, $('#contact-status'), {
+      name: f.name.value,
+      email: f.email.value,
+      message: f.message.value,
+      _subject: `${t().letsTalk}: ${f.name.value}`,
+      _template: 'table'
+    });
   });
 
   /* ---------- language ---------- */

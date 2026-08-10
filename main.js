@@ -39,8 +39,8 @@
       el.setAttribute('aria-label', d.title);
       el.innerHTML = `
         <div class="media">${item.video
-          ? `<video src="${item.video}" autoplay loop muted playsinline></video>`
-          : `<img src="${item.image}" alt="${d.title}" loading="lazy">`}</div>
+          ? `<video data-src="${item.video}" loop muted playsinline preload="none"></video>`
+          : `<img src="${item.image}" alt="${d.title}" loading="lazy" decoding="async">`}</div>
         <span class="tag">${item.icon} ${d.tag || 'Work'}</span>
         <div class="body">
           <h3>${d.title}</h3>
@@ -53,6 +53,28 @@
       if (!reduceMotion) addTilt(el);
       grid.insertBefore(el, contact);
     });
+    lazyLoadVideos();
+  }
+
+  /* Grid videos only start downloading once they're about to scroll into view,
+     instead of every autoplay video fetching its full file on page load. */
+  function lazyLoadVideos() {
+    const videos = grid.querySelectorAll('video[data-src]');
+    if (!('IntersectionObserver' in window)) {
+      videos.forEach(v => { v.src = v.dataset.src; v.removeAttribute('data-src'); v.play().catch(() => {}); });
+      return;
+    }
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const v = entry.target;
+        v.src = v.dataset.src;
+        v.removeAttribute('data-src');
+        v.play().catch(() => {});
+        obs.unobserve(v);
+      });
+    }, { rootMargin: '300px' });
+    videos.forEach(v => io.observe(v));
   }
 
   function addTilt(el) {

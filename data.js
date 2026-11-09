@@ -1,62 +1,304 @@
-/* All content lives here. Edit text in this file — no code knowledge needed. */
+/* All content lives here. Edit text in this file, then run  node build.js  to regenerate
+   the static pages (index.html + da/ de/ it/ fr/). No other code knowledge needed. */
 
 const UI_TEXT = {
-  en: { consult:"Hire for Consulting", org:"Organization / Event", role:"Spatial Computing Pioneer, Founder & Keynote Speaker", expNxt:"Experience NXT/WebXR", engage:"Engage as Speaker", letsTalk:"Let's Talk", name:"Name", email:"Email Address", message:"Tell me about your project...", openEmail:"Send Message", draftMsg:"I typically reply within 1 business day.", officialBooking:"Official Booking", inquiry:"Keynote Inquiry", inquiryDesc:"Available for conferences, corporate summits, and private workshops.", audienceSize:"Audience Size", people:"people", pickDates:"Pick Dates", pickDatesDesc:"(You can select up to three dates)", phone:"Phone Number", reqEmail:"Send Request", reqEmailDesc:"I'll get back to you within 1 business day to confirm.", footer:"Designed in Copenhagen", hoverListen:"Listen", hoverProject:"Explore Project", hoverImage:"View Image", hoverRead:"Read More", btnVisit:"View Source", btnExperience:"Experience NXT/WebXR", btnTry:"Try SendToQuest", sending:"Sending…", sentOk:"Thanks! I'll get back to you soon.", sentErr:"Something went wrong — please email Morten@nxtwebxr.com directly." },
-  da: { consult:"Book som Konsulent", org:"Organisation / Event", role:"Spatial Computing Pioner, Founder & Keynote Taler", expNxt:"Oplev NXT/WebXR", engage:"Book som Taler", letsTalk:"Lad os tale sammen", name:"Navn", email:"E-mailadresse", message:"Fortæl mig om dit projekt...", openEmail:"Send Besked", draftMsg:"Jeg svarer normalt inden for 1 hverdag.", officialBooking:"Officiel Booking", inquiry:"Forespørgsel på Keynote", inquiryDesc:"Tilgængelig til konferencer, virksomhedsevents og private workshops.", audienceSize:"Publikumsstørrelse", people:"personer", pickDates:"Vælg Datoer", pickDatesDesc:"(Du kan vælge op til tre datoer)", phone:"Telefonnummer", reqEmail:"Send Anmodning", reqEmailDesc:"Jeg vender tilbage inden for 1 hverdag for at bekræfte.", footer:"Designet i København", hoverListen:"Lyt med", hoverProject:"Udforsk Projekt", hoverImage:"Se Billede", hoverRead:"Læs Mere", btnVisit:"Gå til kilde", btnExperience:"Oplev NXT/WebXR", btnTry:"Prøv SendToQuest", sending:"Sender…", sentOk:"Tak! Jeg vender hurtigt tilbage.", sentErr:"Noget gik galt — skriv venligst direkte til Morten@nxtwebxr.com." },
-  de: { consult:"Als Berater Buchen", org:"Organisation / Veranstaltung", role:"Spatial Computing Pionier, Gründer & Keynote Speaker", expNxt:"NXT/WebXR Erleben", engage:"Als Redner Buchen", letsTalk:"Lass uns reden", name:"Name", email:"E-Mail Adresse", message:"Erzählen Sie mir von Ihrem Projekt...", openEmail:"Nachricht Senden", draftMsg:"Ich antworte normalerweise innerhalb von 1 Werktag.", officialBooking:"Offizielle Buchung", inquiry:"Keynote-Anfrage", inquiryDesc:"Verfügbar für Konferenzen, Unternehmensgipfel und private Workshops.", audienceSize:"Publikumsgröße", people:"Personen", pickDates:"Daten Wählen", pickDatesDesc:"(Sie können bis zu drei Daten auswählen)", phone:"Telefonnummer", reqEmail:"Anfrage Senden", reqEmailDesc:"Ich melde mich innerhalb von 1 Werktag zur Bestätigung zurück.", footer:"Entworfen in Kopenhagen", hoverListen:"Anhören", hoverProject:"Projekt Erkunden", hoverImage:"Bild Ansehen", hoverRead:"Weiterlesen", btnVisit:"Quelle Ansehen", btnExperience:"NXT/WebXR Erleben", btnTry:"SendToQuest Testen", sending:"Wird gesendet…", sentOk:"Danke! Ich melde mich bald.", sentErr:"Etwas ist schiefgelaufen — bitte schreiben Sie direkt an Morten@nxtwebxr.com." },
-  it: { consult:"Prenota una Consulenza", org:"Organizzazione / Evento", role:"Pioniere dello Spatial Computing, Fondatore e Keynote Speaker", expNxt:"Scopri NXT/WebXR", engage:"Prenota come Speaker", letsTalk:"Parliamo", name:"Nome", email:"Indirizzo Email", message:"Parlami del tuo progetto...", openEmail:"Invia Messaggio", draftMsg:"Di solito rispondo entro 1 giorno lavorativo.", officialBooking:"Prenotazione Ufficiale", inquiry:"Richiesta Keynote", inquiryDesc:"Disponibile per conferenze, summit aziendali e workshop privati.", audienceSize:"Dimensione del Pubblico", people:"persone", pickDates:"Scegli le Date", pickDatesDesc:"(Puoi selezionare fino a tre date)", phone:"Numero di Telefono", reqEmail:"Invia Richiesta", reqEmailDesc:"Ti risponderò entro 1 giorno lavorativo per confermare.", footer:"Progettato a Copenaghen", hoverListen:"Ascolta", hoverProject:"Esplora Progetto", hoverImage:"Vedi Immagine", hoverRead:"Leggi di Più", btnVisit:"Vedi Fonte", btnExperience:"Scopri NXT/WebXR", btnTry:"Prova SendToQuest", sending:"Invio…", sentOk:"Grazie! Ti risponderò presto.", sentErr:"Qualcosa è andato storto — scrivi direttamente a Morten@nxtwebxr.com." },
-  fr: { consult:"Demander un Conseil", org:"Organisation / Événement", role:"Pionnier de l'Informatique Spatiale, Fondateur & Conférencier", expNxt:"Découvrir NXT/WebXR", engage:"Réserver comme Conférencier", letsTalk:"Discutons-en", name:"Nom", email:"Adresse Email", message:"Parlez-moi de votre projet...", openEmail:"Envoyer le Message", draftMsg:"Je réponds généralement dans un délai de 1 jour ouvré.", officialBooking:"Réservation Officielle", inquiry:"Demande de Keynote", inquiryDesc:"Disponible pour des conférences, des sommets d'entreprise et des ateliers privés.", audienceSize:"Taille du Public", people:"personnes", pickDates:"Choisir les Dates", pickDatesDesc:"(Vous pouvez sélectionner jusqu'à trois dates)", phone:"Numéro de Téléphone", reqEmail:"Envoyer la Demande", reqEmailDesc:"Je vous répondrai dans un délai de 1 jour ouvré pour confirmer.", footer:"Conçu à Copenhague", hoverListen:"Écouter", hoverProject:"Explorer le Projet", hoverImage:"Voir l'Image", hoverRead:"Lire la Suite", btnVisit:"Voir la Source", btnExperience:"Découvrir NXT/WebXR", btnTry:"Essayer SendToQuest", sending:"Envoi…", sentOk:"Merci ! Je vous répondrai bientôt.", sentErr:"Une erreur est survenue — merci d'écrire directement à Morten@nxtwebxr.com." }
+  en: { btnPlay:"Play on NXT/WebXR", hoverPlay:"Play", btnCare:"NXT/Care ↗", consult:"Hire for Consulting", org:"Organization / Event", role:"Spatial Computing Pioneer, Founder & Keynote Speaker", expNxt:"Experience NXT/WebXR", engage:"Engage as Speaker", letsTalk:"Let's Talk", name:"Name", email:"Email Address", message:"Tell me about your project...", openEmail:"Send Message", draftMsg:"I typically reply within 1 business day.", officialBooking:"Official Booking", inquiry:"Keynote Inquiry", inquiryDesc:"Available for conferences, corporate summits, and private workshops.", audienceSize:"Audience Size", people:"people", pickDates:"Pick Dates", pickDatesDesc:"(You can select up to three dates)", phone:"Phone Number", reqEmail:"Send Request", reqEmailDesc:"I'll get back to you within 1 business day to confirm.", footer:"Designed in Copenhagen", hoverListen:"Listen", hoverProject:"Explore Project", hoverImage:"View Image", hoverRead:"Read More", btnVisit:"View Source", btnExperience:"Experience NXT/WebXR", btnTry:"Try SendToQuest", sending:"Sending…", sentOk:"Thanks! I'll get back to you soon.", sentErr:"Something went wrong — please email Morten@nxtwebxr.com directly." },
+  da: { btnPlay:"Spil på NXT/WebXR", hoverPlay:"Spil", btnCare:"NXT/Care ↗", consult:"Få XR-rådgivning", org:"Organisation / Event", role:"VR-ekspert, founder & foredragsholder", expNxt:"Oplev NXT/WebXR", engage:"Book et foredrag", letsTalk:"Lad os tale sammen", name:"Navn", email:"E-mailadresse", message:"Fortæl mig om dit projekt...", openEmail:"Send Besked", draftMsg:"Jeg svarer normalt inden for 1 hverdag.", officialBooking:"Officiel Booking", inquiry:"Forespørgsel på Keynote", inquiryDesc:"Tilgængelig til konferencer, virksomhedsevents og private workshops.", audienceSize:"Publikumsstørrelse", people:"personer", pickDates:"Vælg Datoer", pickDatesDesc:"(Du kan vælge op til tre datoer)", phone:"Telefonnummer", reqEmail:"Send Anmodning", reqEmailDesc:"Jeg vender tilbage inden for 1 hverdag for at bekræfte.", footer:"Designet i København", hoverListen:"Lyt med", hoverProject:"Udforsk Projekt", hoverImage:"Se Billede", hoverRead:"Læs Mere", btnVisit:"Gå til kilde", btnExperience:"Oplev NXT/WebXR", btnTry:"Prøv SendToQuest", sending:"Sender…", sentOk:"Tak! Jeg vender hurtigt tilbage.", sentErr:"Noget gik galt — skriv venligst direkte til Morten@nxtwebxr.com." },
+  de: { btnPlay:"Auf NXT/WebXR spielen", hoverPlay:"Spielen", btnCare:"NXT/Care ↗", consult:"Als Berater Buchen", org:"Organisation / Veranstaltung", role:"Spatial Computing Pionier, Gründer & Keynote Speaker", expNxt:"NXT/WebXR Erleben", engage:"Als Redner Buchen", letsTalk:"Lass uns reden", name:"Name", email:"E-Mail Adresse", message:"Erzählen Sie mir von Ihrem Projekt...", openEmail:"Nachricht Senden", draftMsg:"Ich antworte normalerweise innerhalb von 1 Werktag.", officialBooking:"Offizielle Buchung", inquiry:"Keynote-Anfrage", inquiryDesc:"Verfügbar für Konferenzen, Unternehmensgipfel und private Workshops.", audienceSize:"Publikumsgröße", people:"Personen", pickDates:"Daten Wählen", pickDatesDesc:"(Sie können bis zu drei Daten auswählen)", phone:"Telefonnummer", reqEmail:"Anfrage Senden", reqEmailDesc:"Ich melde mich innerhalb von 1 Werktag zur Bestätigung zurück.", footer:"Entworfen in Kopenhagen", hoverListen:"Anhören", hoverProject:"Projekt Erkunden", hoverImage:"Bild Ansehen", hoverRead:"Weiterlesen", btnVisit:"Quelle Ansehen", btnExperience:"NXT/WebXR Erleben", btnTry:"SendToQuest Testen", sending:"Wird gesendet…", sentOk:"Danke! Ich melde mich bald.", sentErr:"Etwas ist schiefgelaufen — bitte schreiben Sie direkt an Morten@nxtwebxr.com." },
+  it: { btnPlay:"Gioca su NXT/WebXR", hoverPlay:"Gioca", btnCare:"NXT/Care ↗", consult:"Prenota una Consulenza", org:"Organizzazione / Evento", role:"Pioniere dello Spatial Computing, Fondatore e Keynote Speaker", expNxt:"Scopri NXT/WebXR", engage:"Prenota come Speaker", letsTalk:"Parliamo", name:"Nome", email:"Indirizzo Email", message:"Parlami del tuo progetto...", openEmail:"Invia Messaggio", draftMsg:"Di solito rispondo entro 1 giorno lavorativo.", officialBooking:"Prenotazione Ufficiale", inquiry:"Richiesta Keynote", inquiryDesc:"Disponibile per conferenze, summit aziendali e workshop privati.", audienceSize:"Dimensione del Pubblico", people:"persone", pickDates:"Scegli le Date", pickDatesDesc:"(Puoi selezionare fino a tre date)", phone:"Numero di Telefono", reqEmail:"Invia Richiesta", reqEmailDesc:"Ti risponderò entro 1 giorno lavorativo per confermare.", footer:"Progettato a Copenaghen", hoverListen:"Ascolta", hoverProject:"Esplora Progetto", hoverImage:"Vedi Immagine", hoverRead:"Leggi di Più", btnVisit:"Vedi Fonte", btnExperience:"Scopri NXT/WebXR", btnTry:"Prova SendToQuest", sending:"Invio…", sentOk:"Grazie! Ti risponderò presto.", sentErr:"Qualcosa è andato storto — scrivi direttamente a Morten@nxtwebxr.com." },
+  fr: { btnPlay:"Jouer sur NXT/WebXR", hoverPlay:"Jouer", btnCare:"NXT/Care ↗", consult:"Demander un Conseil", org:"Organisation / Événement", role:"Pionnier de l'Informatique Spatiale, Fondateur & Conférencier", expNxt:"Découvrir NXT/WebXR", engage:"Réserver comme Conférencier", letsTalk:"Discutons-en", name:"Nom", email:"Adresse Email", message:"Parlez-moi de votre projet...", openEmail:"Envoyer le Message", draftMsg:"Je réponds généralement dans un délai de 1 jour ouvré.", officialBooking:"Réservation Officielle", inquiry:"Demande de Keynote", inquiryDesc:"Disponible pour des conférences, des sommets d'entreprise et des ateliers privés.", audienceSize:"Taille du Public", people:"personnes", pickDates:"Choisir les Dates", pickDatesDesc:"(Vous pouvez sélectionner jusqu'à trois dates)", phone:"Numéro de Téléphone", reqEmail:"Envoyer la Demande", reqEmailDesc:"Je vous répondrai dans un délai de 1 jour ouvré pour confirmer.", footer:"Conçu à Copenhague", hoverListen:"Écouter", hoverProject:"Explorer le Projet", hoverImage:"Voir l'Image", hoverRead:"Lire la Suite", btnVisit:"Voir la Source", btnExperience:"Découvrir NXT/WebXR", btnTry:"Essayer SendToQuest", sending:"Envoi…", sentOk:"Merci ! Je vous répondrai bientôt.", sentErr:"Une erreur est survenue — merci d'écrire directement à Morten@nxtwebxr.com." }
 };
 
 const SEO_META = {
-  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"Copenhagen-based spatial computing pioneer and founder of NXT/WebXR. Book keynotes on XR, VR and the spatial internet, or hire XR strategy and WebXR consulting." },
-  da: { title:"Morten Haulik | Keynote Taler i Spatial Computing & XR Konsulent", desc:"Spatial computing-pioner fra København og founder af NXT/WebXR. Book foredrag og keynotes om XR, VR og det rummelige internet, eller hyr XR-rådgivning og WebXR-udvikling." },
+  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"Copenhagen-based XR expert and founder of NXT/WebXR. Book keynotes on VR, AR, smart glasses and the spatial internet, hire XR strategy and WebXR consulting, or request press comment." },
+  da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR- og XR-ekspert fra København og founder af NXT/WebXR. Book foredrag om VR, AR, smartbriller og spatial computing, få XR-rådgivning, eller kontakt for ekspertkommentar til presse." },
   de: { title:"Morten Haulik | Keynote Speaker Spatial Computing & XR-Berater", desc:"Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR. Buchen Sie Keynotes zu XR, VR und dem räumlichen Internet oder XR-Strategie- und WebXR-Beratung." },
   it: { title:"Morten Haulik | Keynote Speaker Spatial Computing & Consulente XR", desc:"Pioniere dello spatial computing a Copenaghen e fondatore di NXT/WebXR. Keynote su XR, VR e internet spaziale, e consulenza su strategia XR e WebXR." },
   fr: { title:"Morten Haulik | Conférencier Informatique Spatiale & Consultant XR", desc:"Pionnier de l'informatique spatiale basé à Copenhague et fondateur de NXT/WebXR. Keynotes sur la XR, la VR et l'internet spatial, et conseil en stratégie XR et WebXR." }
 };
 
-/* Bio shown inline on the page (English is pre-rendered in index.html for SEO). */
-const BIO = {
-  en: [
-    "I am an award-winning spatial computing developer, founder, and keynote speaker based in Copenhagen. Over a decade ago, I left my Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then, I have facilitated over 100 industry workshops, shipped high-impact immersive products, and delivered keynotes to audiences of 2,000+ people.",
-    "I have had the honor of presenting spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, as well as for United Nations delegations, demonstrating the real-world impact of immersive technology.",
-    "Over the past five years, I have engineered WebXR and immersive applications for leading global brands and cultural institutions. My software is used daily across the globe—transforming clinical workflows in hospitals, enhancing museum exhibits, and delivering seamless entertainment to users at home.",
-    "Since 2022, I have served as an Entrepreneur in Residence at the University of Copenhagen, helping shape the <a href='https://lighthouse.ku.dk/' target='_blank' rel='noopener'>KU Lighthouse</a> initiative to support students and faculty in scaling new tech startups.",
-    "In 2025, I launched <a href='https://www.nxtwebxr.com' target='_blank' rel='noopener'>NXT/WebXR</a>. Today, it stands as one of the world's most prominent spatial computing platforms, serving as the definitive gateway for daily users worldwide to explore the spatial internet."
-  ],
-  da: [
-    "Jeg er en prisvindende spatial computing udvikler, founder og keynote taler baseret i København. For over et årti siden forlod jeg mine studier i Informationsvidenskab på Københavns Universitet for at tilslutte mig det første nordiske XR-studie på fuld tid. Siden da har jeg faciliteret over 100 brancheworkshops, leveret høj-effektive immersive produkter og holdt keynotes for publikummer på over 2.000 mennesker.",
-    "Jeg har haft æren af at præsentere spatial computing-løsninger ved officielle EU-sammenkomster for medlemmer af Europa-Parlamentet og Kommissionen, samt for FN-delegationer, for at demonstrere den reelle effekt af immersiv teknologi.",
-    "Over de seneste fem år har jeg udviklet WebXR og immersive applikationer for førende globale brands og kulturinstitutioner. Min software bruges dagligt over hele verden – og transformerer kliniske arbejdsgange på hospitaler, forbedrer museumsudstillinger og leverer underholdning til brugere i hjemmet.",
-    "Siden 2022 har jeg fungeret som Entrepreneur in Residence på Københavns Universitet, hvor jeg hjælper med at forme <a href='https://lighthouse.ku.dk/' target='_blank' rel='noopener'>KU Lighthouse</a>-initiativet for at støtte studerende og forskere i at skalere nye tech-startups.",
-    "I 2025 lancerede jeg <a href='https://www.nxtwebxr.com' target='_blank' rel='noopener'>NXT/WebXR</a>. I dag står den som en af verdens mest fremtrædende spatial computing-platforme og fungerer som den definitive gateway for daglige brugere verden over til at udforske det rummelige internet."
-  ],
-  de: [
-    "Ich bin ein preisgekrönter Spatial Computing Entwickler, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über einem Jahrzehnt verließ ich mein Studium an der Universität Kopenhagen, um dem ersten nordischen XR-Studio in Vollzeit beizutreten. Seitdem habe ich über 100 Workshops geleitet, wirkungsvolle immersive Produkte geliefert und Keynotes vor über 2.000 Menschen gehalten.",
-    "Ich hatte die Ehre, Spatial Computing Lösungen bei offiziellen EU-Treffen für Mitglieder des Europäischen Parlaments sowie für UN-Delegationen zu präsentieren, um die realen Auswirkungen immersiver Technologien zu demonstrieren.",
-    "In den letzten fünf Jahren habe ich WebXR und immersive Anwendungen für führende globale Marken entwickelt. Meine Software wird weltweit täglich genutzt – zur Transformation klinischer Arbeitsabläufe in Krankenhäusern, zur Erweiterung von Museumsausstellungen und für nahtlose Unterhaltung zu Hause.",
-    "Seit 2022 bin ich Entrepreneur in Residence an der Universität Kopenhagen und helfe bei der Gestaltung der <a href='https://lighthouse.ku.dk/' target='_blank' rel='noopener'>KU Lighthouse</a>-Initiative zur Unterstützung von Studenten bei neuen Tech-Startups.",
-    "2025 habe ich <a href='https://www.nxtwebxr.com' target='_blank' rel='noopener'>NXT/WebXR</a> gestartet. Heute ist es eine der weltweit führenden Spatial Computing Plattformen."
-  ],
-  it: [
-    "Sono un pluripremiato sviluppatore di spatial computing, fondatore e keynote speaker con sede a Copenaghen. Oltre un decennio fa, ho lasciato i miei studi per unirmi a tempo pieno al primo studio XR nordico. Da allora, ho facilitato oltre 100 workshop del settore, lanciato prodotti immersivi ad alto impatto e tenuto keynote a un pubblico di oltre 2.000 persone.",
-    "Ho avuto l'onore di presentare soluzioni di spatial computing in occasione di incontri ufficiali dell'Unione Europea e delegazioni delle Nazioni Unite, dimostrando l'impatto reale della tecnologia immersiva.",
-    "Negli ultimi cinque anni ho ingegnerizzato WebXR e applicazioni immersive per marchi globali. Il mio software è utilizzato quotidianamente in tutto il mondo: trasforma i flussi di lavoro clinici negli ospedali, migliora le mostre museali e offre intrattenimento domestico.",
-    "Dal 2022 sono Entrepreneur in Residence presso l'Università di Copenaghen, contribuendo a plasmare l'iniziativa <a href='https://lighthouse.ku.dk/' target='_blank' rel='noopener'>KU Lighthouse</a>.",
-    "Nel 2025 ho lanciato <a href='https://www.nxtwebxr.com' target='_blank' rel='noopener'>NXT/WebXR</a>. Oggi è una delle piattaforme di spatial computing più importanti al mondo."
-  ],
-  fr: [
-    "Je suis un développeur d'informatique spatiale primé, fondateur et conférencier basé à Copenhague. Il y a plus de dix ans, j'ai quitté mes études pour rejoindre à temps plein le premier studio XR nordique. Depuis, j'ai animé plus de 100 ateliers de l'industrie, livré des produits immersifs à fort impact et donné des conférences devant plus de 2 000 personnes.",
-    "J'ai eu l'honneur de présenter des solutions d'informatique spatiale lors de rassemblements officiels de l'Union européenne et de délégations des Nations Unies, démontrant l'impact réel de la technologie immersive.",
-    "Au cours des cinq dernières années, j'ai conçu des applications WebXR et immersives pour de grandes marques mondiales. Mon logiciel est utilisé quotidiennement dans le monde entier.",
-    "Depuis 2022, je suis Entrepreneur en Résidence à l'Université de Copenhague, aidant à façonner l'initiative <a href='https://lighthouse.ku.dk/' target='_blank' rel='noopener'>KU Lighthouse</a>.",
-    "En 2025, j'ai lancé <a href='https://www.nxtwebxr.com' target='_blank' rel='noopener'>NXT/WebXR</a>. Aujourd'hui, il s'agit de l'une des plateformes d'informatique spatiale les plus importantes au monde."
-  ]
+/* Page sections (hero, services, press, speaker kit, FAQ), all languages.
+   After editing anything in this file, run:  node build.js  */
+const PAGE_TEXT = {
+  en: {
+    heroLead: "I help organisations make sense of spatial computing, and build what comes next.",
+    heroSub: "Keynote speaker, XR consultant and founder of NXT/WebXR. More than a decade building VR, AR and WebXR for hospitals, museums, universities and global brands.",
+    stats: [["10+","years building XR"],["100+","industry workshops facilitated"],["2,000+","people in a single keynote audience"],["EU & UN","official presentations"]],
+    featured: "Featured in and on stage with",
+    servicesTitle: "Three ways to work together",
+    speakTitle: "Keynotes & panels",
+    speakText: "Clear, demo-rich talks that give an audience a grounded view of where XR is actually going. For conferences, corporate summits, universities and public-sector events, in English or Danish.",
+    speakTopics: ["The spatial internet: why the next platform will be visited, not installed","XR in healthcare, from maternity wards to children's hospitals","Smart glasses and headsets: what Meta, Apple and Google are really building","Building immersive products people actually use","Innovation and entrepreneurship in emerging tech"],
+    speakCta: "Request a keynote",
+    consultTitle: "XR strategy & consulting",
+    consultText: "Hands-on advice from someone who ships. I help leadership and product teams decide where XR creates real value, then prototype and build it.",
+    consultList: ["XR opportunity workshops for leadership teams","WebXR, VR and mixed-reality prototypes and production","Healthcare, training and education simulations","Distribution without app stores via the open web","Hardware advice: which headset or glasses fit your case"],
+    consultCta: "Start a conversation",
+    pressTitle: "Press & expert comment",
+    pressText: "Journalists: I comment on VR, AR and smart glasses, from Meta's newest headsets and glasses to Apple Vision Pro and Android XR. In Danish or English, and I can usually respond quickly to news deadlines.",
+    pressList: ["Meta Quest and Meta's smart glasses","Apple Vision Pro and visionOS","Google, Samsung and Android XR","XR in healthcare and education","The metaverse, hype vs. reality"],
+    pressCta: "Contact for press",
+    pressSubject: "Press inquiry",
+    workTitle: "Talks, press & projects",
+    workSub: "Tap any card for the full story.",
+    kitTitle: "Speaker kit",
+    kitSub: "Everything an organiser needs for the programme, ready to copy.",
+    kitShortLabel: "Short bio",
+    kitShort: "Morten Haulik is a Copenhagen-based spatial computing pioneer and the founder of NXT/WebXR, the front page of the spatial internet. With more than a decade in XR, he builds immersive tools used in hospitals, museums and homes worldwide, has facilitated 100+ industry workshops and has presented at EU and UN gatherings.",
+    kitLongLabel: "Full bio",
+    kitLong: [
+      "Morten Haulik is a spatial computing developer, founder and keynote speaker based in Copenhagen. More than a decade ago he left his Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then he has facilitated over 100 industry workshops, shipped immersive products and delivered keynotes to audiences of 2,000+.",
+      "He has presented spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, and for United Nations delegations.",
+      "As co-founder of MidwifeVR, winner of the KU Impact Award 2021, he built the VR breastfeeding-guidance platform now used in the midwifery programme at University College Copenhagen. Through NXT/Care, he brings calm, playful mixed reality to children in Danish hospitals and clinics, and he collaborates with Herlev Hospital on clinical XR.",
+      "Since 2022 he has been Entrepreneur in Residence at the University of Copenhagen, helping shape the KU Lighthouse initiative. In 2025 he launched NXT/WebXR, a catalogue of free WebXR games and experiences opened straight from the headset browser, including his own titles HoloRange, Meows Freaky Fishstick Factory and die Hände."
+    ],
+    kitFacts: [["Formats","Keynote (20–60 min), panel, fireside chat, hands-on workshop with headsets"],["Languages","English, Danish"],["Based in","Copenhagen, available across Europe"]],
+    copy: "Copy", copied: "Copied ✓",
+    headshot: "Download profile image",
+    faqTitle: "Frequently asked",
+    faq: [
+      ["Can I book Morten Haulik as a keynote speaker?","Yes. Morten gives keynotes, panels and workshops on spatial computing, XR, VR and smart glasses for conferences, corporate events and universities across Europe, in English or Danish. Use the keynote form on this page or email Morten@nxtwebxr.com."],
+      ["What does Morten consult on?","XR strategy, WebXR and VR/mixed-reality development, healthcare and training simulations, and choosing the right hardware. He works with companies, hospitals, museums and universities, from the first workshop to a shipped product."],
+      ["Is Morten available for press comment on VR and smart glasses?","Yes. Journalists can reach him for expert comment on Meta Quest and Meta's smart glasses, Apple Vision Pro, Android XR and the wider XR industry, in Danish or English, at Morten@nxtwebxr.com."],
+      ["What has Morten built?","NXT/WebXR, a catalogue of free WebXR games and experiences, with his own games HoloRange, Meows Freaky Fishstick Factory and die Hände; NXT/Care for children in hospitals and clinics; MidwifeVR, used in midwifery education at University College Copenhagen and winner of the KU Impact Award 2021; and the SendToQuest utility."]
+    ],
+    contactTitle: "Let's talk",
+    contactSub: "Consulting projects, collaborations or just a question. I typically reply within one business day.",
+    directLabel: "Direct",
+    skip: "Skip to content"
+  },
+  da: {
+    heroLead: "Jeg hjælper organisationer med at forstå spatial computing og bygge det, der kommer bagefter.",
+    heroSub: "Foredragsholder, XR-konsulent og founder af NXT/WebXR. Mere end ti år med VR, AR og WebXR til hospitaler, museer, universiteter og globale brands.",
+    stats: [["10+","år med XR"],["100+","workshops faciliteret"],["2.000+","tilhørere ved ét keynote"],["EU & FN","officielle præsentationer"]],
+    featured: "Omtalt i og på scenen med",
+    servicesTitle: "Tre måder at arbejde sammen på",
+    speakTitle: "Foredrag & paneler",
+    speakText: "Klare foredrag med masser af demoer, der giver publikum et jordnært billede af, hvor XR reelt er på vej hen. Til konferencer, virksomhedsevents, universiteter og det offentlige, på dansk eller engelsk.",
+    speakTopics: ["Det rumlige internet: hvorfor den næste platform besøges og ikke installeres","XR i sundhedsvæsenet, fra fødegangen til børneafdelingen","Smartbriller og headsets: hvad Meta, Apple og Google reelt bygger","Immersive produkter, som folk faktisk bruger","Innovation og iværksætteri i ny teknologi"],
+    speakCta: "Book et foredrag",
+    consultTitle: "XR-strategi & rådgivning",
+    consultText: "Praktisk rådgivning fra en, der selv leverer. Jeg hjælper ledelser og produktteams med at finde ud af, hvor XR skaber reel værdi, og bygger derefter prototyper og løsninger.",
+    consultList: ["XR-workshops for ledelsesgrupper","WebXR-, VR- og mixed reality-prototyper og produktion","Simulationer til sundhed, træning og uddannelse","Distribution uden app stores via det åbne web","Hardware-rådgivning: hvilke headsets eller briller passer til jer"],
+    consultCta: "Start en dialog",
+    pressTitle: "Presse & ekspertkommentarer",
+    pressText: "Journalister: Jeg kommenterer på VR, AR og smartbriller, fra Metas nyeste headsets og briller til Apple Vision Pro og Android XR. På dansk eller engelsk, og jeg kan som regel svare hurtigt, når der er deadline.",
+    pressList: ["Meta Quest og Metas smartbriller","Apple Vision Pro og visionOS","Google, Samsung og Android XR","XR i sundhed og uddannelse","Metaverset, hype vs. virkelighed"],
+    pressCta: "Kontakt til presse",
+    pressSubject: "Presseforespørgsel",
+    workTitle: "Foredrag, presse & projekter",
+    workSub: "Tryk på et kort for hele historien.",
+    kitTitle: "Speaker kit",
+    kitSub: "Alt, hvad en arrangør skal bruge til programmet, klar til at kopiere.",
+    kitShortLabel: "Kort bio",
+    kitShort: "Morten Haulik er spatial computing-pioner fra København og founder af NXT/WebXR, forsiden til det rumlige internet. Med mere end ti år i XR bygger han immersive værktøjer, der bruges på hospitaler, museer og i hjem verden over. Han har faciliteret 100+ workshops og præsenteret ved EU- og FN-arrangementer.",
+    kitLongLabel: "Fuld bio",
+    kitLong: [
+      "Morten Haulik er spatial computing-udvikler, founder og foredragsholder med base i København. For mere end ti år siden forlod han studiet i Informationsvidenskab på Københavns Universitet for at arbejde fuld tid i det første nordiske XR-studie. Siden har han faciliteret over 100 workshops, lanceret immersive produkter og holdt keynotes for publikummer på over 2.000.",
+      "Han har præsenteret spatial computing-løsninger ved officielle EU-arrangementer for medlemmer af Europa-Parlamentet og Kommissionen samt for FN-delegationer.",
+      "Som medstifter af MidwifeVR, vinder af KU Impact Award 2021, byggede han VR-platformen til ammevejledning, der i dag bruges på jordemoderuddannelsen på Københavns Professionshøjskole. Med NXT/Care bringer han tryg og legende mixed reality til børn på danske hospitaler og klinikker, og han samarbejder med Herlev Hospital om klinisk XR.",
+      "Siden 2022 har han været Entrepreneur in Residence på Københavns Universitet og med til at forme KU Lighthouse. I 2025 lancerede han NXT/WebXR, et katalog af gratis WebXR-spil og -oplevelser, der åbnes direkte i headsettets browser, herunder hans egne titler HoloRange, Meows Freaky Fishstick Factory og die Hände."
+    ],
+    kitFacts: [["Formater","Keynote (20–60 min), panel, samtale, hands-on workshop med headsets"],["Sprog","Dansk, engelsk"],["Base","København, tilgængelig i hele Europa"]],
+    copy: "Kopiér", copied: "Kopieret ✓",
+    headshot: "Download profilbillede",
+    faqTitle: "Ofte stillede spørgsmål",
+    faq: [
+      ["Kan man booke Morten Haulik som foredragsholder?","Ja. Morten holder foredrag, keynotes, paneler og workshops om spatial computing, XR, VR og smartbriller for konferencer, virksomheder og uddannelser, på dansk eller engelsk. Brug formularen her på siden eller skriv til Morten@nxtwebxr.com."],
+      ["Hvad rådgiver Morten om?","XR-strategi, WebXR- og VR/mixed reality-udvikling, simulationer til sundhed og træning samt valg af hardware. Han arbejder med virksomheder, hospitaler, museer og uddannelser, fra første workshop til færdigt produkt."],
+      ["Kan journalister få en kommentar fra Morten om VR og smartbriller?","Ja. Morten stiller op som ekspertkilde om Meta Quest og Metas smartbriller, Apple Vision Pro, Android XR og XR-branchen generelt, på dansk eller engelsk. Skriv til Morten@nxtwebxr.com."],
+      ["Hvad har Morten bygget?","NXT/WebXR, et katalog af gratis WebXR-spil og -oplevelser med hans egne spil HoloRange, Meows Freaky Fishstick Factory og die Hände; NXT/Care til børn på hospitaler og klinikker; MidwifeVR, der bruges på jordemoderuddannelsen på Københavns Professionshøjskole og vandt KU Impact Award 2021; samt værktøjet SendToQuest."]
+    ],
+    contactTitle: "Lad os tale sammen",
+    contactSub: "Rådgivning, samarbejde eller bare et spørgsmål. Jeg svarer normalt inden for én hverdag.",
+    directLabel: "Direkte",
+    skip: "Spring til indhold"
+  },
+  de: {
+    heroLead: "Ich helfe Organisationen, Spatial Computing zu verstehen und das zu bauen, was als Nächstes kommt.",
+    heroSub: "Keynote Speaker, XR-Berater und Gründer von NXT/WebXR. Über zehn Jahre VR, AR und WebXR für Kliniken, Museen, Universitäten und globale Marken.",
+    stats: [["10+","Jahre XR-Entwicklung"],["100+","moderierte Workshops"],["2.000+","Zuhörer bei einer Keynote"],["EU & UN","offizielle Präsentationen"]],
+    featured: "Bekannt aus und auf der Bühne mit",
+    servicesTitle: "Drei Wege der Zusammenarbeit",
+    speakTitle: "Keynotes & Panels",
+    speakText: "Klare, demo-starke Vorträge, die dem Publikum ein realistisches Bild davon geben, wohin sich XR wirklich entwickelt. Für Konferenzen, Firmenevents, Universitäten und den öffentlichen Sektor, auf Englisch oder Dänisch.",
+    speakTopics: ["Das räumliche Internet: warum die nächste Plattform besucht und nicht installiert wird","XR im Gesundheitswesen, von der Geburtsstation bis zur Kinderklinik","Smart Glasses und Headsets: was Meta, Apple und Google wirklich bauen","Immersive Produkte, die Menschen tatsächlich nutzen","Innovation und Unternehmertum in neuen Technologien"],
+    speakCta: "Keynote anfragen",
+    consultTitle: "XR-Strategie & Beratung",
+    consultText: "Praxisnahe Beratung von jemandem, der selbst liefert. Ich helfe Führungs- und Produktteams zu entscheiden, wo XR echten Mehrwert schafft, und baue dann Prototypen und Lösungen.",
+    consultList: ["XR-Workshops für Führungsteams","WebXR-, VR- und Mixed-Reality-Prototypen und Produktion","Simulationen für Gesundheit, Training und Bildung","Distribution ohne App Stores über das offene Web","Hardware-Beratung: welches Headset oder welche Brille passt"],
+    consultCta: "Gespräch starten",
+    pressTitle: "Presse & Expertenkommentar",
+    pressText: "Journalisten: Ich kommentiere VR, AR und Smart Glasses, von Metas neuesten Headsets und Brillen bis zu Apple Vision Pro und Android XR. Auf Englisch oder Dänisch, meist kurzfristig.",
+    pressList: ["Meta Quest und Metas Smart Glasses","Apple Vision Pro und visionOS","Google, Samsung und Android XR","XR in Gesundheit und Bildung","Metaverse, Hype vs. Realität"],
+    pressCta: "Presseanfrage",
+    pressSubject: "Presseanfrage",
+    workTitle: "Vorträge, Presse & Projekte",
+    workSub: "Karte antippen für die ganze Geschichte.",
+    kitTitle: "Speaker Kit",
+    kitSub: "Alles, was Veranstalter für das Programm brauchen, zum Kopieren bereit.",
+    kitShortLabel: "Kurzbio",
+    kitShort: "Morten Haulik ist ein Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR, der Startseite des räumlichen Internets. Seit über zehn Jahren entwickelt er immersive Anwendungen, die weltweit in Kliniken, Museen und Haushalten genutzt werden, moderierte über 100 Workshops und präsentierte bei EU- und UN-Veranstaltungen.",
+    kitLongLabel: "Ausführliche Bio",
+    kitLong: [
+      "Morten Haulik ist Spatial-Computing-Entwickler, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über zehn Jahren verließ er sein Studium der Informationswissenschaft an der Universität Kopenhagen, um in Vollzeit beim ersten nordischen XR-Studio einzusteigen. Seitdem moderierte er über 100 Workshops, brachte immersive Produkte auf den Markt und sprach vor über 2.000 Zuhörern.",
+      "Er präsentierte Spatial-Computing-Lösungen bei offiziellen EU-Veranstaltungen für Mitglieder des Europäischen Parlaments und der Kommission sowie für UN-Delegationen.",
+      "Als Mitgründer von MidwifeVR, Gewinner des KU Impact Award 2021, baute er die VR-Plattform zur Stillberatung, die heute in der Hebammenausbildung am University College Copenhagen genutzt wird. Mit NXT/Care bringt er beruhigende, spielerische Mixed Reality zu Kindern in dänischen Kliniken.",
+      "Seit 2022 ist er Entrepreneur in Residence an der Universität Kopenhagen (KU Lighthouse). 2025 startete er NXT/WebXR, einen Katalog kostenloser WebXR-Spiele, darunter seine eigenen Titel HoloRange, Meows Freaky Fishstick Factory und die Hände."
+    ],
+    kitFacts: [["Formate","Keynote (20–60 Min.), Panel, Kamingespräch, Workshop mit Headsets"],["Sprachen","Englisch, Dänisch"],["Standort","Kopenhagen, europaweit verfügbar"]],
+    copy: "Kopieren", copied: "Kopiert ✓",
+    headshot: "Profilbild herunterladen",
+    faqTitle: "Häufige Fragen",
+    faq: [
+      ["Kann ich Morten Haulik als Keynote Speaker buchen?","Ja. Morten hält Keynotes, Panels und Workshops zu Spatial Computing, XR, VR und Smart Glasses für Konferenzen, Unternehmen und Universitäten in ganz Europa, auf Englisch oder Dänisch. Nutzen Sie das Formular oder schreiben Sie an Morten@nxtwebxr.com."],
+      ["Wozu berät Morten?","XR-Strategie, WebXR- und VR/Mixed-Reality-Entwicklung, Simulationen für Gesundheit und Training sowie Hardware-Auswahl, vom ersten Workshop bis zum fertigen Produkt."],
+      ["Steht Morten für Pressekommentare zu VR und Smart Glasses zur Verfügung?","Ja. Journalisten erreichen ihn für Expertenkommentare zu Meta Quest, Metas Smart Glasses, Apple Vision Pro und Android XR unter Morten@nxtwebxr.com."],
+      ["Was hat Morten gebaut?","NXT/WebXR mit seinen Spielen HoloRange, Meows Freaky Fishstick Factory und die Hände; NXT/Care für Kinder in Kliniken; MidwifeVR, Gewinner des KU Impact Award 2021; und das Tool SendToQuest."]
+    ],
+    contactTitle: "Lass uns reden",
+    contactSub: "Beratungsprojekte, Kooperationen oder einfach eine Frage. Ich antworte meist innerhalb eines Werktags.",
+    directLabel: "Direkt",
+    skip: "Zum Inhalt springen"
+  },
+  it: {
+    heroLead: "Aiuto le organizzazioni a capire lo spatial computing e a costruire ciò che viene dopo.",
+    heroSub: "Keynote speaker, consulente XR e fondatore di NXT/WebXR. Oltre dieci anni di VR, AR e WebXR per ospedali, musei, università e marchi globali.",
+    stats: [["10+","anni di XR"],["100+","workshop facilitati"],["2.000+","persone in un singolo keynote"],["UE & ONU","presentazioni ufficiali"]],
+    featured: "Citato da e sul palco con",
+    servicesTitle: "Tre modi per collaborare",
+    speakTitle: "Keynote & panel",
+    speakText: "Interventi chiari e ricchi di demo che offrono al pubblico una visione concreta di dove sta andando davvero l'XR. Per conferenze, eventi aziendali, università e settore pubblico, in inglese o danese.",
+    speakTopics: ["L'internet spaziale: perché la prossima piattaforma si visita, non si installa","L'XR in sanità, dai reparti maternità agli ospedali pediatrici","Smart glasses e visori: cosa stanno davvero costruendo Meta, Apple e Google","Creare prodotti immersivi che le persone usano davvero","Innovazione e imprenditorialità nelle tecnologie emergenti"],
+    speakCta: "Richiedi un keynote",
+    consultTitle: "Strategia & consulenza XR",
+    consultText: "Consulenza pratica da chi realizza prodotti. Aiuto i team di leadership e di prodotto a capire dove l'XR crea valore reale, poi prototipo e sviluppo.",
+    consultList: ["Workshop XR per team di leadership","Prototipi e produzione WebXR, VR e realtà mista","Simulazioni per sanità, formazione e istruzione","Distribuzione senza app store tramite il web aperto","Consulenza hardware: quale visore o occhiale fa per voi"],
+    consultCta: "Inizia una conversazione",
+    pressTitle: "Stampa & commento esperto",
+    pressText: "Giornalisti: commento VR, AR e smart glasses, dai nuovi visori e occhiali di Meta ad Apple Vision Pro e Android XR. In inglese o danese, di solito con tempi rapidi.",
+    pressList: ["Meta Quest e gli smart glasses di Meta","Apple Vision Pro e visionOS","Google, Samsung e Android XR","XR in sanità e istruzione","Metaverso, hype vs. realtà"],
+    pressCta: "Contatto stampa",
+    pressSubject: "Richiesta stampa",
+    workTitle: "Interventi, stampa & progetti",
+    workSub: "Tocca una scheda per la storia completa.",
+    kitTitle: "Speaker kit",
+    kitSub: "Tutto ciò che serve agli organizzatori per il programma, pronto da copiare.",
+    kitShortLabel: "Bio breve",
+    kitShort: "Morten Haulik è un pioniere dello spatial computing con sede a Copenaghen e fondatore di NXT/WebXR, la prima pagina dell'internet spaziale. Con oltre dieci anni di XR, sviluppa strumenti immersivi usati in ospedali, musei e case di tutto il mondo, ha facilitato oltre 100 workshop e ha presentato a eventi UE e ONU.",
+    kitLongLabel: "Bio completa",
+    kitLong: [
+      "Morten Haulik è sviluppatore di spatial computing, fondatore e keynote speaker con sede a Copenaghen. Oltre dieci anni fa ha lasciato gli studi di Scienze dell'Informazione all'Università di Copenaghen per entrare a tempo pieno nel primo studio XR nordico. Da allora ha facilitato oltre 100 workshop e parlato a platee di oltre 2.000 persone.",
+      "Ha presentato soluzioni di spatial computing a incontri ufficiali dell'Unione Europea per membri del Parlamento e della Commissione, e a delegazioni delle Nazioni Unite.",
+      "Come co-fondatore di MidwifeVR, vincitore del KU Impact Award 2021, ha creato la piattaforma VR per l'allattamento oggi usata nel corso di ostetricia dello University College Copenhagen. Con NXT/Care porta la realtà mista ai bambini negli ospedali danesi.",
+      "Dal 2022 è Entrepreneur in Residence all'Università di Copenaghen (KU Lighthouse). Nel 2025 ha lanciato NXT/WebXR, un catalogo di giochi WebXR gratuiti, tra cui i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände."
+    ],
+    kitFacts: [["Formati","Keynote (20–60 min), panel, conversazione, workshop pratico con visori"],["Lingue","Inglese, danese"],["Sede","Copenaghen, disponibile in tutta Europa"]],
+    copy: "Copia", copied: "Copiato ✓",
+    headshot: "Scarica immagine profilo",
+    faqTitle: "Domande frequenti",
+    faq: [
+      ["Posso prenotare Morten Haulik come keynote speaker?","Sì. Morten tiene keynote, panel e workshop su spatial computing, XR, VR e smart glasses per conferenze, aziende e università in tutta Europa, in inglese o danese. Usa il modulo o scrivi a Morten@nxtwebxr.com."],
+      ["Su cosa offre consulenza Morten?","Strategia XR, sviluppo WebXR e VR/realtà mista, simulazioni per sanità e formazione e scelta dell'hardware, dal primo workshop al prodotto finito."],
+      ["Morten è disponibile per commenti alla stampa su VR e smart glasses?","Sì. I giornalisti possono contattarlo per commenti su Meta Quest, smart glasses di Meta, Apple Vision Pro e Android XR a Morten@nxtwebxr.com."],
+      ["Cosa ha creato Morten?","NXT/WebXR con i suoi giochi HoloRange, Meows Freaky Fishstick Factory e die Hände; NXT/Care per bambini in ospedale; MidwifeVR, vincitore del KU Impact Award 2021; e lo strumento SendToQuest."]
+    ],
+    contactTitle: "Parliamo",
+    contactSub: "Progetti di consulenza, collaborazioni o semplicemente una domanda. Di solito rispondo entro un giorno lavorativo.",
+    directLabel: "Diretto",
+    skip: "Vai al contenuto"
+  },
+  fr: {
+    heroLead: "J'aide les organisations à comprendre l'informatique spatiale et à construire la suite.",
+    heroSub: "Conférencier, consultant XR et fondateur de NXT/WebXR. Plus de dix ans de VR, AR et WebXR pour des hôpitaux, des musées, des universités et des marques mondiales.",
+    stats: [["10+","ans de XR"],["100+","ateliers animés"],["2 000+","personnes pour une seule keynote"],["UE & ONU","présentations officielles"]],
+    featured: "Vu dans et sur scène avec",
+    servicesTitle: "Trois façons de travailler ensemble",
+    speakTitle: "Keynotes & tables rondes",
+    speakText: "Des interventions claires et riches en démos qui donnent au public une vision concrète de l'avenir réel de la XR. Pour conférences, séminaires d'entreprise, universités et secteur public, en anglais ou en danois.",
+    speakTopics: ["L'internet spatial : pourquoi la prochaine plateforme se visite au lieu de s'installer","La XR en santé, des maternités aux hôpitaux pédiatriques","Lunettes connectées et casques : ce que Meta, Apple et Google construisent vraiment","Créer des produits immersifs que les gens utilisent vraiment","Innovation et entrepreneuriat dans les technologies émergentes"],
+    speakCta: "Demander une keynote",
+    consultTitle: "Stratégie & conseil XR",
+    consultText: "Un conseil concret de quelqu'un qui livre. J'aide les équipes de direction et produit à identifier où la XR crée une vraie valeur, puis je prototype et je développe.",
+    consultList: ["Ateliers XR pour équipes de direction","Prototypes et production WebXR, VR et réalité mixte","Simulations pour la santé, la formation et l'éducation","Distribution sans app store via le web ouvert","Conseil matériel : quel casque ou quelles lunettes choisir"],
+    consultCta: "Démarrer la conversation",
+    pressTitle: "Presse & commentaire d'expert",
+    pressText: "Journalistes : je commente la VR, l'AR et les lunettes connectées, des derniers casques et lunettes de Meta à l'Apple Vision Pro et Android XR. En anglais ou en danois, généralement dans des délais courts.",
+    pressList: ["Meta Quest et les lunettes connectées de Meta","Apple Vision Pro et visionOS","Google, Samsung et Android XR","La XR en santé et en éducation","Le métavers, entre hype et réalité"],
+    pressCta: "Contact presse",
+    pressSubject: "Demande presse",
+    workTitle: "Conférences, presse & projets",
+    workSub: "Touchez une carte pour l'histoire complète.",
+    kitTitle: "Kit conférencier",
+    kitSub: "Tout ce dont un organisateur a besoin pour le programme, prêt à copier.",
+    kitShortLabel: "Bio courte",
+    kitShort: "Morten Haulik est un pionnier de l'informatique spatiale basé à Copenhague et le fondateur de NXT/WebXR, la page d'accueil de l'internet spatial. Fort de plus de dix ans dans la XR, il conçoit des outils immersifs utilisés dans des hôpitaux, des musées et des foyers du monde entier, a animé plus de 100 ateliers et a présenté lors d'événements de l'UE et de l'ONU.",
+    kitLongLabel: "Bio complète",
+    kitLong: [
+      "Morten Haulik est développeur en informatique spatiale, fondateur et conférencier basé à Copenhague. Il y a plus de dix ans, il a quitté ses études en sciences de l'information à l'Université de Copenhague pour rejoindre à plein temps le premier studio XR nordique. Depuis, il a animé plus de 100 ateliers et s'est adressé à des publics de plus de 2 000 personnes.",
+      "Il a présenté des solutions d'informatique spatiale lors de rencontres officielles de l'Union européenne pour des membres du Parlement et de la Commission, ainsi qu'à des délégations des Nations unies.",
+      "Cofondateur de MidwifeVR, lauréat du KU Impact Award 2021, il a créé la plateforme VR d'accompagnement à l'allaitement utilisée dans la formation des sages-femmes à l'University College Copenhagen. Avec NXT/Care, il apporte la réalité mixte aux enfants dans les hôpitaux danois.",
+      "Depuis 2022, il est Entrepreneur en résidence à l'Université de Copenhague (KU Lighthouse). En 2025, il a lancé NXT/WebXR, un catalogue de jeux WebXR gratuits, dont ses propres titres HoloRange, Meows Freaky Fishstick Factory et die Hände."
+    ],
+    kitFacts: [["Formats","Keynote (20–60 min), table ronde, conversation, atelier pratique avec casques"],["Langues","Anglais, danois"],["Basé à","Copenhague, disponible dans toute l'Europe"]],
+    copy: "Copier", copied: "Copié ✓",
+    headshot: "Télécharger l'image de profil",
+    faqTitle: "Questions fréquentes",
+    faq: [
+      ["Puis-je réserver Morten Haulik comme conférencier ?","Oui. Morten donne des keynotes, tables rondes et ateliers sur l'informatique spatiale, la XR, la VR et les lunettes connectées pour des conférences, entreprises et universités dans toute l'Europe, en anglais ou en danois. Utilisez le formulaire ou écrivez à Morten@nxtwebxr.com."],
+      ["Sur quoi Morten conseille-t-il ?","Stratégie XR, développement WebXR et VR/réalité mixte, simulations pour la santé et la formation, et choix du matériel, du premier atelier au produit livré."],
+      ["Morten est-il disponible pour commenter la VR et les lunettes connectées dans la presse ?","Oui. Les journalistes peuvent le joindre pour un commentaire d'expert sur Meta Quest, les lunettes de Meta, l'Apple Vision Pro et Android XR à Morten@nxtwebxr.com."],
+      ["Qu'a construit Morten ?","NXT/WebXR avec ses jeux HoloRange, Meows Freaky Fishstick Factory et die Hände ; NXT/Care pour les enfants à l'hôpital ; MidwifeVR, lauréat du KU Impact Award 2021 ; et l'outil SendToQuest."]
+    ],
+    contactTitle: "Discutons-en",
+    contactSub: "Projets de conseil, collaborations ou simple question. Je réponds généralement sous un jour ouvré.",
+    directLabel: "Direct",
+    skip: "Aller au contenu"
+  }
 };
+
+/* "Featured in" strip. Links go to the coverage itself. */
+const FEATURED = [
+  ["Berlingske","https://www.berlingske.dk/indland/stort-problem-blandt-nybagte-foraeldre-kan-afhjaelpes-startup-kommer-med-loesning"],
+  ["IDA","https://videos.ida.dk/media/Virtual+Reality+og+Amning%3A+En+innovativ+tilgang+med+MidwifeVR++Morten+Haulik%2C+Co-founder+og+VR+ekspert+og+Sofie+Bonde+Alsen%2C+jordemoder+og+Digital+Designer/1_bb9dwkxp"],
+  ["Radio4","https://radio4.dk/podcasts/kraes/rolf-s-rensen-elsker-ny-dokumentar-om-tour-de-fran"],
+  ["Voice of America","https://learningenglish.voanews.com/amp/a-visit-to-the-virtual-world/3618990.html"],
+  ["The Copenhagen Post","https://cphpost.dk/2017-07-02/news/goggle-me-up-scotty-this-is-the-final-frontier/"],
+  ["Danish Sound Cluster","https://danishsoundcluster.dk/the-future-sound-forum/"],
+  ["24Victoria","https://24victoria.dk/artificial-and-intelligence-deep-tech/udvikler-xr-oplevelser-morten-haulik"],
+  ["CBS Wire","https://cbswire.dk/healthy-glove-gaming-misoballs-and-a-virtual-midwife/"]
+];
 
 /* Portfolio card + modal content, all languages. */
 const PORTFOLIO_DATA = {
+  'project-nxtcare': {
+    en:{tag:'Project',title:'NXT/Care',subtitle:'Calm, playful XR for children in hospitals and clinics',desc:"Mixed-reality distraction for children during blood tests, IV placement and dental visits, used in the Capital Region of Denmark.",content:["Needles, drills and waiting rooms are scary when you are six. NXT/Care turns that time into play.","The experiences run in AR passthrough and use only the child's hands, so the child can always see the nurse, the parent and the room while their attention moves to the game. Setup takes under 60 seconds.","The catalogue includes 'Bag Tænderne', where children clean away virtual bacteria while the dentist works, the calm 'Sommerfugl' nature world, and 'Pusteven', a visual breathing exercise that gives the child a sense of control. Everything is built and tested together with Danish children, paediatric departments, specialists and dentists."]},
+    da:{tag:'Projekt',title:'NXT/Care',subtitle:'Tryg og legende XR til børn på hospitaler og klinikker',desc:"Mixed reality-distraktion til børn under blodprøver, IV-anlæggelse og tandlægebesøg, anvendt i Region Hovedstaden.",content:["Nåle, boremaskiner og venteværelser er skræmmende, når man er seks år. NXT/Care forvandler den tid til leg.","Oplevelserne kører i AR-passthrough og bruger kun barnets hænder, så barnet altid kan se sygeplejersken, forælderen og rummet, mens opmærksomheden flyttes over i spillet. Opsætningen tager under 60 sekunder.","Kataloget rummer bl.a. 'Bag Tænderne', hvor barnet fjerner virtuelle bakterier, mens tandlægen arbejder, det rolige naturunivers 'Sommerfugl' og 'Pusteven', en visuel vejrtrækningsøvelse, der giver barnet kontrol og ro. Alt er udviklet og testet sammen med danske børn, børneafdelinger, speciallæger og tandlæger."]},
+    de:{tag:'Projekt',title:'NXT/Care',subtitle:'Ruhige, spielerische XR für Kinder in Kliniken und Praxen',desc:"Mixed-Reality-Ablenkung für Kinder bei Blutabnahmen, Infusionen und Zahnarztbesuchen, im Einsatz in der Region Hovedstaden (Dänemark).",content:["Nadeln, Bohrer und Wartezimmer sind beängstigend, wenn man sechs ist. NXT/Care verwandelt diese Zeit in Spiel.","Die Erlebnisse laufen im AR-Passthrough und nutzen nur die Hände des Kindes. So sieht das Kind jederzeit Pflegekraft, Eltern und Raum, während die Aufmerksamkeit ins Spiel wandert. Die Einrichtung dauert unter 60 Sekunden.","Zum Katalog gehören u. a. 'Bag Tænderne', bei dem Kinder virtuelle Bakterien entfernen, während der Zahnarzt arbeitet, die ruhige Naturwelt 'Sommerfugl' und 'Pusteven', eine visuelle Atemübung. Alles wurde gemeinsam mit dänischen Kindern, Kinderstationen und Zahnärzten entwickelt und getestet."]},
+    it:{tag:'Progetto',title:'NXT/Care',subtitle:'XR rassicurante e giocosa per bambini in ospedali e cliniche',desc:"Distrazione in realtà mista per bambini durante prelievi, accessi venosi e visite dentistiche, in uso nella Regione Capitale danese.",content:["Aghi, trapani e sale d'attesa fanno paura quando hai sei anni. NXT/Care trasforma quel tempo in gioco.","Le esperienze funzionano in passthrough AR e usano solo le mani del bambino, che vede sempre l'infermiere, il genitore e la stanza mentre l'attenzione si sposta sul gioco. La configurazione richiede meno di 60 secondi.","Il catalogo include 'Bag Tænderne', in cui il bambino elimina batteri virtuali mentre il dentista lavora, il rilassante mondo naturale 'Sommerfugl' e 'Pusteven', un esercizio visivo di respirazione. Tutto è sviluppato e testato con bambini, reparti pediatrici e dentisti danesi."]},
+    fr:{tag:'Projet',title:'NXT/Care',subtitle:"Une XR rassurante et ludique pour les enfants à l'hôpital et en clinique",desc:"Distraction en réalité mixte pour les enfants pendant les prises de sang, les perfusions et les soins dentaires, utilisée dans la Région capitale du Danemark.",content:["Les aiguilles, les fraises et les salles d'attente font peur quand on a six ans. NXT/Care transforme ce temps en jeu.","Les expériences fonctionnent en passthrough AR et n'utilisent que les mains de l'enfant, qui voit toujours l'infirmière, le parent et la pièce pendant que son attention passe au jeu. L'installation prend moins de 60 secondes.","Le catalogue comprend 'Bag Tænderne', où l'enfant élimine des bactéries virtuelles pendant que le dentiste travaille, l'univers apaisant 'Sommerfugl' et 'Pusteven', un exercice de respiration visuel. Tout est conçu et testé avec des enfants, des services de pédiatrie et des dentistes danois."]}
+  },
+  'game-holorange': {
+    en:{tag:'Game',title:'HoloRange',subtitle:'Free WebXR mixed-reality shooter on NXT/WebXR',desc:"Turns the room you are standing in into a hologram shooting range. Dual-wield blasters, clear four stages, then face the Colossus.",content:["HoloRange is a free mixed-reality shooter that runs straight in the headset browser: no app store, no download, no account.","Holographic targets come at you in waves across four stages (Peek, Breach, Wide Arc and Surrounded), with runners and juggernauts joining in before the Colossus boss arrives. Grab a second blaster to dual wield; headshots, accuracy and multi-kills all count.","I designed and built it to show what WebXR can do in mixed reality today, in your own living room."]},
+    da:{tag:'Spil',title:'HoloRange',subtitle:'Gratis WebXR mixed reality-skydespil på NXT/WebXR',desc:"Forvandler rummet, du står i, til en hologram-skydebane. To blastere, fire baner, og til sidst Colossus.",content:["HoloRange er et gratis mixed reality-skydespil, der kører direkte i headsettets browser: ingen app store, ingen download, ingen konto.","Holografiske mål angriber i bølger over fire baner (Peek, Breach, Wide Arc og Surrounded), med løbere og juggernauts, før bossen Colossus dukker op. Grib en blaster mere for at skyde med begge hænder; headshots, præcision og multi-kills tæller.","Jeg har designet og bygget det for at vise, hvad WebXR kan i mixed reality i dag, i din egen stue."]},
+    de:{tag:'Spiel',title:'HoloRange',subtitle:'Kostenloser WebXR-Mixed-Reality-Shooter auf NXT/WebXR',desc:"Verwandelt den Raum, in dem du stehst, in einen Hologramm-Schießstand. Zwei Blaster, vier Stages, dann der Colossus.",content:["HoloRange ist ein kostenloser Mixed-Reality-Shooter, der direkt im Headset-Browser läuft: kein App Store, kein Download, kein Konto.","Holografische Ziele greifen in Wellen über vier Stages an, bevor der Boss Colossus erscheint. Mit einem zweiten Blaster wird beidhändig geschossen; Headshots, Präzision und Multi-Kills zählen.","Ich habe es entworfen und gebaut, um zu zeigen, was WebXR heute in Mixed Reality kann, im eigenen Wohnzimmer."]},
+    it:{tag:'Gioco',title:'HoloRange',subtitle:'Sparatutto WebXR gratuito in realtà mista su NXT/WebXR',desc:"Trasforma la stanza in cui ti trovi in un poligono di tiro olografico. Due blaster, quattro livelli, poi il Colossus.",content:["HoloRange è uno sparatutto gratuito in realtà mista che funziona direttamente nel browser del visore: niente app store, niente download, niente account.","Bersagli olografici arrivano a ondate su quattro livelli prima del boss Colossus. Afferra un secondo blaster per sparare con due mani; colpi alla testa, precisione e uccisioni multiple contano.","L'ho progettato e sviluppato per mostrare cosa può fare oggi WebXR in realtà mista, nel tuo salotto."]},
+    fr:{tag:'Jeu',title:'HoloRange',subtitle:'Jeu de tir WebXR gratuit en réalité mixte sur NXT/WebXR',desc:"Transforme la pièce où vous êtes en stand de tir holographique. Deux blasters, quatre niveaux, puis le Colossus.",content:["HoloRange est un jeu de tir gratuit en réalité mixte qui tourne directement dans le navigateur du casque : pas d'app store, pas de téléchargement, pas de compte.","Des cibles holographiques arrivent par vagues sur quatre niveaux avant le boss Colossus. Saisissez un second blaster pour tirer à deux mains ; tirs à la tête, précision et éliminations multiples comptent.","Je l'ai conçu et développé pour montrer ce que WebXR permet aujourd'hui en réalité mixte, dans votre salon."]}
+  },
+  'game-fishstick': {
+    en:{tag:'Game',title:'Meows Freaky Fishstick Factory',subtitle:'Free WebXR mixed-reality rage game on NXT/WebXR',desc:"You are a cat on a fish stick conveyor belt, and your boss is a bigger, angrier cat. Swat only the weird ones.",content:["Most fish sticks are perfectly normal. Some are not: one wears a bow tie, one has a monocle, one has a face on both ends, one is doing a handstand.","Swat only the weird ones before they get shipped and let the normal ones pass. Then the boss turns the belt up. See how far you get before you're fired.","A free mixed-reality game that plays in your own room, straight from the headset browser."]},
+    da:{tag:'Spil',title:'Meows Freaky Fishstick Factory',subtitle:'Gratis WebXR mixed reality-spil på NXT/WebXR',desc:"Du er en kat ved et samlebånd med fiskestænger, og din chef er en større, vredere kat. Slå kun de mærkelige.",content:["De fleste fiskestænger er helt normale. Nogle er ikke: én har butterfly, én har monokel, én har ansigt i begge ender, én står på hænder.","Slå kun de mærkelige, før de bliver sendt afsted, og lad de normale passere. Så skruer chefen op for båndet. Hvor langt når du, før du bliver fyret?","Et gratis mixed reality-spil, der spilles i din egen stue, direkte fra headsettets browser."]},
+    de:{tag:'Spiel',title:'Meows Freaky Fishstick Factory',subtitle:'Kostenloses WebXR-Mixed-Reality-Spiel auf NXT/WebXR',desc:"Du bist eine Katze am Fischstäbchen-Fließband, und dein Chef ist eine größere, wütendere Katze. Schlag nur die seltsamen.",content:["Die meisten Fischstäbchen sind ganz normal. Manche nicht: eines trägt Fliege, eines Monokel, eines macht einen Handstand.","Schlag nur die seltsamen, bevor sie verschickt werden. Dann dreht der Chef das Band hoch. Wie weit kommst du, bevor du gefeuert wirst?","Ein kostenloses Mixed-Reality-Spiel für das eigene Zimmer, direkt im Headset-Browser."]},
+    it:{tag:'Gioco',title:'Meows Freaky Fishstick Factory',subtitle:'Gioco WebXR gratuito in realtà mista su NXT/WebXR',desc:"Sei un gatto su un nastro di bastoncini di pesce, e il tuo capo è un gatto più grosso e più arrabbiato. Colpisci solo quelli strani.",content:["La maggior parte dei bastoncini è normale. Alcuni no: uno ha il papillon, uno il monocolo, uno fa la verticale.","Colpisci solo quelli strani prima che vengano spediti. Poi il capo accelera il nastro. Quanto resisti prima di essere licenziato?","Un gioco gratuito in realtà mista che si gioca nella tua stanza, direttamente dal browser del visore."]},
+    fr:{tag:'Jeu',title:'Meows Freaky Fishstick Factory',subtitle:'Jeu WebXR gratuit en réalité mixte sur NXT/WebXR',desc:"Vous êtes un chat sur un tapis de bâtonnets de poisson, et votre patron est un chat plus gros et plus en colère. Frappez seulement les bizarres.",content:["La plupart des bâtonnets sont normaux. Certains non : l'un porte un nœud papillon, l'autre un monocle, un autre fait le poirier.","Frappez seulement les bizarres avant leur expédition. Puis le patron accélère le tapis. Jusqu'où irez-vous avant d'être viré ?","Un jeu gratuit en réalité mixte qui se joue dans votre pièce, directement depuis le navigateur du casque."]}
+  },
+  'game-diehaende': {
+    en:{tag:'Game',title:'die Hände',subtitle:'Free WebXR hand-tracking horror on NXT/WebXR',desc:"A dead hand wakes under glass, Specimen Nº 13, and moves as you move. Set it free, and see how long it keeps obeying.",content:["die Hände is played with your bare hands, using your headset's hand tracking. Put the controllers down and lay your hand on the plate to wake the specimen.","The hand copies yours, walks on its fingers, and then wants to play you, first to three: keep still while it stares, move when it looks away.","A small, eerie mixed-reality piece built to show how expressive hand tracking in the browser has become."]},
+    da:{tag:'Spil',title:'die Hände',subtitle:'Gratis WebXR-gyser med håndsporing på NXT/WebXR',desc:"En død hånd vågner under glas, Specimen Nº 13, og bevæger sig, som du bevæger dig. Sæt den fri, og se hvor længe den adlyder.",content:["die Hände spilles med dine bare hænder via headsettets håndsporing. Læg controllerne fra dig og læg hånden på pladen for at vække præparatet.","Hånden efterligner din, går på fingrene og vil så spille mod dig, først til tre: hold dig i ro, når den stirrer, og bevæg dig, når den kigger væk.","Et lille, uhyggeligt mixed reality-værk, der viser, hvor udtryksfuld håndsporing i browseren er blevet."]},
+    de:{tag:'Spiel',title:'die Hände',subtitle:'Kostenloser WebXR-Horror mit Hand-Tracking auf NXT/WebXR',desc:"Eine tote Hand erwacht unter Glas, Specimen Nº 13, und bewegt sich, wie du dich bewegst. Befreie sie und sieh, wie lange sie gehorcht.",content:["die Hände wird mit bloßen Händen über das Hand-Tracking des Headsets gespielt. Leg die Controller weg und die Hand auf die Platte, um das Präparat zu wecken.","Die Hand ahmt deine nach, läuft auf den Fingern und will dann gegen dich spielen, bis drei: still halten, wenn sie starrt, bewegen, wenn sie wegschaut.","Ein kleines, unheimliches Mixed-Reality-Stück, das zeigt, wie ausdrucksstark Hand-Tracking im Browser geworden ist."]},
+    it:{tag:'Gioco',title:'die Hände',subtitle:'Horror WebXR gratuito con hand tracking su NXT/WebXR',desc:"Una mano morta si sveglia sotto una campana di vetro, Specimen Nº 13, e si muove come ti muovi tu. Liberala e scopri per quanto obbedisce.",content:["die Hände si gioca a mani nude con l'hand tracking del visore. Posa i controller e appoggia la mano sulla piastra per risvegliare il reperto.","La mano copia la tua, cammina sulle dita e poi vuole sfidarti, al meglio dei tre: resta immobile quando ti fissa, muoviti quando distoglie lo sguardo.","Un piccolo pezzo inquietante in realtà mista che mostra quanto è diventato espressivo l'hand tracking nel browser."]},
+    fr:{tag:'Jeu',title:'die Hände',subtitle:'Horreur WebXR gratuite avec suivi des mains sur NXT/WebXR',desc:"Une main morte se réveille sous une cloche de verre, Specimen Nº 13, et bouge comme vous. Libérez-la et voyez combien de temps elle obéit.",content:["die Hände se joue à mains nues grâce au suivi des mains du casque. Posez les manettes et la main sur la plaque pour réveiller le spécimen.","La main imite la vôtre, marche sur ses doigts, puis veut jouer contre vous, en trois manches : restez immobile quand elle vous fixe, bougez quand elle détourne le regard.","Une petite pièce inquiétante en réalité mixte qui montre à quel point le suivi des mains dans le navigateur est devenu expressif."]}
+  },
   'keynote-ida': {
     en:{tag:'Keynote',title:'IDA: Driving Health Tech',subtitle:'Spatial Computing as future healthcare',desc:"As co-founder and XR architect, I took the stage at IDA's Driving Health Tech conference to demonstrate how MidwifeXR solves critical challenges on maternity wards.",quote:"The cutting-edge conference Driving Health Tech is IDA's annual health tech conference, where we focus on new revolutionary methods and health tech solutions...",content:["How can immersive technology help new parents and benefit the establishment of breastfeeding?","Watch or re-watch my talk from Driving Health Tech in Aarhus, where I, along with midwife Sofie Bonde Alsen, presented the XR platform I designed and developed to solve a massive problem in the healthcare sector during the lockdown of Denmark.","In my keynote, I dive into the engine room behind MidwifeXR and show concrete cases of how we alleviate the healthcare system's challenges with spatial computing – now and in the future."]},
     da:{tag:'Keynote',title:'IDA: Driving Health Tech',subtitle:'Spatial Computing som fremtidens sundhedsvæsen',desc:"Som medstifter og XR-arkitekt indtog jeg scenen på IDA's Driving Health Tech-konference for at demonstrere, hvordan MidwifeXR løser kritiske udfordringer på fødegangene.",quote:"Cutting-edge konferencen Driving Health Tech er IDAs årlige sundhedsteknologiske konference, hvor vi sætter spot på nye revolutionerende metoder og sundhedsteknologiske løsninger...",content:["Hvordan kan fordybende teknologi hjælpe nybagte forældre og gavne amme-etableringen?","Se eller gense min talk fra Driving Health Tech i Aarhus, hvor jeg, sammen med jordemoder Sofie Bonde Alsen, præsenterede den XR-platform, jeg har designet og udviklet for at løse et massivt problem i sundhedssektoren under nedlukningen af Danmark.","I min keynote dykker jeg ned i maskinrummet bag MidwifeXR og viser konkrete cases på, hvordan vi med spatial computing afhjælper sundhedssystemets udfordringer – nu og i fremtiden."]},
@@ -209,10 +451,14 @@ const PORTFOLIO_DATA = {
 /* Grid layout + media. icon = small emoji used in the tag pill. */
 const ITEMS = [
   { id:'keynote-ida', type:'video', icon:'🎤', video:'Mortenhjemmeside.mp4', externalLink:'https://videos.ida.dk/media/Virtual+Reality+og+Amning%3A+En+innovativ+tilgang+med+MidwifeVR++Morten+Haulik%2C+Co-founder+og+VR+ekspert+og+Sofie+Bonde+Alsen%2C+jordemoder+og+Digital+Designer/1_bb9dwkxp', span:1 },
+  { id:'project-nxt', type:'project', icon:'💻', image:'thumb13.webp', externalLink:'https://www.nxtwebxr.com', span:2 },
+  { id:'game-holorange', type:'project', icon:'🎮', image:'game-holorange.jpg', externalLink:'https://www.nxtwebxr.com/watch/holorange/', span:1 },
+  { id:'game-fishstick', type:'project', icon:'🎮', image:'game-fishstick.jpg', externalLink:'https://www.nxtwebxr.com/watch/fishstickfactory/', span:1 },
+  { id:'game-diehaende', type:'project', icon:'🎮', image:'game-diehaende.jpg', externalLink:'https://www.nxtwebxr.com/watch/diehaende/', span:1 },
+  { id:'project-nxtcare', type:'project', icon:'🩺', image:'nxtcare.jpg', externalLink:'https://nxtcare.eu/', span:2 },
   { id:'highlight-kp', type:'link', icon:'⭐', image:'thumbnail11.webp', externalLink:'https://www.linkedin.com/posts/caroline-laurvig-deichmann-0813ba1b7_innovation-teknologi-teknologiforstaevelse-activity-7188271529833492480-Hh9q', span:1 },
   { id:'press-berlingske', type:'link', icon:'📰', image:'thumb14.jpg', externalLink:'https://www.berlingske.dk/indland/stort-problem-blandt-nybagte-foraeldre-kan-afhjaelpes-startup-kommer-med-loesning', span:1 },
   { id:'media-24victoria', type:'link', icon:'🌐', image:'thumbnail6.jpg', externalLink:'https://24victoria.dk/artificial-and-intelligence-deep-tech/udvikler-xr-oplevelser-morten-haulik', span:1 },
-  { id:'project-nxt', type:'project', icon:'💻', image:'thumb13.webp', externalLink:'https://www.nxtwebxr.com', span:2 },
   { id:'podcast-apple', type:'link', icon:'🎧', image:'thumb1.webp', externalLink:'https://goodpods.com/podcasts/pilestræde-241749/æblebrillen-31650444', span:1 },
   { id:'panel-sound', type:'link', icon:'👥', image:'thumb7.jpg', externalLink:'https://danishsoundcluster.dk/the-future-sound-forum/', span:1 },
   { id:'press-kulturmagasinet', type:'link', icon:'🎧', image:'thunn.webp', externalLink:'https://radio4.dk/podcasts/kraes/rolf-s-rensen-elsker-ny-dokumentar-om-tour-de-fran', span:1 },

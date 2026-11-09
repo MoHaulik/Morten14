@@ -6,14 +6,19 @@
 - Has presented spatial computing at European Union gatherings (European Parliament and Commission members) and for United Nations delegations.
 - Entrepreneur in Residence at the University of Copenhagen (KU Lighthouse) since 2022.
 - Founder of NXT/WebXR (2025), a discovery platform for WebXR experiences: https://www.nxtwebxr.com
-- Co-founder and XR architect of MidwifeXR/MidwifeVR, a VR breastfeeding-guidance platform used in the midwifery curriculum at University College Copenhagen (KP).
+- Co-founder and XR architect of MidwifeVR/MidwifeXR (KU Impact Award 2021), a VR breastfeeding-guidance platform used in the midwifery curriculum at University College Copenhagen (KP).
+- Behind NXT/Care: mixed-reality distraction for children during blood tests, IV placement and dental visits, used in the Capital Region of Denmark: https://nxtcare.eu
+- Made the free WebXR games HoloRange (mixed-reality shooter), Meows Freaky Fishstick Factory (mixed-reality rage game) and die Hände (hand-tracking horror), all on NXT/WebXR.
 - Builds WebXR and immersive applications for hospitals (e.g. Herlev Hospital), museums and global brands.
-- Speaks English and Danish.
+- Speaks English and Danish. Available to journalists for expert comment on VR, AR and smart glasses (Meta Quest and Meta's glasses, Apple Vision Pro, Android XR).
+- Danish page: https://www.mortenhaulik.com/da/ (also /de/, /it/, /fr/)
 
 ## Engage
 
 - Keynote / speaking inquiry: https://www.mortenhaulik.com/#booking
 - Consulting inquiry: https://www.mortenhaulik.com/#contact
+- Press / expert comment: https://www.mortenhaulik.com/#press
+- Speaker kit (bios, profile image): https://www.mortenhaulik.com/#speaker-kit
 - Email: Morten@nxtwebxr.com
 - LinkedIn: https://www.linkedin.com/in/haulik
 - X: https://x.com/Haulik
@@ -30,3 +35,7 @@
 
 - [NXT/WebXR](https://www.nxtwebxr.com): the front page of the spatial internet
 - [SendToQuest](https://sendtoquest.com): open WebXR links on multiple headsets at once
+- [HoloRange](https://www.nxtwebxr.com/watch/holorange/)
+- [Meows Freaky Fishstick Factory](https://www.nxtwebxr.com/watch/fishstickfactory/)
+- [die Hände](https://www.nxtwebxr.com/watch/diehaende/)
+- [NXT/Care](https://nxtcare.eu)

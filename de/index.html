@@ -47,7 +47,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/img/hero.jpg" imagesrcset="/img/hero-1100.jpg 1100w, /img/hero.jpg 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="/style.css?v=859190ea">
+<link rel="stylesheet" href="/style.css?v=607e606b">
 <script>document.documentElement.classList.add('js');setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')),2500)</script>
 <script type="application/ld+json">
 {
@@ -153,7 +153,13 @@
     "Meta smart glasses",
     "Android XR",
     "Hand tracking",
-    "Game development"
+    "Game development",
+    "XR Marketing",
+    "VR Advertising",
+    "AR Campaigns",
+    "Brand Activations",
+    "Immersive Experiences",
+    "Experiential Marketing"
    ],
    "contactPoint": [
     {
@@ -354,6 +360,14 @@
       "@type": "Offer",
       "itemOffered": {
        "@type": "Service",
+       "name": "XR campaigns",
+       "description": "VR, AR and WebXR campaigns and brand activations that open from a link or QR code."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
        "name": "Hardware choices",
        "description": "Which headsets or glasses fit your use case, budget and operations."
       }
@@ -364,6 +378,18 @@
     "@type": "CommunicateAction",
     "target": "https://www.mortenhaulik.com/#contact"
    }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.mortenhaulik.com/#marketing",
+   "name": "XR marketing and immersive advertising campaigns",
+   "serviceType": "XR marketing",
+   "provider": {
+    "@id": "https://www.mortenhaulik.com/#person"
+   },
+   "areaServed": "Europe",
+   "url": "https://www.mortenhaulik.com/xr-marketing-campaigns/",
+   "description": "VR, AR and WebXR campaigns and brand activations that open from a link or QR code, from concept to launch."
   },
   {
    "@type": "VideoGame",
@@ -483,16 +509,17 @@
 <header class="topbar" id="top">
   <a class="wordmark" href="/de/">Morten Haulik</a>
   <nav class="topnav" aria-label="Main">
-    <a href="#speaking">Keynotes</a>
-    <a href="#consulting">Beratung</a>
-    <a href="#press">Presse</a>
-    <a href="#work">Projekte</a>
+    <a href="/de/#speaking">Keynotes</a>
+    <a href="/de/#consulting">Beratung</a>
+    <a href="/de/#press">Presse</a>
+    <a href="/de/#work">Projekte</a>
   </nav>
   <nav class="langs" aria-label="Sprache"><a href="/" hreflang="en" lang="en" data-lang="en" title="English">EN</a><a href="/da/" hreflang="da" lang="da" data-lang="da" title="Dansk">DA</a><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-current="page" title="Deutsch">DE</a><a href="/it/" hreflang="it" lang="it" data-lang="it" title="Italiano">IT</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" title="Français">FR</a></nav>
   <button class="btn btn-gold btn-sm" type="button" data-open-booking>Morten buchen</button>
 </header>
 
 <main id="main">
+
   <section class="hero" aria-labelledby="hero-title">
     <picture class="hero-media">
       <img src="/img/hero.jpg" srcset="/img/hero-1100.jpg 1100w, /img/hero.jpg 2000w" sizes="100vw"
@@ -551,7 +578,7 @@
         <li class="reveal"><span class="talk-no">3</span><div><h3>Brille auf: Hype oder Realität?</h3><p>Meta, Apple und Google setzen Milliarden auf Ihr Gesicht. Ein ehrlicher Leitfaden aus Entwicklersicht: was wirklich bereit ist und was nicht.</p></div></li>
       </ol>
       <p class="formats reveal"><span>Formate</span> Keynote, 20–60 Min. <i>/</i> Panels &amp; Kamingespräche <i>/</i> Workshops mit Headsets <i>/</i> Englisch oder Dänisch</p>
-      <button class="btn btn-gold reveal" type="button" data-open-booking>Keynote buchen</button>
+      <div class="row-ctas reveal"><button class="btn btn-gold" type="button" data-open-booking>Keynote buchen</button></div>
     </div>
   </section>
 
@@ -578,13 +605,15 @@
       </div>
       <div>
         <p class="lede reveal">Ich helfe Führungs- und Produktteams herauszufinden, wo XR echten Mehrwert schafft, und baue es dann. Beratung von jemandem, der liefert, nicht von Folien.</p>
-        <a class="btn btn-line reveal" href="#contact">XR-Beratung anfragen</a>
+        <div class="row-ctas reveal"><a class="btn btn-line" href="#contact">XR-Beratung anfragen</a></div>
+        
       </div>
     </div>
     <ol class="offers">
       <li class="reveal"><h3>XR-Strategie</h3><p>Workshops für das Management: wo XR für Sie sinnvoll ist und wo nicht.</p></li>
       <li class="reveal"><h3>Prototypen &amp; Produktion</h3><p>WebXR, VR und Mixed Reality von der Idee bis zum Launch, ohne App-Store-Hürden.</p></li>
       <li class="reveal"><h3>Gesundheit &amp; Training</h3><p>Simulationen und Patientenerlebnisse, gemeinsam mit Klinikpersonal entwickelt.</p></li>
+      <li class="reveal"><h3>XR-Kampagnen</h3><p>Kampagnen und Brand-Aktivierungen in VR, AR und WebXR, die per Link oder QR-Code starten.</p></li>
       <li class="reveal"><h3>Hardware-Auswahl</h3><p>Welche Headsets oder Brillen zu Ihrem Einsatz, Budget und Betrieb passen.</p></li>
     </ol>
     <div class="partners reveal">
@@ -605,6 +634,7 @@
       <div class="press-actions reveal">
         <a class="btn btn-gold" href="mailto:Morten@nxtwebxr.com?subject=Presseanfrage">Morten schreiben</a>
         <a class="mail" href="mailto:Morten@nxtwebxr.com?subject=Presseanfrage">Morten@nxtwebxr.com</a>
+        
       </div>
       <p class="label reveal">Pressefotos</p>
       <ul class="photo-dl reveal">
@@ -887,6 +917,8 @@
     </div>
   </section>
 
+
+
   <section class="contact block" id="contact" aria-labelledby="contact-title">
     <div class="contact-intro">
       <p class="label reveal">Kontakt</p>
@@ -909,6 +941,7 @@
       <p class="hint" id="contact-status" role="status">Ich antworte normalerweise innerhalb von 1 Werktag.</p>
     </form>
   </section>
+
 </main>
 
 <footer class="site-footer">
@@ -916,6 +949,7 @@
     <a class="wordmark" href="#top">Morten Haulik</a>
     <nav class="langs" aria-label="Sprache"><a href="/" hreflang="en" lang="en" data-lang="en" title="English">EN</a><a href="/da/" hreflang="da" lang="da" data-lang="da" title="Dansk">DA</a><a href="/de/" hreflang="de" lang="de" data-lang="de" aria-current="page" title="Deutsch">DE</a><a href="/it/" hreflang="it" lang="it" data-lang="it" title="Italiano">IT</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" title="Français">FR</a></nav>
   </div>
+
   <p class="muted">© 2026 Morten Haulik · Entworfen in Kopenhagen</p>
 </footer>
 
@@ -955,7 +989,7 @@
   </div>
 </dialog>
 
-<script src="/data.js?v=a7b90d8f" defer></script>
+<script src="/data.js?v=6eca59f2" defer></script>
 <script src="/main.js?v=3a068b97" defer></script>
 </body>
 </html>

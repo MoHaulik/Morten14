@@ -55,4 +55,60 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/"/>
     <image:image><image:loc>https://www.mortenhaulik.com/og-image.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/xr-keynote-speaker/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-keynote-speaker/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/foredragsholder-vr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-keynote-speaker/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/da/foredragsholder-vr/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-keynote-speaker/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/foredragsholder-vr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-keynote-speaker/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/xr-consultant/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-consultant/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/xr-konsulent/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-consultant/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/da/xr-konsulent/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-consultant/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/xr-konsulent/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-consultant/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/xr-marketing-campaigns/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-marketing-campaigns/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/xr-markedsfoering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-marketing-campaigns/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/da/xr-markedsfoering/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-marketing-campaigns/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/xr-markedsfoering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-marketing-campaigns/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/xr-expert-press/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-expert-press/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/vr-ekspert-presse/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-expert-press/"/>
+  </url>
+  <url>
+    <loc>https://www.mortenhaulik.com/da/vr-ekspert-presse/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mortenhaulik.com/xr-expert-press/"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.mortenhaulik.com/da/vr-ekspert-presse/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mortenhaulik.com/xr-expert-press/"/>
+  </url>
 </urlset>

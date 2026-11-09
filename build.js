@@ -11,6 +11,11 @@ const ctx = {};
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, 'data.js'), 'utf8') +
   ';this.d={UI_TEXT,SEO_META,PAGE_TEXT,FEATURED,PORTFOLIO_DATA,ITEMS};', ctx);
 const { UI_TEXT, SEO_META, PAGE_TEXT, FEATURED, PORTFOLIO_DATA, ITEMS } = ctx.d;
+const pctx = {};
+vm.runInNewContext(fs.readFileSync(path.join(__dirname, 'pages.js'), 'utf8') + ';this.s=SERVICE_PAGES;', pctx);
+const SERVICE_PAGES = pctx.s;
+const SUB_LANGS = ['en', 'da'];
+const PHOTOS = ['press/morten-haulik-1.jpg', 'press/morten-haulik-2.jpg', 'press/morten-haulik-3.jpg'];
 
 const SITE = 'https://www.mortenhaulik.com';
 const LANGS = ['en', 'da', 'de', 'it', 'fr'];
@@ -22,6 +27,17 @@ const MODIFIED = new Date().toISOString().slice(0, 10);
 const ver = f => require('crypto').createHash('md5').update(fs.readFileSync(path.join(__dirname, f))).digest('hex').slice(0, 8);
 
 const urlFor = l => `${SITE}/${l === 'en' ? '' : l + '/'}`;
+const homePath = l => (l === 'en' ? '/' : `/${l}/`);
+const subPath = (l, sp) => `${homePath(l)}${sp[l].slug}/`;
+const subUrl = (l, sp) => SITE + subPath(l, sp);
+
+// Top navigation: dedicated landing pages where a language has them, in-page anchors otherwise.
+function navLinks(l, p) {
+  if (!SUB_LANGS.includes(l)) return ['speaking', 'consulting', 'press', 'work']
+    .map(k => `    <a href="${homePath(l)}#${k}">${esc(p.nav[k])}</a>`).join('\n');
+  return SERVICE_PAGES.map(sp => `    <a href="${subPath(l, sp)}">${esc(sp[l].nav)}</a>`).join('\n') +
+    `\n    <a href="${homePath(l)}#work">${esc(p.nav.work)}</a>`;
+}
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const asset = p => '/' + encodeURI(p);
 
@@ -94,7 +110,8 @@ function jsonLd(l) {
         description: en.kitShort,
         knowsAbout: ['Spatial Computing', 'Extended Reality (XR)', 'Virtual Reality', 'Augmented Reality', 'Mixed Reality',
           'Smart Glasses', 'WebXR', 'Spatial Internet', 'XR Strategy', 'Healthcare XR', 'VR Training',
-          'Apple Vision Pro', 'Meta Quest', 'Meta smart glasses', 'Android XR', 'Hand tracking', 'Game development'],
+          'Apple Vision Pro', 'Meta Quest', 'Meta smart glasses', 'Android XR', 'Hand tracking', 'Game development',
+          'XR Marketing', 'VR Advertising', 'AR Campaigns', 'Brand Activations', 'Immersive Experiences', 'Experiential Marketing'],
         contactPoint: [
           { '@type': 'ContactPoint', contactType: 'speaking inquiries', email: EMAIL, url: `${url}#booking`, availableLanguage: ['English', 'Danish'] },
           { '@type': 'ContactPoint', contactType: 'consulting', email: EMAIL, url: `${url}#contact`, availableLanguage: ['English', 'Danish'] },
@@ -121,6 +138,9 @@ function jsonLd(l) {
         hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Consulting services',
           itemListElement: en.consultList.map(([n, d]) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n, description: d } })) },
         potentialAction: { '@type': 'CommunicateAction', target: `${SITE}/#contact` } },
+      { '@type': 'Service', '@id': `${SITE}/#marketing`, name: 'XR marketing and immersive advertising campaigns',
+        serviceType: 'XR marketing', provider: { '@id': person }, areaServed: 'Europe', url: `${SITE}/xr-marketing-campaigns/`,
+        description: 'VR, AR and WebXR campaigns and brand activations that open from a link or QR code, from concept to launch.' },
       game('game-holorange', 'HoloRange', 'holorange', ['Shooter', 'Mixed reality']),
       game('game-fishstick', 'Meows Freaky Fishstick Factory', 'fishstickfactory', ['Arcade', 'Mixed reality']),
       game('game-diehaende', 'die Hände', 'diehaende', ['Horror', 'Mixed reality']),
@@ -130,77 +150,13 @@ function jsonLd(l) {
   };
 }
 
-function page(l) {
-  const t = UI_TEXT[l], p = PAGE_TEXT[l], seo = SEO_META[l], url = urlFor(l);
-  const alternates = LANGS.map(x => `<link rel="alternate" hreflang="${x}" href="${urlFor(x)}">`).join('\n') +
-    `\n<link rel="alternate" hreflang="x-default" href="${urlFor('en')}">`;
+function page(l, o = {}) {
+  const t = UI_TEXT[l], p = PAGE_TEXT[l], seo = o.seo || SEO_META[l], url = o.url || urlFor(l);
+  const alternates = o.alternates || (LANGS.map(x => `<link rel="alternate" hreflang="${x}" href="${urlFor(x)}">`).join('\n') +
+    `\n<link rel="alternate" hreflang="x-default" href="${urlFor('en')}">`);
   const mailPress = `mailto:${EMAIL}?subject=${encodeURIComponent(p.pressSubject)}`;
-  const langLinks = cls => LANGS.map(x => `<a href="/${x === 'en' ? '' : x + '/'}" hreflang="${x}" lang="${x}" data-lang="${x}"${x === l ? ' aria-current="page"' : ''} title="${FLAGS[x][1]}">${x.toUpperCase()}</a>`).join('');
-  const PHOTOS = ['press/morten-haulik-1.jpg', 'press/morten-haulik-2.jpg', 'press/morten-haulik-3.jpg'];
-
-  return `<!DOCTYPE html>
-<html lang="${l}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Generated by build.js from data.js. Edit data.js, then run: node build.js -->
-<title>${esc(seo.title)}</title>
-<meta name="description" content="${esc(seo.desc)}">
-<meta name="author" content="Morten Haulik">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="theme-color" content="#0b0a08">
-<meta name="color-scheme" content="dark">
-<link rel="canonical" href="${url}">
-${alternates}
-
-<meta property="og:type" content="profile">
-<meta property="og:site_name" content="Morten Haulik">
-<meta property="og:title" content="${esc(seo.title)}">
-<meta property="og:description" content="${esc(seo.desc)}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Morten Haulik, keynote speaker and XR consultant">
-<meta property="profile:first_name" content="Morten">
-<meta property="profile:last_name" content="Haulik">
-<meta property="og:locale" content="${LOCALE[l]}">
-${LANGS.filter(x => x !== l).map(x => `<meta property="og:locale:alternate" content="${LOCALE[x]}">`).join('\n')}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@Haulik">
-<meta name="twitter:creator" content="@Haulik">
-<meta name="twitter:title" content="${esc(seo.title)}">
-<meta name="twitter:description" content="${esc(seo.desc)}">
-<meta name="twitter:image" content="${SITE}/og-image.jpg">
-<meta name="twitter:image:alt" content="Morten Haulik, keynote speaker and XR consultant">
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0a08'/><text x='50' y='68' font-family='Arial' font-weight='700' font-size='52' text-anchor='middle' fill='%23e8c26a'>MH</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/img/hero.jpg" imagesrcset="/img/hero-1100.jpg 1100w, /img/hero.jpg 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="/style.css?v=${ver('style.css')}">
-<script>document.documentElement.classList.add('js');setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')),2500)</script>
-<script type="application/ld+json">
-${JSON.stringify(jsonLd(l), null, 1)}
-</script>
-</head>
-<body>
-<a class="skip" href="#main">${esc(p.skip)}</a>
-
-<header class="topbar" id="top">
-  <a class="wordmark" href="/${l === 'en' ? '' : l + '/'}">Morten Haulik</a>
-  <nav class="topnav" aria-label="Main">
-    <a href="#speaking">${esc(p.nav.speaking)}</a>
-    <a href="#consulting">${esc(p.nav.consulting)}</a>
-    <a href="#press">${esc(p.nav.press)}</a>
-    <a href="#work">${esc(p.nav.work)}</a>
-  </nav>
-  <nav class="langs" aria-label="${esc(p.languages)}">${langLinks()}</nav>
-  <button class="btn btn-gold btn-sm" type="button" data-open-booking>${esc(p.nav.book)}</button>
-</header>
-
-<main id="main">
+  const langLinks = cls => LANGS.map(x => `<a href="${(o.langHref && o.langHref[x]) || '/' + (x === 'en' ? '' : x + '/')}" hreflang="${x}" lang="${x}" data-lang="${x}"${x === l ? ' aria-current="page"' : ''} title="${FLAGS[x][1]}">${x.toUpperCase()}</a>`).join('');
+  const homeMain = () => `
   <section class="hero" aria-labelledby="hero-title">
     <picture class="hero-media">
       <img src="/img/hero.jpg" srcset="/img/hero-1100.jpg 1100w, /img/hero.jpg 2000w" sizes="100vw"
@@ -254,7 +210,7 @@ ${p.stats.map(([n, s]) => `      <div><dt>${esc(n)}</dt><dd>${esc(s)}</dd></div>
 ${p.talks.map(([n, d], i) => `        <li class="reveal"><span class="talk-no">${i + 1}</span><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></li>`).join('\n')}
       </ol>
       <p class="formats reveal"><span>${esc(p.formatsLabel)}</span> ${p.formats.map(esc).join(' <i>/</i> ')}</p>
-      <button class="btn btn-gold reveal" type="button" data-open-booking>${esc(p.ctaKeynote)}</button>
+      <div class="row-ctas reveal"><button class="btn btn-gold" type="button" data-open-booking>${esc(p.ctaKeynote)}</button>${SUB_LANGS.includes(l) ? `<a class="text-link more" href="${subPath(l, SERVICE_PAGES.find(x => x.key === 'keynote'))}">${esc(SERVICE_PAGES.find(x => x.key === 'keynote')[l].kicker)} ${ICON.arrow}</a>` : ''}</div>
     </div>
   </section>
 
@@ -274,7 +230,8 @@ ${p.track.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>${esc(d
       </div>
       <div>
         <p class="lede reveal">${esc(p.consultText)}</p>
-        <a class="btn btn-line reveal" href="#contact">${esc(p.ctaConsult)}</a>
+        <div class="row-ctas reveal"><a class="btn btn-line" href="#contact">${esc(p.ctaConsult)}</a>${SUB_LANGS.includes(l) ? `<a class="text-link more" href="${subPath(l, SERVICE_PAGES.find(x => x.key === 'consultant'))}">${esc(SERVICE_PAGES.find(x => x.key === 'consultant')[l].kicker)} ${ICON.arrow}</a>` : ''}</div>
+        ${SUB_LANGS.includes(l) ? `<a class="text-link more reveal" href="${subPath(l, SERVICE_PAGES.find(x => x.key === 'marketing'))}">${esc(SERVICE_PAGES.find(x => x.key === 'marketing')[l].kicker)} ${ICON.arrow}</a>` : ''}
       </div>
     </div>
     <ol class="offers">
@@ -298,6 +255,7 @@ ${p.consultList.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>$
       <div class="press-actions reveal">
         <a class="btn btn-gold" href="${esc(mailPress)}">${esc(p.pressCta)}</a>
         <a class="mail" href="${esc(mailPress)}">${EMAIL}</a>
+        ${SUB_LANGS.includes(l) ? `<a class="text-link more" href="${subPath(l, SERVICE_PAGES.find(x => x.key === 'press'))}">${esc(SERVICE_PAGES.find(x => x.key === 'press')[l].kicker)} ${ICON.arrow}</a>` : ''}
       </div>
       <p class="label reveal">${esc(p.pressPhotos)}</p>
       <ul class="photo-dl reveal">
@@ -349,6 +307,8 @@ ${p.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summa
     </div>
   </section>
 
+`;
+  const contactSection = () => `
   <section class="contact block" id="contact" aria-labelledby="contact-title">
     <div class="contact-intro">
       <p class="label reveal">${esc(p.contactLabel)}</p>
@@ -371,6 +331,70 @@ ${p.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summa
       <p class="hint" id="contact-status" role="status">${esc(t.draftMsg)}</p>
     </form>
   </section>
+`;
+
+  return `<!DOCTYPE html>
+<html lang="${l}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Generated by build.js from data.js. Edit data.js, then run: node build.js -->
+<title>${esc(seo.title)}</title>
+<meta name="description" content="${esc(seo.desc)}">
+<meta name="author" content="Morten Haulik">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0b0a08">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="${url}">
+${alternates}
+
+<meta property="og:type" content="${o.main ? 'website' : 'profile'}">
+<meta property="og:site_name" content="Morten Haulik">
+<meta property="og:title" content="${esc(seo.title)}">
+<meta property="og:description" content="${esc(seo.desc)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITE}/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Morten Haulik, keynote speaker and XR consultant">
+<meta property="profile:first_name" content="Morten">
+<meta property="profile:last_name" content="Haulik">
+<meta property="og:locale" content="${LOCALE[l]}">
+${LANGS.filter(x => x !== l).map(x => `<meta property="og:locale:alternate" content="${LOCALE[x]}">`).join('\n')}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Haulik">
+<meta name="twitter:creator" content="@Haulik">
+<meta name="twitter:title" content="${esc(seo.title)}">
+<meta name="twitter:description" content="${esc(seo.desc)}">
+<meta name="twitter:image" content="${SITE}/og-image.jpg">
+<meta name="twitter:image:alt" content="Morten Haulik, keynote speaker and XR consultant">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0a08'/><text x='50' y='68' font-family='Arial' font-weight='700' font-size='52' text-anchor='middle' fill='%23e8c26a'>MH</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/img/hero.jpg" imagesrcset="/img/hero-1100.jpg 1100w, /img/hero.jpg 2000w" imagesizes="100vw">
+<link rel="stylesheet" href="/style.css?v=${ver('style.css')}">
+<script>document.documentElement.classList.add('js');setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')),2500)</script>
+<script type="application/ld+json">
+${JSON.stringify(o.jsonLd || jsonLd(l), null, 1)}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">${esc(p.skip)}</a>
+
+<header class="topbar" id="top">
+  <a class="wordmark" href="/${l === 'en' ? '' : l + '/'}">Morten Haulik</a>
+  <nav class="topnav" aria-label="Main">
+${navLinks(l, p)}
+  </nav>
+  <nav class="langs" aria-label="${esc(p.languages)}">${langLinks()}</nav>
+  <button class="btn btn-gold btn-sm" type="button" data-open-booking>${esc(p.nav.book)}</button>
+</header>
+
+<main id="main">
+${o.main ?? homeMain()}
+${contactSection()}
 </main>
 
 <footer class="site-footer">
@@ -378,6 +402,7 @@ ${p.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summa
     <a class="wordmark" href="#top">Morten Haulik</a>
     <nav class="langs" aria-label="${esc(p.languages)}">${langLinks()}</nav>
   </div>
+${SUB_LANGS.includes(l) ? `  <nav class="footer-links" aria-label="Services">${SERVICE_PAGES.map(sp => `<a href="${subPath(l, sp)}">${esc(sp[l].kicker)}</a>`).join('')}</nav>` : ''}
   <p class="muted">© ${new Date().getFullYear()} Morten Haulik · ${esc(t.footer)}</p>
 </footer>
 
@@ -424,10 +449,114 @@ ${p.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summa
 `;
 }
 
+
+function subJsonLd(l, sp) {
+  const c = sp[l], url = subUrl(l, sp), person = `${SITE}/#person`;
+  const service = {
+    keynote: { '@type': 'Service', serviceType: 'Keynote speaker' },
+    consultant: { '@type': 'Service', serviceType: 'XR consulting' },
+    marketing: { '@type': 'Service', serviceType: 'XR marketing and immersive advertising campaigns' },
+    press: null
+  }[sp.key];
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: l,
+        isPartOf: { '@id': `${SITE}/#website` }, about: { '@id': person }, dateModified: MODIFIED,
+        primaryImageOfPage: `${SITE}/${sp.image}`, breadcrumb: { '@id': `${url}#breadcrumb` } },
+      { '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Morten Haulik', item: urlFor(l) },
+        { '@type': 'ListItem', position: 2, name: c.nav, item: url } ] },
+      ...(service ? [{ ...service, '@id': `${url}#service`, name: c.title.split(' | ')[0], description: c.desc, url,
+        provider: { '@id': person }, areaServed: ['DK', 'Europe'], availableLanguage: ['English', 'Danish'] }] : []),
+      { '@type': 'FAQPage', '@id': `${url}#faq`, inLanguage: l,
+        mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }
+    ]
+  };
+}
+
+function subMain(l, sp) {
+  const c = sp[l], p = PAGE_TEXT[l];
+  const mailPress = `mailto:${EMAIL}?subject=${encodeURIComponent(p.pressSubject)}`;
+  const ctaBtn = cls => sp.cta === 'booking'
+    ? `<button class="btn ${cls}" type="button" data-open-booking>${esc(c.ctaBtn)}</button>`
+    : sp.cta === 'press' ? `<a class="btn ${cls}" href="${esc(mailPress)}">${esc(c.ctaBtn)}</a>`
+    : `<a class="btn ${cls}" href="#contact">${esc(c.ctaBtn)}</a>`;
+  const section = s => `
+  <section class="block sub-sec">
+    <h2 class="h2 reveal">${esc(s.h2)}</h2>
+    ${(s.p || []).map(x => `<p class="lede reveal">${esc(x)}</p>`).join('\n    ')}
+    ${s.list ? `<ul class="topic-list wide reveal">${s.list.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+    ${s.talks ? `<ol class="talks">${s.talks.map(([n, d], i) => `<li class="reveal"><span class="talk-no">${i + 1}</span><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></li>`).join('')}</ol>` : ''}
+    ${s.steps ? `<ol class="offers">${s.steps.map(([n, d]) => `<li class="reveal"><h3>${esc(n)}</h3><p>${esc(d)}</p></li>`).join('')}</ol>` : ''}
+  </section>`;
+  const related = SERVICE_PAGES.filter(x => x !== sp);
+  return `
+  <section class="sub-hero">
+    <div class="sub-hero-text">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="${homePath(l)}">Morten Haulik</a> <span>/</span> <span aria-current="page">${esc(c.nav)}</span></nav>
+      <p class="eyebrow">${esc(c.kicker)}</p>
+      <h1>${esc(c.h1)}</h1>
+      <p class="lede">${esc(c.lead)}</p>
+      <div class="hero-ctas">${ctaBtn('btn-gold')}<a class="text-link" href="${homePath(l)}#work">${esc(p.workTitle)} ${ICON.arrow}</a></div>
+    </div>
+    <figure class="sub-hero-media"><img src="/${sp.image}" alt="Morten Haulik" loading="eager" decoding="async"></figure>
+  </section>
+${sp.reel ? `
+  <section class="reel">
+    <div class="reel-frame">
+      <video data-src="/Mortenhjemmeside.mp4" poster="/img/ida-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="reel-cap">
+        <p class="kicker"><span class="live"></span>${esc(p.reelLabel)}</p>
+        <h2>${esc(p.reelTitle)}</h2>
+        <a class="btn btn-gold" href="${esc(ITEMS.find(i => i.id === 'keynote-ida').externalLink)}" target="_blank" rel="noopener">${ICON.play} ${esc(p.reelCta)}</a>
+      </div>
+    </div>
+  </section>` : ''}
+${c.sections.map(section).join('\n')}
+${sp.photos ? `
+  <section class="block sub-sec">
+    <h2 class="h2 reveal">${esc(p.pressPhotos)}</h2>
+    <ul class="photo-dl wide reveal">${PHOTOS.map((f, i) => `<li><a href="/${f}" download><img src="/${f}" alt="Morten Haulik press photo ${i + 1}" loading="lazy" decoding="async"><span>${ICON.dl} ${esc(p.download)}</span></a></li>`).join('')}</ul>
+  </section>` : ''}
+  <section class="faq block">
+    <h2 class="h2 reveal">${esc(p.faqTitle)}</h2>
+    <div class="faq-list">
+${c.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n')}
+    </div>
+  </section>
+
+  <section class="cta-band block">
+    <div class="cta-box reveal">
+      <h2 class="h2">${esc(c.ctaTitle)}</h2>
+      <p class="lede">${esc(c.ctaText)}</p>
+      ${ctaBtn('btn-gold')}
+    </div>
+  </section>
+
+  <nav class="related block" aria-label="Related">
+${related.map(x => `    <a class="related-link reveal" href="${subPath(l, x)}"><span>${esc(x[l].kicker)}</span><strong>${esc(x[l].h1)}</strong>${ICON.arrow}</a>`).join('\n')}
+  </nav>
+`;
+}
+
+function subpage(l, sp) {
+  const c = sp[l], url = subUrl(l, sp);
+  const alternates = SUB_LANGS.map(x => `<link rel="alternate" hreflang="${x}" href="${subUrl(x, sp)}">`).join('\n') +
+    `\n<link rel="alternate" hreflang="x-default" href="${subUrl('en', sp)}">`;
+  const langHref = Object.fromEntries(LANGS.map(x => [x, SUB_LANGS.includes(x) ? subPath(x, sp) : homePath(x)]));
+  return page(l, { seo: { title: c.title, desc: c.desc }, url, alternates, langHref, jsonLd: subJsonLd(l, sp), main: subMain(l, sp) });
+}
+
 for (const l of LANGS) {
   const dir = l === 'en' ? __dirname : path.join(__dirname, l);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), page(l));
+}
+for (const sp of SERVICE_PAGES) for (const l of SUB_LANGS) {
+  const dir = path.join(__dirname, ...subPath(l, sp).split('/').filter(Boolean));
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), subpage(l, sp));
 }
 
 const alt = LANGS.map(x => `    <xhtml:link rel="alternate" hreflang="${x}" href="${urlFor(x)}"/>`).join('\n') +
@@ -440,6 +569,27 @@ ${LANGS.map(l => `  <url>
 ${alt}
     <image:image><image:loc>${SITE}/og-image.jpg</image:loc></image:image>
   </url>`).join('\n')}
+${SERVICE_PAGES.map(sp => SUB_LANGS.map(l => `  <url>
+    <loc>${subUrl(l, sp)}</loc>
+    <lastmod>${MODIFIED}</lastmod>
+${SUB_LANGS.map(x => `    <xhtml:link rel="alternate" hreflang="${x}" href="${subUrl(x, sp)}"/>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${subUrl('en', sp)}"/>
+  </url>`).join('\n')).join('\n')}
 </urlset>
 `);
-console.log(`Built ${LANGS.length} pages + sitemap.xml (${MODIFIED})`);
+// Custom 404 (GitHub Pages serves /404.html for unknown paths)
+fs.writeFileSync(path.join(__dirname, '404.html'), page('en', {
+  seo: { title: 'Page not found | Morten Haulik', desc: 'This page does not exist. Go to Morten Haulik, XR keynote speaker and consultant.' },
+  url: `${SITE}/404.html`, alternates: '<meta name="robots" content="noindex">',
+  main: `
+  <section class="sub-hero"><div class="sub-hero-text">
+    <p class="eyebrow">404</p>
+    <h1>This page wandered off into another reality.</h1>
+    <p class="lede">The link may be old. Here is where to go instead.</p>
+    <div class="hero-ctas"><a class="btn btn-gold" href="/">Go to the homepage</a></div>
+  </div></section>
+  <nav class="related block" aria-label="Pages">
+${SERVICE_PAGES.map(x => `    <a class="related-link" href="${subPath('en', x)}"><span>${esc(x.en.kicker)}</span><strong>${esc(x.en.h1)}</strong>${ICON.arrow}</a>`).join('\n')}
+  </nav>`
+}).replace('<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">\n', ''));
+console.log(`Built ${LANGS.length} home pages + ${SERVICE_PAGES.length * SUB_LANGS.length} landing pages + sitemap.xml (${MODIFIED})`);

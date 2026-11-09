@@ -10,7 +10,7 @@ const UI_TEXT = {
 };
 
 const SEO_META = {
-  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"XR pioneer and keynote speaker from Copenhagen, founder of NXT/WebXR and NXT/Care. Book keynotes on VR, AR and smart glasses, hire XR consulting or request press comment." },
+  en: { title:"Morten Haulik | XR & VR Expert, Keynote Speaker and Consultant", desc:"XR pioneer and keynote speaker from Copenhagen, founder of NXT/WebXR and NXT/Care. Book keynotes on VR, AR and smart glasses, hire XR consulting or request press comment." },
   da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR-ekspert og foredragsholder fra København, stifter af NXT/WebXR og NXT/Care. Book foredrag om VR, AR og smartbriller, få XR-rådgivning eller en ekspertkommentar." },
   de: { title:"Morten Haulik | Keynote Speaker Spatial Computing & XR-Berater", desc:"Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR. Buchen Sie Keynotes zu XR, VR und dem räumlichen Internet oder XR-Strategie- und WebXR-Beratung." },
   it: { title:"Morten Haulik | Keynote Speaker Spatial Computing & Consulente XR", desc:"Pioniere dello spatial computing a Copenaghen e fondatore di NXT/WebXR. Keynote su XR, VR e internet spaziale, e consulenza su strategia XR e WebXR." },
@@ -68,6 +68,7 @@ const PAGE_TEXT = {
       ["XR strategy","Leadership workshops: where XR makes sense for you, and where it doesn't."],
       ["Prototypes & production","WebXR, VR and mixed reality from idea to launch, without app store bottlenecks."],
       ["Healthcare & training","Simulations and patient experiences built together with clinicians."],
+      ["XR campaigns","VR, AR and WebXR campaigns and brand activations that open from a link or QR code."],
       ["Hardware choices","Which headsets or glasses fit your use case, budget and operations."]
     ],
     partnersLabel: "Clients, partners & stages",
@@ -176,6 +177,7 @@ const PAGE_TEXT = {
       ["XR-strategi","Workshops for ledelsen: Hvor giver XR mening for jer, og hvor gør det ikke?"],
       ["Prototyper og produktion","WebXR, VR og mixed reality fra idé til lancering, uden at gå gennem app stores."],
       ["Sundhed og træning","Simulationer og patientoplevelser udviklet sammen med klinikere."],
+      ["XR-kampagner","Kampagner og brandaktiveringer i VR, AR og WebXR, der åbner fra et link eller en QR-kode."],
       ["Valg af hardware","Hvilke headsets eller briller passer til jeres behov, budget og drift?"]
     ],
     partnersLabel: "Kunder, partnere og scener",
@@ -287,6 +289,7 @@ const PAGE_TEXT = {
       ["XR-Strategie","Workshops für das Management: wo XR für Sie sinnvoll ist und wo nicht."],
       ["Prototypen & Produktion","WebXR, VR und Mixed Reality von der Idee bis zum Launch, ohne App-Store-Hürden."],
       ["Gesundheit & Training","Simulationen und Patientenerlebnisse, gemeinsam mit Klinikpersonal entwickelt."],
+      ["XR-Kampagnen","Kampagnen und Brand-Aktivierungen in VR, AR und WebXR, die per Link oder QR-Code starten."],
       ["Hardware-Auswahl","Welche Headsets oder Brillen zu Ihrem Einsatz, Budget und Betrieb passen."]
     ],
     partnersLabel: "Kunden, Partner & Bühnen",
@@ -389,6 +392,7 @@ const PAGE_TEXT = {
       ["Strategia XR","Workshop per il management: dove l'XR ha senso per voi, e dove no."],
       ["Prototipi e produzione","WebXR, VR e realtà mista dall'idea al lancio, senza i vincoli degli app store."],
       ["Sanità e formazione","Simulazioni ed esperienze per i pazienti sviluppate insieme ai clinici."],
+      ["Campagne XR","Campagne e attivazioni di brand in VR, AR e WebXR che si aprono da un link o un QR code."],
       ["Scelta dell'hardware","Quali visori o occhiali sono adatti al vostro uso, budget e operatività."]
     ],
     partnersLabel: "Clienti, partner e palchi",
@@ -500,6 +504,7 @@ const PAGE_TEXT = {
       ["Stratégie XR","Ateliers pour la direction : où la XR a du sens pour vous, et où elle n'en a pas."],
       ["Prototypes et production","WebXR, VR et réalité mixte de l'idée au lancement, sans passer par les app stores."],
       ["Santé et formation","Simulations et expériences patients conçues avec les soignants."],
+      ["Campagnes XR","Campagnes et activations de marque en VR, AR et WebXR, accessibles depuis un lien ou un QR code."],
       ["Choix du matériel","Quels casques ou lunettes conviennent à votre usage, votre budget et votre exploitation."]
     ],
     partnersLabel: "Clients, partenaires et scènes",

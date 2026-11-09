@@ -1,3 +1,6 @@
+# Search engines and AI assistants (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, ...)
+# are all intentionally allowed: being citable by AI assistants is a goal of this site.
 User-agent: *
 Allow: /
+
 Sitemap: https://www.mortenhaulik.com/sitemap.xml

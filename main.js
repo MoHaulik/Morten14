@@ -162,6 +162,10 @@
 
   /* ---------- booking ---------- */
   $('#open-booking').addEventListener('click', () => bookingModal.showModal());
+  // #booking is the keynote deep link (also used as the ReserveAction target in the JSON-LD)
+  const openFromHash = () => { if (location.hash === '#booking' && !bookingModal.open) bookingModal.showModal(); };
+  addEventListener('hashchange', openFromHash);
+  openFromHash();
   const audOut = $('#audience-out');
   $('#audience').addEventListener('input', e => {
     const v = +e.target.value;
@@ -172,6 +176,9 @@
     const aud = $('#audience').value;
     const dates = ['#d1','#d2','#d3'].map(s => $(s).value).filter(Boolean).join(', ') || 'TBD';
     sendForm(e.target, $('#booking-status'), {
+      name: $('#b-name').value,
+      email: $('#b-email').value,
+      organization: $('#b-org').value,
       audience_size: aud,
       phone: $('#phone').value,
       dates,
@@ -207,6 +214,10 @@
     buildGrid();
     const url = new URL(location); lang === 'en' ? url.searchParams.delete('lang') : url.searchParams.set('lang', lang);
     history.replaceState(null, '', url);
+    // Each ?lang= variant is its own hreflang alternate, so it must canonicalize to itself
+    // (a canonical pointing at / would make Google discard the alternates).
+    document.querySelector('link[rel="canonical"]').href =
+      'https://www.mortenhaulik.com/' + (lang === 'en' ? '' : `?lang=${lang}`);
   }
   document.querySelectorAll('.lang-nav button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
 

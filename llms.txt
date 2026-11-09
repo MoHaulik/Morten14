@@ -1,0 +1,32 @@
+# Morten Haulik
+
+> Copenhagen-based spatial computing pioneer, founder of NXT/WebXR, keynote speaker and XR consultant. Available for keynotes, panels and workshops on XR, VR, WebXR and the spatial internet, and for XR strategy and WebXR consulting across Europe.
+
+- Over a decade in XR; facilitated 100+ industry workshops; keynotes for audiences of 2,000+.
+- Has presented spatial computing at European Union gatherings (European Parliament and Commission members) and for United Nations delegations.
+- Entrepreneur in Residence at the University of Copenhagen (KU Lighthouse) since 2022.
+- Founder of NXT/WebXR (2025), a discovery platform for WebXR experiences: https://www.nxtwebxr.com
+- Co-founder and XR architect of MidwifeXR/MidwifeVR, a VR breastfeeding-guidance platform used in the midwifery curriculum at University College Copenhagen (KP).
+- Builds WebXR and immersive applications for hospitals (e.g. Herlev Hospital), museums and global brands.
+- Speaks English and Danish.
+
+## Engage
+
+- Keynote / speaking inquiry: https://www.mortenhaulik.com/#booking
+- Consulting inquiry: https://www.mortenhaulik.com/#contact
+- Email: Morten@nxtwebxr.com
+- LinkedIn: https://www.linkedin.com/in/haulik
+- X: https://x.com/Haulik
+
+## Selected talks and press
+
+- IDA Driving Health Tech keynote: spatial computing in maternity care
+- Future Sound Forum (Danish Sound Cluster) panel with Bang & Olufsen: spatial audio and XR
+- Berlingske podcast "Pilestræde": Apple Vision Pro analysis
+- Radio4 Kulturmagasinet: what Apple Vision Pro means for the cultural industry
+- Berlingske, 24Victoria, CBS Wire, The Copenhagen Post and Voice of America coverage
+
+## Projects
+
+- [NXT/WebXR](https://www.nxtwebxr.com): the front page of the spatial internet
+- [SendToQuest](https://sendtoquest.com): open WebXR links on multiple headsets at once

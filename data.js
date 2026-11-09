@@ -28,11 +28,15 @@ const PAGE_TEXT = {
     ctaKeynote: "Book a keynote",
     ctaConsult: "Hire for consulting",
     ctaPress: "Journalist? Get a comment",
+    reelLabel: "On stage",
+    reelTitle: "Keynote at IDA Driving Health Tech",
+    reelCta: "Watch the full keynote",
+    quote: "Spatial computing won't be installed. It will be visited.",
     stats: [
       ["10+","years building XR"],
       ["100+","workshops facilitated"],
       ["2,000+","people in a single audience"],
-      ["EU & UN","official presentations"]
+      ["EU & UN","presented to the European Parliament and UN delegations"]
     ],
     featured: "As featured in",
     trackLabel: "Track record",
@@ -57,7 +61,6 @@ const PAGE_TEXT = {
     ],
     formatsLabel: "Formats",
     formats: ["Keynote, 20–60 min","Panels & fireside chats","Hands-on workshops with headsets","English or Danish"],
-    watch: "Watch: keynote at IDA Driving Health Tech",
     consultLabel: "Consulting",
     consultTitle: "From first workshop to shipped product.",
     consultText: "I help leadership and product teams find where XR creates real value, then build it. Advice from someone who ships, not from a slide deck.",
@@ -127,11 +130,15 @@ const PAGE_TEXT = {
     ctaKeynote: "Book et foredrag",
     ctaConsult: "Få XR-rådgivning",
     ctaPress: "Journalist? Få en kommentar",
+    reelLabel: "På scenen",
+    reelTitle: "Keynote ved IDA Driving Health Tech",
+    reelCta: "Se hele foredraget",
+    quote: "Spatial computing bliver ikke installeret. Det bliver besøgt.",
     stats: [
       ["10+","års erfaring med XR"],
       ["100+","workshops afholdt"],
       ["2.000+","tilhørere ved ét foredrag"],
-      ["EU & FN","officielle præsentationer"]
+      ["EU & FN","har præsenteret for Europa-Parlamentet og FN-delegationer"]
     ],
     featured: "Kendt fra",
     trackLabel: "Erfaring",
@@ -162,7 +169,6 @@ const PAGE_TEXT = {
     ],
     formatsLabel: "Formater",
     formats: ["Keynote, 20–60 min.","Paneldebat og samtale","Workshop med headsets","Dansk eller engelsk"],
-    watch: "Se klip: foredrag ved IDA Driving Health Tech",
     consultLabel: "Rådgivning",
     consultTitle: "Fra første workshop til færdigt produkt.",
     consultText: "Jeg hjælper ledelser og produktteams med at finde ud af, hvor XR skaber reel værdi, og bygger det derefter. Rådgivning fra én, der selv leverer, ikke fra et slide-deck.",
@@ -232,11 +238,15 @@ const PAGE_TEXT = {
     ctaKeynote: "Keynote buchen",
     ctaConsult: "XR-Beratung anfragen",
     ctaPress: "Journalist? Kommentar anfragen",
+    reelLabel: "Auf der Bühne",
+    reelTitle: "Keynote bei IDA Driving Health Tech",
+    reelCta: "Ganze Keynote ansehen",
+    quote: "Spatial Computing wird nicht installiert. Es wird besucht.",
     stats: [
       ["10+","Jahre XR-Entwicklung"],
       ["100+","moderierte Workshops"],
       ["2.000+","Zuhörer bei einem Vortrag"],
-      ["EU & UN","offizielle Präsentationen"]
+      ["EU & UN","Präsentationen im Europäischen Parlament und vor UN-Delegationen"]
     ],
     featured: "Bekannt aus",
     trackLabel: "Erfahrung",
@@ -270,7 +280,6 @@ const PAGE_TEXT = {
     ],
     formatsLabel: "Formate",
     formats: ["Keynote, 20–60 Min.","Panels & Kamingespräche","Workshops mit Headsets","Englisch oder Dänisch"],
-    watch: "Ansehen: Keynote bei IDA Driving Health Tech",
     consultLabel: "Beratung",
     consultTitle: "Vom ersten Workshop zum fertigen Produkt.",
     consultText: "Ich helfe Führungs- und Produktteams herauszufinden, wo XR echten Mehrwert schafft, und baue es dann. Beratung von jemandem, der liefert, nicht von Folien.",
@@ -340,11 +349,15 @@ const PAGE_TEXT = {
     ctaKeynote: "Prenota un keynote",
     ctaConsult: "Richiedi una consulenza",
     ctaPress: "Giornalista? Chiedi un commento",
+    reelLabel: "Sul palco",
+    reelTitle: "Keynote a IDA Driving Health Tech",
+    reelCta: "Guarda il keynote completo",
+    quote: "Lo spatial computing non si installa. Si visita.",
     stats: [
       ["10+","anni di XR"],
       ["100+","workshop facilitati"],
       ["2.000+","persone in un solo pubblico"],
-      ["UE & ONU","presentazioni ufficiali"]
+      ["UE & ONU","presentazioni al Parlamento europeo e a delegazioni ONU"]
     ],
     featured: "Citato da",
     trackLabel: "Esperienza",
@@ -369,7 +382,6 @@ const PAGE_TEXT = {
     ],
     formatsLabel: "Formati",
     formats: ["Keynote, 20–60 min","Panel e conversazioni","Workshop con visori","Inglese o danese"],
-    watch: "Guarda: keynote a IDA Driving Health Tech",
     consultLabel: "Consulenza",
     consultTitle: "Dal primo workshop al prodotto finito.",
     consultText: "Aiuto i team di leadership e di prodotto a capire dove l'XR crea valore reale, e poi lo costruisco. Consulenza da chi realizza, non da una presentazione.",
@@ -439,11 +451,15 @@ const PAGE_TEXT = {
     ctaKeynote: "Réserver une keynote",
     ctaConsult: "Demander un conseil",
     ctaPress: "Journaliste ? Obtenir un commentaire",
+    reelLabel: "Sur scène",
+    reelTitle: "Keynote à IDA Driving Health Tech",
+    reelCta: "Voir la keynote complète",
+    quote: "L'informatique spatiale ne s'installe pas. Elle se visite.",
     stats: [
       ["10+","ans de XR"],
       ["100+","ateliers animés"],
       ["2 000+","personnes dans un seul public"],
-      ["UE & ONU","présentations officielles"]
+      ["UE & ONU","présentations au Parlement européen et à des délégations de l'ONU"]
     ],
     featured: "Vu dans",
     trackLabel: "Parcours",
@@ -477,7 +493,6 @@ const PAGE_TEXT = {
     ],
     formatsLabel: "Formats",
     formats: ["Keynote, 20–60 min","Tables rondes et conversations","Ateliers avec casques","Anglais ou danois"],
-    watch: "Voir : keynote à IDA Driving Health Tech",
     consultLabel: "Conseil",
     consultTitle: "Du premier atelier au produit livré.",
     consultText: "J'aide les équipes de direction et produit à identifier où la XR crée une vraie valeur, puis je la construis. Le conseil de quelqu'un qui livre, pas d'un diaporama.",

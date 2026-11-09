@@ -29,6 +29,7 @@ const ICON = {
   mail: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>',
   x: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7Zm-1.3 19.4h2L6.5 3.3h-2.2l13.3 17.3Z"/></svg>',
   linkedin: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5Z"/></svg>',
+  play: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>',
   arrow: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
   dl: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>',
   mic: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg>',
@@ -206,11 +207,11 @@ ${JSON.stringify(jsonLd(l), null, 1)}
         alt="Morten Haulik wearing a VR headset, lit by projected light" width="2000" height="1333" fetchpriority="high">
     </picture>
     <div class="hero-inner">
-      <p class="eyebrow reveal">${esc(p.heroEyebrow)}</p>
-      <h1 id="hero-title" class="reveal">Morten Haulik</h1>
-      <p class="tagline reveal">${esc(p.heroTag[0])}<em>${esc(p.heroTag[1])}</em></p>
-      <p class="hero-sub reveal">${esc(p.heroSub)}</p>
-      <div class="hero-ctas reveal">
+      <p class="eyebrow">${esc(p.heroEyebrow)}</p>
+      <h1 id="hero-title">Morten Haulik</h1>
+      <p class="tagline">${esc(p.heroTag[0])}<em>${esc(p.heroTag[1])}</em></p>
+      <p class="hero-sub">${esc(p.heroSub)}</p>
+      <div class="hero-ctas">
         <button class="btn btn-gold" type="button" data-open-booking>${esc(p.ctaKeynote)}</button>
         <a class="btn btn-line" href="#contact">${esc(p.ctaConsult)}</a>
         <a class="text-link" href="#press">${esc(p.ctaPress)} ${ICON.arrow}</a>
@@ -221,21 +222,24 @@ ${p.stats.map(([n, s]) => `      <div><dt>${esc(n)}</dt><dd>${esc(s)}</dd></div>
     </dl>
   </section>
 
+  <section class="reel" aria-labelledby="reel-title">
+    <div class="reel-frame">
+      <video data-src="/Mortenhjemmeside.mp4" poster="/img/ida-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="reel-cap">
+        <p class="kicker"><span class="live"></span>${esc(p.reelLabel)}</p>
+        <h2 id="reel-title">${esc(p.reelTitle)}</h2>
+        <a class="btn btn-gold" href="${esc(ITEMS.find(i => i.id === 'keynote-ida').externalLink)}" target="_blank" rel="noopener">${ICON.play} ${esc(p.reelCta)}</a>
+      </div>
+    </div>
+  </section>
+
   <section class="featured" aria-label="${esc(p.featured)}">
     <p class="label">${esc(p.featured)}</p>
     <ul>${FEATURED.map(([n, h]) => h ? `<li><a href="${esc(h)}" target="_blank" rel="noopener">${esc(n)}</a></li>` : `<li><span>${esc(n)}</span></li>`).join('')}</ul>
   </section>
 
-  <section class="track block" id="track" aria-labelledby="track-title">
-    <div class="section-head">
-      <div>
-        <p class="label reveal">${esc(p.trackLabel)}</p>
-        <h2 id="track-title" class="h2 reveal">${esc(p.trackTitle)}</h2>
-      </div>
-    </div>
-    <ol class="track-list">
-${p.track.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>${esc(d)}</p></li>`).join('\n')}
-    </ol>
+  <section class="statement" aria-label="Morten Haulik">
+    <blockquote class="reveal"><p>${esc(p.quote)}</p><cite>Morten Haulik</cite></blockquote>
   </section>
 
   <section class="speaking block" id="speaking" aria-labelledby="speaking-title">
@@ -243,38 +247,43 @@ ${p.track.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>${esc(d
       <img src="/img/speaking.jpg" alt="Morten Haulik in a VR headset under a beam of warm light" width="1300" height="1950" loading="lazy" decoding="async">
     </figure>
     <div class="speaking-body">
-      <p class="label reveal"><span>01</span> ${esc(p.speakLabel)}</p>
+      <p class="label reveal">${esc(p.speakLabel)}</p>
       <h2 id="speaking-title" class="h2 reveal">${esc(p.speakTitle)}</h2>
       <p class="lede reveal">${esc(p.speakText)}</p>
       <ol class="talks">
-${p.talks.map(([n, d], i) => `        <li class="reveal"><span class="talk-no">0${i + 1}</span><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></li>`).join('\n')}
+${p.talks.map(([n, d], i) => `        <li class="reveal"><span class="talk-no">${i + 1}</span><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></li>`).join('\n')}
       </ol>
-      <div class="formats reveal">
-        <p class="label">${esc(p.formatsLabel)}</p>
-        <ul class="chips">${p.formats.map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-      </div>
-      <figure class="clip reveal">
-        <video data-src="/Mortenhjemmeside.mp4" poster="/img/ida-poster.jpg" muted loop playsinline preload="none" aria-label="${esc(p.watch)}"></video>
-        <figcaption>${esc(p.watch)}</figcaption>
-      </figure>
+      <p class="formats reveal"><span>${esc(p.formatsLabel)}</span> ${p.formats.map(esc).join(' <i>/</i> ')}</p>
       <button class="btn btn-gold reveal" type="button" data-open-booking>${esc(p.ctaKeynote)}</button>
     </div>
   </section>
 
+  <section class="track block" id="track" aria-labelledby="track-title">
+    <p class="label reveal">${esc(p.trackLabel)}</p>
+    <h2 id="track-title" class="h2 reveal">${esc(p.trackTitle)}</h2>
+    <ol class="track-list">
+${p.track.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>${esc(d)}</p></li>`).join('\n')}
+    </ol>
+  </section>
+
   <section class="consulting block" id="consulting" aria-labelledby="consulting-title">
-    <div class="consulting-head">
-      <p class="label reveal"><span>02</span> ${esc(p.consultLabel)}</p>
-      <h2 id="consulting-title" class="h2 reveal">${esc(p.consultTitle)}</h2>
-      <p class="lede reveal">${esc(p.consultText)}</p>
+    <div class="split">
+      <div>
+        <p class="label reveal">${esc(p.consultLabel)}</p>
+        <h2 id="consulting-title" class="h2 reveal">${esc(p.consultTitle)}</h2>
+      </div>
+      <div>
+        <p class="lede reveal">${esc(p.consultText)}</p>
+        <a class="btn btn-line reveal" href="#contact">${esc(p.ctaConsult)}</a>
+      </div>
     </div>
-    <div class="offers">
-${p.consultList.map(([n, d]) => `      <article class="offer reveal"><h3>${esc(n)}</h3><p>${esc(d)}</p></article>`).join('\n')}
-    </div>
+    <ol class="offers">
+${p.consultList.map(([n, d]) => `      <li class="reveal"><h3>${esc(n)}</h3><p>${esc(d)}</p></li>`).join('\n')}
+    </ol>
     <div class="partners reveal">
       <p class="label">${esc(p.partnersLabel)}</p>
-      <ul>${p.partners.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      <p class="partner-line">${p.partners.map(esc).join(' <i>/</i> ')}</p>
     </div>
-    <a class="btn btn-line reveal" href="#contact">${esc(p.ctaConsult)}</a>
   </section>
 
   <section class="press block" id="press" aria-labelledby="press-title">
@@ -282,10 +291,10 @@ ${p.consultList.map(([n, d]) => `      <article class="offer reveal"><h3>${esc(n
       <img src="/img/portrait.jpg" alt="Portrait of Morten Haulik with a VR headset pushed up on his forehead" width="854" height="1222" loading="lazy" decoding="async">
     </figure>
     <div class="press-body">
-      <p class="label reveal"><span>03</span> ${esc(p.pressLabel)}</p>
+      <p class="label reveal">${esc(p.pressLabel)}</p>
       <h2 id="press-title" class="h2 reveal">${esc(p.pressTitle)}</h2>
       <p class="lede reveal">${esc(p.pressText)}</p>
-      <ul class="chips reveal">${p.pressList.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      <ul class="topic-list reveal">${p.pressList.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
       <div class="press-actions reveal">
         <a class="btn btn-gold" href="${esc(mailPress)}">${esc(p.pressCta)}</a>
         <a class="mail" href="${esc(mailPress)}">${EMAIL}</a>
@@ -300,7 +309,7 @@ ${PHOTOS.map((f, i) => `        <li><a href="/${f}" download><img src="/${f}" al
   <section class="work block" id="work" aria-labelledby="work-title">
     <div class="section-head">
       <div>
-        <p class="label reveal"><span>04</span> ${esc(p.workLabel)}</p>
+        <p class="label reveal">${esc(p.workLabel)}</p>
         <h2 id="work-title" class="h2 reveal">${esc(p.workTitle)}</h2>
       </div>
       <p class="muted">${esc(p.workSub)}</p>

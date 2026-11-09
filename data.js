@@ -10,8 +10,8 @@ const UI_TEXT = {
 };
 
 const SEO_META = {
-  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"XR pioneer from Copenhagen: part of starting Khora, one of Europe's first VR companies, and founder of NXT/WebXR and NXT/Care. Book keynotes, hire XR consulting or request press comment." },
-  da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR-ekspert og foredragsholder fra København. Med til at starte Khora, et af Europas første VR-firmaer, og stifter af NXT/WebXR og NXT/Care. Book foredrag, få XR-rådgivning eller en ekspertkommentar." },
+  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"XR pioneer and keynote speaker from Copenhagen, founder of NXT/WebXR and NXT/Care. Book keynotes on VR, AR and smart glasses, hire XR consulting or request press comment." },
+  da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR-ekspert og foredragsholder fra København, stifter af NXT/WebXR og NXT/Care. Book foredrag om VR, AR og smartbriller, få XR-rådgivning eller en ekspertkommentar." },
   de: { title:"Morten Haulik | Keynote Speaker Spatial Computing & XR-Berater", desc:"Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR. Buchen Sie Keynotes zu XR, VR und dem räumlichen Internet oder XR-Strategie- und WebXR-Beratung." },
   it: { title:"Morten Haulik | Keynote Speaker Spatial Computing & Consulente XR", desc:"Pioniere dello spatial computing a Copenaghen e fondatore di NXT/WebXR. Keynote su XR, VR e internet spaziale, e consulenza su strategia XR e WebXR." },
   fr: { title:"Morten Haulik | Conférencier Informatique Spatiale & Consultant XR", desc:"Pionnier de l'informatique spatiale basé à Copenhague et fondateur de NXT/WebXR. Keynotes sur la XR, la VR et l'internet spatial, et conseil en stratégie XR et WebXR." }
@@ -24,7 +24,7 @@ const PAGE_TEXT = {
     nav: { speaking: "Keynotes", consulting: "Consulting", press: "Press", work: "Work", book: "Book Morten" },
     heroEyebrow: "Keynote speaker · XR consultant · Copenhagen",
     heroTag: ["The future of XR, from someone who ","builds it."],
-    heroSub: "Part of the team that started Khora, one of Europe's first VR companies, I have spent over a decade building XR for global brands, hospitals and cultural institutions. On stage, I show audiences what's real, what's hype and what's coming next.",
+    heroSub: "I build VR and mixed reality used in hospitals, classrooms and living rooms around the world, and have done it for global brands for over a decade. On stage, I show audiences what's real, what's hype and what's coming next.",
     ctaKeynote: "Book a keynote",
     ctaConsult: "Hire for consulting",
     ctaPress: "Journalist? Get a comment",
@@ -38,14 +38,14 @@ const PAGE_TEXT = {
     trackLabel: "Track record",
     trackTitle: "A decade of building what others only talk about.",
     track: [
-      ["Khora","Part of the team that started Khora in Copenhagen, one of Europe's first VR companies."],
+      ["NXT/WebXR","Founder. One of the largest catalogues of WebXR games and experiences, visited daily by headset users worldwide."],
+      ["NXT/Care","Founder. Mixed reality that calms children during treatment in hospitals and clinics in the Capital Region of Denmark."],
+      ["MidwifeVR","Founded and built the VR breastfeeding platform now in the official midwifery curriculum. KU Impact Award 2021."],
       ["Global brands","Countless VR, AR and WebXR experiences for international brands, museums and cultural institutions."],
       ["Michelin dining in VR","Lead developer on a fully immersive journey into the kitchens of top Danish Michelin restaurants."],
       ["European Parliament & UN","Presented immersive work to members of the European Parliament and Commission and to UN delegations."],
-      ["MidwifeVR","Founded and built the VR breastfeeding platform now in the official midwifery curriculum. KU Impact Award 2021."],
-      ["NXT/Care","Founder. Mixed reality that calms children during treatment in hospitals and clinics in the Capital Region of Denmark."],
-      ["NXT/WebXR","Founder. One of the largest catalogues of WebXR games and experiences, visited daily by headset users worldwide."],
-      ["University of Copenhagen","Entrepreneur in Residence since 2022, helping shape the KU Lighthouse startup initiative."]
+      ["University of Copenhagen","Entrepreneur in Residence since 2022, helping shape the KU Lighthouse startup initiative."],
+      ["Where it started","On the early team at Khora in Copenhagen, one of Europe's first VR companies."]
     ],
     speakLabel: "Keynotes",
     speakTitle: "Talks that make XR make sense.",
@@ -68,7 +68,7 @@ const PAGE_TEXT = {
       ["Hardware choices","Which headsets or glasses fit your use case, budget and operations."]
     ],
     partnersLabel: "Clients, partners & stages",
-    partners: ["Khora","European Parliament","Eli Lilly","Herlev Hospital","Capital Region of Denmark","DR2","IDA","University of Copenhagen","University College Copenhagen"],
+    partners: ["European Parliament","Eli Lilly","Herlev Hospital","Capital Region of Denmark","DR2","IDA","University of Copenhagen","University College Copenhagen"],
     pressLabel: "Press",
     pressTitle: "Need an XR expert on deadline?",
     pressText: "I'm available as a source on VR, AR and smart glasses, from Meta's latest glasses and headsets to Apple Vision Pro and Android XR. In English or Danish, for print, radio and TV.",
@@ -83,7 +83,7 @@ const PAGE_TEXT = {
     kitTitle: "Speaker kit",
     kitSub: "Bios and press photos, ready for your programme.",
     kitShortLabel: "Short bio",
-    kitShort: "Morten Haulik is a Copenhagen-based XR pioneer, founder and keynote speaker. Part of the team that started Khora, one of Europe's first VR companies, he has spent more than a decade building VR, AR and WebXR for global brands, hospitals and cultural institutions. He is the founder of NXT/WebXR, NXT/Care and MidwifeVR, and has presented at EU and UN gatherings.",
+    kitShort: "Morten Haulik is a Copenhagen-based XR pioneer, founder and keynote speaker. He is the founder of NXT/WebXR, NXT/Care and MidwifeVR, and for more than a decade he has built VR, AR and WebXR for global brands, hospitals and cultural institutions. He began his career on the early team at Khora, one of Europe's first VR companies, and has presented at EU and UN gatherings.",
     kitLongLabel: "Full bio",
     kitLong: [
       "Morten Haulik is an XR pioneer, founder and keynote speaker based in Copenhagen. More than a decade ago he left his Information Science studies at the University of Copenhagen to be part of the team that started Khora, one of Europe's first VR companies. Since then he has built countless VR, AR and WebXR experiences for global brands, museums and cultural institutions, including a fully immersive journey into the kitchens of top Danish Michelin restaurants, facilitated over 100 industry workshops and spoken to audiences of 2,000+.",
@@ -110,7 +110,7 @@ const PAGE_TEXT = {
       ],
       [
         "What has Morten built?",
-        "More than a decade of XR, starting as part of the team behind Khora, one of Europe's first VR companies. He has built countless VR, AR and WebXR experiences for global brands, museums and cultural institutions, including a Michelin-restaurant VR experience, and presented immersive work in the European Parliament. He founded MidwifeVR (KU Impact Award 2021, now in the midwifery curriculum at University College Copenhagen), NXT/Care (mixed reality for children in hospitals) and NXT/WebXR (one of the largest catalogues of WebXR games, including his own HoloRange, Meows Freaky Fishstick Factory and die Hände)."
+        "He is the founder of NXT/WebXR (one of the largest catalogues of WebXR games, including his own HoloRange, Meows Freaky Fishstick Factory and die Hände), NXT/Care (mixed reality for children in hospitals) and MidwifeVR (KU Impact Award 2021, now in the midwifery curriculum at University College Copenhagen). Over more than a decade he has built countless VR, AR and WebXR experiences for global brands, museums and cultural institutions, including a Michelin-restaurant VR experience, and presented immersive work in the European Parliament. His career began on the early team at Khora, one of Europe's first VR companies."
       ]
     ],
     contactLabel: "Contact",
@@ -123,7 +123,7 @@ const PAGE_TEXT = {
     nav: { speaking: "Foredrag", consulting: "Rådgivning", press: "Presse", work: "Projekter", book: "Book Morten" },
     heroEyebrow: "Foredragsholder · XR-konsulent · København",
     heroTag: ["Fremtidens XR, fortalt af én, der ","bygger den."],
-    heroSub: "Jeg var med til at starte Khora, et af Europas første VR-firmaer, og har i over ti år bygget XR til globale brands, hospitaler og kulturinstitutioner. På scenen viser jeg, hvad der er ægte, hvad der er hype, og hvad der venter forude.",
+    heroSub: "Jeg udvikler VR og mixed reality, der bruges på hospitaler, i undervisningen og i hjem verden over, og har gjort det for globale brands i over ti år. På scenen viser jeg, hvad der er ægte, hvad der er hype, og hvad der venter forude.",
     ctaKeynote: "Book et foredrag",
     ctaConsult: "Få XR-rådgivning",
     ctaPress: "Journalist? Få en kommentar",
@@ -137,14 +137,14 @@ const PAGE_TEXT = {
     trackLabel: "Erfaring",
     trackTitle: "Ti år med at bygge det, andre kun taler om.",
     track: [
-      ["Khora","Med til at starte Khora i København, et af Europas første VR-firmaer."],
+      ["NXT/WebXR","Stifter. Et af verdens største kataloger af WebXR-spil og -oplevelser, som besøges dagligt af brugere verden over."],
+      ["NXT/Care","Stifter. Mixed reality, der skaber ro for børn under behandling på hospitaler og klinikker i Region Hovedstaden."],
+      ["MidwifeVR","Stiftede og byggede VR-platformen til ammevejledning, som nu er en del af jordemoderuddannelsen. KU Impact Award 2021."],
       ["Globale brands","Utallige VR-, AR- og WebXR-oplevelser til internationale brands, museer og kulturinstitutioner."],
       ["Michelin-restauranter i VR","Leadudvikler på en fuldt immersiv rejse ind i køkkenerne på danske Michelin-restauranter."],
       ["Europa-Parlamentet og FN","Har præsenteret immersive løsninger for medlemmer af Europa-Parlamentet og Kommissionen samt FN-delegationer."],
-      ["MidwifeVR","Stiftede og byggede VR-platformen til ammevejledning, som nu er en del af jordemoderuddannelsen. KU Impact Award 2021."],
-      ["NXT/Care","Stifter. Mixed reality, der skaber ro for børn under behandling på hospitaler og klinikker i Region Hovedstaden."],
-      ["NXT/WebXR","Stifter. Et af verdens største kataloger af WebXR-spil og -oplevelser, som besøges dagligt af brugere verden over."],
-      ["Københavns Universitet","Entrepreneur in Residence siden 2022 og med til at forme iværksætterinitiativet KU Lighthouse."]
+      ["Københavns Universitet","Entrepreneur in Residence siden 2022 og med til at forme iværksætterinitiativet KU Lighthouse."],
+      ["Hvor det startede","I det tidlige team hos Khora i København, et af Europas første VR-firmaer."]
     ],
     speakLabel: "Foredrag",
     speakTitle: "Foredrag, der får XR til at give mening.",
@@ -173,7 +173,7 @@ const PAGE_TEXT = {
       ["Valg af hardware","Hvilke headsets eller briller passer til jeres behov, budget og drift?"]
     ],
     partnersLabel: "Kunder, partnere og scener",
-    partners: ["Khora","Europa-Parlamentet","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Københavns Universitet","Københavns Professionshøjskole"],
+    partners: ["Europa-Parlamentet","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Københavns Universitet","Københavns Professionshøjskole"],
     pressLabel: "Presse",
     pressTitle: "Brug for en XR-ekspert før deadline?",
     pressText: "Jeg stiller gerne op som kilde om VR, AR og smartbriller, fra Metas nyeste briller og headsets til Apple Vision Pro og Android XR. På dansk eller engelsk, til skrevne medier, radio og tv.",
@@ -188,7 +188,7 @@ const PAGE_TEXT = {
     kitTitle: "Speaker kit",
     kitSub: "Bio og pressefotos, klar til programmet.",
     kitShortLabel: "Kort bio",
-    kitShort: "Morten Haulik er XR-pioner, iværksætter og foredragsholder fra København. Han var med til at starte Khora, et af Europas første VR-firmaer, og har i mere end ti år bygget VR, AR og WebXR til globale brands, hospitaler og kulturinstitutioner. Han har stiftet NXT/WebXR, NXT/Care og MidwifeVR og har præsenteret for EU og FN.",
+    kitShort: "Morten Haulik er XR-pioner, iværksætter og foredragsholder fra København. Han har stiftet NXT/WebXR, NXT/Care og MidwifeVR og har i mere end ti år bygget VR, AR og WebXR til globale brands, hospitaler og kulturinstitutioner. Han begyndte sin karriere i det tidlige team hos Khora, et af Europas første VR-firmaer, og har præsenteret for EU og FN.",
     kitLongLabel: "Fuld bio",
     kitLong: [
       "Morten Haulik er XR-pioner, iværksætter og foredragsholder med base i København. For mere end ti år siden forlod han studiet i Informationsvidenskab på Københavns Universitet for at være med til at starte Khora, et af Europas første VR-firmaer. Siden har han bygget utallige VR-, AR- og WebXR-oplevelser til globale brands, museer og kulturinstitutioner, blandt andet en fuldt immersiv rejse ind i køkkenerne på danske Michelin-restauranter, afholdt over 100 workshops og talt for publikummer på over 2.000.",
@@ -215,7 +215,7 @@ const PAGE_TEXT = {
       ],
       [
         "Hvad har Morten bygget?",
-        "Mere end ti års XR, begyndende med Khora, et af Europas første VR-firmaer, som han var med til at starte. Han har bygget utallige VR-, AR- og WebXR-oplevelser til globale brands, museer og kulturinstitutioner, blandt andet en VR-oplevelse med danske Michelin-restauranter, og har præsenteret immersive løsninger i Europa-Parlamentet. Han har stiftet MidwifeVR (KU Impact Award 2021, nu en del af jordemoderuddannelsen på Københavns Professionshøjskole), NXT/Care (mixed reality til børn på hospitaler) og NXT/WebXR (et af verdens største kataloger af WebXR-spil, herunder hans egne HoloRange, Meows Freaky Fishstick Factory og die Hände)."
+        "Han har stiftet NXT/WebXR (et af verdens største kataloger af WebXR-spil, herunder hans egne HoloRange, Meows Freaky Fishstick Factory og die Hände), NXT/Care (mixed reality til børn på hospitaler) og MidwifeVR (KU Impact Award 2021, nu en del af jordemoderuddannelsen på Københavns Professionshøjskole). Gennem mere end ti år har han bygget utallige VR-, AR- og WebXR-oplevelser til globale brands, museer og kulturinstitutioner, blandt andet en VR-oplevelse med danske Michelin-restauranter, og præsenteret i Europa-Parlamentet. Karrieren begyndte i det tidlige team hos Khora, et af Europas første VR-firmaer."
       ]
     ],
     contactLabel: "Kontakt",
@@ -228,7 +228,7 @@ const PAGE_TEXT = {
     nav: { speaking: "Keynotes", consulting: "Beratung", press: "Presse", work: "Projekte", book: "Morten buchen" },
     heroEyebrow: "Keynote Speaker · XR-Berater · Kopenhagen",
     heroTag: ["Die Zukunft von XR, erzählt von jemandem, der sie ","baut."],
-    heroSub: "Ich war Teil des Teams, das Khora gegründet hat, eines der ersten VR-Unternehmen Europas, und baue seit über zehn Jahren XR für globale Marken, Kliniken und Kulturinstitutionen. Auf der Bühne zeige ich, was echt ist, was Hype ist und was als Nächstes kommt.",
+    heroSub: "Ich entwickle VR und Mixed Reality, die in Kliniken, Klassenzimmern und Wohnzimmern weltweit genutzt werden, und tue das seit über zehn Jahren auch für globale Marken. Auf der Bühne zeige ich, was echt ist, was Hype ist und was als Nächstes kommt.",
     ctaKeynote: "Keynote buchen",
     ctaConsult: "XR-Beratung anfragen",
     ctaPress: "Journalist? Kommentar anfragen",
@@ -242,14 +242,14 @@ const PAGE_TEXT = {
     trackLabel: "Erfahrung",
     trackTitle: "Zehn Jahre bauen, worüber andere nur reden.",
     track: [
-      ["Khora","Teil des Teams, das Khora in Kopenhagen gestartet hat, eines der ersten VR-Unternehmen Europas."],
+      ["NXT/WebXR","Gründer. Einer der größten Kataloge für WebXR-Spiele und -Erlebnisse, täglich weltweit genutzt."],
+      ["NXT/Care","Gründer. Mixed Reality, die Kinder während der Behandlung in Kliniken der Region Hovedstaden beruhigt."],
+      ["MidwifeVR","Gründung und Entwicklung der VR-Plattform zur Stillberatung, heute Teil der Hebammenausbildung. KU Impact Award 2021."],
       ["Globale Marken","Unzählige VR-, AR- und WebXR-Erlebnisse für internationale Marken, Museen und Kulturinstitutionen."],
       ["Michelin-Küche in VR","Lead Developer einer vollständig immersiven Reise in die Küchen dänischer Michelin-Restaurants."],
       ["Europäisches Parlament & UN","Präsentationen für Mitglieder des Europäischen Parlaments und der Kommission sowie UN-Delegationen."],
-      ["MidwifeVR","Gründung und Entwicklung der VR-Plattform zur Stillberatung, heute Teil der Hebammenausbildung. KU Impact Award 2021."],
-      ["NXT/Care","Gründer. Mixed Reality, die Kinder während der Behandlung in Kliniken der Region Hovedstaden beruhigt."],
-      ["NXT/WebXR","Gründer. Einer der größten Kataloge für WebXR-Spiele und -Erlebnisse, täglich weltweit genutzt."],
-      ["Universität Kopenhagen","Entrepreneur in Residence seit 2022, Mitgestaltung der Startup-Initiative KU Lighthouse."]
+      ["Universität Kopenhagen","Entrepreneur in Residence seit 2022, Mitgestaltung der Startup-Initiative KU Lighthouse."],
+      ["Die Anfänge","Im frühen Team von Khora in Kopenhagen, einem der ersten VR-Unternehmen Europas."]
     ],
     speakLabel: "Keynotes",
     speakTitle: "Vorträge, die XR verständlich machen.",
@@ -281,7 +281,7 @@ const PAGE_TEXT = {
       ["Hardware-Auswahl","Welche Headsets oder Brillen zu Ihrem Einsatz, Budget und Betrieb passen."]
     ],
     partnersLabel: "Kunden, Partner & Bühnen",
-    partners: ["Khora","Europäisches Parlament","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Universität Kopenhagen","University College Copenhagen"],
+    partners: ["Europäisches Parlament","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Universität Kopenhagen","University College Copenhagen"],
     pressLabel: "Presse",
     pressTitle: "XR-Experte gesucht, kurz vor Redaktionsschluss?",
     pressText: "Ich stehe als Quelle zu VR, AR und Smart Glasses zur Verfügung, von Metas neuesten Brillen und Headsets bis zu Apple Vision Pro und Android XR. Auf Englisch oder Dänisch, für Print, Radio und TV.",
@@ -296,7 +296,7 @@ const PAGE_TEXT = {
     kitTitle: "Speaker Kit",
     kitSub: "Bios und Pressefotos, bereit für Ihr Programm.",
     kitShortLabel: "Kurzbio",
-    kitShort: "Morten Haulik ist XR-Pionier, Gründer und Keynote Speaker aus Kopenhagen. Als Teil des Teams, das Khora gestartet hat, eines der ersten VR-Unternehmen Europas, entwickelt er seit über zehn Jahren VR, AR und WebXR für globale Marken, Kliniken und Kulturinstitutionen. Er gründete NXT/WebXR, NXT/Care und MidwifeVR und präsentierte bei EU- und UN-Veranstaltungen.",
+    kitShort: "Morten Haulik ist XR-Pionier, Gründer und Keynote Speaker aus Kopenhagen. Er gründete NXT/WebXR, NXT/Care und MidwifeVR und entwickelt seit über zehn Jahren VR, AR und WebXR für globale Marken, Kliniken und Kulturinstitutionen. Seine Laufbahn begann im frühen Team von Khora, einem der ersten VR-Unternehmen Europas; er präsentierte bei EU- und UN-Veranstaltungen.",
     kitLongLabel: "Ausführliche Bio",
     kitLong: [
       "Morten Haulik ist XR-Pionier, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über zehn Jahren verließ er sein Studium der Informationswissenschaft an der Universität Kopenhagen, um Khora mit aufzubauen, eines der ersten VR-Unternehmen Europas. Seitdem hat er unzählige VR-, AR- und WebXR-Erlebnisse für globale Marken, Museen und Kulturinstitutionen entwickelt, darunter eine immersive Reise in die Küchen dänischer Michelin-Restaurants, über 100 Workshops moderiert und vor über 2.000 Menschen gesprochen.",
@@ -323,7 +323,7 @@ const PAGE_TEXT = {
       ],
       [
         "Was hat Morten gebaut?",
-        "Über zehn Jahre XR, beginnend mit Khora, einem der ersten VR-Unternehmen Europas. Unzählige VR-, AR- und WebXR-Erlebnisse für globale Marken, Museen und Kulturinstitutionen, darunter eine VR-Reise mit dänischen Michelin-Restaurants, sowie Präsentationen im Europäischen Parlament. Er gründete MidwifeVR (KU Impact Award 2021), NXT/Care (Mixed Reality für Kinder in Kliniken) und NXT/WebXR (einer der größten WebXR-Spielekataloge, mit seinen eigenen Spielen HoloRange, Meows Freaky Fishstick Factory und die Hände)."
+        "Er gründete NXT/WebXR (einer der größten WebXR-Spielekataloge, mit seinen Spielen HoloRange, Meows Freaky Fishstick Factory und die Hände), NXT/Care (Mixed Reality für Kinder in Kliniken) und MidwifeVR (KU Impact Award 2021). Seit über zehn Jahren entwickelt er VR-, AR- und WebXR-Erlebnisse für globale Marken, Museen und Kulturinstitutionen, darunter eine VR-Reise mit dänischen Michelin-Restaurants, und präsentierte im Europäischen Parlament. Seine Laufbahn begann im frühen Team von Khora, einem der ersten VR-Unternehmen Europas."
       ]
     ],
     contactLabel: "Kontakt",
@@ -336,7 +336,7 @@ const PAGE_TEXT = {
     nav: { speaking: "Keynote", consulting: "Consulenza", press: "Stampa", work: "Progetti", book: "Prenota Morten" },
     heroEyebrow: "Keynote speaker · Consulente XR · Copenaghen",
     heroTag: ["Il futuro dell'XR, raccontato da chi lo ","costruisce."],
-    heroSub: "Ho fatto parte del team che ha avviato Khora, una delle prime aziende VR in Europa, e da oltre dieci anni costruisco XR per brand globali, ospedali e istituzioni culturali. Sul palco mostro cosa è reale, cosa è hype e cosa sta arrivando.",
+    heroSub: "Sviluppo VR e realtà mista usate in ospedali, aule e case di tutto il mondo, e da oltre dieci anni lo faccio anche per brand globali. Sul palco mostro cosa è reale, cosa è hype e cosa sta arrivando.",
     ctaKeynote: "Prenota un keynote",
     ctaConsult: "Richiedi una consulenza",
     ctaPress: "Giornalista? Chiedi un commento",
@@ -350,14 +350,14 @@ const PAGE_TEXT = {
     trackLabel: "Esperienza",
     trackTitle: "Dieci anni a costruire ciò di cui altri si limitano a parlare.",
     track: [
-      ["Khora","Parte del team che ha avviato Khora a Copenaghen, una delle prime aziende VR in Europa."],
+      ["NXT/WebXR","Fondatore. Uno dei più grandi cataloghi di giochi ed esperienze WebXR, visitato ogni giorno in tutto il mondo."],
+      ["NXT/Care","Fondatore. Realtà mista che tranquillizza i bambini durante le cure negli ospedali della Regione Capitale danese."],
+      ["MidwifeVR","Ha fondato e sviluppato la piattaforma VR per l'allattamento, oggi nel curriculum di ostetricia. KU Impact Award 2021."],
       ["Brand globali","Innumerevoli esperienze VR, AR e WebXR per brand internazionali, musei e istituzioni culturali."],
       ["Cucina stellata in VR","Lead developer di un viaggio immersivo nelle cucine dei ristoranti stellati Michelin danesi."],
       ["Parlamento europeo e ONU","Presentazioni per membri del Parlamento europeo e della Commissione e per delegazioni ONU."],
-      ["MidwifeVR","Ha fondato e sviluppato la piattaforma VR per l'allattamento, oggi nel curriculum di ostetricia. KU Impact Award 2021."],
-      ["NXT/Care","Fondatore. Realtà mista che tranquillizza i bambini durante le cure negli ospedali della Regione Capitale danese."],
-      ["NXT/WebXR","Fondatore. Uno dei più grandi cataloghi di giochi ed esperienze WebXR, visitato ogni giorno in tutto il mondo."],
-      ["Università di Copenaghen","Entrepreneur in Residence dal 2022, contribuisce all'iniziativa per startup KU Lighthouse."]
+      ["Università di Copenaghen","Entrepreneur in Residence dal 2022, contribuisce all'iniziativa per startup KU Lighthouse."],
+      ["Gli inizi","Nel primo team di Khora a Copenaghen, una delle prime aziende VR in Europa."]
     ],
     speakLabel: "Keynote",
     speakTitle: "Interventi che rendono l'XR comprensibile.",
@@ -380,7 +380,7 @@ const PAGE_TEXT = {
       ["Scelta dell'hardware","Quali visori o occhiali sono adatti al vostro uso, budget e operatività."]
     ],
     partnersLabel: "Clienti, partner e palchi",
-    partners: ["Khora","Parlamento europeo","Eli Lilly","Herlev Hospital","Regione Capitale danese","DR2","IDA","Università di Copenaghen","University College Copenhagen"],
+    partners: ["Parlamento europeo","Eli Lilly","Herlev Hospital","Regione Capitale danese","DR2","IDA","Università di Copenaghen","University College Copenhagen"],
     pressLabel: "Stampa",
     pressTitle: "Serve un esperto XR prima della chiusura?",
     pressText: "Sono disponibile come fonte su VR, AR e smart glasses, dai nuovi occhiali e visori di Meta ad Apple Vision Pro e Android XR. In inglese o danese, per carta stampata, radio e TV.",
@@ -395,7 +395,7 @@ const PAGE_TEXT = {
     kitTitle: "Speaker kit",
     kitSub: "Bio e foto stampa, pronte per il programma.",
     kitShortLabel: "Bio breve",
-    kitShort: "Morten Haulik è un pioniere dell'XR, imprenditore e keynote speaker con sede a Copenaghen. Parte del team che ha avviato Khora, una delle prime aziende VR in Europa, da oltre dieci anni sviluppa VR, AR e WebXR per brand globali, ospedali e istituzioni culturali. Ha fondato NXT/WebXR, NXT/Care e MidwifeVR e ha presentato a eventi dell'UE e dell'ONU.",
+    kitShort: "Morten Haulik è un pioniere dell'XR, imprenditore e keynote speaker con sede a Copenaghen. Ha fondato NXT/WebXR, NXT/Care e MidwifeVR e da oltre dieci anni sviluppa VR, AR e WebXR per brand globali, ospedali e istituzioni culturali. Ha iniziato la carriera nel primo team di Khora, una delle prime aziende VR in Europa, e ha presentato a eventi dell'UE e dell'ONU.",
     kitLongLabel: "Bio completa",
     kitLong: [
       "Morten Haulik è un pioniere dell'XR, imprenditore e keynote speaker con sede a Copenaghen. Oltre dieci anni fa ha lasciato gli studi di Scienze dell'Informazione all'Università di Copenaghen per far parte del team che ha avviato Khora, una delle prime aziende VR in Europa. Da allora ha creato innumerevoli esperienze VR, AR e WebXR per brand globali, musei e istituzioni culturali, tra cui un viaggio immersivo nelle cucine dei ristoranti stellati danesi, facilitato oltre 100 workshop e parlato a platee di oltre 2.000 persone.",
@@ -422,7 +422,7 @@ const PAGE_TEXT = {
       ],
       [
         "Cosa ha creato Morten?",
-        "Oltre dieci anni di XR, a partire da Khora, una delle prime aziende VR in Europa. Innumerevoli esperienze VR, AR e WebXR per brand globali, musei e istituzioni culturali, tra cui un'esperienza VR con ristoranti stellati danesi, e presentazioni al Parlamento europeo. Ha fondato MidwifeVR (KU Impact Award 2021), NXT/Care (realtà mista per bambini in ospedale) e NXT/WebXR (uno dei più grandi cataloghi di giochi WebXR, con i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände)."
+        "Ha fondato NXT/WebXR (uno dei più grandi cataloghi di giochi WebXR, con i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände), NXT/Care (realtà mista per bambini in ospedale) e MidwifeVR (KU Impact Award 2021). In oltre dieci anni ha creato innumerevoli esperienze VR, AR e WebXR per brand globali, musei e istituzioni culturali, tra cui un'esperienza VR con ristoranti stellati danesi, e ha presentato al Parlamento europeo. La sua carriera è iniziata nel primo team di Khora, una delle prime aziende VR in Europa."
       ]
     ],
     contactLabel: "Contatti",
@@ -435,7 +435,7 @@ const PAGE_TEXT = {
     nav: { speaking: "Keynotes", consulting: "Conseil", press: "Presse", work: "Projets", book: "Réserver Morten" },
     heroEyebrow: "Conférencier · Consultant XR · Copenhague",
     heroTag: ["L'avenir de la XR, raconté par celui qui la ","construit."],
-    heroSub: "J'ai fait partie de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe, et je construis depuis plus de dix ans de la XR pour des marques mondiales, des hôpitaux et des institutions culturelles. Sur scène, je montre ce qui est réel, ce qui relève du buzz et ce qui arrive.",
+    heroSub: "Je développe de la VR et de la réalité mixte utilisées dans des hôpitaux, des salles de classe et des foyers du monde entier, et je le fais depuis plus de dix ans pour des marques mondiales. Sur scène, je montre ce qui est réel, ce qui relève du buzz et ce qui arrive.",
     ctaKeynote: "Réserver une keynote",
     ctaConsult: "Demander un conseil",
     ctaPress: "Journaliste ? Obtenir un commentaire",
@@ -449,14 +449,14 @@ const PAGE_TEXT = {
     trackLabel: "Parcours",
     trackTitle: "Dix ans à construire ce dont d'autres ne font que parler.",
     track: [
-      ["Khora","Membre de l'équipe qui a lancé Khora à Copenhague, l'une des premières entreprises VR d'Europe."],
+      ["NXT/WebXR","Fondateur. L'un des plus grands catalogues de jeux et d'expériences WebXR, visité chaque jour dans le monde entier."],
+      ["NXT/Care","Fondateur. La réalité mixte qui apaise les enfants pendant les soins dans les hôpitaux de la Région capitale du Danemark."],
+      ["MidwifeVR","A fondé et développé la plateforme VR d'accompagnement à l'allaitement, aujourd'hui au programme des sages-femmes. KU Impact Award 2021."],
       ["Marques mondiales","D'innombrables expériences VR, AR et WebXR pour des marques internationales, des musées et des institutions culturelles."],
       ["Gastronomie étoilée en VR","Lead developer d'une immersion dans les cuisines de grands restaurants étoilés danois."],
       ["Parlement européen et ONU","Présentations à des membres du Parlement européen et de la Commission, et à des délégations de l'ONU."],
-      ["MidwifeVR","A fondé et développé la plateforme VR d'accompagnement à l'allaitement, aujourd'hui au programme des sages-femmes. KU Impact Award 2021."],
-      ["NXT/Care","Fondateur. La réalité mixte qui apaise les enfants pendant les soins dans les hôpitaux de la Région capitale du Danemark."],
-      ["NXT/WebXR","Fondateur. L'un des plus grands catalogues de jeux et d'expériences WebXR, visité chaque jour dans le monde entier."],
-      ["Université de Copenhague","Entrepreneur en résidence depuis 2022, il contribue à l'initiative startup KU Lighthouse."]
+      ["Université de Copenhague","Entrepreneur en résidence depuis 2022, il contribue à l'initiative startup KU Lighthouse."],
+      ["Les débuts","Dans l'équipe des débuts de Khora à Copenhague, l'une des premières entreprises VR d'Europe."]
     ],
     speakLabel: "Keynotes",
     speakTitle: "Des conférences qui rendent la XR limpide.",
@@ -488,7 +488,7 @@ const PAGE_TEXT = {
       ["Choix du matériel","Quels casques ou lunettes conviennent à votre usage, votre budget et votre exploitation."]
     ],
     partnersLabel: "Clients, partenaires et scènes",
-    partners: ["Khora","Parlement européen","Eli Lilly","Herlev Hospital","Région capitale du Danemark","DR2","IDA","Université de Copenhague","University College Copenhagen"],
+    partners: ["Parlement européen","Eli Lilly","Herlev Hospital","Région capitale du Danemark","DR2","IDA","Université de Copenhague","University College Copenhagen"],
     pressLabel: "Presse",
     pressTitle: "Besoin d'un expert XR avant le bouclage ?",
     pressText: "Je suis disponible comme source sur la VR, l'AR et les lunettes connectées, des dernières lunettes et casques de Meta à l'Apple Vision Pro et Android XR. En anglais ou en danois, pour la presse écrite, la radio et la télévision.",
@@ -503,7 +503,7 @@ const PAGE_TEXT = {
     kitTitle: "Kit conférencier",
     kitSub: "Bios et photos presse, prêtes pour votre programme.",
     kitShortLabel: "Bio courte",
-    kitShort: "Morten Haulik est un pionnier de la XR, entrepreneur et conférencier basé à Copenhague. Membre de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe, il conçoit depuis plus de dix ans de la VR, de l'AR et du WebXR pour des marques mondiales, des hôpitaux et des institutions culturelles. Il a fondé NXT/WebXR, NXT/Care et MidwifeVR, et a présenté lors d'événements de l'UE et de l'ONU.",
+    kitShort: "Morten Haulik est un pionnier de la XR, entrepreneur et conférencier basé à Copenhague. Fondateur de NXT/WebXR, NXT/Care et MidwifeVR, il conçoit depuis plus de dix ans de la VR, de l'AR et du WebXR pour des marques mondiales, des hôpitaux et des institutions culturelles. Il a débuté dans l'équipe des débuts de Khora, l'une des premières entreprises VR d'Europe, et a présenté lors d'événements de l'UE et de l'ONU.",
     kitLongLabel: "Bio complète",
     kitLong: [
       "Morten Haulik est un pionnier de la XR, entrepreneur et conférencier basé à Copenhague. Il y a plus de dix ans, il a quitté ses études en sciences de l'information à l'Université de Copenhague pour faire partie de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe. Depuis, il a créé d'innombrables expériences VR, AR et WebXR pour des marques mondiales, des musées et des institutions culturelles, dont une immersion dans les cuisines de restaurants étoilés danois, animé plus de 100 ateliers et parlé devant des publics de plus de 2 000 personnes.",
@@ -530,7 +530,7 @@ const PAGE_TEXT = {
       ],
       [
         "Qu'a construit Morten ?",
-        "Plus de dix ans de XR, à commencer par Khora, l'une des premières entreprises VR d'Europe. D'innombrables expériences VR, AR et WebXR pour des marques mondiales, des musées et des institutions culturelles, dont une expérience VR avec des restaurants étoilés danois, et des présentations au Parlement européen. Il a fondé MidwifeVR (KU Impact Award 2021), NXT/Care (réalité mixte pour les enfants à l'hôpital) et NXT/WebXR (l'un des plus grands catalogues de jeux WebXR, dont ses propres HoloRange, Meows Freaky Fishstick Factory et die Hände)."
+        "Il a fondé NXT/WebXR (l'un des plus grands catalogues de jeux WebXR, dont ses propres HoloRange, Meows Freaky Fishstick Factory et die Hände), NXT/Care (réalité mixte pour les enfants à l'hôpital) et MidwifeVR (KU Impact Award 2021). En plus de dix ans, il a créé d'innombrables expériences VR, AR et WebXR pour des marques mondiales, des musées et des institutions culturelles, dont une expérience VR avec des restaurants étoilés danois, et a présenté au Parlement européen. Sa carrière a débuté dans l'équipe des débuts de Khora, l'une des premières entreprises VR d'Europe."
       ]
     ],
     contactLabel: "Contact",

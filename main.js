@@ -37,7 +37,7 @@
   });
 
   /* Grid videos only start downloading once they're about to scroll into view. */
-  const videos = $$('#grid video[data-src]');
+  const videos = $$('video[data-src]');
   const startVideo = v => { v.src = v.dataset.src; v.removeAttribute('data-src'); v.play().catch(() => {}); };
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries, obs) => entries.forEach(e => {
@@ -55,6 +55,20 @@
     });
     el.addEventListener('pointerleave', () => { el.style.transform = ''; });
   }
+
+  /* ---------- scroll polish ---------- */
+  const topbar = $('.topbar');
+  const onScroll = () => topbar.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const ro = new IntersectionObserver((entries, obs) => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(el => ro.observe(el));
+  } else reveals.forEach(el => el.classList.add('in'));
 
   /* ---------- portfolio modal ---------- */
   function openCard(item) {

@@ -10,250 +10,534 @@ const UI_TEXT = {
 };
 
 const SEO_META = {
-  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"Copenhagen-based XR expert and founder of NXT/WebXR. Book keynotes on VR, AR, smart glasses and the spatial internet, hire XR strategy and WebXR consulting, or request press comment." },
-  da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR- og XR-ekspert fra København og founder af NXT/WebXR. Book foredrag om VR, AR, smartbriller og spatial computing, få XR-rådgivning, eller kontakt for ekspertkommentar til presse." },
+  en: { title:"Morten Haulik | Spatial Computing Keynote Speaker & XR Consultant", desc:"XR pioneer from Copenhagen: part of starting Khora, one of Europe's first VR companies, and founder of NXT/WebXR and NXT/Care. Book keynotes, hire XR consulting or request press comment." },
+  da: { title:"Morten Haulik | VR-ekspert, foredragsholder & XR-konsulent", desc:"VR-ekspert og foredragsholder fra København. Med til at starte Khora, et af Europas første VR-firmaer, og stifter af NXT/WebXR og NXT/Care. Book foredrag, få XR-rådgivning eller en ekspertkommentar." },
   de: { title:"Morten Haulik | Keynote Speaker Spatial Computing & XR-Berater", desc:"Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR. Buchen Sie Keynotes zu XR, VR und dem räumlichen Internet oder XR-Strategie- und WebXR-Beratung." },
   it: { title:"Morten Haulik | Keynote Speaker Spatial Computing & Consulente XR", desc:"Pioniere dello spatial computing a Copenaghen e fondatore di NXT/WebXR. Keynote su XR, VR e internet spaziale, e consulenza su strategia XR e WebXR." },
   fr: { title:"Morten Haulik | Conférencier Informatique Spatiale & Consultant XR", desc:"Pionnier de l'informatique spatiale basé à Copenhague et fondateur de NXT/WebXR. Keynotes sur la XR, la VR et l'internet spatial, et conseil en stratégie XR et WebXR." }
 };
 
-/* Page sections (hero, services, press, speaker kit, FAQ), all languages.
+/* Page sections (hero, keynotes, consulting, press, speaker kit, FAQ), all languages.
    After editing anything in this file, run:  node build.js  */
 const PAGE_TEXT = {
   en: {
-    heroLead: "I help organisations make sense of spatial computing, and build what comes next.",
-    heroSub: "Keynote speaker, XR consultant and founder of NXT/WebXR. More than a decade building VR, AR and WebXR for hospitals, museums, universities and global brands.",
-    stats: [["10+","years building XR"],["100+","industry workshops facilitated"],["2,000+","people in a single keynote audience"],["EU & UN","official presentations"]],
-    featured: "Featured in and on stage with",
-    servicesTitle: "Three ways to work together",
-    speakTitle: "Keynotes & panels",
-    speakText: "Clear, demo-rich talks that give an audience a grounded view of where XR is actually going. For conferences, corporate summits, universities and public-sector events, in English or Danish.",
-    speakTopics: ["The spatial internet: why the next platform will be visited, not installed","XR in healthcare, from maternity wards to children's hospitals","Smart glasses and headsets: what Meta, Apple and Google are really building","Building immersive products people actually use","Innovation and entrepreneurship in emerging tech"],
-    speakCta: "Request a keynote",
-    consultTitle: "XR strategy & consulting",
-    consultText: "Hands-on advice from someone who ships. I help leadership and product teams decide where XR creates real value, then prototype and build it.",
-    consultList: ["XR opportunity workshops for leadership teams","WebXR, VR and mixed-reality prototypes and production","Healthcare, training and education simulations","Distribution without app stores via the open web","Hardware advice: which headset or glasses fit your case"],
-    consultCta: "Start a conversation",
-    pressTitle: "Press & expert comment",
-    pressText: "Journalists: I comment on VR, AR and smart glasses, from Meta's newest headsets and glasses to Apple Vision Pro and Android XR. In Danish or English, and I can usually respond quickly to news deadlines.",
-    pressList: ["Meta Quest and Meta's smart glasses","Apple Vision Pro and visionOS","Google, Samsung and Android XR","XR in healthcare and education","The metaverse, hype vs. reality"],
-    pressCta: "Contact for press",
+    nav: { speaking: "Keynotes", consulting: "Consulting", press: "Press", work: "Work", book: "Book Morten" },
+    heroEyebrow: "Keynote speaker · XR consultant · Copenhagen",
+    heroTag: ["The future of XR, from someone who ","builds it."],
+    heroSub: "Part of the team that started Khora, one of Europe's first VR companies, I have spent over a decade building XR for global brands, hospitals and cultural institutions. On stage, I show audiences what's real, what's hype and what's coming next.",
+    ctaKeynote: "Book a keynote",
+    ctaConsult: "Hire for consulting",
+    ctaPress: "Journalist? Get a comment",
+    stats: [
+      ["10+","years building XR"],
+      ["100+","workshops facilitated"],
+      ["2,000+","people in a single audience"],
+      ["EU & UN","official presentations"]
+    ],
+    featured: "As featured in",
+    trackLabel: "Track record",
+    trackTitle: "A decade of building what others only talk about.",
+    track: [
+      ["Khora","Part of the team that started Khora in Copenhagen, one of Europe's first VR companies."],
+      ["Global brands","Countless VR, AR and WebXR experiences for international brands, museums and cultural institutions."],
+      ["Michelin dining in VR","Lead developer on a fully immersive journey into the kitchens of top Danish Michelin restaurants."],
+      ["European Parliament & UN","Presented immersive work to members of the European Parliament and Commission and to UN delegations."],
+      ["MidwifeVR","Founded and built the VR breastfeeding platform now in the official midwifery curriculum. KU Impact Award 2021."],
+      ["NXT/Care","Founder. Mixed reality that calms children during treatment in hospitals and clinics in the Capital Region of Denmark."],
+      ["NXT/WebXR","Founder. One of the largest catalogues of WebXR games and experiences, visited daily by headset users worldwide."],
+      ["University of Copenhagen","Entrepreneur in Residence since 2022, helping shape the KU Lighthouse startup initiative."]
+    ],
+    speakLabel: "Keynotes",
+    speakTitle: "Talks that make XR make sense.",
+    speakText: "No buzzwords, no science fiction. Every talk is built on products I have designed and shipped myself, so audiences leave with a clear, grounded picture of what XR can do today and what is coming next.",
+    talks: [
+      ["The Spatial Internet","Why the next big platform will be visited, not installed, and what that means for every brand, museum and publisher with a website."],
+      ["XR That Heals","From maternity wards to children's blood tests: what happens when immersive tech leaves the demo room and enters real hospitals."],
+      ["Glasses On: Hype vs. Reality","Meta, Apple and Google are betting billions on your face. A builder's honest guide to what is actually ready, and what isn't."]
+    ],
+    formatsLabel: "Formats",
+    formats: ["Keynote, 20–60 min","Panels & fireside chats","Hands-on workshops with headsets","English or Danish"],
+    watch: "Watch: keynote at IDA Driving Health Tech",
+    consultLabel: "Consulting",
+    consultTitle: "From first workshop to shipped product.",
+    consultText: "I help leadership and product teams find where XR creates real value, then build it. Advice from someone who ships, not from a slide deck.",
+    consultList: [
+      ["XR strategy","Leadership workshops: where XR makes sense for you, and where it doesn't."],
+      ["Prototypes & production","WebXR, VR and mixed reality from idea to launch, without app store bottlenecks."],
+      ["Healthcare & training","Simulations and patient experiences built together with clinicians."],
+      ["Hardware choices","Which headsets or glasses fit your use case, budget and operations."]
+    ],
+    partnersLabel: "Clients, partners & stages",
+    partners: ["Khora","European Parliament","Eli Lilly","Herlev Hospital","Capital Region of Denmark","DR2","IDA","University of Copenhagen","University College Copenhagen"],
+    pressLabel: "Press",
+    pressTitle: "Need an XR expert on deadline?",
+    pressText: "I'm available as a source on VR, AR and smart glasses, from Meta's latest glasses and headsets to Apple Vision Pro and Android XR. In English or Danish, for print, radio and TV.",
+    pressList: ["Meta Quest & Meta's smart glasses","Apple Vision Pro & visionOS","Google, Samsung & Android XR","XR in healthcare & education","The metaverse: hype vs. reality"],
+    pressCta: "Email Morten",
     pressSubject: "Press inquiry",
+    pressPhotos: "Press photos",
+    workLabel: "Work",
     workTitle: "Talks, press & projects",
     workSub: "Tap any card for the full story.",
+    kitLabel: "For organisers",
     kitTitle: "Speaker kit",
-    kitSub: "Everything an organiser needs for the programme, ready to copy.",
+    kitSub: "Bios and press photos, ready for your programme.",
     kitShortLabel: "Short bio",
-    kitShort: "Morten Haulik is a Copenhagen-based spatial computing pioneer and the founder of NXT/WebXR, the front page of the spatial internet. With more than a decade in XR, he builds immersive tools used in hospitals, museums and homes worldwide, has facilitated 100+ industry workshops and has presented at EU and UN gatherings.",
+    kitShort: "Morten Haulik is a Copenhagen-based XR pioneer, founder and keynote speaker. Part of the team that started Khora, one of Europe's first VR companies, he has spent more than a decade building VR, AR and WebXR for global brands, hospitals and cultural institutions. He is the founder of NXT/WebXR, NXT/Care and MidwifeVR, and has presented at EU and UN gatherings.",
     kitLongLabel: "Full bio",
     kitLong: [
-      "Morten Haulik is a spatial computing developer, founder and keynote speaker based in Copenhagen. More than a decade ago he left his Information Science studies at the University of Copenhagen to join the first Nordic XR studio full-time. Since then he has facilitated over 100 industry workshops, shipped immersive products and delivered keynotes to audiences of 2,000+.",
+      "Morten Haulik is an XR pioneer, founder and keynote speaker based in Copenhagen. More than a decade ago he left his Information Science studies at the University of Copenhagen to be part of the team that started Khora, one of Europe's first VR companies. Since then he has built countless VR, AR and WebXR experiences for global brands, museums and cultural institutions, including a fully immersive journey into the kitchens of top Danish Michelin restaurants, facilitated over 100 industry workshops and spoken to audiences of 2,000+.",
       "He has presented spatial computing solutions at official European Union gatherings for members of the European Parliament and Commission, and for United Nations delegations.",
-      "As co-founder of MidwifeVR, winner of the KU Impact Award 2021, he built the VR breastfeeding-guidance platform now used in the midwifery programme at University College Copenhagen. Through NXT/Care, he brings calm, playful mixed reality to children in Danish hospitals and clinics, and he collaborates with Herlev Hospital on clinical XR.",
+      "As co-founder of MidwifeVR, winner of the KU Impact Award 2021, he built the VR breastfeeding-guidance platform now used in the midwifery programme at University College Copenhagen. He is the founder of NXT/Care, which brings calm, playful mixed reality to children in hospitals and clinics in the Capital Region of Denmark, and he collaborates with Herlev Hospital on clinical XR.",
       "Since 2022 he has been Entrepreneur in Residence at the University of Copenhagen, helping shape the KU Lighthouse initiative. In 2025 he launched NXT/WebXR, a catalogue of free WebXR games and experiences opened straight from the headset browser, including his own titles HoloRange, Meows Freaky Fishstick Factory and die Hände."
     ],
-    kitFacts: [["Formats","Keynote (20–60 min), panel, fireside chat, hands-on workshop with headsets"],["Languages","English, Danish"],["Based in","Copenhagen, available across Europe"]],
-    copy: "Copy", copied: "Copied ✓",
-    headshot: "Download profile image",
+    copy: "Copy",
+    copied: "Copied ✓",
+    download: "Download",
     faqTitle: "Frequently asked",
     faq: [
-      ["Can I book Morten Haulik as a keynote speaker?","Yes. Morten gives keynotes, panels and workshops on spatial computing, XR, VR and smart glasses for conferences, corporate events and universities across Europe, in English or Danish. Use the keynote form on this page or email Morten@nxtwebxr.com."],
-      ["What does Morten consult on?","XR strategy, WebXR and VR/mixed-reality development, healthcare and training simulations, and choosing the right hardware. He works with companies, hospitals, museums and universities, from the first workshop to a shipped product."],
-      ["Is Morten available for press comment on VR and smart glasses?","Yes. Journalists can reach him for expert comment on Meta Quest and Meta's smart glasses, Apple Vision Pro, Android XR and the wider XR industry, in Danish or English, at Morten@nxtwebxr.com."],
-      ["What has Morten built?","NXT/WebXR, a catalogue of free WebXR games and experiences, with his own games HoloRange, Meows Freaky Fishstick Factory and die Hände; NXT/Care for children in hospitals and clinics; MidwifeVR, used in midwifery education at University College Copenhagen and winner of the KU Impact Award 2021; and the SendToQuest utility."]
+      [
+        "Can I book Morten Haulik as a keynote speaker?",
+        "Yes. Morten gives keynotes, panels and workshops on XR, VR, mixed reality and smart glasses for conferences, corporate events and universities across Europe, in English or Danish. Use the booking form on this page or email Morten@nxtwebxr.com."
+      ],
+      [
+        "What does Morten consult on?",
+        "XR strategy, WebXR and VR/mixed-reality development, healthcare and training simulations, and choosing the right hardware. He works with companies, hospitals, museums and universities, from the first workshop to a shipped product."
+      ],
+      [
+        "Is Morten available for press comment on VR and smart glasses?",
+        "Yes. Journalists can reach him for expert comment on Meta Quest and Meta's smart glasses, Apple Vision Pro, Android XR and the wider XR industry, in English or Danish, at Morten@nxtwebxr.com."
+      ],
+      [
+        "What has Morten built?",
+        "More than a decade of XR, starting as part of the team behind Khora, one of Europe's first VR companies. He has built countless VR, AR and WebXR experiences for global brands, museums and cultural institutions, including a Michelin-restaurant VR experience, and presented immersive work in the European Parliament. He founded MidwifeVR (KU Impact Award 2021, now in the midwifery curriculum at University College Copenhagen), NXT/Care (mixed reality for children in hospitals) and NXT/WebXR (one of the largest catalogues of WebXR games, including his own HoloRange, Meows Freaky Fishstick Factory and die Hände)."
+      ]
     ],
-    contactTitle: "Let's talk",
-    contactSub: "Consulting projects, collaborations or just a question. I typically reply within one business day.",
-    directLabel: "Direct",
-    skip: "Skip to content"
+    contactLabel: "Contact",
+    contactTitle: "Let's talk.",
+    contactSub: "Keynotes, consulting, collaborations or just a question. I typically reply within one business day.",
+    skip: "Skip to content",
+    languages: "Language"
   },
   da: {
-    heroLead: "Jeg hjælper organisationer med at forstå spatial computing og bygge det, der kommer bagefter.",
-    heroSub: "Foredragsholder, XR-konsulent og founder af NXT/WebXR. Mere end ti år med VR, AR og WebXR til hospitaler, museer, universiteter og globale brands.",
-    stats: [["10+","år med XR"],["100+","workshops faciliteret"],["2.000+","tilhørere ved ét keynote"],["EU & FN","officielle præsentationer"]],
-    featured: "Omtalt i og på scenen med",
-    servicesTitle: "Tre måder at arbejde sammen på",
-    speakTitle: "Foredrag & paneler",
-    speakText: "Klare foredrag med masser af demoer, der giver publikum et jordnært billede af, hvor XR reelt er på vej hen. Til konferencer, virksomhedsevents, universiteter og det offentlige, på dansk eller engelsk.",
-    speakTopics: ["Det rumlige internet: hvorfor den næste platform besøges og ikke installeres","XR i sundhedsvæsenet, fra fødegangen til børneafdelingen","Smartbriller og headsets: hvad Meta, Apple og Google reelt bygger","Immersive produkter, som folk faktisk bruger","Innovation og iværksætteri i ny teknologi"],
-    speakCta: "Book et foredrag",
-    consultTitle: "XR-strategi & rådgivning",
-    consultText: "Praktisk rådgivning fra en, der selv leverer. Jeg hjælper ledelser og produktteams med at finde ud af, hvor XR skaber reel værdi, og bygger derefter prototyper og løsninger.",
-    consultList: ["XR-workshops for ledelsesgrupper","WebXR-, VR- og mixed reality-prototyper og produktion","Simulationer til sundhed, træning og uddannelse","Distribution uden app stores via det åbne web","Hardware-rådgivning: hvilke headsets eller briller passer til jer"],
-    consultCta: "Start en dialog",
-    pressTitle: "Presse & ekspertkommentarer",
-    pressText: "Journalister: Jeg kommenterer på VR, AR og smartbriller, fra Metas nyeste headsets og briller til Apple Vision Pro og Android XR. På dansk eller engelsk, og jeg kan som regel svare hurtigt, når der er deadline.",
-    pressList: ["Meta Quest og Metas smartbriller","Apple Vision Pro og visionOS","Google, Samsung og Android XR","XR i sundhed og uddannelse","Metaverset, hype vs. virkelighed"],
-    pressCta: "Kontakt til presse",
+    nav: { speaking: "Foredrag", consulting: "Rådgivning", press: "Presse", work: "Projekter", book: "Book Morten" },
+    heroEyebrow: "Foredragsholder · XR-konsulent · København",
+    heroTag: ["Fremtidens XR, fortalt af én, der ","bygger den."],
+    heroSub: "Jeg var med til at starte Khora, et af Europas første VR-firmaer, og har i over ti år bygget XR til globale brands, hospitaler og kulturinstitutioner. På scenen viser jeg, hvad der er ægte, hvad der er hype, og hvad der venter forude.",
+    ctaKeynote: "Book et foredrag",
+    ctaConsult: "Få XR-rådgivning",
+    ctaPress: "Journalist? Få en kommentar",
+    stats: [
+      ["10+","års erfaring med XR"],
+      ["100+","workshops afholdt"],
+      ["2.000+","tilhørere ved ét foredrag"],
+      ["EU & FN","officielle præsentationer"]
+    ],
+    featured: "Kendt fra",
+    trackLabel: "Erfaring",
+    trackTitle: "Ti år med at bygge det, andre kun taler om.",
+    track: [
+      ["Khora","Med til at starte Khora i København, et af Europas første VR-firmaer."],
+      ["Globale brands","Utallige VR-, AR- og WebXR-oplevelser til internationale brands, museer og kulturinstitutioner."],
+      ["Michelin-restauranter i VR","Leadudvikler på en fuldt immersiv rejse ind i køkkenerne på danske Michelin-restauranter."],
+      ["Europa-Parlamentet og FN","Har præsenteret immersive løsninger for medlemmer af Europa-Parlamentet og Kommissionen samt FN-delegationer."],
+      ["MidwifeVR","Stiftede og byggede VR-platformen til ammevejledning, som nu er en del af jordemoderuddannelsen. KU Impact Award 2021."],
+      ["NXT/Care","Stifter. Mixed reality, der skaber ro for børn under behandling på hospitaler og klinikker i Region Hovedstaden."],
+      ["NXT/WebXR","Stifter. Et af verdens største kataloger af WebXR-spil og -oplevelser, som besøges dagligt af brugere verden over."],
+      ["Københavns Universitet","Entrepreneur in Residence siden 2022 og med til at forme iværksætterinitiativet KU Lighthouse."]
+    ],
+    speakLabel: "Foredrag",
+    speakTitle: "Foredrag, der får XR til at give mening.",
+    speakText: "Ingen buzzwords og ingen science fiction. Mine foredrag bygger på produkter, jeg selv har udviklet og sendt ud i verden, så publikum går derfra med et klart og jordnært billede af, hvad XR kan i dag, og hvad der kommer.",
+    talks: [
+      [
+        "Det rumlige internet",
+        "Hvorfor den næste store platform bliver besøgt og ikke installeret, og hvad det betyder for alle brands, museer og medier med en hjemmeside."
+      ],
+      ["XR, der heler","Fra fødegangen til børns blodprøver: Hvad sker der, når immersiv teknologi forlader demorummet og rykker ind på rigtige hospitaler?"],
+      [
+        "Brillerne på: hype eller virkelighed?",
+        "Meta, Apple og Google satser milliarder på dit ansigt. En udviklers ærlige guide til, hvad der faktisk er klar, og hvad der ikke er."
+      ]
+    ],
+    formatsLabel: "Formater",
+    formats: ["Keynote, 20–60 min.","Paneldebat og samtale","Workshop med headsets","Dansk eller engelsk"],
+    watch: "Se klip: foredrag ved IDA Driving Health Tech",
+    consultLabel: "Rådgivning",
+    consultTitle: "Fra første workshop til færdigt produkt.",
+    consultText: "Jeg hjælper ledelser og produktteams med at finde ud af, hvor XR skaber reel værdi, og bygger det derefter. Rådgivning fra én, der selv leverer, ikke fra et slide-deck.",
+    consultList: [
+      ["XR-strategi","Workshops for ledelsen: Hvor giver XR mening for jer, og hvor gør det ikke?"],
+      ["Prototyper og produktion","WebXR, VR og mixed reality fra idé til lancering, uden at gå gennem app stores."],
+      ["Sundhed og træning","Simulationer og patientoplevelser udviklet sammen med klinikere."],
+      ["Valg af hardware","Hvilke headsets eller briller passer til jeres behov, budget og drift?"]
+    ],
+    partnersLabel: "Kunder, partnere og scener",
+    partners: ["Khora","Europa-Parlamentet","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Københavns Universitet","Københavns Professionshøjskole"],
+    pressLabel: "Presse",
+    pressTitle: "Brug for en XR-ekspert før deadline?",
+    pressText: "Jeg stiller gerne op som kilde om VR, AR og smartbriller, fra Metas nyeste briller og headsets til Apple Vision Pro og Android XR. På dansk eller engelsk, til skrevne medier, radio og tv.",
+    pressList: ["Meta Quest og Metas smartbriller","Apple Vision Pro og visionOS","Google, Samsung og Android XR","XR i sundhed og uddannelse","Metaverset: hype eller virkelighed"],
+    pressCta: "Skriv til Morten",
     pressSubject: "Presseforespørgsel",
-    workTitle: "Foredrag, presse & projekter",
+    pressPhotos: "Pressefotos",
+    workLabel: "Projekter",
+    workTitle: "Foredrag, presse og projekter",
     workSub: "Tryk på et kort for hele historien.",
+    kitLabel: "Til arrangører",
     kitTitle: "Speaker kit",
-    kitSub: "Alt, hvad en arrangør skal bruge til programmet, klar til at kopiere.",
+    kitSub: "Bio og pressefotos, klar til programmet.",
     kitShortLabel: "Kort bio",
-    kitShort: "Morten Haulik er spatial computing-pioner fra København og founder af NXT/WebXR, forsiden til det rumlige internet. Med mere end ti år i XR bygger han immersive værktøjer, der bruges på hospitaler, museer og i hjem verden over. Han har faciliteret 100+ workshops og præsenteret ved EU- og FN-arrangementer.",
+    kitShort: "Morten Haulik er XR-pioner, iværksætter og foredragsholder fra København. Han var med til at starte Khora, et af Europas første VR-firmaer, og har i mere end ti år bygget VR, AR og WebXR til globale brands, hospitaler og kulturinstitutioner. Han har stiftet NXT/WebXR, NXT/Care og MidwifeVR og har præsenteret for EU og FN.",
     kitLongLabel: "Fuld bio",
     kitLong: [
-      "Morten Haulik er spatial computing-udvikler, founder og foredragsholder med base i København. For mere end ti år siden forlod han studiet i Informationsvidenskab på Københavns Universitet for at arbejde fuld tid i det første nordiske XR-studie. Siden har han faciliteret over 100 workshops, lanceret immersive produkter og holdt keynotes for publikummer på over 2.000.",
+      "Morten Haulik er XR-pioner, iværksætter og foredragsholder med base i København. For mere end ti år siden forlod han studiet i Informationsvidenskab på Københavns Universitet for at være med til at starte Khora, et af Europas første VR-firmaer. Siden har han bygget utallige VR-, AR- og WebXR-oplevelser til globale brands, museer og kulturinstitutioner, blandt andet en fuldt immersiv rejse ind i køkkenerne på danske Michelin-restauranter, afholdt over 100 workshops og talt for publikummer på over 2.000.",
       "Han har præsenteret spatial computing-løsninger ved officielle EU-arrangementer for medlemmer af Europa-Parlamentet og Kommissionen samt for FN-delegationer.",
-      "Som medstifter af MidwifeVR, vinder af KU Impact Award 2021, byggede han VR-platformen til ammevejledning, der i dag bruges på jordemoderuddannelsen på Københavns Professionshøjskole. Med NXT/Care bringer han tryg og legende mixed reality til børn på danske hospitaler og klinikker, og han samarbejder med Herlev Hospital om klinisk XR.",
-      "Siden 2022 har han været Entrepreneur in Residence på Københavns Universitet og med til at forme KU Lighthouse. I 2025 lancerede han NXT/WebXR, et katalog af gratis WebXR-spil og -oplevelser, der åbnes direkte i headsettets browser, herunder hans egne titler HoloRange, Meows Freaky Fishstick Factory og die Hände."
+      "Som medstifter af MidwifeVR, der vandt KU Impact Award 2021, byggede han VR-platformen til ammevejledning, som i dag bruges på jordemoderuddannelsen på Københavns Professionshøjskole. Han er stifter af NXT/Care, der giver børn på hospitaler og klinikker i Region Hovedstaden en tryg og legende oplevelse med mixed reality, og han samarbejder med Herlev Hospital om klinisk XR.",
+      "Siden 2022 har han været Entrepreneur in Residence på Københavns Universitet og med til at forme KU Lighthouse. I 2025 lancerede han NXT/WebXR, et katalog af gratis WebXR-spil og -oplevelser, der åbnes direkte i headsettets browser, blandt andet hans egne spil HoloRange, Meows Freaky Fishstick Factory og die Hände."
     ],
-    kitFacts: [["Formater","Keynote (20–60 min), panel, samtale, hands-on workshop med headsets"],["Sprog","Dansk, engelsk"],["Base","København, tilgængelig i hele Europa"]],
-    copy: "Kopiér", copied: "Kopieret ✓",
-    headshot: "Download profilbillede",
+    copy: "Kopiér",
+    copied: "Kopieret ✓",
+    download: "Download",
     faqTitle: "Ofte stillede spørgsmål",
     faq: [
-      ["Kan man booke Morten Haulik som foredragsholder?","Ja. Morten holder foredrag, keynotes, paneler og workshops om spatial computing, XR, VR og smartbriller for konferencer, virksomheder og uddannelser, på dansk eller engelsk. Brug formularen her på siden eller skriv til Morten@nxtwebxr.com."],
-      ["Hvad rådgiver Morten om?","XR-strategi, WebXR- og VR/mixed reality-udvikling, simulationer til sundhed og træning samt valg af hardware. Han arbejder med virksomheder, hospitaler, museer og uddannelser, fra første workshop til færdigt produkt."],
-      ["Kan journalister få en kommentar fra Morten om VR og smartbriller?","Ja. Morten stiller op som ekspertkilde om Meta Quest og Metas smartbriller, Apple Vision Pro, Android XR og XR-branchen generelt, på dansk eller engelsk. Skriv til Morten@nxtwebxr.com."],
-      ["Hvad har Morten bygget?","NXT/WebXR, et katalog af gratis WebXR-spil og -oplevelser med hans egne spil HoloRange, Meows Freaky Fishstick Factory og die Hände; NXT/Care til børn på hospitaler og klinikker; MidwifeVR, der bruges på jordemoderuddannelsen på Københavns Professionshøjskole og vandt KU Impact Award 2021; samt værktøjet SendToQuest."]
+      [
+        "Kan man booke Morten Haulik som foredragsholder?",
+        "Ja. Morten holder foredrag, keynotes, paneldebatter og workshops om XR, VR, mixed reality og smartbriller for konferencer, virksomheder og uddannelser, på dansk eller engelsk. Brug bookingformularen her på siden, eller skriv til Morten@nxtwebxr.com."
+      ],
+      [
+        "Hvad rådgiver Morten om?",
+        "XR-strategi, udvikling i WebXR, VR og mixed reality, simulationer til sundhed og træning samt valg af hardware. Han arbejder med virksomheder, hospitaler, museer og uddannelser, fra første workshop til færdigt produkt."
+      ],
+      [
+        "Kan journalister få en kommentar fra Morten om VR og smartbriller?",
+        "Ja. Morten stiller op som ekspertkilde om Meta Quest og Metas smartbriller, Apple Vision Pro, Android XR og XR-branchen generelt, på dansk eller engelsk. Skriv til Morten@nxtwebxr.com."
+      ],
+      [
+        "Hvad har Morten bygget?",
+        "Mere end ti års XR, begyndende med Khora, et af Europas første VR-firmaer, som han var med til at starte. Han har bygget utallige VR-, AR- og WebXR-oplevelser til globale brands, museer og kulturinstitutioner, blandt andet en VR-oplevelse med danske Michelin-restauranter, og har præsenteret immersive løsninger i Europa-Parlamentet. Han har stiftet MidwifeVR (KU Impact Award 2021, nu en del af jordemoderuddannelsen på Københavns Professionshøjskole), NXT/Care (mixed reality til børn på hospitaler) og NXT/WebXR (et af verdens største kataloger af WebXR-spil, herunder hans egne HoloRange, Meows Freaky Fishstick Factory og die Hände)."
+      ]
     ],
-    contactTitle: "Lad os tale sammen",
-    contactSub: "Rådgivning, samarbejde eller bare et spørgsmål. Jeg svarer normalt inden for én hverdag.",
-    directLabel: "Direkte",
-    skip: "Spring til indhold"
+    contactLabel: "Kontakt",
+    contactTitle: "Lad os tage en snak.",
+    contactSub: "Foredrag, rådgivning, samarbejde eller bare et spørgsmål. Jeg svarer normalt inden for én hverdag.",
+    skip: "Spring til indhold",
+    languages: "Sprog"
   },
   de: {
-    heroLead: "Ich helfe Organisationen, Spatial Computing zu verstehen und das zu bauen, was als Nächstes kommt.",
-    heroSub: "Keynote Speaker, XR-Berater und Gründer von NXT/WebXR. Über zehn Jahre VR, AR und WebXR für Kliniken, Museen, Universitäten und globale Marken.",
-    stats: [["10+","Jahre XR-Entwicklung"],["100+","moderierte Workshops"],["2.000+","Zuhörer bei einer Keynote"],["EU & UN","offizielle Präsentationen"]],
-    featured: "Bekannt aus und auf der Bühne mit",
-    servicesTitle: "Drei Wege der Zusammenarbeit",
-    speakTitle: "Keynotes & Panels",
-    speakText: "Klare, demo-starke Vorträge, die dem Publikum ein realistisches Bild davon geben, wohin sich XR wirklich entwickelt. Für Konferenzen, Firmenevents, Universitäten und den öffentlichen Sektor, auf Englisch oder Dänisch.",
-    speakTopics: ["Das räumliche Internet: warum die nächste Plattform besucht und nicht installiert wird","XR im Gesundheitswesen, von der Geburtsstation bis zur Kinderklinik","Smart Glasses und Headsets: was Meta, Apple und Google wirklich bauen","Immersive Produkte, die Menschen tatsächlich nutzen","Innovation und Unternehmertum in neuen Technologien"],
-    speakCta: "Keynote anfragen",
-    consultTitle: "XR-Strategie & Beratung",
-    consultText: "Praxisnahe Beratung von jemandem, der selbst liefert. Ich helfe Führungs- und Produktteams zu entscheiden, wo XR echten Mehrwert schafft, und baue dann Prototypen und Lösungen.",
-    consultList: ["XR-Workshops für Führungsteams","WebXR-, VR- und Mixed-Reality-Prototypen und Produktion","Simulationen für Gesundheit, Training und Bildung","Distribution ohne App Stores über das offene Web","Hardware-Beratung: welches Headset oder welche Brille passt"],
-    consultCta: "Gespräch starten",
-    pressTitle: "Presse & Expertenkommentar",
-    pressText: "Journalisten: Ich kommentiere VR, AR und Smart Glasses, von Metas neuesten Headsets und Brillen bis zu Apple Vision Pro und Android XR. Auf Englisch oder Dänisch, meist kurzfristig.",
-    pressList: ["Meta Quest und Metas Smart Glasses","Apple Vision Pro und visionOS","Google, Samsung und Android XR","XR in Gesundheit und Bildung","Metaverse, Hype vs. Realität"],
-    pressCta: "Presseanfrage",
+    nav: { speaking: "Keynotes", consulting: "Beratung", press: "Presse", work: "Projekte", book: "Morten buchen" },
+    heroEyebrow: "Keynote Speaker · XR-Berater · Kopenhagen",
+    heroTag: ["Die Zukunft von XR, erzählt von jemandem, der sie ","baut."],
+    heroSub: "Ich war Teil des Teams, das Khora gegründet hat, eines der ersten VR-Unternehmen Europas, und baue seit über zehn Jahren XR für globale Marken, Kliniken und Kulturinstitutionen. Auf der Bühne zeige ich, was echt ist, was Hype ist und was als Nächstes kommt.",
+    ctaKeynote: "Keynote buchen",
+    ctaConsult: "XR-Beratung anfragen",
+    ctaPress: "Journalist? Kommentar anfragen",
+    stats: [
+      ["10+","Jahre XR-Entwicklung"],
+      ["100+","moderierte Workshops"],
+      ["2.000+","Zuhörer bei einem Vortrag"],
+      ["EU & UN","offizielle Präsentationen"]
+    ],
+    featured: "Bekannt aus",
+    trackLabel: "Erfahrung",
+    trackTitle: "Zehn Jahre bauen, worüber andere nur reden.",
+    track: [
+      ["Khora","Teil des Teams, das Khora in Kopenhagen gestartet hat, eines der ersten VR-Unternehmen Europas."],
+      ["Globale Marken","Unzählige VR-, AR- und WebXR-Erlebnisse für internationale Marken, Museen und Kulturinstitutionen."],
+      ["Michelin-Küche in VR","Lead Developer einer vollständig immersiven Reise in die Küchen dänischer Michelin-Restaurants."],
+      ["Europäisches Parlament & UN","Präsentationen für Mitglieder des Europäischen Parlaments und der Kommission sowie UN-Delegationen."],
+      ["MidwifeVR","Gründung und Entwicklung der VR-Plattform zur Stillberatung, heute Teil der Hebammenausbildung. KU Impact Award 2021."],
+      ["NXT/Care","Gründer. Mixed Reality, die Kinder während der Behandlung in Kliniken der Region Hovedstaden beruhigt."],
+      ["NXT/WebXR","Gründer. Einer der größten Kataloge für WebXR-Spiele und -Erlebnisse, täglich weltweit genutzt."],
+      ["Universität Kopenhagen","Entrepreneur in Residence seit 2022, Mitgestaltung der Startup-Initiative KU Lighthouse."]
+    ],
+    speakLabel: "Keynotes",
+    speakTitle: "Vorträge, die XR verständlich machen.",
+    speakText: "Keine Buzzwords, keine Science-Fiction. Jeder Vortrag basiert auf Produkten, die ich selbst entwickelt und veröffentlicht habe. So geht das Publikum mit einem klaren, realistischen Bild davon nach Hause, was XR heute kann und was kommt.",
+    talks: [
+      [
+        "Das räumliche Internet",
+        "Warum die nächste große Plattform besucht und nicht installiert wird, und was das für jede Marke, jedes Museum und jeden Verlag mit Website bedeutet."
+      ],
+      [
+        "XR, die heilt",
+        "Von der Geburtsstation bis zur Blutabnahme bei Kindern: was passiert, wenn immersive Technologie den Demoraum verlässt und in echte Kliniken einzieht."
+      ],
+      [
+        "Brille auf: Hype oder Realität?",
+        "Meta, Apple und Google setzen Milliarden auf Ihr Gesicht. Ein ehrlicher Leitfaden aus Entwicklersicht: was wirklich bereit ist und was nicht."
+      ]
+    ],
+    formatsLabel: "Formate",
+    formats: ["Keynote, 20–60 Min.","Panels & Kamingespräche","Workshops mit Headsets","Englisch oder Dänisch"],
+    watch: "Ansehen: Keynote bei IDA Driving Health Tech",
+    consultLabel: "Beratung",
+    consultTitle: "Vom ersten Workshop zum fertigen Produkt.",
+    consultText: "Ich helfe Führungs- und Produktteams herauszufinden, wo XR echten Mehrwert schafft, und baue es dann. Beratung von jemandem, der liefert, nicht von Folien.",
+    consultList: [
+      ["XR-Strategie","Workshops für das Management: wo XR für Sie sinnvoll ist und wo nicht."],
+      ["Prototypen & Produktion","WebXR, VR und Mixed Reality von der Idee bis zum Launch, ohne App-Store-Hürden."],
+      ["Gesundheit & Training","Simulationen und Patientenerlebnisse, gemeinsam mit Klinikpersonal entwickelt."],
+      ["Hardware-Auswahl","Welche Headsets oder Brillen zu Ihrem Einsatz, Budget und Betrieb passen."]
+    ],
+    partnersLabel: "Kunden, Partner & Bühnen",
+    partners: ["Khora","Europäisches Parlament","Eli Lilly","Herlev Hospital","Region Hovedstaden","DR2","IDA","Universität Kopenhagen","University College Copenhagen"],
+    pressLabel: "Presse",
+    pressTitle: "XR-Experte gesucht, kurz vor Redaktionsschluss?",
+    pressText: "Ich stehe als Quelle zu VR, AR und Smart Glasses zur Verfügung, von Metas neuesten Brillen und Headsets bis zu Apple Vision Pro und Android XR. Auf Englisch oder Dänisch, für Print, Radio und TV.",
+    pressList: ["Meta Quest & Metas Smart Glasses","Apple Vision Pro & visionOS","Google, Samsung & Android XR","XR in Gesundheit & Bildung","Metaverse: Hype oder Realität"],
+    pressCta: "Morten schreiben",
     pressSubject: "Presseanfrage",
+    pressPhotos: "Pressefotos",
+    workLabel: "Projekte",
     workTitle: "Vorträge, Presse & Projekte",
     workSub: "Karte antippen für die ganze Geschichte.",
+    kitLabel: "Für Veranstalter",
     kitTitle: "Speaker Kit",
-    kitSub: "Alles, was Veranstalter für das Programm brauchen, zum Kopieren bereit.",
+    kitSub: "Bios und Pressefotos, bereit für Ihr Programm.",
     kitShortLabel: "Kurzbio",
-    kitShort: "Morten Haulik ist ein Spatial-Computing-Pionier aus Kopenhagen und Gründer von NXT/WebXR, der Startseite des räumlichen Internets. Seit über zehn Jahren entwickelt er immersive Anwendungen, die weltweit in Kliniken, Museen und Haushalten genutzt werden, moderierte über 100 Workshops und präsentierte bei EU- und UN-Veranstaltungen.",
+    kitShort: "Morten Haulik ist XR-Pionier, Gründer und Keynote Speaker aus Kopenhagen. Als Teil des Teams, das Khora gestartet hat, eines der ersten VR-Unternehmen Europas, entwickelt er seit über zehn Jahren VR, AR und WebXR für globale Marken, Kliniken und Kulturinstitutionen. Er gründete NXT/WebXR, NXT/Care und MidwifeVR und präsentierte bei EU- und UN-Veranstaltungen.",
     kitLongLabel: "Ausführliche Bio",
     kitLong: [
-      "Morten Haulik ist Spatial-Computing-Entwickler, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über zehn Jahren verließ er sein Studium der Informationswissenschaft an der Universität Kopenhagen, um in Vollzeit beim ersten nordischen XR-Studio einzusteigen. Seitdem moderierte er über 100 Workshops, brachte immersive Produkte auf den Markt und sprach vor über 2.000 Zuhörern.",
+      "Morten Haulik ist XR-Pionier, Gründer und Keynote Speaker mit Sitz in Kopenhagen. Vor über zehn Jahren verließ er sein Studium der Informationswissenschaft an der Universität Kopenhagen, um Khora mit aufzubauen, eines der ersten VR-Unternehmen Europas. Seitdem hat er unzählige VR-, AR- und WebXR-Erlebnisse für globale Marken, Museen und Kulturinstitutionen entwickelt, darunter eine immersive Reise in die Küchen dänischer Michelin-Restaurants, über 100 Workshops moderiert und vor über 2.000 Menschen gesprochen.",
       "Er präsentierte Spatial-Computing-Lösungen bei offiziellen EU-Veranstaltungen für Mitglieder des Europäischen Parlaments und der Kommission sowie für UN-Delegationen.",
-      "Als Mitgründer von MidwifeVR, Gewinner des KU Impact Award 2021, baute er die VR-Plattform zur Stillberatung, die heute in der Hebammenausbildung am University College Copenhagen genutzt wird. Mit NXT/Care bringt er beruhigende, spielerische Mixed Reality zu Kindern in dänischen Kliniken.",
-      "Seit 2022 ist er Entrepreneur in Residence an der Universität Kopenhagen (KU Lighthouse). 2025 startete er NXT/WebXR, einen Katalog kostenloser WebXR-Spiele, darunter seine eigenen Titel HoloRange, Meows Freaky Fishstick Factory und die Hände."
+      "Als Mitgründer von MidwifeVR, Gewinner des KU Impact Award 2021, entwickelte er die VR-Plattform zur Stillberatung, die heute in der Hebammenausbildung am University College Copenhagen genutzt wird. Er ist Gründer von NXT/Care, das Kindern in Kliniken der Region Hovedstaden mit Mixed Reality Ruhe und Ablenkung schenkt, und arbeitet mit dem Herlev Hospital an klinischer XR.",
+      "Seit 2022 ist er Entrepreneur in Residence an der Universität Kopenhagen (KU Lighthouse). 2025 startete er NXT/WebXR, einen Katalog kostenloser WebXR-Spiele und -Erlebnisse, darunter seine eigenen Titel HoloRange, Meows Freaky Fishstick Factory und die Hände."
     ],
-    kitFacts: [["Formate","Keynote (20–60 Min.), Panel, Kamingespräch, Workshop mit Headsets"],["Sprachen","Englisch, Dänisch"],["Standort","Kopenhagen, europaweit verfügbar"]],
-    copy: "Kopieren", copied: "Kopiert ✓",
-    headshot: "Profilbild herunterladen",
+    copy: "Kopieren",
+    copied: "Kopiert ✓",
+    download: "Herunterladen",
     faqTitle: "Häufige Fragen",
     faq: [
-      ["Kann ich Morten Haulik als Keynote Speaker buchen?","Ja. Morten hält Keynotes, Panels und Workshops zu Spatial Computing, XR, VR und Smart Glasses für Konferenzen, Unternehmen und Universitäten in ganz Europa, auf Englisch oder Dänisch. Nutzen Sie das Formular oder schreiben Sie an Morten@nxtwebxr.com."],
-      ["Wozu berät Morten?","XR-Strategie, WebXR- und VR/Mixed-Reality-Entwicklung, Simulationen für Gesundheit und Training sowie Hardware-Auswahl, vom ersten Workshop bis zum fertigen Produkt."],
-      ["Steht Morten für Pressekommentare zu VR und Smart Glasses zur Verfügung?","Ja. Journalisten erreichen ihn für Expertenkommentare zu Meta Quest, Metas Smart Glasses, Apple Vision Pro und Android XR unter Morten@nxtwebxr.com."],
-      ["Was hat Morten gebaut?","NXT/WebXR mit seinen Spielen HoloRange, Meows Freaky Fishstick Factory und die Hände; NXT/Care für Kinder in Kliniken; MidwifeVR, Gewinner des KU Impact Award 2021; und das Tool SendToQuest."]
+      [
+        "Kann ich Morten Haulik als Keynote Speaker buchen?",
+        "Ja. Morten hält Keynotes, Panels und Workshops zu XR, VR, Mixed Reality und Smart Glasses für Konferenzen, Unternehmen und Universitäten in ganz Europa, auf Englisch oder Dänisch. Nutzen Sie das Buchungsformular oder schreiben Sie an Morten@nxtwebxr.com."
+      ],
+      [
+        "Wozu berät Morten?",
+        "XR-Strategie, Entwicklung in WebXR, VR und Mixed Reality, Simulationen für Gesundheit und Training sowie Hardware-Auswahl, vom ersten Workshop bis zum fertigen Produkt."
+      ],
+      [
+        "Steht Morten für Pressekommentare zu VR und Smart Glasses zur Verfügung?",
+        "Ja. Journalisten erreichen ihn für Expertenkommentare zu Meta Quest, Metas Smart Glasses, Apple Vision Pro und Android XR unter Morten@nxtwebxr.com."
+      ],
+      [
+        "Was hat Morten gebaut?",
+        "Über zehn Jahre XR, beginnend mit Khora, einem der ersten VR-Unternehmen Europas. Unzählige VR-, AR- und WebXR-Erlebnisse für globale Marken, Museen und Kulturinstitutionen, darunter eine VR-Reise mit dänischen Michelin-Restaurants, sowie Präsentationen im Europäischen Parlament. Er gründete MidwifeVR (KU Impact Award 2021), NXT/Care (Mixed Reality für Kinder in Kliniken) und NXT/WebXR (einer der größten WebXR-Spielekataloge, mit seinen eigenen Spielen HoloRange, Meows Freaky Fishstick Factory und die Hände)."
+      ]
     ],
-    contactTitle: "Lass uns reden",
-    contactSub: "Beratungsprojekte, Kooperationen oder einfach eine Frage. Ich antworte meist innerhalb eines Werktags.",
-    directLabel: "Direkt",
-    skip: "Zum Inhalt springen"
+    contactLabel: "Kontakt",
+    contactTitle: "Lassen Sie uns sprechen.",
+    contactSub: "Keynotes, Beratung, Kooperationen oder einfach eine Frage. Ich antworte meist innerhalb eines Werktags.",
+    skip: "Zum Inhalt springen",
+    languages: "Sprache"
   },
   it: {
-    heroLead: "Aiuto le organizzazioni a capire lo spatial computing e a costruire ciò che viene dopo.",
-    heroSub: "Keynote speaker, consulente XR e fondatore di NXT/WebXR. Oltre dieci anni di VR, AR e WebXR per ospedali, musei, università e marchi globali.",
-    stats: [["10+","anni di XR"],["100+","workshop facilitati"],["2.000+","persone in un singolo keynote"],["UE & ONU","presentazioni ufficiali"]],
-    featured: "Citato da e sul palco con",
-    servicesTitle: "Tre modi per collaborare",
-    speakTitle: "Keynote & panel",
-    speakText: "Interventi chiari e ricchi di demo che offrono al pubblico una visione concreta di dove sta andando davvero l'XR. Per conferenze, eventi aziendali, università e settore pubblico, in inglese o danese.",
-    speakTopics: ["L'internet spaziale: perché la prossima piattaforma si visita, non si installa","L'XR in sanità, dai reparti maternità agli ospedali pediatrici","Smart glasses e visori: cosa stanno davvero costruendo Meta, Apple e Google","Creare prodotti immersivi che le persone usano davvero","Innovazione e imprenditorialità nelle tecnologie emergenti"],
-    speakCta: "Richiedi un keynote",
-    consultTitle: "Strategia & consulenza XR",
-    consultText: "Consulenza pratica da chi realizza prodotti. Aiuto i team di leadership e di prodotto a capire dove l'XR crea valore reale, poi prototipo e sviluppo.",
-    consultList: ["Workshop XR per team di leadership","Prototipi e produzione WebXR, VR e realtà mista","Simulazioni per sanità, formazione e istruzione","Distribuzione senza app store tramite il web aperto","Consulenza hardware: quale visore o occhiale fa per voi"],
-    consultCta: "Inizia una conversazione",
-    pressTitle: "Stampa & commento esperto",
-    pressText: "Giornalisti: commento VR, AR e smart glasses, dai nuovi visori e occhiali di Meta ad Apple Vision Pro e Android XR. In inglese o danese, di solito con tempi rapidi.",
-    pressList: ["Meta Quest e gli smart glasses di Meta","Apple Vision Pro e visionOS","Google, Samsung e Android XR","XR in sanità e istruzione","Metaverso, hype vs. realtà"],
-    pressCta: "Contatto stampa",
+    nav: { speaking: "Keynote", consulting: "Consulenza", press: "Stampa", work: "Progetti", book: "Prenota Morten" },
+    heroEyebrow: "Keynote speaker · Consulente XR · Copenaghen",
+    heroTag: ["Il futuro dell'XR, raccontato da chi lo ","costruisce."],
+    heroSub: "Ho fatto parte del team che ha avviato Khora, una delle prime aziende VR in Europa, e da oltre dieci anni costruisco XR per brand globali, ospedali e istituzioni culturali. Sul palco mostro cosa è reale, cosa è hype e cosa sta arrivando.",
+    ctaKeynote: "Prenota un keynote",
+    ctaConsult: "Richiedi una consulenza",
+    ctaPress: "Giornalista? Chiedi un commento",
+    stats: [
+      ["10+","anni di XR"],
+      ["100+","workshop facilitati"],
+      ["2.000+","persone in un solo pubblico"],
+      ["UE & ONU","presentazioni ufficiali"]
+    ],
+    featured: "Citato da",
+    trackLabel: "Esperienza",
+    trackTitle: "Dieci anni a costruire ciò di cui altri si limitano a parlare.",
+    track: [
+      ["Khora","Parte del team che ha avviato Khora a Copenaghen, una delle prime aziende VR in Europa."],
+      ["Brand globali","Innumerevoli esperienze VR, AR e WebXR per brand internazionali, musei e istituzioni culturali."],
+      ["Cucina stellata in VR","Lead developer di un viaggio immersivo nelle cucine dei ristoranti stellati Michelin danesi."],
+      ["Parlamento europeo e ONU","Presentazioni per membri del Parlamento europeo e della Commissione e per delegazioni ONU."],
+      ["MidwifeVR","Ha fondato e sviluppato la piattaforma VR per l'allattamento, oggi nel curriculum di ostetricia. KU Impact Award 2021."],
+      ["NXT/Care","Fondatore. Realtà mista che tranquillizza i bambini durante le cure negli ospedali della Regione Capitale danese."],
+      ["NXT/WebXR","Fondatore. Uno dei più grandi cataloghi di giochi ed esperienze WebXR, visitato ogni giorno in tutto il mondo."],
+      ["Università di Copenaghen","Entrepreneur in Residence dal 2022, contribuisce all'iniziativa per startup KU Lighthouse."]
+    ],
+    speakLabel: "Keynote",
+    speakTitle: "Interventi che rendono l'XR comprensibile.",
+    speakText: "Niente buzzword, niente fantascienza. Ogni intervento si basa su prodotti che ho progettato e lanciato io stesso, così il pubblico esce con un'idea chiara e concreta di cosa può fare l'XR oggi e di cosa arriverà.",
+    talks: [
+      ["L'internet spaziale","Perché la prossima grande piattaforma si visiterà invece di installarla, e cosa significa per ogni brand, museo ed editore con un sito web."],
+      ["XR che cura","Dai reparti maternità ai prelievi sui bambini: cosa succede quando la tecnologia immersiva esce dalla sala demo ed entra in veri ospedali."],
+      ["Occhiali addosso: hype o realtà?","Meta, Apple e Google scommettono miliardi sul tuo viso. Una guida onesta, da sviluppatore, su cosa è davvero pronto e cosa no."]
+    ],
+    formatsLabel: "Formati",
+    formats: ["Keynote, 20–60 min","Panel e conversazioni","Workshop con visori","Inglese o danese"],
+    watch: "Guarda: keynote a IDA Driving Health Tech",
+    consultLabel: "Consulenza",
+    consultTitle: "Dal primo workshop al prodotto finito.",
+    consultText: "Aiuto i team di leadership e di prodotto a capire dove l'XR crea valore reale, e poi lo costruisco. Consulenza da chi realizza, non da una presentazione.",
+    consultList: [
+      ["Strategia XR","Workshop per il management: dove l'XR ha senso per voi, e dove no."],
+      ["Prototipi e produzione","WebXR, VR e realtà mista dall'idea al lancio, senza i vincoli degli app store."],
+      ["Sanità e formazione","Simulazioni ed esperienze per i pazienti sviluppate insieme ai clinici."],
+      ["Scelta dell'hardware","Quali visori o occhiali sono adatti al vostro uso, budget e operatività."]
+    ],
+    partnersLabel: "Clienti, partner e palchi",
+    partners: ["Khora","Parlamento europeo","Eli Lilly","Herlev Hospital","Regione Capitale danese","DR2","IDA","Università di Copenaghen","University College Copenhagen"],
+    pressLabel: "Stampa",
+    pressTitle: "Serve un esperto XR prima della chiusura?",
+    pressText: "Sono disponibile come fonte su VR, AR e smart glasses, dai nuovi occhiali e visori di Meta ad Apple Vision Pro e Android XR. In inglese o danese, per carta stampata, radio e TV.",
+    pressList: ["Meta Quest e gli smart glasses di Meta","Apple Vision Pro e visionOS","Google, Samsung e Android XR","XR in sanità e istruzione","Metaverso: hype o realtà"],
+    pressCta: "Scrivi a Morten",
     pressSubject: "Richiesta stampa",
-    workTitle: "Interventi, stampa & progetti",
+    pressPhotos: "Foto stampa",
+    workLabel: "Progetti",
+    workTitle: "Interventi, stampa e progetti",
     workSub: "Tocca una scheda per la storia completa.",
+    kitLabel: "Per gli organizzatori",
     kitTitle: "Speaker kit",
-    kitSub: "Tutto ciò che serve agli organizzatori per il programma, pronto da copiare.",
+    kitSub: "Bio e foto stampa, pronte per il programma.",
     kitShortLabel: "Bio breve",
-    kitShort: "Morten Haulik è un pioniere dello spatial computing con sede a Copenaghen e fondatore di NXT/WebXR, la prima pagina dell'internet spaziale. Con oltre dieci anni di XR, sviluppa strumenti immersivi usati in ospedali, musei e case di tutto il mondo, ha facilitato oltre 100 workshop e ha presentato a eventi UE e ONU.",
+    kitShort: "Morten Haulik è un pioniere dell'XR, imprenditore e keynote speaker con sede a Copenaghen. Parte del team che ha avviato Khora, una delle prime aziende VR in Europa, da oltre dieci anni sviluppa VR, AR e WebXR per brand globali, ospedali e istituzioni culturali. Ha fondato NXT/WebXR, NXT/Care e MidwifeVR e ha presentato a eventi dell'UE e dell'ONU.",
     kitLongLabel: "Bio completa",
     kitLong: [
-      "Morten Haulik è sviluppatore di spatial computing, fondatore e keynote speaker con sede a Copenaghen. Oltre dieci anni fa ha lasciato gli studi di Scienze dell'Informazione all'Università di Copenaghen per entrare a tempo pieno nel primo studio XR nordico. Da allora ha facilitato oltre 100 workshop e parlato a platee di oltre 2.000 persone.",
+      "Morten Haulik è un pioniere dell'XR, imprenditore e keynote speaker con sede a Copenaghen. Oltre dieci anni fa ha lasciato gli studi di Scienze dell'Informazione all'Università di Copenaghen per far parte del team che ha avviato Khora, una delle prime aziende VR in Europa. Da allora ha creato innumerevoli esperienze VR, AR e WebXR per brand globali, musei e istituzioni culturali, tra cui un viaggio immersivo nelle cucine dei ristoranti stellati danesi, facilitato oltre 100 workshop e parlato a platee di oltre 2.000 persone.",
       "Ha presentato soluzioni di spatial computing a incontri ufficiali dell'Unione Europea per membri del Parlamento e della Commissione, e a delegazioni delle Nazioni Unite.",
-      "Come co-fondatore di MidwifeVR, vincitore del KU Impact Award 2021, ha creato la piattaforma VR per l'allattamento oggi usata nel corso di ostetricia dello University College Copenhagen. Con NXT/Care porta la realtà mista ai bambini negli ospedali danesi.",
-      "Dal 2022 è Entrepreneur in Residence all'Università di Copenaghen (KU Lighthouse). Nel 2025 ha lanciato NXT/WebXR, un catalogo di giochi WebXR gratuiti, tra cui i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände."
+      "Come co-fondatore di MidwifeVR, vincitore del KU Impact Award 2021, ha creato la piattaforma VR per l'allattamento oggi usata nel corso di ostetricia dello University College Copenhagen. È il fondatore di NXT/Care, che porta la realtà mista ai bambini negli ospedali e nelle cliniche della Regione Capitale danese, e collabora con l'Herlev Hospital sull'XR clinica.",
+      "Dal 2022 è Entrepreneur in Residence all'Università di Copenaghen (KU Lighthouse). Nel 2025 ha lanciato NXT/WebXR, un catalogo di giochi ed esperienze WebXR gratuiti, tra cui i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände."
     ],
-    kitFacts: [["Formati","Keynote (20–60 min), panel, conversazione, workshop pratico con visori"],["Lingue","Inglese, danese"],["Sede","Copenaghen, disponibile in tutta Europa"]],
-    copy: "Copia", copied: "Copiato ✓",
-    headshot: "Scarica immagine profilo",
+    copy: "Copia",
+    copied: "Copiato ✓",
+    download: "Scarica",
     faqTitle: "Domande frequenti",
     faq: [
-      ["Posso prenotare Morten Haulik come keynote speaker?","Sì. Morten tiene keynote, panel e workshop su spatial computing, XR, VR e smart glasses per conferenze, aziende e università in tutta Europa, in inglese o danese. Usa il modulo o scrivi a Morten@nxtwebxr.com."],
-      ["Su cosa offre consulenza Morten?","Strategia XR, sviluppo WebXR e VR/realtà mista, simulazioni per sanità e formazione e scelta dell'hardware, dal primo workshop al prodotto finito."],
-      ["Morten è disponibile per commenti alla stampa su VR e smart glasses?","Sì. I giornalisti possono contattarlo per commenti su Meta Quest, smart glasses di Meta, Apple Vision Pro e Android XR a Morten@nxtwebxr.com."],
-      ["Cosa ha creato Morten?","NXT/WebXR con i suoi giochi HoloRange, Meows Freaky Fishstick Factory e die Hände; NXT/Care per bambini in ospedale; MidwifeVR, vincitore del KU Impact Award 2021; e lo strumento SendToQuest."]
+      [
+        "Posso prenotare Morten Haulik come keynote speaker?",
+        "Sì. Morten tiene keynote, panel e workshop su XR, VR, realtà mista e smart glasses per conferenze, aziende e università in tutta Europa, in inglese o danese. Usa il modulo di prenotazione o scrivi a Morten@nxtwebxr.com."
+      ],
+      [
+        "Su cosa offre consulenza Morten?",
+        "Strategia XR, sviluppo WebXR, VR e realtà mista, simulazioni per sanità e formazione e scelta dell'hardware, dal primo workshop al prodotto finito."
+      ],
+      [
+        "Morten è disponibile per commenti alla stampa su VR e smart glasses?",
+        "Sì. I giornalisti possono contattarlo per commenti su Meta Quest, gli smart glasses di Meta, Apple Vision Pro e Android XR a Morten@nxtwebxr.com."
+      ],
+      [
+        "Cosa ha creato Morten?",
+        "Oltre dieci anni di XR, a partire da Khora, una delle prime aziende VR in Europa. Innumerevoli esperienze VR, AR e WebXR per brand globali, musei e istituzioni culturali, tra cui un'esperienza VR con ristoranti stellati danesi, e presentazioni al Parlamento europeo. Ha fondato MidwifeVR (KU Impact Award 2021), NXT/Care (realtà mista per bambini in ospedale) e NXT/WebXR (uno dei più grandi cataloghi di giochi WebXR, con i suoi HoloRange, Meows Freaky Fishstick Factory e die Hände)."
+      ]
     ],
-    contactTitle: "Parliamo",
-    contactSub: "Progetti di consulenza, collaborazioni o semplicemente una domanda. Di solito rispondo entro un giorno lavorativo.",
-    directLabel: "Diretto",
-    skip: "Vai al contenuto"
+    contactLabel: "Contatti",
+    contactTitle: "Parliamone.",
+    contactSub: "Keynote, consulenza, collaborazioni o semplicemente una domanda. Di solito rispondo entro un giorno lavorativo.",
+    skip: "Vai al contenuto",
+    languages: "Lingua"
   },
   fr: {
-    heroLead: "J'aide les organisations à comprendre l'informatique spatiale et à construire la suite.",
-    heroSub: "Conférencier, consultant XR et fondateur de NXT/WebXR. Plus de dix ans de VR, AR et WebXR pour des hôpitaux, des musées, des universités et des marques mondiales.",
-    stats: [["10+","ans de XR"],["100+","ateliers animés"],["2 000+","personnes pour une seule keynote"],["UE & ONU","présentations officielles"]],
-    featured: "Vu dans et sur scène avec",
-    servicesTitle: "Trois façons de travailler ensemble",
-    speakTitle: "Keynotes & tables rondes",
-    speakText: "Des interventions claires et riches en démos qui donnent au public une vision concrète de l'avenir réel de la XR. Pour conférences, séminaires d'entreprise, universités et secteur public, en anglais ou en danois.",
-    speakTopics: ["L'internet spatial : pourquoi la prochaine plateforme se visite au lieu de s'installer","La XR en santé, des maternités aux hôpitaux pédiatriques","Lunettes connectées et casques : ce que Meta, Apple et Google construisent vraiment","Créer des produits immersifs que les gens utilisent vraiment","Innovation et entrepreneuriat dans les technologies émergentes"],
-    speakCta: "Demander une keynote",
-    consultTitle: "Stratégie & conseil XR",
-    consultText: "Un conseil concret de quelqu'un qui livre. J'aide les équipes de direction et produit à identifier où la XR crée une vraie valeur, puis je prototype et je développe.",
-    consultList: ["Ateliers XR pour équipes de direction","Prototypes et production WebXR, VR et réalité mixte","Simulations pour la santé, la formation et l'éducation","Distribution sans app store via le web ouvert","Conseil matériel : quel casque ou quelles lunettes choisir"],
-    consultCta: "Démarrer la conversation",
-    pressTitle: "Presse & commentaire d'expert",
-    pressText: "Journalistes : je commente la VR, l'AR et les lunettes connectées, des derniers casques et lunettes de Meta à l'Apple Vision Pro et Android XR. En anglais ou en danois, généralement dans des délais courts.",
-    pressList: ["Meta Quest et les lunettes connectées de Meta","Apple Vision Pro et visionOS","Google, Samsung et Android XR","La XR en santé et en éducation","Le métavers, entre hype et réalité"],
-    pressCta: "Contact presse",
+    nav: { speaking: "Keynotes", consulting: "Conseil", press: "Presse", work: "Projets", book: "Réserver Morten" },
+    heroEyebrow: "Conférencier · Consultant XR · Copenhague",
+    heroTag: ["L'avenir de la XR, raconté par celui qui la ","construit."],
+    heroSub: "J'ai fait partie de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe, et je construis depuis plus de dix ans de la XR pour des marques mondiales, des hôpitaux et des institutions culturelles. Sur scène, je montre ce qui est réel, ce qui relève du buzz et ce qui arrive.",
+    ctaKeynote: "Réserver une keynote",
+    ctaConsult: "Demander un conseil",
+    ctaPress: "Journaliste ? Obtenir un commentaire",
+    stats: [
+      ["10+","ans de XR"],
+      ["100+","ateliers animés"],
+      ["2 000+","personnes dans un seul public"],
+      ["UE & ONU","présentations officielles"]
+    ],
+    featured: "Vu dans",
+    trackLabel: "Parcours",
+    trackTitle: "Dix ans à construire ce dont d'autres ne font que parler.",
+    track: [
+      ["Khora","Membre de l'équipe qui a lancé Khora à Copenhague, l'une des premières entreprises VR d'Europe."],
+      ["Marques mondiales","D'innombrables expériences VR, AR et WebXR pour des marques internationales, des musées et des institutions culturelles."],
+      ["Gastronomie étoilée en VR","Lead developer d'une immersion dans les cuisines de grands restaurants étoilés danois."],
+      ["Parlement européen et ONU","Présentations à des membres du Parlement européen et de la Commission, et à des délégations de l'ONU."],
+      ["MidwifeVR","A fondé et développé la plateforme VR d'accompagnement à l'allaitement, aujourd'hui au programme des sages-femmes. KU Impact Award 2021."],
+      ["NXT/Care","Fondateur. La réalité mixte qui apaise les enfants pendant les soins dans les hôpitaux de la Région capitale du Danemark."],
+      ["NXT/WebXR","Fondateur. L'un des plus grands catalogues de jeux et d'expériences WebXR, visité chaque jour dans le monde entier."],
+      ["Université de Copenhague","Entrepreneur en résidence depuis 2022, il contribue à l'initiative startup KU Lighthouse."]
+    ],
+    speakLabel: "Keynotes",
+    speakTitle: "Des conférences qui rendent la XR limpide.",
+    speakText: "Pas de jargon, pas de science-fiction. Chaque intervention s'appuie sur des produits que j'ai conçus et lancés moi-même : le public repart avec une vision claire et concrète de ce que la XR permet aujourd'hui et de ce qui arrive.",
+    talks: [
+      [
+        "L'internet spatial",
+        "Pourquoi la prochaine grande plateforme se visitera au lieu de s'installer, et ce que cela change pour chaque marque, musée et éditeur doté d'un site web."
+      ],
+      [
+        "La XR qui soigne",
+        "Des maternités aux prises de sang chez l'enfant : ce qui se passe quand la technologie immersive quitte la salle de démo pour entrer dans de vrais hôpitaux."
+      ],
+      [
+        "Lunettes sur le nez : buzz ou réalité ?",
+        "Meta, Apple et Google misent des milliards sur votre visage. Le guide honnête d'un développeur sur ce qui est vraiment prêt, et ce qui ne l'est pas."
+      ]
+    ],
+    formatsLabel: "Formats",
+    formats: ["Keynote, 20–60 min","Tables rondes et conversations","Ateliers avec casques","Anglais ou danois"],
+    watch: "Voir : keynote à IDA Driving Health Tech",
+    consultLabel: "Conseil",
+    consultTitle: "Du premier atelier au produit livré.",
+    consultText: "J'aide les équipes de direction et produit à identifier où la XR crée une vraie valeur, puis je la construis. Le conseil de quelqu'un qui livre, pas d'un diaporama.",
+    consultList: [
+      ["Stratégie XR","Ateliers pour la direction : où la XR a du sens pour vous, et où elle n'en a pas."],
+      ["Prototypes et production","WebXR, VR et réalité mixte de l'idée au lancement, sans passer par les app stores."],
+      ["Santé et formation","Simulations et expériences patients conçues avec les soignants."],
+      ["Choix du matériel","Quels casques ou lunettes conviennent à votre usage, votre budget et votre exploitation."]
+    ],
+    partnersLabel: "Clients, partenaires et scènes",
+    partners: ["Khora","Parlement européen","Eli Lilly","Herlev Hospital","Région capitale du Danemark","DR2","IDA","Université de Copenhague","University College Copenhagen"],
+    pressLabel: "Presse",
+    pressTitle: "Besoin d'un expert XR avant le bouclage ?",
+    pressText: "Je suis disponible comme source sur la VR, l'AR et les lunettes connectées, des dernières lunettes et casques de Meta à l'Apple Vision Pro et Android XR. En anglais ou en danois, pour la presse écrite, la radio et la télévision.",
+    pressList: ["Meta Quest et les lunettes de Meta","Apple Vision Pro et visionOS","Google, Samsung et Android XR","La XR en santé et en éducation","Le métavers : buzz ou réalité"],
+    pressCta: "Écrire à Morten",
     pressSubject: "Demande presse",
-    workTitle: "Conférences, presse & projets",
+    pressPhotos: "Photos presse",
+    workLabel: "Projets",
+    workTitle: "Conférences, presse et projets",
     workSub: "Touchez une carte pour l'histoire complète.",
+    kitLabel: "Pour les organisateurs",
     kitTitle: "Kit conférencier",
-    kitSub: "Tout ce dont un organisateur a besoin pour le programme, prêt à copier.",
+    kitSub: "Bios et photos presse, prêtes pour votre programme.",
     kitShortLabel: "Bio courte",
-    kitShort: "Morten Haulik est un pionnier de l'informatique spatiale basé à Copenhague et le fondateur de NXT/WebXR, la page d'accueil de l'internet spatial. Fort de plus de dix ans dans la XR, il conçoit des outils immersifs utilisés dans des hôpitaux, des musées et des foyers du monde entier, a animé plus de 100 ateliers et a présenté lors d'événements de l'UE et de l'ONU.",
+    kitShort: "Morten Haulik est un pionnier de la XR, entrepreneur et conférencier basé à Copenhague. Membre de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe, il conçoit depuis plus de dix ans de la VR, de l'AR et du WebXR pour des marques mondiales, des hôpitaux et des institutions culturelles. Il a fondé NXT/WebXR, NXT/Care et MidwifeVR, et a présenté lors d'événements de l'UE et de l'ONU.",
     kitLongLabel: "Bio complète",
     kitLong: [
-      "Morten Haulik est développeur en informatique spatiale, fondateur et conférencier basé à Copenhague. Il y a plus de dix ans, il a quitté ses études en sciences de l'information à l'Université de Copenhague pour rejoindre à plein temps le premier studio XR nordique. Depuis, il a animé plus de 100 ateliers et s'est adressé à des publics de plus de 2 000 personnes.",
+      "Morten Haulik est un pionnier de la XR, entrepreneur et conférencier basé à Copenhague. Il y a plus de dix ans, il a quitté ses études en sciences de l'information à l'Université de Copenhague pour faire partie de l'équipe qui a lancé Khora, l'une des premières entreprises VR d'Europe. Depuis, il a créé d'innombrables expériences VR, AR et WebXR pour des marques mondiales, des musées et des institutions culturelles, dont une immersion dans les cuisines de restaurants étoilés danois, animé plus de 100 ateliers et parlé devant des publics de plus de 2 000 personnes.",
       "Il a présenté des solutions d'informatique spatiale lors de rencontres officielles de l'Union européenne pour des membres du Parlement et de la Commission, ainsi qu'à des délégations des Nations unies.",
-      "Cofondateur de MidwifeVR, lauréat du KU Impact Award 2021, il a créé la plateforme VR d'accompagnement à l'allaitement utilisée dans la formation des sages-femmes à l'University College Copenhagen. Avec NXT/Care, il apporte la réalité mixte aux enfants dans les hôpitaux danois.",
-      "Depuis 2022, il est Entrepreneur en résidence à l'Université de Copenhague (KU Lighthouse). En 2025, il a lancé NXT/WebXR, un catalogue de jeux WebXR gratuits, dont ses propres titres HoloRange, Meows Freaky Fishstick Factory et die Hände."
+      "Cofondateur de MidwifeVR, lauréat du KU Impact Award 2021, il a créé la plateforme VR d'accompagnement à l'allaitement utilisée dans la formation des sages-femmes à l'University College Copenhagen. Il est le fondateur de NXT/Care, qui apporte la réalité mixte aux enfants dans les hôpitaux et cliniques de la Région capitale du Danemark, et collabore avec l'hôpital de Herlev sur la XR clinique.",
+      "Depuis 2022, il est Entrepreneur en résidence à l'Université de Copenhague (KU Lighthouse). En 2025, il a lancé NXT/WebXR, un catalogue de jeux et d'expériences WebXR gratuits, dont ses propres titres HoloRange, Meows Freaky Fishstick Factory et die Hände."
     ],
-    kitFacts: [["Formats","Keynote (20–60 min), table ronde, conversation, atelier pratique avec casques"],["Langues","Anglais, danois"],["Basé à","Copenhague, disponible dans toute l'Europe"]],
-    copy: "Copier", copied: "Copié ✓",
-    headshot: "Télécharger l'image de profil",
+    copy: "Copier",
+    copied: "Copié ✓",
+    download: "Télécharger",
     faqTitle: "Questions fréquentes",
     faq: [
-      ["Puis-je réserver Morten Haulik comme conférencier ?","Oui. Morten donne des keynotes, tables rondes et ateliers sur l'informatique spatiale, la XR, la VR et les lunettes connectées pour des conférences, entreprises et universités dans toute l'Europe, en anglais ou en danois. Utilisez le formulaire ou écrivez à Morten@nxtwebxr.com."],
-      ["Sur quoi Morten conseille-t-il ?","Stratégie XR, développement WebXR et VR/réalité mixte, simulations pour la santé et la formation, et choix du matériel, du premier atelier au produit livré."],
-      ["Morten est-il disponible pour commenter la VR et les lunettes connectées dans la presse ?","Oui. Les journalistes peuvent le joindre pour un commentaire d'expert sur Meta Quest, les lunettes de Meta, l'Apple Vision Pro et Android XR à Morten@nxtwebxr.com."],
-      ["Qu'a construit Morten ?","NXT/WebXR avec ses jeux HoloRange, Meows Freaky Fishstick Factory et die Hände ; NXT/Care pour les enfants à l'hôpital ; MidwifeVR, lauréat du KU Impact Award 2021 ; et l'outil SendToQuest."]
+      [
+        "Puis-je réserver Morten Haulik comme conférencier ?",
+        "Oui. Morten donne des keynotes, tables rondes et ateliers sur la XR, la VR, la réalité mixte et les lunettes connectées pour des conférences, entreprises et universités dans toute l'Europe, en anglais ou en danois. Utilisez le formulaire de réservation ou écrivez à Morten@nxtwebxr.com."
+      ],
+      [
+        "Sur quoi Morten conseille-t-il ?",
+        "Stratégie XR, développement WebXR, VR et réalité mixte, simulations pour la santé et la formation, et choix du matériel, du premier atelier au produit livré."
+      ],
+      [
+        "Morten est-il disponible pour commenter la VR et les lunettes connectées dans la presse ?",
+        "Oui. Les journalistes peuvent le joindre pour un commentaire d'expert sur Meta Quest, les lunettes de Meta, l'Apple Vision Pro et Android XR à Morten@nxtwebxr.com."
+      ],
+      [
+        "Qu'a construit Morten ?",
+        "Plus de dix ans de XR, à commencer par Khora, l'une des premières entreprises VR d'Europe. D'innombrables expériences VR, AR et WebXR pour des marques mondiales, des musées et des institutions culturelles, dont une expérience VR avec des restaurants étoilés danois, et des présentations au Parlement européen. Il a fondé MidwifeVR (KU Impact Award 2021), NXT/Care (réalité mixte pour les enfants à l'hôpital) et NXT/WebXR (l'un des plus grands catalogues de jeux WebXR, dont ses propres HoloRange, Meows Freaky Fishstick Factory et die Hände)."
+      ]
     ],
-    contactTitle: "Discutons-en",
-    contactSub: "Projets de conseil, collaborations ou simple question. Je réponds généralement sous un jour ouvré.",
-    directLabel: "Direct",
-    skip: "Aller au contenu"
+    contactLabel: "Contact",
+    contactTitle: "Parlons-en.",
+    contactSub: "Keynotes, conseil, collaborations ou simple question. Je réponds généralement sous un jour ouvré.",
+    skip: "Aller au contenu",
+    languages: "Langue"
   }
 };
 
@@ -266,14 +550,15 @@ const FEATURED = [
   ["The Copenhagen Post","https://cphpost.dk/2017-07-02/news/goggle-me-up-scotty-this-is-the-final-frontier/"],
   ["Danish Sound Cluster","https://danishsoundcluster.dk/the-future-sound-forum/"],
   ["24Victoria","https://24victoria.dk/artificial-and-intelligence-deep-tech/udvikler-xr-oplevelser-morten-haulik"],
-  ["CBS Wire","https://cbswire.dk/healthy-glove-gaming-misoballs-and-a-virtual-midwife/"]
+  ["CBS Wire","https://cbswire.dk/healthy-glove-gaming-misoballs-and-a-virtual-midwife/"],
+  ["DR2", null]
 ];
 
 /* Portfolio card + modal content, all languages. */
 const PORTFOLIO_DATA = {
   'project-nxtcare': {
-    en:{tag:'Project',title:'NXT/Care',subtitle:'Calm, playful XR for children in hospitals and clinics',desc:"Mixed-reality distraction for children during blood tests, IV placement and dental visits, used in the Capital Region of Denmark.",content:["Needles, drills and waiting rooms are scary when you are six. NXT/Care turns that time into play.","The experiences run in AR passthrough and use only the child's hands, so the child can always see the nurse, the parent and the room while their attention moves to the game. Setup takes under 60 seconds.","The catalogue includes 'Bag Tænderne', where children clean away virtual bacteria while the dentist works, the calm 'Sommerfugl' nature world, and 'Pusteven', a visual breathing exercise that gives the child a sense of control. Everything is built and tested together with Danish children, paediatric departments, specialists and dentists."]},
-    da:{tag:'Projekt',title:'NXT/Care',subtitle:'Tryg og legende XR til børn på hospitaler og klinikker',desc:"Mixed reality-distraktion til børn under blodprøver, IV-anlæggelse og tandlægebesøg, anvendt i Region Hovedstaden.",content:["Nåle, boremaskiner og venteværelser er skræmmende, når man er seks år. NXT/Care forvandler den tid til leg.","Oplevelserne kører i AR-passthrough og bruger kun barnets hænder, så barnet altid kan se sygeplejersken, forælderen og rummet, mens opmærksomheden flyttes over i spillet. Opsætningen tager under 60 sekunder.","Kataloget rummer bl.a. 'Bag Tænderne', hvor barnet fjerner virtuelle bakterier, mens tandlægen arbejder, det rolige naturunivers 'Sommerfugl' og 'Pusteven', en visuel vejrtrækningsøvelse, der giver barnet kontrol og ro. Alt er udviklet og testet sammen med danske børn, børneafdelinger, speciallæger og tandlæger."]},
+    en:{tag:'Project',title:'NXT/Care',subtitle:'Founder. Calm, playful XR for children in hospitals and clinics',desc:"My company NXT/Care brings mixed-reality distraction to children during blood tests, IV placement and dental visits in the Capital Region of Denmark.",content:["Needles, drills and waiting rooms are scary when you are six. NXT/Care turns that time into play.","The experiences run in AR passthrough and use only the child's hands, so the child can always see the nurse, the parent and the room while their attention moves to the game. Setup takes under 60 seconds.","The catalogue includes 'Bag Tænderne', where children clean away virtual bacteria while the dentist works, the calm 'Sommerfugl' nature world, and 'Pusteven', a visual breathing exercise that gives the child a sense of control. Everything is built and tested together with Danish children, paediatric departments, specialists and dentists."]},
+    da:{tag:'Projekt',title:'NXT/Care',subtitle:'Stifter. Tryg og legende XR til børn på hospitaler og klinikker',desc:"Min virksomhed NXT/Care giver børn mixed reality-distraktion under blodprøver, IV-anlæggelse og tandlægebesøg i Region Hovedstaden.",content:["Nåle, boremaskiner og venteværelser er skræmmende, når man er seks år. NXT/Care forvandler den tid til leg.","Oplevelserne kører i AR-passthrough og bruger kun barnets hænder, så barnet altid kan se sygeplejersken, forælderen og rummet, mens opmærksomheden flyttes over i spillet. Opsætningen tager under 60 sekunder.","Kataloget rummer bl.a. 'Bag Tænderne', hvor barnet fjerner virtuelle bakterier, mens tandlægen arbejder, det rolige naturunivers 'Sommerfugl' og 'Pusteven', en visuel vejrtrækningsøvelse, der giver barnet kontrol og ro. Alt er udviklet og testet sammen med danske børn, børneafdelinger, speciallæger og tandlæger."]},
     de:{tag:'Projekt',title:'NXT/Care',subtitle:'Ruhige, spielerische XR für Kinder in Kliniken und Praxen',desc:"Mixed-Reality-Ablenkung für Kinder bei Blutabnahmen, Infusionen und Zahnarztbesuchen, im Einsatz in der Region Hovedstaden (Dänemark).",content:["Nadeln, Bohrer und Wartezimmer sind beängstigend, wenn man sechs ist. NXT/Care verwandelt diese Zeit in Spiel.","Die Erlebnisse laufen im AR-Passthrough und nutzen nur die Hände des Kindes. So sieht das Kind jederzeit Pflegekraft, Eltern und Raum, während die Aufmerksamkeit ins Spiel wandert. Die Einrichtung dauert unter 60 Sekunden.","Zum Katalog gehören u. a. 'Bag Tænderne', bei dem Kinder virtuelle Bakterien entfernen, während der Zahnarzt arbeitet, die ruhige Naturwelt 'Sommerfugl' und 'Pusteven', eine visuelle Atemübung. Alles wurde gemeinsam mit dänischen Kindern, Kinderstationen und Zahnärzten entwickelt und getestet."]},
     it:{tag:'Progetto',title:'NXT/Care',subtitle:'XR rassicurante e giocosa per bambini in ospedali e cliniche',desc:"Distrazione in realtà mista per bambini durante prelievi, accessi venosi e visite dentistiche, in uso nella Regione Capitale danese.",content:["Aghi, trapani e sale d'attesa fanno paura quando hai sei anni. NXT/Care trasforma quel tempo in gioco.","Le esperienze funzionano in passthrough AR e usano solo le mani del bambino, che vede sempre l'infermiere, il genitore e la stanza mentre l'attenzione si sposta sul gioco. La configurazione richiede meno di 60 secondi.","Il catalogo include 'Bag Tænderne', in cui il bambino elimina batteri virtuali mentre il dentista lavora, il rilassante mondo naturale 'Sommerfugl' e 'Pusteven', un esercizio visivo di respirazione. Tutto è sviluppato e testato con bambini, reparti pediatrici e dentisti danesi."]},
     fr:{tag:'Projet',title:'NXT/Care',subtitle:"Une XR rassurante et ludique pour les enfants à l'hôpital et en clinique",desc:"Distraction en réalité mixte pour les enfants pendant les prises de sang, les perfusions et les soins dentaires, utilisée dans la Région capitale du Danemark.",content:["Les aiguilles, les fraises et les salles d'attente font peur quand on a six ans. NXT/Care transforme ce temps en jeu.","Les expériences fonctionnent en passthrough AR et n'utilisent que les mains de l'enfant, qui voit toujours l'infirmière, le parent et la pièce pendant que son attention passe au jeu. L'installation prend moins de 60 secondes.","Le catalogue comprend 'Bag Tænderne', où l'enfant élimine des bactéries virtuelles pendant que le dentiste travaille, l'univers apaisant 'Sommerfugl' et 'Pusteven', un exercice de respiration visuel. Tout est conçu et testé avec des enfants, des services de pédiatrie et des dentistes danois."]}

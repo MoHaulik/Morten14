@@ -342,6 +342,7 @@ ${p.faq.map(([q, a]) => `      <details class="reveal"><summary>${esc(q)}</summa
 <title>${esc(seo.title)}</title>
 <meta name="description" content="${esc(seo.desc)}">
 <meta name="author" content="Morten Haulik">
+<meta name="msvalidate.01" content="564019357C022278ED65C98A58C0D8C8">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0b0a08">
 <meta name="color-scheme" content="dark">
